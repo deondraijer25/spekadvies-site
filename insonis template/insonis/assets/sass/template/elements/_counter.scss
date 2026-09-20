@@ -1,0 +1,245 @@
+.milestone-one{
+	position: relative;
+	margin-bottom: 30px;
+	&__icon{
+		color: $theme-color;
+		font-size: 62px;
+	}
+	&__number{
+		font-size: 36px;
+		font-weight: 700;
+		color: $headings-color;
+		margin: 20px 0 5px;
+		.symbol{
+			&.after{
+				margin-left: -5px;
+			}
+			&.before{
+				margin-right: -5px;
+			}
+		}
+	}
+	&__title{
+		background: #E9E9EF;
+		color: $headings-color;
+		position: relative;
+		display: inline-block;
+		padding: 10px 20px;
+		font-size: 16px;
+		font-weight: 600;
+		margin-top: 15px;
+		transition: all 0.5s;
+		line-height: 22px;
+		border-radius: 8px;
+		@media(max-width: 1024px){
+			font-size: 15px;
+			padding: 10px 15px;
+		}
+		&:after{
+			content: '';
+			border: 8px solid transparent;
+			border-bottom-color: #E9E9EF;
+			position: absolute;
+			bottom: 100%;
+			left: 20px;
+			z-index: 1;
+			transition: all 0.5s;
+		}
+	}
+	&__link{
+		position: absolute;
+		@include size(100%, 100%);
+		top: 0;
+		left: 0;
+		z-index: 11;
+	}
+	&:hover{
+		.milestone-one__icon{
+			.icon{
+				svg, i{
+					animation: beat 1.5s ease 0s infinite;
+				}
+			}
+		}
+	}
+}
+
+// Style 02
+.milestone-two{
+	position: relative;
+	margin-bottom: 30px;
+	background: $white;
+	border-radius: 0 40px 40px 40px;
+	padding: 2px;
+	width: 100%;
+	transition: all 0.8s;
+	&__wrap{
+		display: flex;
+	}
+	&__icon{
+		background: $black;
+		font-size: 38px;
+		width: 90px;
+		flex: 0 0 90px;
+		height: 90px; 
+		border-radius: 0 30px 30px 30px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: all 0.8s;
+		@media(max-width: 1024px){
+			width: 75px;
+			flex: 0 0 75px;
+			height: 85px;
+		}
+		svg, i{
+			color: $white;
+			fill: $white;
+		}
+	}
+	&__content{
+		flex: 0 0 calc(100% - 90px);
+		padding: 25px 15px 20px 22px;
+		@media(max-width: 1024px){
+			padding: 20px 15px 15px 16px;
+			flex: 0 0 calc(100% - 75px);
+		}
+	}
+	&__number{
+		font-size: 36px;
+		font-weight: 600;
+		color: $headings-color;
+		transition: all 0.8s;
+		@media(max-width: 1024px){
+			font-size: 32px;
+		}
+		.symbol{
+			&.after{
+				margin-left: -5px;
+			}
+			&.before{
+				margin-right: -5px;
+			}
+		}
+	}
+	&__title{
+		position: relative;
+		display: inline-block;
+		font-size: 14px;
+		font-weight: 500;
+		margin-top: 12px;
+		transition: all 0.8s;
+		line-height: 20px;
+		text-transform: uppercase;
+	}
+	&__link{
+		position: absolute;
+		@include size(100%, 100%);
+		top: 0;
+		left: 0;
+		z-index: 11;
+	}
+	&:hover, &.active{
+		background: $black;
+		.milestone-two{
+			&__icon{
+				background: $theme-color;
+				svg, i{
+					color: $white;
+					fill: $white;
+					animation: beat 1.5s ease 0s infinite;
+				}
+			}
+			&__number{
+				color: $white;
+			}
+			&__title{
+				color: $white;
+			}
+		}
+	}
+}
+
+// Style 03
+.milestone-three{
+	position: relative;
+	margin-bottom: 30px;
+	border-radius: 0 40px 40px 40px;
+	padding: 2px;
+	transition: all 0.8s;
+	&__wrap{
+		display: flex;
+	}
+	&__icon{
+		background: $black;
+		font-size: 38px;
+		width: 72px;
+		flex: 0 0 72px;
+		height: 90px;
+		border-radius: 30px 30px 0 30px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: all 0.8s;
+		margin-top: 5px;
+		svg, i{
+			color: $white;
+			fill: $white;
+		}
+	}
+	&__content{
+		flex: 0 0 calc(100% - 72px);
+		padding-left: 20px;
+	}
+	&__number{
+		font-size: 52px;
+		line-height: 1;
+		font-weight: 500;
+		color: $headings-color;
+		transition: all 0.8s;
+		.symbol{
+			padding-left: 5px;
+			&.after{
+				margin-left: -5px;
+			}
+			&.before{
+				margin-right: -5px;
+			}
+		}
+	}
+	&__title{
+		position: relative;
+		display: inline-block;
+		font-size: 16px;
+		font-weight: 500;
+		margin-bottom: 15px;
+		transition: all 0.8s;
+		line-height: 20px;
+		text-transform: uppercase;
+	}
+	&__link{
+		position: absolute;
+		@include size(100%, 100%);
+		top: 0;
+		left: 0;
+		z-index: 11;
+	}
+	&:hover, &.active{
+		.milestone-two{
+			&__icon{
+				background: $theme-color;
+				svg, i{
+					color: $white;
+					fill: $white;
+					animation: beat 1.5s ease 0s infinite;
+				}
+			}
+			&__number{
+				color: $white;
+			}
+			&__title{
+				color: $white;
+			}
+		}
+	}
+}

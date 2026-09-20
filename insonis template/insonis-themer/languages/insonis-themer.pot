@@ -1,0 +1,3112 @@
+# Copyright (C) 2026 Insonis Themer
+# This file is distributed under the same license as the Insonis Themer package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Insonis Themer 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/insonis-themer\n"
+"POT-Creation-Date: 2026-05-27 08:50:20+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2026-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: elementor/el-widgets/base.php:91
+msgid "Image Thumbnail"
+msgstr ""
+
+#: elementor/el-widgets/base.php:107
+msgid "Carousel Options"
+msgstr ""
+
+#: elementor/el-widgets/base.php:117 elementor/el-widgets/base.php:308
+msgid "Columns for Large Screen"
+msgstr ""
+
+#: elementor/el-widgets/base.php:127 elementor/el-widgets/base.php:318
+msgid "Columns for Medium Screen"
+msgstr ""
+
+#: elementor/el-widgets/base.php:137 elementor/el-widgets/base.php:328
+msgid "Columns for Small Screen"
+msgstr ""
+
+#: elementor/el-widgets/base.php:147 elementor/el-widgets/base.php:338
+msgid "Columns for Extra Small Screen"
+msgstr ""
+
+#: elementor/el-widgets/base.php:157 elementor/el-widgets/base.php:348
+msgid "Columns for Very Extra Small Screen"
+msgstr ""
+
+#: elementor/el-widgets/base.php:166
+msgid "Space Between Items"
+msgstr ""
+
+#: elementor/el-widgets/base.php:176
+msgid "Effect"
+msgstr ""
+
+#: elementor/el-widgets/base.php:180
+msgid "Slide"
+msgstr ""
+
+#: elementor/el-widgets/base.php:181
+msgid "Coverflow"
+msgstr ""
+
+#: elementor/el-widgets/base.php:182
+#: elementor/el-widgets/dynamic-tags/post-breadcrumb.php:166
+#: elementor/el-widgets/general/heading-block.php:124
+#: elementor/el-widgets/general/heading-block.php:147
+#: elementor/el-widgets/general/logo.php:78
+#: elementor/el-widgets/general/navigation-menu.php:82
+#: elementor/el-widgets/general/search-box.php:85
+msgid "Center"
+msgstr ""
+
+#: elementor/el-widgets/base.php:189
+msgid "Loop"
+msgstr ""
+
+#: elementor/el-widgets/base.php:198
+msgid "Speed"
+msgstr ""
+
+#: elementor/el-widgets/base.php:207
+msgid "Auto Play"
+msgstr ""
+
+#: elementor/el-widgets/base.php:216
+msgid "Auto Play Delay"
+msgstr ""
+
+#: elementor/el-widgets/base.php:225
+msgid "Play Hover"
+msgstr ""
+
+#: elementor/el-widgets/base.php:234
+msgid "Navigation"
+msgstr ""
+
+#: elementor/el-widgets/base.php:243
+#: elementor/el-widgets/general/portfolio.php:208
+#: elementor/el-widgets/plugins/events.php:193
+#: elementor/el-widgets/post/all-items.php:213
+#: elementor/el-widgets/product/all-products.php:211
+msgid "Pagination"
+msgstr ""
+
+#: elementor/el-widgets/base.php:252
+msgid "Pagination Type"
+msgstr ""
+
+#: elementor/el-widgets/base.php:256
+msgid "Bullets"
+msgstr ""
+
+#: elementor/el-widgets/base.php:257
+msgid "Fraction"
+msgstr ""
+
+#: elementor/el-widgets/base.php:258
+msgid "Progressbar"
+msgstr ""
+
+#: elementor/el-widgets/base.php:266
+msgid "Dynamic Bullets"
+msgstr ""
+
+#: elementor/el-widgets/base.php:275
+msgid "Dots Spacing"
+msgstr ""
+
+#: elementor/el-widgets/base.php:299
+msgid "Grid Options"
+msgstr ""
+
+#: elementor/el-widgets/base.php:358
+msgid "Remove Padding"
+msgstr ""
+
+#: elementor/el-widgets/base.php:624
+msgid "Prev page"
+msgstr ""
+
+#: elementor/el-widgets/base.php:625
+msgid "Next page"
+msgstr ""
+
+#: elementor/el-widgets/base.php:626
+msgid "Load more"
+msgstr ""
+
+#: elementor/el-widgets/dynamic-tags/post-author-box.php:25
+msgid "Post Author Box"
+msgstr ""
+
+#: elementor/el-widgets/dynamic-tags/post-author-box.php:36
+#: elementor/el-widgets/dynamic-tags/post-author-image.php:32
+#: elementor/el-widgets/dynamic-tags/post-author-name.php:36
+#: elementor/el-widgets/dynamic-tags/post-category.php:36
+#: elementor/el-widgets/dynamic-tags/post-content.php:36
+#: elementor/el-widgets/dynamic-tags/post-date.php:36
+#: elementor/el-widgets/dynamic-tags/post-name.php:34
+#: elementor/el-widgets/dynamic-tags/post-share.php:36
+#: elementor/el-widgets/dynamic-tags/post-thumbnail.php:32
+msgid "General"
+msgstr ""
+
+#: elementor/el-widgets/dynamic-tags/post-author-box.php:44
+#: elementor/el-widgets/dynamic-tags/post-author-name.php:54
+#: elementor/el-widgets/dynamic-tags/post-category.php:54
+#: elementor/el-widgets/dynamic-tags/post-content.php:44
+#: elementor/el-widgets/dynamic-tags/post-date.php:54
+#: elementor/el-widgets/general/circle-progress.php:65
+#: elementor/el-widgets/general/counter.php:296
+#: elementor/el-widgets/general/counter.php:382
+#: elementor/el-widgets/general/features-block.php:165
+#: elementor/el-widgets/general/features-block.php:298
+#: elementor/el-widgets/general/features-block.php:330
+#: elementor/el-widgets/general/icon-box-group.php:323
+#: elementor/el-widgets/general/icon-box-group.php:352
+#: elementor/el-widgets/general/icon-box-styles.php:299
+#: elementor/el-widgets/general/icon-box-styles.php:333
+#: elementor/el-widgets/general/navigation-menu.php:264
+#: elementor/el-widgets/general/navigation-menu.php:283
+#: elementor/el-widgets/general/navigation-menu.php:304
+#: elementor/el-widgets/general/navigation-menu.php:350
+#: elementor/el-widgets/general/navigation-menu.php:388
+#: elementor/el-widgets/general/navigation-menu.php:432
+#: elementor/el-widgets/general/navigation-menu.php:480
+#: elementor/el-widgets/general/search-box.php:138
+#: elementor/el-widgets/general/services.php:335
+#: elementor/el-widgets/general/services.php:364
+#: elementor/el-widgets/general/video-box.php:141
+#: elementor/el-widgets/plugins/cart.php:62
+#: elementor/el-widgets/post/all-items.php:409
+#: elementor/el-widgets/product/item-excerpt.php:50
+msgid "Color"
+msgstr ""
+
+#: elementor/el-widgets/dynamic-tags/post-author-image.php:21
+msgid "Post Author Image"
+msgstr ""
+
+#: elementor/el-widgets/dynamic-tags/post-author-name.php:25
+msgid "Post Author Name"
+msgstr ""
+
+#: elementor/el-widgets/dynamic-tags/post-author-name.php:44
+#: elementor/el-widgets/dynamic-tags/post-category.php:44
+#: elementor/el-widgets/dynamic-tags/post-date.php:44
+#: elementor/el-widgets/dynamic-tags/post-share.php:56
+msgid "Display Icon"
+msgstr ""
+
+#: elementor/el-widgets/dynamic-tags/post-breadcrumb.php:23
+msgid "Breadcrumb"
+msgstr ""
+
+#: elementor/el-widgets/dynamic-tags/post-breadcrumb.php:35
+#: elementor/el-widgets/dynamic-tags/post-comment-form.php:35
+#: elementor/el-widgets/dynamic-tags/post-tags.php:35
+#: elementor/el-widgets/general/brand.php:47
+#: elementor/el-widgets/general/career-block.php:36
+#: elementor/el-widgets/general/career-block.php:94
+#: elementor/el-widgets/general/circle-progress.php:42
+#: elementor/el-widgets/general/counter.php:45
+#: elementor/el-widgets/general/features-block.php:264
+#: elementor/el-widgets/general/heading-block.php:43
+#: elementor/el-widgets/general/icon-box-group.php:52
+#: elementor/el-widgets/general/icon-box-styles.php:264
+#: elementor/el-widgets/general/image-content.php:34
+#: elementor/el-widgets/general/logo.php:34
+#: elementor/el-widgets/general/map.php:42
+#: elementor/el-widgets/general/navigation-menu.php:43
+#: elementor/el-widgets/general/pricing-block.php:35
+#: elementor/el-widgets/general/pricing-block.php:264
+#: elementor/el-widgets/general/search-box.php:164
+#: elementor/el-widgets/general/services.php:46
+#: elementor/el-widgets/general/services.php:301
+#: elementor/el-widgets/general/tabs-contact.php:55
+#: elementor/el-widgets/general/team.php:47
+#: elementor/el-widgets/general/testimonial.php:83
+#: elementor/el-widgets/general/testimonial.php:182
+#: elementor/el-widgets/general/video-box.php:34
+#: elementor/el-widgets/general/video-box.php:124
+#: elementor/el-widgets/plugins/rev-slider.php:45
+#: elementor/el-widgets/product/item-add-to-cart.php:44
+#: elementor/el-widgets/product/item-arrow.php:44
+#: elementor/el-widgets/product/item-excerpt.php:44
+#: elementor/el-widgets/product/item-hooks.php:44
+#: elementor/el-widgets/product/item-media.php:46
+#: elementor/el-widgets/product/item-meta.php:45
+#: elementor/el-widgets/product/item-price.php:45
+#: elementor/el-widgets/product/item-rating.php:44
+#: elementor/el-widgets/product/item-related.php:47
+#: elementor/el-widgets/product/item-social-share.php:44
+#: elementor/el-widgets/product/item-tabs.php:44
+#: elementor/el-widgets/product/woo-archive-image.php:46
+#: elementor/el-widgets/product/woo-archive-info.php:50
+msgid "Content"
+msgstr ""
+
+#: elementor/el-widgets/dynamic-tags/post-breadcrumb.php:42
+msgid "Background & Color ------"
+msgstr ""
+
+#: elementor/el-widgets/dynamic-tags/post-breadcrumb.php:51
+msgid "Background"
+msgstr ""
+
+#: elementor/el-widgets/dynamic-tags/post-breadcrumb.php:60
+msgid "Background Overlay Color"
+msgstr ""
+
+#: elementor/el-widgets/dynamic-tags/post-breadcrumb.php:71
+msgid "Padding ------"
+msgstr ""
+
+#: elementor/el-widgets/dynamic-tags/post-breadcrumb.php:79
+msgid "Breadcrumb Padding Top"
+msgstr ""
+
+#: elementor/el-widgets/dynamic-tags/post-breadcrumb.php:96
+msgid "Breadcrumb Padding Bottom"
+msgstr ""
+
+#: elementor/el-widgets/dynamic-tags/post-breadcrumb.php:113
+msgid "Content & Style ------"
+msgstr ""
+
+#: elementor/el-widgets/dynamic-tags/post-breadcrumb.php:120
+msgid "Show Titlte"
+msgstr ""
+
+#: elementor/el-widgets/dynamic-tags/post-breadcrumb.php:129
+#: elementor/el-widgets/product/item-price.php:81
+msgid "Title Color"
+msgstr ""
+
+#: elementor/el-widgets/dynamic-tags/post-breadcrumb.php:148
+msgid "Show Breadcrumb Links"
+msgstr ""
+
+#: elementor/el-widgets/dynamic-tags/post-breadcrumb.php:158
+#: elementor/el-widgets/general/heading-block.php:116
+msgid "Alignment Text"
+msgstr ""
+
+#: elementor/el-widgets/dynamic-tags/post-breadcrumb.php:162
+#: elementor/el-widgets/general/heading-block.php:120
+#: elementor/el-widgets/general/heading-block.php:143
+#: elementor/el-widgets/general/logo.php:74
+#: elementor/el-widgets/general/navigation-menu.php:78
+#: elementor/el-widgets/general/search-box.php:81
+msgid "Left"
+msgstr ""
+
+#: elementor/el-widgets/dynamic-tags/post-breadcrumb.php:170
+#: elementor/el-widgets/general/heading-block.php:128
+#: elementor/el-widgets/general/heading-block.php:151
+#: elementor/el-widgets/general/logo.php:82
+#: elementor/el-widgets/general/navigation-menu.php:86
+#: elementor/el-widgets/general/search-box.php:89
+msgid "Right"
+msgstr ""
+
+#: elementor/el-widgets/dynamic-tags/post-breadcrumb.php:214
+#: elementor/el-widgets/general/logo.php:43
+#: elementor/el-widgets/general/tabs-contact.php:131
+msgid "Home"
+msgstr ""
+
+#: elementor/el-widgets/dynamic-tags/post-breadcrumb.php:252
+msgid "Search results for"
+msgstr ""
+
+#: elementor/el-widgets/dynamic-tags/post-breadcrumb.php:302
+msgid "Posts tagged"
+msgstr ""
+
+#: elementor/el-widgets/dynamic-tags/post-breadcrumb.php:309
+msgid "Articles posted by"
+msgstr ""
+
+#: elementor/el-widgets/dynamic-tags/post-breadcrumb.php:313
+msgid "Error 404"
+msgstr ""
+
+#: elementor/el-widgets/dynamic-tags/post-breadcrumb.php:317
+msgid "Page"
+msgstr ""
+
+#: elementor/el-widgets/dynamic-tags/post-category.php:25
+msgid "Post Category"
+msgstr ""
+
+#: elementor/el-widgets/dynamic-tags/post-comment-form.php:23
+msgid "Post Comment"
+msgstr ""
+
+#: elementor/el-widgets/dynamic-tags/post-comment-form.php:42
+#: elementor/el-widgets/product/item-add-to-cart.php:50
+#: elementor/el-widgets/product/item-social-share.php:50
+msgid "No Settings"
+msgstr ""
+
+#: elementor/el-widgets/dynamic-tags/post-content.php:25
+#: elementor/el-widgets/post/all-items.php:302
+msgid "Post Content"
+msgstr ""
+
+#: elementor/el-widgets/dynamic-tags/post-date.php:25
+msgid "Post Date"
+msgstr ""
+
+#: elementor/el-widgets/dynamic-tags/post-name.php:23
+#: elementor/el-widgets/post/all-items.php:340
+msgid "Post Title"
+msgstr ""
+
+#: elementor/el-widgets/dynamic-tags/post-name.php:42
+msgid "Tag"
+msgstr ""
+
+#: elementor/el-widgets/dynamic-tags/post-name.php:45
+msgid "DIV"
+msgstr ""
+
+#: elementor/el-widgets/dynamic-tags/post-name.php:46
+msgid "H1"
+msgstr ""
+
+#: elementor/el-widgets/dynamic-tags/post-name.php:47
+msgid "H2"
+msgstr ""
+
+#: elementor/el-widgets/dynamic-tags/post-name.php:48
+msgid "H3"
+msgstr ""
+
+#: elementor/el-widgets/dynamic-tags/post-name.php:49
+msgid "H4"
+msgstr ""
+
+#: elementor/el-widgets/dynamic-tags/post-name.php:50
+msgid "H5"
+msgstr ""
+
+#: elementor/el-widgets/dynamic-tags/post-name.php:59
+#: elementor/el-widgets/dynamic-tags/post-tags.php:61
+#: elementor/el-widgets/general/career-block.php:134
+#: elementor/el-widgets/general/career-block.php:179
+#: elementor/el-widgets/general/career-block.php:234
+#: elementor/el-widgets/general/circle-progress.php:118
+#: elementor/el-widgets/general/heading-block.php:409
+#: elementor/el-widgets/general/heading-block.php:455
+#: elementor/el-widgets/general/heading-block.php:515
+#: elementor/el-widgets/general/image-content.php:218
+#: elementor/el-widgets/general/image-content.php:252
+#: elementor/el-widgets/general/navigation-menu.php:254
+#: elementor/el-widgets/general/navigation-menu.php:340
+#: elementor/el-widgets/general/pricing-block.php:214
+#: elementor/el-widgets/general/pricing-block.php:243
+#: elementor/el-widgets/general/pricing-block.php:272
+#: elementor/el-widgets/general/testimonial.php:190
+#: elementor/el-widgets/general/testimonial.php:277
+#: elementor/el-widgets/general/testimonial.php:310
+msgid "Text Color"
+msgstr ""
+
+#: elementor/el-widgets/dynamic-tags/post-share.php:25
+msgid "Post Share"
+msgstr ""
+
+#: elementor/el-widgets/dynamic-tags/post-share.php:44
+#: elementor/el-widgets/general/brand.php:119
+#: elementor/el-widgets/general/counter.php:64
+#: elementor/el-widgets/general/features-block.php:45
+#: elementor/el-widgets/general/gallery.php:148
+#: elementor/el-widgets/general/heading-block.php:80
+#: elementor/el-widgets/general/icon-box-group.php:79
+#: elementor/el-widgets/general/icon-box-group.php:192
+#: elementor/el-widgets/general/icon-box-styles.php:45
+#: elementor/el-widgets/general/image-content.php:40
+#: elementor/el-widgets/general/navigation-menu.php:61
+#: elementor/el-widgets/general/portfolio.php:171
+#: elementor/el-widgets/general/pricing-block.php:41
+#: elementor/el-widgets/general/search-box.php:43
+#: elementor/el-widgets/general/services.php:71
+#: elementor/el-widgets/general/tabs-contact.php:61
+#: elementor/el-widgets/general/testimonial.php:66
+#: elementor/el-widgets/plugins/events.php:169
+#: elementor/el-widgets/post/all-items.php:111
+#: elementor/el-widgets/post/posts-archive-grid.php:58
+#: elementor/el-widgets/product/all-products.php:110
+#: elementor/el-widgets/product/item-price.php:66
+#: elementor/el-widgets/product/woo-archive.php:63
+msgid "Style"
+msgstr ""
+
+#: elementor/el-widgets/dynamic-tags/post-share.php:47
+#: elementor/el-widgets/general/brand.php:123
+#: elementor/el-widgets/general/search-box.php:46
+#: elementor/el-widgets/general/video-box.php:53
+msgid "Style I"
+msgstr ""
+
+#: elementor/el-widgets/dynamic-tags/post-share.php:48
+#: elementor/el-widgets/general/brand.php:124
+#: elementor/el-widgets/general/video-box.php:54
+msgid "Style II"
+msgstr ""
+
+#: elementor/el-widgets/dynamic-tags/post-tags.php:23
+msgid "Post Tag"
+msgstr ""
+
+#: elementor/el-widgets/dynamic-tags/post-tags.php:42
+#: elementor/el-widgets/general/brand.php:55
+#: elementor/el-widgets/general/career-block.php:42
+#: elementor/el-widgets/general/career-block.php:127
+#: elementor/el-widgets/general/circle-progress.php:48
+#: elementor/el-widgets/general/circle-progress.php:110
+#: elementor/el-widgets/general/counter.php:113
+#: elementor/el-widgets/general/counter.php:263
+#: elementor/el-widgets/general/features-block.php:59
+#: elementor/el-widgets/general/features-block.php:272
+#: elementor/el-widgets/general/gallery.php:65
+#: elementor/el-widgets/general/heading-block.php:60
+#: elementor/el-widgets/general/heading-block.php:402
+#: elementor/el-widgets/general/icon-box-group.php:107
+#: elementor/el-widgets/general/icon-box-group.php:297
+#: elementor/el-widgets/general/icon-box-styles.php:272
+#: elementor/el-widgets/general/image-content.php:57
+#: elementor/el-widgets/general/image-content.php:207
+#: elementor/el-widgets/general/logo.php:40
+#: elementor/el-widgets/general/map.php:49
+#: elementor/el-widgets/general/portfolio.php:129
+#: elementor/el-widgets/general/pricing-block.php:52
+#: elementor/el-widgets/general/pricing-block.php:206
+#: elementor/el-widgets/general/services.php:116
+#: elementor/el-widgets/general/services.php:309
+#: elementor/el-widgets/general/tabs-contact.php:87
+#: elementor/el-widgets/general/tabs-contact.php:101
+#: elementor/el-widgets/general/video-box.php:41
+#: elementor/el-widgets/general/video-box.php:132
+#: elementor/el-widgets/plugins/events.php:126
+#: elementor/el-widgets/post/all-items.php:190
+#: elementor/el-widgets/product/all-products.php:189
+#: elementor/el-widgets/product/item-price.php:53
+#: elementor/el-widgets/product/item-price.php:73
+#: elementor/el-widgets/product/item-related.php:72
+msgid "Title"
+msgstr ""
+
+#: elementor/el-widgets/dynamic-tags/post-tags.php:44
+#: elementor/el-widgets/general/career-block.php:47
+#: elementor/el-widgets/general/circle-progress.php:51
+#: elementor/el-widgets/general/counter.php:116
+#: elementor/el-widgets/general/features-block.php:62
+#: elementor/el-widgets/general/heading-block.php:62
+#: elementor/el-widgets/general/icon-box-styles.php:75
+#: elementor/el-widgets/general/image-content.php:59
+#: elementor/el-widgets/general/logo.php:42
+#: elementor/el-widgets/general/map.php:51
+#: elementor/el-widgets/general/pricing-block.php:54
+#: elementor/el-widgets/general/tabs-contact.php:89
+msgid "Enter your title"
+msgstr ""
+
+#: elementor/el-widgets/dynamic-tags/post-tags.php:45
+msgid "Tags"
+msgstr ""
+
+#: elementor/el-widgets/dynamic-tags/post-tags.php:53
+msgid "Style Title Text"
+msgstr ""
+
+#: elementor/el-widgets/dynamic-tags/post-thumbnail.php:21
+msgid "Post Thumbnail"
+msgstr ""
+
+#: elementor/el-widgets/general/brand.php:25
+msgid "Brand"
+msgstr ""
+
+#: elementor/el-widgets/general/brand.php:64
+#: elementor/el-widgets/general/features-block.php:83
+#: elementor/el-widgets/general/image-content.php:82
+#: elementor/el-widgets/general/services.php:134
+#: elementor/el-widgets/general/tabs-contact.php:140
+#: elementor/el-widgets/general/team.php:56
+#: elementor/el-widgets/general/testimonial.php:93
+msgid "Choose Image"
+msgstr ""
+
+#: elementor/el-widgets/general/brand.php:75
+#: elementor/el-widgets/general/career-block.php:82
+#: elementor/el-widgets/general/counter.php:123
+#: elementor/el-widgets/general/features-block.php:184
+#: elementor/el-widgets/general/features-block.php:191
+#: elementor/el-widgets/general/icon-box-group.php:125
+#: elementor/el-widgets/general/icon-box-styles.php:134
+#: elementor/el-widgets/general/image-content.php:181
+#: elementor/el-widgets/general/logo.php:61
+#: elementor/el-widgets/general/services.php:156
+#: elementor/el-widgets/general/team.php:91
+msgid "Link"
+msgstr ""
+
+#: elementor/el-widgets/general/brand.php:76
+#: elementor/el-widgets/general/career-block.php:84
+#: elementor/el-widgets/general/counter.php:125
+#: elementor/el-widgets/general/icon-box-group.php:127
+#: elementor/el-widgets/general/image-content.php:183
+#: elementor/el-widgets/general/logo.php:63
+#: elementor/el-widgets/general/services.php:158
+#: elementor/el-widgets/general/team.php:92
+#: elementor/el-widgets/general/video-box.php:79
+msgid "https://your-link.com"
+msgstr ""
+
+#: elementor/el-widgets/general/brand.php:84
+msgid "Brand Content Item"
+msgstr ""
+
+#: elementor/el-widgets/general/brand.php:90
+msgid "Brand 1"
+msgstr ""
+
+#: elementor/el-widgets/general/brand.php:94
+msgid "Brand 2"
+msgstr ""
+
+#: elementor/el-widgets/general/brand.php:98
+msgid "Brand 3"
+msgstr ""
+
+#: elementor/el-widgets/general/brand.php:102
+msgid "Brand 4"
+msgstr ""
+
+#: elementor/el-widgets/general/brand.php:106
+msgid "Brand 5"
+msgstr ""
+
+#: elementor/el-widgets/general/brand.php:110
+msgid "Brand 6"
+msgstr ""
+
+#: elementor/el-widgets/general/brand.php:146
+#: elementor/el-widgets/general/gallery.php:54
+#: elementor/el-widgets/general/testimonial.php:215
+#: elementor/el-widgets/general/video-box.php:63
+msgid "Image"
+msgstr ""
+
+#: elementor/el-widgets/general/brand.php:162
+#: elementor/el-widgets/general/heading-block.php:364
+#: elementor/el-widgets/general/logo.php:148
+#: elementor/el-widgets/general/testimonial.php:252
+msgid "Border Radius"
+msgstr ""
+
+#: elementor/el-widgets/general/career-block.php:25
+msgid "Career Block"
+msgstr ""
+
+#: elementor/el-widgets/general/career-block.php:48 posttypes/portfolio.php:49
+#: posttypes/portfolio.php:59
+msgid "Categories"
+msgstr ""
+
+#: elementor/el-widgets/general/career-block.php:55
+#: elementor/el-widgets/general/career-block.php:100
+#: elementor/el-widgets/general/career-block.php:172
+msgid "Job Type"
+msgstr ""
+
+#: elementor/el-widgets/general/career-block.php:63
+#: elementor/el-widgets/general/heading-block.php:96
+#: elementor/el-widgets/general/image-content.php:158
+msgid "HTML Tag"
+msgstr ""
+
+#: elementor/el-widgets/general/career-block.php:108
+msgid "Company"
+msgstr ""
+
+#: elementor/el-widgets/general/career-block.php:116
+msgid "Address"
+msgstr ""
+
+#: elementor/el-widgets/general/career-block.php:151
+#: elementor/el-widgets/general/career-block.php:206
+#: elementor/el-widgets/general/icon-box-styles.php:194
+#: elementor/el-widgets/general/logo.php:117
+#: elementor/el-widgets/general/navigation-menu.php:458
+#: elementor/el-widgets/general/search-box.php:126
+#: elementor/el-widgets/general/search-box.php:172
+msgid "Padding"
+msgstr ""
+
+#: elementor/el-widgets/general/career-block.php:189
+#: elementor/el-widgets/general/counter.php:308
+#: elementor/el-widgets/general/navigation-menu.php:470
+#: elementor/includes/overrides.php:207
+msgid "Background Color"
+msgstr ""
+
+#: elementor/el-widgets/general/career-block.php:227
+msgid "Information (Address & Company)"
+msgstr ""
+
+#: elementor/el-widgets/general/circle-progress.php:24
+msgid "Circle Progress"
+msgstr ""
+
+#: elementor/el-widgets/general/circle-progress.php:52
+msgid "Organic Foods Provides"
+msgstr ""
+
+#: elementor/el-widgets/general/circle-progress.php:58
+msgid "Color EmptyFill"
+msgstr ""
+
+#: elementor/el-widgets/general/circle-progress.php:72
+msgid "Width"
+msgstr ""
+
+#: elementor/el-widgets/general/circle-progress.php:83
+#: elementor/el-widgets/general/circle-progress.php:139
+msgid "Percentage"
+msgstr ""
+
+#: elementor/el-widgets/general/circle-progress.php:94
+msgid "Thickness"
+msgstr ""
+
+#: elementor/el-widgets/general/circle-progress.php:147
+msgid "Percentage Color"
+msgstr ""
+
+#: elementor/el-widgets/general/counter.php:26
+msgid "Counter"
+msgstr ""
+
+#: elementor/el-widgets/general/counter.php:51
+#: elementor/el-widgets/general/gallery.php:136
+#: elementor/el-widgets/general/icon-box-group.php:66
+#: elementor/el-widgets/general/portfolio.php:159
+#: elementor/el-widgets/general/services.php:59
+#: elementor/el-widgets/general/team.php:214
+#: elementor/el-widgets/general/testimonial.php:53
+#: elementor/el-widgets/plugins/events.php:156
+#: elementor/el-widgets/post/all-items.php:96
+#: elementor/el-widgets/product/all-products.php:97
+msgid "Layout Display"
+msgstr ""
+
+#: elementor/el-widgets/general/counter.php:55
+#: elementor/el-widgets/general/gallery.php:140
+#: elementor/el-widgets/general/icon-box-group.php:70
+#: elementor/el-widgets/general/portfolio.php:163
+#: elementor/el-widgets/general/services.php:63
+#: elementor/el-widgets/general/team.php:218
+#: elementor/el-widgets/general/testimonial.php:57
+#: elementor/el-widgets/plugins/events.php:162
+#: elementor/el-widgets/post/all-items.php:101
+#: elementor/el-widgets/product/all-products.php:101
+msgid "Grid"
+msgstr ""
+
+#: elementor/el-widgets/general/counter.php:56
+#: elementor/el-widgets/general/gallery.php:141
+#: elementor/el-widgets/general/icon-box-group.php:71
+#: elementor/el-widgets/general/portfolio.php:164
+#: elementor/el-widgets/general/services.php:64
+#: elementor/el-widgets/general/team.php:219
+#: elementor/el-widgets/general/testimonial.php:58
+#: elementor/el-widgets/plugins/events.php:161
+#: elementor/el-widgets/post/all-items.php:102
+#: elementor/el-widgets/product/all-products.php:102
+msgid "Carousel"
+msgstr ""
+
+#: elementor/el-widgets/general/counter.php:57
+msgid "Single"
+msgstr ""
+
+#: elementor/el-widgets/general/counter.php:67
+#: elementor/el-widgets/general/features-block.php:48
+#: elementor/el-widgets/general/heading-block.php:83
+#: elementor/el-widgets/general/icon-box-group.php:82
+#: elementor/el-widgets/general/icon-box-styles.php:48
+#: elementor/el-widgets/general/image-content.php:43
+#: elementor/el-widgets/general/services.php:74
+#: elementor/el-widgets/general/tabs-contact.php:64
+msgid "Style 01"
+msgstr ""
+
+#: elementor/el-widgets/general/counter.php:68
+#: elementor/el-widgets/general/features-block.php:49
+#: elementor/el-widgets/general/heading-block.php:84
+#: elementor/el-widgets/general/icon-box-group.php:83
+#: elementor/el-widgets/general/icon-box-styles.php:49
+#: elementor/el-widgets/general/image-content.php:44
+#: elementor/el-widgets/general/services.php:75
+#: elementor/el-widgets/general/tabs-contact.php:65
+msgid "Style 02"
+msgstr ""
+
+#: elementor/el-widgets/general/counter.php:69
+#: elementor/el-widgets/general/features-block.php:50
+#: elementor/el-widgets/general/heading-block.php:85
+#: elementor/el-widgets/general/icon-box-group.php:84
+#: elementor/el-widgets/general/icon-box-styles.php:50
+#: elementor/el-widgets/general/image-content.php:45
+#: elementor/el-widgets/general/services.php:76
+#: elementor/el-widgets/general/tabs-contact.php:66
+msgid "Style 03"
+msgstr ""
+
+#: elementor/el-widgets/general/counter.php:79
+msgid "Icon Class"
+msgstr ""
+
+#: elementor/el-widgets/general/counter.php:91
+#: elementor/el-widgets/general/icon-box-group.php:135
+msgid "Number"
+msgstr ""
+
+#: elementor/el-widgets/general/counter.php:99
+msgid "Text Before Number"
+msgstr ""
+
+#: elementor/el-widgets/general/counter.php:106
+msgid "Text After Number"
+msgstr ""
+
+#: elementor/el-widgets/general/counter.php:115
+#: elementor/el-widgets/general/icon-box-styles.php:74
+msgid "This is the heading"
+msgstr ""
+
+#: elementor/el-widgets/general/counter.php:131
+#: elementor/el-widgets/general/features-block.php:156
+#: elementor/el-widgets/general/icon-box-group.php:144
+#: elementor/el-widgets/general/icon-box-group.php:146
+#: elementor/el-widgets/general/icon-box-styles.php:117
+#: elementor/el-widgets/general/navigation-menu.php:298
+#: elementor/el-widgets/general/navigation-menu.php:382
+#: elementor/el-widgets/general/services.php:86
+#: elementor/el-widgets/general/services.php:165
+msgid "Active"
+msgstr ""
+
+#: elementor/el-widgets/general/counter.php:140
+#: elementor/el-widgets/general/icon-box-group.php:154
+msgid "Content Item"
+msgstr ""
+
+#: elementor/el-widgets/general/counter.php:146
+msgid "People We Gave Insurance"
+msgstr ""
+
+#: elementor/el-widgets/general/counter.php:152
+msgid "Company Won Awards"
+msgstr ""
+
+#: elementor/el-widgets/general/counter.php:158
+msgid "Years Of Experience"
+msgstr ""
+
+#: elementor/el-widgets/general/counter.php:164
+msgid "Professional Team Staff"
+msgstr ""
+
+#: elementor/el-widgets/general/counter.php:176
+#: elementor/el-widgets/general/features-block.php:136
+#: elementor/el-widgets/general/icon-box-styles.php:97
+msgid "Title HTML Tag"
+msgstr ""
+
+#: elementor/el-widgets/general/counter.php:202
+#: elementor/el-widgets/general/features-block.php:70
+#: elementor/el-widgets/general/features-block.php:219
+#: elementor/el-widgets/general/icon-box-group.php:240
+#: elementor/el-widgets/general/icon-box-styles.php:59
+#: elementor/el-widgets/general/icon-box-styles.php:218
+#: elementor/el-widgets/general/search-box.php:54
+#: elementor/el-widgets/general/search-box.php:69
+#: elementor/el-widgets/general/services.php:260
+#: elementor/el-widgets/plugins/cart.php:36
+msgid "Icon"
+msgstr ""
+
+#: elementor/el-widgets/general/counter.php:210
+#: elementor/el-widgets/general/features-block.php:230
+#: elementor/el-widgets/general/icon-box-group.php:248
+#: elementor/el-widgets/general/pricing-block.php:291
+#: elementor/el-widgets/general/services.php:268
+msgid "Icon Color"
+msgstr ""
+
+#: elementor/el-widgets/general/counter.php:223
+#: elementor/el-widgets/general/search-box.php:106
+#: elementor/el-widgets/plugins/cart.php:43
+msgid "Icon Size"
+msgstr ""
+
+#: elementor/el-widgets/general/counter.php:241
+#: elementor/el-widgets/general/counter.php:271
+#: elementor/el-widgets/general/counter.php:365
+#: elementor/el-widgets/general/features-block.php:281
+#: elementor/el-widgets/general/icon-box-group.php:280
+#: elementor/el-widgets/general/icon-box-group.php:306
+#: elementor/el-widgets/general/icon-box-styles.php:281
+#: elementor/el-widgets/general/services.php:318
+msgid "Spacing"
+msgstr ""
+
+#: elementor/el-widgets/general/counter.php:324
+msgid "Hover: Color"
+msgstr ""
+
+#: elementor/el-widgets/general/counter.php:339
+msgid "Hover: Background Color"
+msgstr ""
+
+#: elementor/el-widgets/general/counter.php:357
+#: elementor/el-widgets/general/features-block.php:111
+msgid "Number Text"
+msgstr ""
+
+#: elementor/el-widgets/general/features-block.php:27
+#: elementor/el-widgets/general/features-block.php:38
+msgid "Features Block"
+msgstr ""
+
+#: elementor/el-widgets/general/features-block.php:61
+msgid "Safe your money"
+msgstr ""
+
+#: elementor/el-widgets/general/features-block.php:99
+msgid ""
+"Lorem ipsum dolor amet consectetur adipiscing elit do eiusmod tempor incid "
+"idunt ut labore."
+msgstr ""
+
+#: elementor/el-widgets/general/features-block.php:100
+#: elementor/el-widgets/general/icon-box-styles.php:86
+msgid "Enter your description"
+msgstr ""
+
+#: elementor/el-widgets/general/features-block.php:113
+msgid "01"
+msgstr ""
+
+#: elementor/el-widgets/general/features-block.php:114
+msgid "Enter your number"
+msgstr ""
+
+#: elementor/el-widgets/general/features-block.php:199
+#: elementor/el-widgets/general/heading-block.php:243
+#: elementor/el-widgets/general/pricing-block.php:188
+msgid "Button Style"
+msgstr ""
+
+#: elementor/el-widgets/general/features-block.php:202
+#: elementor/el-widgets/general/heading-block.php:246
+#: elementor/el-widgets/general/pricing-block.php:191
+msgid "Button Theme"
+msgstr ""
+
+#: elementor/el-widgets/general/features-block.php:203
+#: elementor/el-widgets/general/heading-block.php:247
+#: elementor/el-widgets/general/pricing-block.php:192
+msgid "Button Theme Second"
+msgstr ""
+
+#: elementor/el-widgets/general/features-block.php:204
+msgid "Button Theme Third"
+msgstr ""
+
+#: elementor/el-widgets/general/features-block.php:205
+#: elementor/el-widgets/general/heading-block.php:248
+#: elementor/el-widgets/general/pricing-block.php:193
+msgid "Button White"
+msgstr ""
+
+#: elementor/el-widgets/general/features-block.php:206
+#: elementor/el-widgets/general/heading-block.php:249
+#: elementor/el-widgets/general/pricing-block.php:194
+msgid "Button Black"
+msgstr ""
+
+#: elementor/el-widgets/general/features-block.php:207
+#: elementor/el-widgets/general/heading-block.php:250
+msgid "Button Border"
+msgstr ""
+
+#: elementor/el-widgets/general/features-block.php:208
+#: elementor/el-widgets/general/heading-block.php:251
+msgid "Button Border White"
+msgstr ""
+
+#: elementor/el-widgets/general/features-block.php:243
+#: elementor/el-widgets/general/icon-box-group.php:261
+#: elementor/el-widgets/general/icon-box-styles.php:229
+#: elementor/el-widgets/general/navigation-menu.php:442
+#: elementor/el-widgets/general/services.php:281
+msgid "Size"
+msgstr ""
+
+#: elementor/el-widgets/general/features-block.php:318
+#: elementor/el-widgets/general/heading-block.php:71
+#: elementor/el-widgets/general/heading-block.php:507
+#: elementor/el-widgets/general/icon-box-group.php:116
+#: elementor/el-widgets/general/icon-box-group.php:343
+#: elementor/el-widgets/general/icon-box-styles.php:321
+#: elementor/el-widgets/general/image-content.php:70
+#: elementor/el-widgets/general/image-content.php:241
+#: elementor/el-widgets/general/pricing-block.php:72
+#: elementor/el-widgets/general/services.php:125
+#: elementor/el-widgets/general/services.php:355
+#: elementor/el-widgets/general/team.php:75
+msgid "Description"
+msgstr ""
+
+#: elementor/el-widgets/general/gallery.php:24
+msgid "Gallery"
+msgstr ""
+
+#: elementor/el-widgets/general/gallery.php:45
+#: elementor/el-widgets/general/portfolio.php:84
+#: elementor/el-widgets/plugins/events.php:81
+#: elementor/el-widgets/post/all-items.php:81
+#: elementor/el-widgets/product/all-products.php:82
+msgid "Query & Layout"
+msgstr ""
+
+#: elementor/el-widgets/general/gallery.php:66
+msgid "Luxury Interior"
+msgstr ""
+
+#: elementor/el-widgets/general/gallery.php:73
+msgid "Sub-Title"
+msgstr ""
+
+#: elementor/el-widgets/general/gallery.php:74
+#: elementor/el-widgets/general/gallery.php:92
+#: elementor/el-widgets/general/gallery.php:99
+#: elementor/el-widgets/general/gallery.php:106
+#: elementor/el-widgets/general/gallery.php:113
+#: elementor/el-widgets/general/gallery.php:120
+#: elementor/el-widgets/general/image-content.php:60
+msgid "Insurance"
+msgstr ""
+
+#: elementor/el-widgets/general/gallery.php:82
+#: elementor/el-widgets/general/testimonial.php:123
+msgid "Testimonials Content Item"
+msgstr ""
+
+#: elementor/el-widgets/general/gallery.php:91
+#: elementor/el-widgets/general/icon-box-group.php:160
+#: elementor/el-widgets/general/services.php:179
+msgid "Car insurance"
+msgstr ""
+
+#: elementor/el-widgets/general/gallery.php:98
+#: elementor/el-widgets/general/services.php:197
+msgid "Health insurance"
+msgstr ""
+
+#: elementor/el-widgets/general/gallery.php:105
+#: elementor/el-widgets/general/icon-box-group.php:174
+msgid "Business insurance"
+msgstr ""
+
+#: elementor/el-widgets/general/gallery.php:112
+msgid "Marriage insurance"
+msgstr ""
+
+#: elementor/el-widgets/general/gallery.php:119
+msgid "Travel insurance"
+msgstr ""
+
+#: elementor/el-widgets/general/gallery.php:129
+#: elementor/el-widgets/general/icon-box-group.php:58
+#: elementor/el-widgets/general/portfolio.php:152
+#: elementor/el-widgets/general/search-box.php:36
+#: elementor/el-widgets/general/services.php:52
+#: elementor/el-widgets/plugins/events.php:149
+#: elementor/el-widgets/post/all-items.php:89
+#: elementor/el-widgets/post/posts-archive-grid.php:43
+#: elementor/el-widgets/post/posts-archive-grid.php:51
+#: elementor/el-widgets/product/all-products.php:90
+#: elementor/el-widgets/product/woo-archive.php:48
+#: elementor/el-widgets/product/woo-archive.php:56
+msgid "Layout"
+msgstr ""
+
+#: elementor/el-widgets/general/gallery.php:151
+msgid "Gallery Style 01"
+msgstr ""
+
+#: elementor/el-widgets/general/gallery.php:152
+msgid "Gallery Style 02"
+msgstr ""
+
+#: elementor/el-widgets/general/gallery.php:160
+#: elementor/el-widgets/general/services.php:209
+#: elementor/el-widgets/general/team.php:239
+#: elementor/el-widgets/general/testimonial.php:223
+#: elementor/el-widgets/plugins/events.php:183
+msgid "Image Size"
+msgstr ""
+
+#: elementor/el-widgets/general/heading-block.php:25
+msgid "Heading Block"
+msgstr ""
+
+#: elementor/el-widgets/general/heading-block.php:50
+#: elementor/el-widgets/general/heading-block.php:447
+#: elementor/el-widgets/general/pricing-block.php:62
+#: elementor/el-widgets/general/tabs-contact.php:74
+msgid "Sub Title"
+msgstr ""
+
+#: elementor/el-widgets/general/heading-block.php:52
+#: elementor/el-widgets/general/tabs-contact.php:76
+msgid "Enter your Sub Title"
+msgstr ""
+
+#: elementor/el-widgets/general/heading-block.php:63
+msgid "Add Your Heading Text Here"
+msgstr ""
+
+#: elementor/el-widgets/general/heading-block.php:73
+#: elementor/el-widgets/general/image-content.php:72
+msgid "Enter Your Description"
+msgstr ""
+
+#: elementor/el-widgets/general/heading-block.php:86
+#: elementor/el-widgets/general/icon-box-group.php:85
+#: elementor/el-widgets/general/image-content.php:46
+msgid "Style 04"
+msgstr ""
+
+#: elementor/el-widgets/general/heading-block.php:87
+#: elementor/el-widgets/general/icon-box-group.php:86
+#: elementor/el-widgets/general/image-content.php:47
+msgid "Style 05"
+msgstr ""
+
+#: elementor/el-widgets/general/heading-block.php:139
+msgid "Alignment Box"
+msgstr ""
+
+#: elementor/el-widgets/general/heading-block.php:162
+msgid "Max Width (px)"
+msgstr ""
+
+#: elementor/el-widgets/general/heading-block.php:182
+msgid "Auto Responsive"
+msgstr ""
+
+#: elementor/el-widgets/general/heading-block.php:184
+msgid "Auto Responsive size of title"
+msgstr ""
+
+#: elementor/el-widgets/general/heading-block.php:194
+msgid "Video Top"
+msgstr ""
+
+#: elementor/el-widgets/general/heading-block.php:200
+msgid "Video"
+msgstr ""
+
+#: elementor/el-widgets/general/heading-block.php:202
+msgid "Enable/Disable Video Heading"
+msgstr ""
+
+#: elementor/el-widgets/general/heading-block.php:209
+msgid "Video Youtube or Vimeo URL"
+msgstr ""
+
+#: elementor/el-widgets/general/heading-block.php:222
+#: elementor/el-widgets/general/pricing-block.php:164
+msgid "Button"
+msgstr ""
+
+#: elementor/el-widgets/general/heading-block.php:228
+#: elementor/el-widgets/general/pricing-block.php:171
+msgid "Button URL"
+msgstr ""
+
+#: elementor/el-widgets/general/heading-block.php:235
+#: elementor/el-widgets/general/pricing-block.php:179
+msgid "Button Text"
+msgstr ""
+
+#: elementor/el-widgets/general/heading-block.php:259
+msgid "Button Size"
+msgstr ""
+
+#: elementor/el-widgets/general/heading-block.php:262
+msgid "Button Size Default"
+msgstr ""
+
+#: elementor/el-widgets/general/heading-block.php:263
+msgid "Button Small"
+msgstr ""
+
+#: elementor/el-widgets/general/heading-block.php:264
+msgid "Button Medium"
+msgstr ""
+
+#: elementor/el-widgets/general/heading-block.php:272
+msgid "Button Text Color"
+msgstr ""
+
+#: elementor/el-widgets/general/heading-block.php:282
+msgid "Button Background"
+msgstr ""
+
+#: elementor/el-widgets/general/heading-block.php:292
+msgid "Button Color Hover"
+msgstr ""
+
+#: elementor/el-widgets/general/heading-block.php:302
+msgid "Button Background Hover"
+msgstr ""
+
+#: elementor/el-widgets/general/heading-block.php:314
+msgid "Video Button"
+msgstr ""
+
+#: elementor/el-widgets/general/heading-block.php:324
+#: elementor/el-widgets/general/icon-box-group.php:208
+#: elementor/el-widgets/general/icon-box-styles.php:152
+#: elementor/el-widgets/general/video-box.php:97
+msgid "Primary Color"
+msgstr ""
+
+#: elementor/el-widgets/general/heading-block.php:335
+msgid "Text Button Video Color"
+msgstr ""
+
+#: elementor/el-widgets/general/heading-block.php:345
+msgid "Video Button Size"
+msgstr ""
+
+#: elementor/el-widgets/general/heading-block.php:377
+#: elementor/el-widgets/general/icon-box-group.php:200
+msgid "Box"
+msgstr ""
+
+#: elementor/el-widgets/general/heading-block.php:384
+msgid "Heading Element Space Bottom"
+msgstr ""
+
+#: elementor/el-widgets/general/heading-block.php:426
+msgid "Title Spacing"
+msgstr ""
+
+#: elementor/el-widgets/general/heading-block.php:466
+msgid "Sub Title Icon Color"
+msgstr ""
+
+#: elementor/el-widgets/general/heading-block.php:477
+msgid "Sub Title Spacing"
+msgstr ""
+
+#: elementor/el-widgets/general/heading-block.php:534
+msgid "Description Spacing"
+msgstr ""
+
+#: elementor/el-widgets/general/icon-box-group.php:30
+msgid "Icon Box Carousel/Grid"
+msgstr ""
+
+#: elementor/el-widgets/general/icon-box-group.php:96
+#: elementor/el-widgets/general/services.php:145
+#: elementor/el-widgets/general/tabs-contact.php:118
+msgid "Choose Icon"
+msgstr ""
+
+#: elementor/el-widgets/general/icon-box-group.php:164
+#: elementor/el-widgets/general/services.php:185
+msgid "Life insurance"
+msgstr ""
+
+#: elementor/el-widgets/general/icon-box-group.php:169
+#: elementor/el-widgets/general/services.php:191
+msgid "Home insurance"
+msgstr ""
+
+#: elementor/el-widgets/general/icon-box-group.php:224
+msgid "Primary Color - Hover"
+msgstr ""
+
+#: elementor/el-widgets/general/icon-box-styles.php:27
+#: elementor/el-widgets/general/icon-box-styles.php:38
+msgid "Icon Box Style"
+msgstr ""
+
+#: elementor/el-widgets/general/icon-box-styles.php:72
+msgid "Title & Description"
+msgstr ""
+
+#: elementor/el-widgets/general/icon-box-styles.php:85
+msgid "There are many new variations of pasages of available text."
+msgstr ""
+
+#: elementor/el-widgets/general/icon-box-styles.php:128
+msgid "Button & Link"
+msgstr ""
+
+#: elementor/el-widgets/general/icon-box-styles.php:144
+#: elementor/el-widgets/general/video-box.php:89
+msgid "Box Style"
+msgstr ""
+
+#: elementor/el-widgets/general/icon-box-styles.php:163
+#: elementor/el-widgets/general/video-box.php:111
+msgid "Second Color"
+msgstr ""
+
+#: elementor/el-widgets/general/icon-box-styles.php:179
+msgid "Border Color"
+msgstr ""
+
+#: elementor/el-widgets/general/icon-box-styles.php:249
+msgid "Icon Padding"
+msgstr ""
+
+#: elementor/el-widgets/general/image-content.php:23
+msgid "Image Content"
+msgstr ""
+
+#: elementor/el-widgets/general/image-content.php:48
+msgid "Style 06"
+msgstr ""
+
+#: elementor/el-widgets/general/image-content.php:49
+msgid "Style 07"
+msgstr ""
+
+#: elementor/el-widgets/general/image-content.php:94
+msgid "Choose Image Second"
+msgstr ""
+
+#: elementor/el-widgets/general/image-content.php:109
+msgid "Choose Logo"
+msgstr ""
+
+#: elementor/el-widgets/general/image-content.php:136
+msgid "Height"
+msgstr ""
+
+#: elementor/el-widgets/general/image-content.php:191
+msgid "Text Link"
+msgstr ""
+
+#: elementor/el-widgets/general/image-content.php:193
+#: elementor/el-widgets/general/image-content.php:194
+#: elementor/views/general/icon-box-group/item.php:110
+#: elementor/views/general/services/item.php:77
+msgid "Read More"
+msgstr ""
+
+#: elementor/el-widgets/general/logo.php:23
+msgid "Logo"
+msgstr ""
+
+#: elementor/el-widgets/general/logo.php:50
+msgid "Choose Logo Image"
+msgstr ""
+
+#: elementor/el-widgets/general/logo.php:70
+#: elementor/el-widgets/general/navigation-menu.php:74
+#: elementor/el-widgets/general/search-box.php:77
+msgid "Alignment"
+msgstr ""
+
+#: elementor/el-widgets/general/logo.php:92
+msgid "Max Width"
+msgstr ""
+
+#: elementor/el-widgets/general/logo.php:110
+msgid "Logo Styling"
+msgstr ""
+
+#: elementor/el-widgets/general/logo.php:128
+msgid "Margin"
+msgstr ""
+
+#: elementor/el-widgets/general/map.php:23
+msgid "Map"
+msgstr ""
+
+#: elementor/el-widgets/general/map.php:59
+msgid "Map Type"
+msgstr ""
+
+#: elementor/el-widgets/general/map.php:62
+msgid "ROADMAP"
+msgstr ""
+
+#: elementor/el-widgets/general/map.php:63
+msgid "HYBRID"
+msgstr ""
+
+#: elementor/el-widgets/general/map.php:64
+msgid "SATELLITE"
+msgstr ""
+
+#: elementor/el-widgets/general/map.php:65
+msgid "TERRAIN"
+msgstr ""
+
+#: elementor/el-widgets/general/map.php:74
+msgid "Latitude, Longitude for map"
+msgstr ""
+
+#: elementor/el-widgets/general/map.php:76
+msgid "Latitude, Longitude"
+msgstr ""
+
+#: elementor/el-widgets/general/map.php:77
+msgid "eg: 21.0173222,105.78405279999993"
+msgstr ""
+
+#: elementor/el-widgets/general/map.php:85
+msgid "Map height"
+msgstr ""
+
+#: elementor/el-widgets/general/map.php:87
+msgid "500px"
+msgstr ""
+
+#: elementor/el-widgets/general/map.php:89
+msgid ""
+"Enter map height (in pixels or leave empty for responsive map), eg: 400px"
+msgstr ""
+
+#: elementor/el-widgets/general/navigation-menu.php:23
+msgid "Navigation Menu"
+msgstr ""
+
+#: elementor/el-widgets/general/navigation-menu.php:50
+msgid "Menu"
+msgstr ""
+
+#: elementor/el-widgets/general/navigation-menu.php:64
+#: elementor/el-widgets/general/navigation-menu.php:128
+msgid "Default"
+msgstr ""
+
+#: elementor/el-widgets/general/navigation-menu.php:65
+msgid "Style II: Background, Flex"
+msgstr ""
+
+#: elementor/el-widgets/general/navigation-menu.php:97
+msgid "Submenu Min Width (px)"
+msgstr ""
+
+#: elementor/el-widgets/general/navigation-menu.php:118
+msgid "Mobile Menu settings"
+msgstr ""
+
+#: elementor/el-widgets/general/navigation-menu.php:125
+msgid "Menu Mobile Breakpoint (px)"
+msgstr ""
+
+#: elementor/el-widgets/general/navigation-menu.php:129
+msgid "Always Menu Mobile"
+msgstr ""
+
+#: elementor/el-widgets/general/navigation-menu.php:130
+msgid "1420px"
+msgstr ""
+
+#: elementor/el-widgets/general/navigation-menu.php:131
+msgid "1380px"
+msgstr ""
+
+#: elementor/el-widgets/general/navigation-menu.php:132
+msgid "1300px"
+msgstr ""
+
+#: elementor/el-widgets/general/navigation-menu.php:133
+msgid "1250px"
+msgstr ""
+
+#: elementor/el-widgets/general/navigation-menu.php:134
+msgid "1200px"
+msgstr ""
+
+#: elementor/el-widgets/general/navigation-menu.php:135
+msgid "1150px"
+msgstr ""
+
+#: elementor/el-widgets/general/navigation-menu.php:136
+msgid "1100px"
+msgstr ""
+
+#: elementor/el-widgets/general/navigation-menu.php:137
+msgid "1080px"
+msgstr ""
+
+#: elementor/el-widgets/general/navigation-menu.php:138
+msgid "1024px"
+msgstr ""
+
+#: elementor/el-widgets/general/navigation-menu.php:139
+msgid "992px"
+msgstr ""
+
+#: elementor/el-widgets/general/navigation-menu.php:140
+msgid "768px"
+msgstr ""
+
+#: elementor/el-widgets/general/navigation-menu.php:141
+msgid "1920px"
+msgstr ""
+
+#: elementor/el-widgets/general/navigation-menu.php:153
+msgid "Socials Link"
+msgstr ""
+
+#: elementor/el-widgets/general/navigation-menu.php:159
+msgid "Facebook"
+msgstr ""
+
+#: elementor/el-widgets/general/navigation-menu.php:161
+msgid "Enter Facebook Link"
+msgstr ""
+
+#: elementor/el-widgets/general/navigation-menu.php:168
+msgid "Twitter X"
+msgstr ""
+
+#: elementor/el-widgets/general/navigation-menu.php:170
+msgid "Enter Twitter X Link"
+msgstr ""
+
+#: elementor/el-widgets/general/navigation-menu.php:177
+msgid "Linkedin"
+msgstr ""
+
+#: elementor/el-widgets/general/navigation-menu.php:179
+msgid "Enter Linkedin Link"
+msgstr ""
+
+#: elementor/el-widgets/general/navigation-menu.php:186
+msgid "pinterest"
+msgstr ""
+
+#: elementor/el-widgets/general/navigation-menu.php:188
+msgid "Enter Pinterest Link"
+msgstr ""
+
+#: elementor/el-widgets/general/navigation-menu.php:195
+msgid "Instagram"
+msgstr ""
+
+#: elementor/el-widgets/general/navigation-menu.php:197
+msgid "Enter Instagram Link"
+msgstr ""
+
+#: elementor/el-widgets/general/navigation-menu.php:204
+msgid "Youtube"
+msgstr ""
+
+#: elementor/el-widgets/general/navigation-menu.php:206
+msgid "Enter Youtube Link"
+msgstr ""
+
+#: elementor/el-widgets/general/navigation-menu.php:216
+msgid "Main Menu"
+msgstr ""
+
+#: elementor/el-widgets/general/navigation-menu.php:232
+#: elementor/el-widgets/general/navigation-menu.php:410
+msgid "Menu Item Padding"
+msgstr ""
+
+#: elementor/el-widgets/general/navigation-menu.php:248
+#: elementor/el-widgets/general/navigation-menu.php:334
+msgid "Normal"
+msgstr ""
+
+#: elementor/el-widgets/general/navigation-menu.php:277
+#: elementor/el-widgets/general/navigation-menu.php:362
+msgid "Hover"
+msgstr ""
+
+#: elementor/el-widgets/general/navigation-menu.php:323
+msgid "Sub Menu"
+msgstr ""
+
+#: elementor/el-widgets/general/navigation-menu.php:369
+msgid "Link Color"
+msgstr ""
+
+#: elementor/el-widgets/general/navigation-menu.php:425
+msgid "Mobile Menu"
+msgstr ""
+
+#: elementor/el-widgets/general/portfolio.php:23 posttypes/portfolio.php:5
+#: posttypes/portfolio.php:6
+msgid "Portfolio"
+msgstr ""
+
+#: elementor/el-widgets/general/portfolio.php:47
+#: elementor/el-widgets/general/portfolio.php:67
+#: elementor/el-widgets/plugins/events.php:44
+#: elementor/el-widgets/plugins/events.php:64
+#: elementor/el-widgets/post/all-items.php:44
+#: elementor/el-widgets/post/all-items.php:64
+#: elementor/el-widgets/product/all-products.php:45
+#: elementor/el-widgets/product/all-products.php:65
+msgid "None"
+msgstr ""
+
+#: elementor/el-widgets/general/portfolio.php:92
+#: elementor/el-widgets/plugins/events.php:89
+#: elementor/el-widgets/post/all-items.php:152
+#: elementor/el-widgets/product/all-products.php:143
+msgid "Select By Category"
+msgstr ""
+
+#: elementor/el-widgets/general/portfolio.php:103
+#: elementor/el-widgets/plugins/events.php:100
+#: elementor/el-widgets/post/all-items.php:164
+msgid "Select Individually"
+msgstr ""
+
+#: elementor/el-widgets/general/portfolio.php:115
+#: elementor/el-widgets/plugins/events.php:112
+#: elementor/el-widgets/post/all-items.php:176
+#: elementor/el-widgets/product/all-products.php:166
+msgid "Posts Per Page"
+msgstr ""
+
+#: elementor/el-widgets/general/portfolio.php:124
+#: elementor/el-widgets/plugins/events.php:121
+#: elementor/el-widgets/post/all-items.php:185
+#: elementor/el-widgets/product/all-products.php:184
+#: elementor/el-widgets/product/item-related.php:67
+msgid "Order By"
+msgstr ""
+
+#: elementor/el-widgets/general/portfolio.php:128
+#: elementor/el-widgets/plugins/events.php:125
+#: elementor/el-widgets/post/all-items.php:189
+#: elementor/el-widgets/product/all-products.php:188
+#: elementor/el-widgets/product/item-related.php:71
+msgid "Date"
+msgstr ""
+
+#: elementor/el-widgets/general/portfolio.php:130
+#: elementor/el-widgets/post/all-items.php:191
+#: elementor/el-widgets/product/item-related.php:77
+msgid "Menu Order"
+msgstr ""
+
+#: elementor/el-widgets/general/portfolio.php:131
+#: elementor/el-widgets/plugins/events.php:128
+#: elementor/el-widgets/post/all-items.php:192
+#: elementor/el-widgets/product/all-products.php:190
+#: elementor/el-widgets/product/item-related.php:76
+msgid "Random"
+msgstr ""
+
+#: elementor/el-widgets/general/portfolio.php:139
+#: elementor/el-widgets/plugins/events.php:136
+#: elementor/el-widgets/post/all-items.php:200
+#: elementor/el-widgets/product/all-products.php:198
+#: elementor/el-widgets/product/item-related.php:85
+msgid "Order"
+msgstr ""
+
+#: elementor/el-widgets/general/portfolio.php:143
+#: elementor/el-widgets/plugins/events.php:140
+#: elementor/el-widgets/post/all-items.php:204
+#: elementor/el-widgets/product/all-products.php:202
+#: elementor/el-widgets/product/item-related.php:89
+msgid "ASC"
+msgstr ""
+
+#: elementor/el-widgets/general/portfolio.php:144
+#: elementor/el-widgets/plugins/events.php:141
+#: elementor/el-widgets/post/all-items.php:205
+#: elementor/el-widgets/product/all-products.php:203
+#: elementor/el-widgets/product/item-related.php:90
+msgid "DESC"
+msgstr ""
+
+#: elementor/el-widgets/general/portfolio.php:175
+#: elementor/el-widgets/general/team.php:229
+#: elementor/el-widgets/general/testimonial.php:70
+msgid "Item Style 01"
+msgstr ""
+
+#: elementor/el-widgets/general/portfolio.php:176
+#: elementor/el-widgets/general/team.php:230
+#: elementor/el-widgets/general/testimonial.php:72
+msgid "Item Style 02"
+msgstr ""
+
+#: elementor/el-widgets/general/portfolio.php:177
+#: elementor/el-widgets/general/team.php:231
+#: elementor/el-widgets/general/testimonial.php:73
+msgid "Item Style 03"
+msgstr ""
+
+#: elementor/el-widgets/general/portfolio.php:178
+msgid "Item Style 04"
+msgstr ""
+
+#: elementor/el-widgets/general/portfolio.php:188
+#: elementor/el-widgets/post/all-items.php:127
+#: elementor/el-widgets/post/posts-archive-grid.php:71
+#: elementor/el-widgets/product/all-products.php:125
+msgid "Image Style"
+msgstr ""
+
+#: elementor/el-widgets/general/portfolio.php:197
+msgid "Isotope Filter"
+msgstr ""
+
+#: elementor/el-widgets/general/pricing-block.php:24
+msgid "Pricing Block"
+msgstr ""
+
+#: elementor/el-widgets/general/pricing-block.php:44
+msgid "Style I: Default"
+msgstr ""
+
+#: elementor/el-widgets/general/pricing-block.php:55
+msgid "Basic Plan"
+msgstr ""
+
+#: elementor/el-widgets/general/pricing-block.php:64
+#: elementor/el-widgets/general/pricing-block.php:65
+msgid "Save 45%"
+msgstr ""
+
+#: elementor/el-widgets/general/pricing-block.php:74
+msgid "Your Description"
+msgstr ""
+
+#: elementor/el-widgets/general/pricing-block.php:75
+msgid "Suitable For Any IT Solutions."
+msgstr ""
+
+#: elementor/el-widgets/general/pricing-block.php:81
+#: elementor/el-widgets/product/item-related.php:73
+msgid "Price"
+msgstr ""
+
+#: elementor/el-widgets/general/pricing-block.php:83
+#: elementor/el-widgets/general/pricing-block.php:84
+msgid "29.68"
+msgstr ""
+
+#: elementor/el-widgets/general/pricing-block.php:90
+#: elementor/el-widgets/general/pricing-block.php:92
+msgid "Currency"
+msgstr ""
+
+#: elementor/el-widgets/general/pricing-block.php:93
+msgid "$"
+msgstr ""
+
+#: elementor/el-widgets/general/pricing-block.php:99
+msgid "Period"
+msgstr ""
+
+#: elementor/el-widgets/general/pricing-block.php:101
+#: elementor/el-widgets/general/pricing-block.php:102
+msgid "Monthly"
+msgstr ""
+
+#: elementor/el-widgets/general/pricing-block.php:110
+#: elementor/el-widgets/general/pricing-block.php:119
+#: elementor/el-widgets/general/pricing-block.php:127
+msgid "Pricing Features"
+msgstr ""
+
+#: elementor/el-widgets/general/pricing-block.php:133
+msgid "Resposive Design"
+msgstr ""
+
+#: elementor/el-widgets/general/pricing-block.php:136
+msgid "Unlimited Entities"
+msgstr ""
+
+#: elementor/el-widgets/general/pricing-block.php:139
+msgid "Premium Quality Support"
+msgstr ""
+
+#: elementor/el-widgets/general/pricing-block.php:143
+msgid "Hosted In The Cloud"
+msgstr ""
+
+#: elementor/el-widgets/general/pricing-block.php:153
+msgid "Pricing Active"
+msgstr ""
+
+#: elementor/el-widgets/general/pricing-block.php:235
+msgid "Price Text"
+msgstr ""
+
+#: elementor/el-widgets/general/search-box.php:24
+msgid "Search Box"
+msgstr ""
+
+#: elementor/el-widgets/general/search-box.php:150
+msgid "Color Hover"
+msgstr ""
+
+#: elementor/el-widgets/general/search-box.php:192
+msgid "Content Width"
+msgstr ""
+
+#: elementor/el-widgets/general/services.php:24
+msgid "Services Grid/Carousel"
+msgstr ""
+
+#: elementor/el-widgets/general/services.php:84
+msgid "Last Item Special Style"
+msgstr ""
+
+#: elementor/el-widgets/general/services.php:96
+msgid "Min Height"
+msgstr ""
+
+#: elementor/el-widgets/general/services.php:173
+msgid "Service Content Item"
+msgstr ""
+
+#: elementor/el-widgets/general/services.php:219
+msgid "Image Box Size"
+msgstr ""
+
+#: elementor/el-widgets/general/services.php:239
+msgid "Button label last item"
+msgstr ""
+
+#: elementor/el-widgets/general/services.php:241
+msgid "Get a Quote"
+msgstr ""
+
+#: elementor/el-widgets/general/services.php:242
+msgid "Enter your label"
+msgstr ""
+
+#: elementor/el-widgets/general/tabs-contact.php:24
+msgid "Tabs Contact Form"
+msgstr ""
+
+#: elementor/el-widgets/general/tabs-contact.php:77
+msgid "Free quote"
+msgstr ""
+
+#: elementor/el-widgets/general/tabs-contact.php:90
+msgid "Get an insurance quote to get started"
+msgstr ""
+
+#: elementor/el-widgets/general/tabs-contact.php:110
+msgid "Contact Form"
+msgstr ""
+
+#: elementor/el-widgets/general/tabs-contact.php:125
+msgid "Contact Form Item"
+msgstr ""
+
+#: elementor/el-widgets/general/tabs-contact.php:157
+msgid "Style Tab"
+msgstr ""
+
+#: elementor/el-widgets/general/tabs-contact.php:168
+msgid "Nav Link | Padding"
+msgstr ""
+
+#: elementor/el-widgets/general/tabs-contact.php:179
+msgid "Nav Link Border Color"
+msgstr ""
+
+#: elementor/el-widgets/general/tabs-contact.php:190
+msgid "Nav Link Color"
+msgstr ""
+
+#: elementor/el-widgets/general/tabs-contact.php:201
+msgid "Nav Link Background"
+msgstr ""
+
+#: elementor/el-widgets/general/tabs-contact.php:213
+msgid "Nav Link Border Color Hover"
+msgstr ""
+
+#: elementor/el-widgets/general/tabs-contact.php:224
+msgid "Nav Link Color Hover"
+msgstr ""
+
+#: elementor/el-widgets/general/tabs-contact.php:235
+msgid "Nav Link Background Hover"
+msgstr ""
+
+#: elementor/el-widgets/general/team.php:25
+msgid "Team"
+msgstr ""
+
+#: elementor/el-widgets/general/team.php:67
+#: elementor/el-widgets/general/testimonial.php:105
+#: elementor/el-widgets/general/testimonial.php:269
+#: layout/templates/parts/footer.php:15 layout/templates/parts/header.php:14
+#: layout/templates/parts/post_archive.php:14
+#: layout/templates/parts/post_single.php:14
+#: layout/templates/parts/product_archive.php:14
+#: layout/templates/parts/product_single.php:14
+msgid "Name"
+msgstr ""
+
+#: elementor/el-widgets/general/team.php:83
+msgid "Position"
+msgstr ""
+
+#: elementor/el-widgets/general/team.php:99
+msgid "Social Link"
+msgstr ""
+
+#: elementor/el-widgets/general/team.php:106
+msgid "Facebook Link"
+msgstr ""
+
+#: elementor/el-widgets/general/team.php:114
+msgid "Twitter Link"
+msgstr ""
+
+#: elementor/el-widgets/general/team.php:121
+msgid "Instagram Link"
+msgstr ""
+
+#: elementor/el-widgets/general/team.php:128
+msgid "Pinterest Link"
+msgstr ""
+
+#: elementor/el-widgets/general/team.php:136
+msgid "Team Content Item"
+msgstr ""
+
+#: elementor/el-widgets/general/team.php:142
+#: elementor/el-widgets/general/testimonial.php:137
+msgid "Jessica Brown"
+msgstr ""
+
+#: elementor/el-widgets/general/team.php:143
+#: elementor/el-widgets/general/team.php:154
+#: elementor/el-widgets/general/team.php:165
+#: elementor/el-widgets/general/team.php:176
+#: elementor/el-widgets/general/team.php:187
+#: elementor/el-widgets/general/team.php:198
+msgid "Consultant"
+msgstr ""
+
+#: elementor/el-widgets/general/team.php:153
+msgid "Yoni Albert"
+msgstr ""
+
+#: elementor/el-widgets/general/team.php:164
+#: elementor/el-widgets/general/testimonial.php:129
+msgid "Christine Eve"
+msgstr ""
+
+#: elementor/el-widgets/general/team.php:175
+msgid "David Hardson"
+msgstr ""
+
+#: elementor/el-widgets/general/team.php:186
+msgid "Fred Andrew"
+msgstr ""
+
+#: elementor/el-widgets/general/team.php:197
+msgid "Sarah Rose"
+msgstr ""
+
+#: elementor/el-widgets/general/team.php:226
+msgid "Item Style"
+msgstr ""
+
+#: elementor/el-widgets/general/testimonial.php:24
+#: elementor/el-widgets/general/testimonial.php:46
+msgid "Testimonials"
+msgstr ""
+
+#: elementor/el-widgets/general/testimonial.php:71
+msgid "Item Style 01 White"
+msgstr ""
+
+#: elementor/el-widgets/general/testimonial.php:114
+#: elementor/el-widgets/general/testimonial.php:302
+msgid "Job"
+msgstr ""
+
+#: elementor/el-widgets/general/testimonial.php:130
+#: elementor/el-widgets/general/testimonial.php:138
+#: elementor/el-widgets/general/testimonial.php:146
+msgid "Founder & CEO"
+msgstr ""
+
+#: elementor/el-widgets/general/testimonial.php:133
+msgid "Kevin Smith"
+msgstr ""
+
+#: elementor/el-widgets/general/testimonial.php:134
+#: elementor/el-widgets/general/testimonial.php:142
+msgid "Customer"
+msgstr ""
+
+#: elementor/el-widgets/general/testimonial.php:141
+msgid "David Anderson"
+msgstr ""
+
+#: elementor/el-widgets/general/testimonial.php:145
+msgid "Susan Neill"
+msgstr ""
+
+#: elementor/el-widgets/general/testimonial.php:167
+#: layout/templates/parts/footer.php:36 layout/templates/parts/header.php:34
+#: layout/templates/parts/post_archive.php:40
+#: layout/templates/parts/post_single.php:40
+#: layout/templates/parts/product_archive.php:40
+#: layout/templates/parts/product_single.php:40
+msgid "View"
+msgstr ""
+
+#: elementor/el-widgets/general/video-box.php:23
+msgid "Video Box"
+msgstr ""
+
+#: elementor/el-widgets/general/video-box.php:43
+msgid "Enter Your Title"
+msgstr ""
+
+#: elementor/el-widgets/general/video-box.php:50
+msgid "style"
+msgstr ""
+
+#: elementor/el-widgets/general/video-box.php:77
+msgid "Link Video (Youtube/Vimeo)"
+msgstr ""
+
+#: elementor/el-widgets/plugins/cart.php:24
+msgid "GVA Cart Box"
+msgstr ""
+
+#: elementor/el-widgets/plugins/cart.php:73
+msgid "Number Color"
+msgstr ""
+
+#: elementor/el-widgets/plugins/cart.php:83
+msgid "Number Background"
+msgstr ""
+
+#: elementor/el-widgets/plugins/events.php:23
+msgid "GVA Events"
+msgstr ""
+
+#: elementor/el-widgets/plugins/events.php:127
+msgid "Event Start Date"
+msgstr ""
+
+#: elementor/el-widgets/plugins/events.php:160
+#: elementor/el-widgets/post/all-items.php:103
+msgid "List"
+msgstr ""
+
+#: elementor/el-widgets/plugins/events.php:172
+msgid "Event Item Style I"
+msgstr ""
+
+#: elementor/el-widgets/plugins/rev-slider.php:22
+msgid "GVA Revolution Slider"
+msgstr ""
+
+#: elementor/el-widgets/plugins/rev-slider.php:39
+msgid "No sliders found"
+msgstr ""
+
+#: elementor/el-widgets/plugins/rev-slider.php:51
+msgid "Choose Slider:"
+msgstr ""
+
+#: elementor/el-widgets/post/all-items.php:23
+msgid "Posts All Items"
+msgstr ""
+
+#: elementor/el-widgets/post/all-items.php:100
+msgid "Standard"
+msgstr ""
+
+#: elementor/el-widgets/post/all-items.php:104
+msgid "Post Large & List"
+msgstr ""
+
+#: elementor/el-widgets/post/all-items.php:115
+#: elementor/el-widgets/post/posts-archive-grid.php:62
+msgid "Item Post Style I"
+msgstr ""
+
+#: elementor/el-widgets/post/all-items.php:116
+#: elementor/el-widgets/post/posts-archive-grid.php:63
+msgid "Item Post Style II"
+msgstr ""
+
+#: elementor/el-widgets/post/all-items.php:117
+msgid "Item Post Style III"
+msgstr ""
+
+#: elementor/el-widgets/post/all-items.php:136
+#: elementor/el-widgets/post/posts-archive-grid.php:80
+msgid "Excerpt Words"
+msgstr ""
+
+#: elementor/el-widgets/post/all-items.php:145
+#: elementor/el-widgets/product/all-products.php:136
+msgid "Query"
+msgstr ""
+
+#: elementor/el-widgets/post/all-items.php:232
+msgid "Right List Posts Style"
+msgstr ""
+
+#: elementor/el-widgets/post/all-items.php:243
+msgid "Padding List Posts"
+msgstr ""
+
+#: elementor/el-widgets/post/all-items.php:255
+msgid "Background List Posts"
+msgstr ""
+
+#: elementor/el-widgets/post/all-items.php:267
+msgid "List Posts Title Color"
+msgstr ""
+
+#: elementor/el-widgets/post/all-items.php:287
+#: elementor/el-widgets/post/all-items.php:383
+msgid "List Posts Meta Color"
+msgstr ""
+
+#: elementor/el-widgets/post/all-items.php:313
+msgid "Padding Post Content"
+msgstr ""
+
+#: elementor/el-widgets/post/all-items.php:325
+msgid "Background Post Content"
+msgstr ""
+
+#: elementor/el-widgets/post/all-items.php:351
+#: elementor/el-widgets/product/all-products.php:241
+msgid "Color Title"
+msgstr ""
+
+#: elementor/el-widgets/post/all-items.php:363
+#: elementor/el-widgets/product/all-products.php:253
+msgid "Color Title Hover"
+msgstr ""
+
+#: elementor/el-widgets/post/all-items.php:398
+msgid "Post Description"
+msgstr ""
+
+#: elementor/el-widgets/post/posts-archive-grid.php:22
+msgid "Posts Archive"
+msgstr ""
+
+#: elementor/el-widgets/product/all-products.php:24
+msgid "All Products"
+msgstr ""
+
+#: elementor/el-widgets/product/all-products.php:114
+#: elementor/el-widgets/product/woo-archive.php:67
+msgid "Item Style I"
+msgstr ""
+
+#: elementor/el-widgets/product/all-products.php:155
+msgid "Product IDs"
+msgstr ""
+
+#: elementor/el-widgets/product/all-products.php:159
+msgid "Example: 1,2,3,4,5"
+msgstr ""
+
+#: elementor/el-widgets/product/all-products.php:175
+msgid "Show Only Featured Campaign"
+msgstr ""
+
+#: elementor/el-widgets/product/all-products.php:230
+msgid "Product Title"
+msgstr ""
+
+#: elementor/el-widgets/product/all-products.php:273
+msgid "Category Color"
+msgstr ""
+
+#: elementor/el-widgets/product/item-add-to-cart.php:24
+msgid "Product Item Add To Cart"
+msgstr ""
+
+#: elementor/el-widgets/product/item-add-to-cart.php:57
+#: elementor/el-widgets/product/item-meta.php:87
+msgid "Content Color"
+msgstr ""
+
+#: elementor/el-widgets/product/item-arrow.php:24
+msgid "Product Item Arrow"
+msgstr ""
+
+#: elementor/el-widgets/product/item-excerpt.php:24
+msgid "Product Item Excerpt"
+msgstr ""
+
+#: elementor/el-widgets/product/item-hooks.php:24
+msgid "Product Item Hooks"
+msgstr ""
+
+#: elementor/el-widgets/product/item-hooks.php:50
+msgid "Hook Name"
+msgstr ""
+
+#: elementor/el-widgets/product/item-hooks.php:53
+msgid "Select Hook Name"
+msgstr ""
+
+#: elementor/el-widgets/product/item-media.php:24
+msgid "Product Item Media"
+msgstr ""
+
+#: elementor/el-widgets/product/item-meta.php:25
+msgid "CF Item Meta"
+msgstr ""
+
+#: elementor/el-widgets/product/item-meta.php:52
+msgid "Label Style"
+msgstr ""
+
+#: elementor/el-widgets/product/item-meta.php:60
+msgid "Label Color"
+msgstr ""
+
+#: elementor/el-widgets/product/item-meta.php:79
+msgid "Content Style"
+msgstr ""
+
+#: elementor/el-widgets/product/item-price.php:25
+msgid "Product Item price"
+msgstr ""
+
+#: elementor/el-widgets/product/item-rating.php:24
+msgid "Product Item Rating"
+msgstr ""
+
+#: elementor/el-widgets/product/item-related.php:24
+msgid "Product Item Related"
+msgstr ""
+
+#: elementor/el-widgets/product/item-related.php:53
+msgid "Products Per Page"
+msgstr ""
+
+#: elementor/el-widgets/product/item-related.php:74
+msgid "Popularity"
+msgstr ""
+
+#: elementor/el-widgets/product/item-related.php:75
+msgid "Rating"
+msgstr ""
+
+#: elementor/el-widgets/product/item-related.php:98
+msgid "Heading"
+msgstr ""
+
+#: elementor/el-widgets/product/item-related.php:100
+msgid "Hide"
+msgstr ""
+
+#: elementor/el-widgets/product/item-related.php:101
+msgid "Show"
+msgstr ""
+
+#: elementor/el-widgets/product/item-social-share.php:24
+msgid "CF Item Social Share"
+msgstr ""
+
+#: elementor/el-widgets/product/item-tabs.php:24
+msgid "Product Item Tabs"
+msgstr ""
+
+#: elementor/el-widgets/product/woo-archive-image.php:26
+msgid "Project Archive Image"
+msgstr ""
+
+#: elementor/el-widgets/product/woo-archive-info.php:29
+msgid "Project Archive Info"
+msgstr ""
+
+#: elementor/el-widgets/product/woo-archive.php:29
+msgid "Products Archive"
+msgstr ""
+
+#: elementor/includes/icons.php:200
+msgid "Icons Theme"
+msgstr ""
+
+#: elementor/includes/overrides.php:45
+msgid ""
+"Accordion. Open links with Enter or Space, close with Escape, and navigate "
+"with Arrow Keys"
+msgstr ""
+
+#: elementor/includes/overrides.php:72
+msgid "Other Settings"
+msgstr ""
+
+#: elementor/includes/overrides.php:80
+msgid "Inner Width"
+msgstr ""
+
+#: elementor/includes/overrides.php:97
+msgid "Gavias Extra Settings Row for Header Builder"
+msgstr ""
+
+#: elementor/includes/overrides.php:106
+msgid "Sticky Row Settings (Use only for row in header)"
+msgstr ""
+
+#: elementor/includes/overrides.php:114
+msgid "Sticky Menu Row"
+msgstr ""
+
+#: elementor/includes/overrides.php:117 elementor/includes/overrides.php:197
+#: posttypes/megamenu.php:70
+msgid "-- None --"
+msgstr ""
+
+#: elementor/includes/overrides.php:118
+msgid "Sticky Menu"
+msgstr ""
+
+#: elementor/includes/overrides.php:122
+msgid ""
+"You can only enable sticky menu for one row, please make sure display all "
+"sticky menu for other rows"
+msgstr ""
+
+#: elementor/includes/overrides.php:129
+msgid "Sticky Background Color"
+msgstr ""
+
+#: elementor/includes/overrides.php:142
+msgid "Sticky Text Color"
+msgstr ""
+
+#: elementor/includes/overrides.php:155
+msgid "Sticky Link Menu Color"
+msgstr ""
+
+#: elementor/includes/overrides.php:168
+msgid "Sticky Link Menu Hover Color"
+msgstr ""
+
+#: elementor/includes/overrides.php:187
+msgid "Gavias Style Settings"
+msgstr ""
+
+#: elementor/includes/overrides.php:194
+msgid "Style Available"
+msgstr ""
+
+#: elementor/includes/overrides.php:211
+msgid "-- Default --"
+msgstr ""
+
+#: elementor/includes/overrides.php:212
+msgid "Background Color Theme"
+msgstr ""
+
+#: elementor/includes/overrides.php:213
+msgid "Background Color Theme Second"
+msgstr ""
+
+#: elementor/init.php:81
+msgid "Insonis Gereral"
+msgstr ""
+
+#: elementor/init.php:89
+msgid "Insonis Layout"
+msgstr ""
+
+#: elementor/init.php:96
+msgid "Insonis Post"
+msgstr ""
+
+#: elementor/init.php:103
+msgid "Insonis Give"
+msgstr ""
+
+#: elementor/init.php:110
+msgid "Insonis WooCommerce"
+msgstr ""
+
+#: elementor/views/dynamic-tags/post-breadcrumb.php:45
+msgid "Search"
+msgstr ""
+
+#: elementor/views/dynamic-tags/post-comment.php:16
+msgid "This Post Disabled Comment"
+msgstr ""
+
+#: elementor/views/dynamic-tags/post-share.php:20
+msgid "Share"
+msgstr ""
+
+#: elementor/views/dynamic-tags/post-share.php:27
+#: templates/sharebox-post.php:13
+msgid "Share This Post: "
+msgstr ""
+
+#: elementor/views/general/career-block.php:76
+msgid "Apply Now"
+msgstr ""
+
+#: elementor/views/general/portfolio/grid.php:31
+msgid "All"
+msgstr ""
+
+#: elementor/views/general/services/item.php:127
+msgid "Read more"
+msgstr ""
+
+#: elementor/views/plugins/cart.php:10
+msgid "View your shopping cart"
+msgstr ""
+
+#: elementor/views/plugins/rev-slider.php:5
+msgid "No slides found, please choose slider"
+msgstr ""
+
+#: elementor/views/post/posts-archive-grid.php:43
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: elementor/views/product/item-meta.php:17
+msgid "Product Meta"
+msgstr ""
+
+#: elementor/views/product/item-related.php:36
+msgid "No related products are available."
+msgstr ""
+
+#: layout/action.php:114 layout/action.php:152 layout/templates/layout.php:25
+msgid "Changes saved successfully"
+msgstr ""
+
+#: layout/action.php:133
+msgid "Changes Unsuccess"
+msgstr ""
+
+#: layout/action.php:189
+msgid "Can't Duplicate"
+msgstr ""
+
+#: layout/action.php:242
+msgid "Duplicate success"
+msgstr ""
+
+#: layout/action.php:270
+msgid "Can't delete when have only one item"
+msgstr ""
+
+#: layout/action.php:288
+msgid "Can't delete, some content use this template layout!"
+msgstr ""
+
+#: layout/action.php:301
+msgid "Can't Delete Template"
+msgstr ""
+
+#: layout/action.php:310
+msgid "Template deleted"
+msgstr ""
+
+#: layout/elementor.php:81
+msgid "Header Position"
+msgstr ""
+
+#: layout/elementor.php:84
+msgid "Relative"
+msgstr ""
+
+#: layout/elementor.php:85
+msgid "Absolute"
+msgstr ""
+
+#: layout/elementor.php:93
+msgid "Background Black Demo"
+msgstr ""
+
+#: layout/elementor.php:122
+msgid "Preview Content"
+msgstr ""
+
+#: layout/layout.php:17 layout/layout.php:18
+msgid "Insonis Template"
+msgstr ""
+
+#: layout/templates/parts/footer.php:7
+msgid "New Footer Layout"
+msgstr ""
+
+#: layout/templates/parts/footer.php:11
+msgid "Footer Layout"
+msgstr ""
+
+#: layout/templates/parts/footer.php:14 layout/templates/parts/header.php:13
+#: layout/templates/parts/post_archive.php:13
+#: layout/templates/parts/post_single.php:13
+#: layout/templates/parts/product_archive.php:13
+#: layout/templates/parts/product_single.php:13
+msgid "State"
+msgstr ""
+
+#: layout/templates/parts/footer.php:16 layout/templates/parts/header.php:15
+#: layout/templates/parts/post_archive.php:17
+#: layout/templates/parts/post_single.php:17
+#: layout/templates/parts/product_archive.php:17
+#: layout/templates/parts/product_single.php:17
+msgid "Actions"
+msgstr ""
+
+#: layout/templates/parts/footer.php:33 layout/templates/parts/header.php:31
+#: layout/templates/parts/post_archive.php:37
+#: layout/templates/parts/post_single.php:37
+#: layout/templates/parts/product_archive.php:37
+#: layout/templates/parts/product_single.php:37
+msgid "Edit"
+msgstr ""
+
+#: layout/templates/parts/footer.php:62 layout/templates/parts/header.php:60
+#: layout/templates/parts/post_archive.php:66
+#: layout/templates/parts/post_single.php:66
+#: layout/templates/parts/product_archive.php:66
+#: layout/templates/parts/product_single.php:66
+msgid "Duplicate"
+msgstr ""
+
+#: layout/templates/parts/footer.php:76 layout/templates/parts/header.php:72
+#: layout/templates/parts/post_archive.php:78
+#: layout/templates/parts/post_single.php:78
+#: layout/templates/parts/product_archive.php:78
+#: layout/templates/parts/product_single.php:78
+msgid "+ Add New"
+msgstr ""
+
+#: layout/templates/parts/header.php:7
+msgid "New Header Layout"
+msgstr ""
+
+#: layout/templates/parts/header.php:10
+msgid "Header Layout"
+msgstr ""
+
+#: layout/templates/parts/post_archive.php:7
+msgid "New Post Archive Template"
+msgstr ""
+
+#: layout/templates/parts/post_archive.php:10
+msgid "Post Archive Templates"
+msgstr ""
+
+#: layout/templates/parts/post_archive.php:15
+#: layout/templates/parts/post_single.php:15
+#: layout/templates/parts/product_archive.php:15
+#: layout/templates/parts/product_single.php:15
+msgid "Choose Header"
+msgstr ""
+
+#: layout/templates/parts/post_archive.php:16
+#: layout/templates/parts/post_single.php:16
+#: layout/templates/parts/product_archive.php:16
+#: layout/templates/parts/product_single.php:16
+msgid "Choose Footer"
+msgstr ""
+
+#: layout/templates/parts/post_single.php:7
+msgid "New Post Single Template"
+msgstr ""
+
+#: layout/templates/parts/post_single.php:10
+msgid "Post Single Templates"
+msgstr ""
+
+#: layout/templates/parts/product_archive.php:7
+msgid "New Product Archive Template"
+msgstr ""
+
+#: layout/templates/parts/product_archive.php:10
+msgid "Product Archive Templates"
+msgstr ""
+
+#: layout/templates/parts/product_single.php:7
+msgid "New Product Single Template"
+msgstr ""
+
+#: layout/templates/parts/product_single.php:10
+msgid "Product Single Templates"
+msgstr ""
+
+#: plugin-update/Puc/v4p9/Plugin/Ui.php:54
+msgid "View details"
+msgstr ""
+
+#: plugin-update/Puc/v4p9/Plugin/Ui.php:77
+msgid "More information about %s"
+msgstr ""
+
+#: plugin-update/Puc/v4p9/Plugin/Ui.php:128
+msgid "Check for updates"
+msgstr ""
+
+#: plugin-update/Puc/v4p9/Plugin/Ui.php:213
+msgctxt "the plugin title"
+msgid "The %s plugin is up to date."
+msgstr ""
+
+#: plugin-update/Puc/v4p9/Plugin/Ui.php:215
+msgctxt "the plugin title"
+msgid "A new version of the %s plugin is available."
+msgstr ""
+
+#: plugin-update/Puc/v4p9/Plugin/Ui.php:217
+msgctxt "the plugin title"
+msgid "Could not determine if updates are available for %s."
+msgstr ""
+
+#: plugin-update/Puc/v4p9/Plugin/Ui.php:223
+msgid "Unknown update checker status \"%s\""
+msgstr ""
+
+#: plugin-update/Puc/v4p9/Vcs/PluginUpdateChecker.php:98
+msgid "There is no changelog available."
+msgstr ""
+
+#: posttypes/megamenu.php:5 posttypes/megamenu.php:16
+msgid "Mega Menus"
+msgstr ""
+
+#: posttypes/megamenu.php:6
+msgid "Mega Menu"
+msgstr ""
+
+#: posttypes/megamenu.php:7 posttypes/megamenu.php:8
+msgid "Add Profile Mega Menu"
+msgstr ""
+
+#: posttypes/megamenu.php:9
+msgid "Edit Mega Menu"
+msgstr ""
+
+#: posttypes/megamenu.php:10
+msgid "New Profile"
+msgstr ""
+
+#: posttypes/megamenu.php:11
+msgid "View Mega Menu Profile"
+msgstr ""
+
+#: posttypes/megamenu.php:12
+msgid "Search Mega Menu Profiles"
+msgstr ""
+
+#: posttypes/megamenu.php:13
+msgid "No Mega Menu Profiles found"
+msgstr ""
+
+#: posttypes/megamenu.php:14
+msgid "No Mega Menu Profiles found in Trash"
+msgstr ""
+
+#: posttypes/megamenu.php:15
+msgid "Parent Mega Menu:"
+msgstr ""
+
+#: posttypes/portfolio.php:7 posttypes/portfolio.php:8
+msgid "Add New Portfolio"
+msgstr ""
+
+#: posttypes/portfolio.php:9
+msgid "Edit Portfolio"
+msgstr ""
+
+#: posttypes/portfolio.php:10
+msgid "New Portfolio"
+msgstr ""
+
+#: posttypes/portfolio.php:11
+msgid "View Portfolio"
+msgstr ""
+
+#: posttypes/portfolio.php:12
+msgid "Search Portfolio"
+msgstr ""
+
+#: posttypes/portfolio.php:13
+msgid "No Portfolio found"
+msgstr ""
+
+#: posttypes/portfolio.php:14
+msgid "No Portfolio found in Trash"
+msgstr ""
+
+#: posttypes/portfolio.php:15
+msgid "Parent Portfolio:"
+msgstr ""
+
+#: posttypes/portfolio.php:16
+msgid "Portfolios"
+msgstr ""
+
+#: posttypes/portfolio.php:50
+msgid "Category"
+msgstr ""
+
+#: posttypes/portfolio.php:51
+msgid "Search Category"
+msgstr ""
+
+#: posttypes/portfolio.php:52
+msgid "All Categories"
+msgstr ""
+
+#: posttypes/portfolio.php:53
+msgid "Parent Category"
+msgstr ""
+
+#: posttypes/portfolio.php:54
+msgid "Parent Category:"
+msgstr ""
+
+#: posttypes/portfolio.php:55
+msgid "Edit Category"
+msgstr ""
+
+#: posttypes/portfolio.php:56
+msgid "Update Category"
+msgstr ""
+
+#: posttypes/portfolio.php:57
+msgid "Add New Category"
+msgstr ""
+
+#: posttypes/portfolio.php:58
+msgid "New Category Name"
+msgstr ""
+
+#: posttypes/template.php:24 posttypes/template.php:25
+msgid "Template"
+msgstr ""
+
+#: posttypes/template.php:26 posttypes/template.php:27
+msgid "Add Template"
+msgstr ""
+
+#: posttypes/template.php:28
+msgid "Edit Template"
+msgstr ""
+
+#: posttypes/template.php:29
+msgid "New Template"
+msgstr ""
+
+#: posttypes/template.php:30
+msgid "View Template"
+msgstr ""
+
+#: posttypes/template.php:31
+msgid "Search Template Profiles"
+msgstr ""
+
+#: posttypes/template.php:32
+msgid "No Template Profiles found"
+msgstr ""
+
+#: posttypes/template.php:33
+msgid "No Template Profiles found in Trash"
+msgstr ""
+
+#: posttypes/template.php:34
+msgid "Parent Template:"
+msgstr ""
+
+#: posttypes/template.php:35
+msgid "Templates & Layout"
+msgstr ""
+
+#: posttypes/template.php:41
+msgid "List Template"
+msgstr ""
+
+#: redux/extensions/wbc_importer/extension_wbc_importer.php:237
+msgid "Demo Already Imported"
+msgstr ""
+
+#: redux/extensions/wbc_importer/extension_wbc_importer.php:263
+#: redux/extensions/wbc_importer/extension_wbc_importer.php:265
+msgid "Demo Importer"
+msgstr ""
+
+#: redux/extensions/wbc_importer/extension_wbc_importer.php:270
+msgid "Works best to import on a new install of WordPress"
+msgstr ""
+
+#: redux/extensions/wbc_importer/inc/importer/class-wp-import.php:107
+#: redux/extensions/wbc_importer/inc/importer/class-wp-import.php:116
+#: redux/extensions/wbc_importer/inc/importer/class-wp-import.php:167
+#: redux/extensions/wbc_importer/inc/importer/class-wp-import.php:171
+#: redux/extensions/wbc_importer/inc/importer/class-wp-import.php:180
+msgid "Sorry, there has been an error."
+msgstr ""
+
+#: redux/extensions/wbc_importer/inc/importer/class-wp-import.php:108
+msgid "The file does not exist, please try again."
+msgstr ""
+
+#: redux/extensions/wbc_importer/inc/importer/class-wp-import.php:151
+msgid "All done."
+msgstr ""
+
+#: redux/extensions/wbc_importer/inc/importer/class-wp-import.php:151
+msgid "Have fun!"
+msgstr ""
+
+#: redux/extensions/wbc_importer/inc/importer/class-wp-import.php:152
+msgid "Remember to update the passwords and roles of imported users."
+msgstr ""
+
+#: redux/extensions/wbc_importer/inc/importer/class-wp-import.php:172
+msgid ""
+"The export file could not be found at <code>%s</code>. It is likely that "
+"this was caused by a permissions problem."
+msgstr ""
+
+#: redux/extensions/wbc_importer/inc/importer/class-wp-import.php:188
+msgid ""
+"This WXR file (version %s) may not be supported by this version of the "
+"importer. Please consider updating."
+msgstr ""
+
+#: redux/extensions/wbc_importer/inc/importer/class-wp-import.php:213
+msgid ""
+"Failed to import author %s. Their posts will be attributed to the current "
+"user."
+msgstr ""
+
+#: redux/extensions/wbc_importer/inc/importer/class-wp-import.php:241
+msgid "Assign Authors"
+msgstr ""
+
+#: redux/extensions/wbc_importer/inc/importer/class-wp-import.php:242
+msgid ""
+"To make it simpler for you to edit and save the imported content, you may "
+"want to reassign the author of the imported item to an existing user of this "
+"site, such as your primary administrator account."
+msgstr ""
+
+#: redux/extensions/wbc_importer/inc/importer/class-wp-import.php:244
+msgid ""
+"If a new user is created by WordPress, a new password will be randomly "
+"generated and the new user&#8217;s role will be set as %s. Manually changing "
+"the new user&#8217;s details will be necessary."
+msgstr ""
+
+#: redux/extensions/wbc_importer/inc/importer/class-wp-import.php:254
+msgid "Import Attachments"
+msgstr ""
+
+#: redux/extensions/wbc_importer/inc/importer/class-wp-import.php:257
+msgid "Download and import file attachments"
+msgstr ""
+
+#: redux/extensions/wbc_importer/inc/importer/class-wp-import.php:261
+msgid "Submit"
+msgstr ""
+
+#: redux/extensions/wbc_importer/inc/importer/class-wp-import.php:275
+msgid "Import author:"
+msgstr ""
+
+#: redux/extensions/wbc_importer/inc/importer/class-wp-import.php:290
+msgid "or create new user with login name:"
+msgstr ""
+
+#: redux/extensions/wbc_importer/inc/importer/class-wp-import.php:293
+msgid "as a new user:"
+msgstr ""
+
+#: redux/extensions/wbc_importer/inc/importer/class-wp-import.php:303
+msgid "assign posts to an existing user:"
+msgstr ""
+
+#: redux/extensions/wbc_importer/inc/importer/class-wp-import.php:305
+msgid "or assign posts to an existing user:"
+msgstr ""
+
+#: redux/extensions/wbc_importer/inc/importer/class-wp-import.php:314
+msgid "- Select -"
+msgstr ""
+
+#: redux/extensions/wbc_importer/inc/importer/class-wp-import.php:373
+msgid ""
+"Failed to create new user for %s. Their posts will be attributed to the "
+"current user."
+msgstr ""
+
+#: redux/extensions/wbc_importer/inc/importer/class-wp-import.php:432
+msgid "Failed to import category %s"
+msgstr ""
+
+#: redux/extensions/wbc_importer/inc/importer/class-wp-import.php:483
+msgid "Failed to import post tag %s"
+msgstr ""
+
+#: redux/extensions/wbc_importer/inc/importer/class-wp-import.php:544
+#: redux/extensions/wbc_importer/inc/importer/class-wp-import.php:792
+msgid "Failed to import %1$s %2$s"
+msgstr ""
+
+#: redux/extensions/wbc_importer/inc/importer/class-wp-import.php:635
+msgid "Failed to import &#8220;%1$s&#8221;: Invalid post type %2$s"
+msgstr ""
+
+#: redux/extensions/wbc_importer/inc/importer/class-wp-import.php:676
+msgid "%1$s &#8220;%2$s&#8221; already exists."
+msgstr ""
+
+#: redux/extensions/wbc_importer/inc/importer/class-wp-import.php:753
+msgid "Failed to import %1$s &#8220;%2$s&#8221;"
+msgstr ""
+
+#: redux/extensions/wbc_importer/inc/importer/class-wp-import.php:939
+msgid "Menu item skipped due to missing menu slug"
+msgstr ""
+
+#: redux/extensions/wbc_importer/inc/importer/class-wp-import.php:946
+msgid "Menu item skipped due to invalid menu slug: %s"
+msgstr ""
+
+#: redux/extensions/wbc_importer/inc/importer/class-wp-import.php:1013
+msgid "Fetching attachments is not enabled"
+msgstr ""
+
+#: redux/extensions/wbc_importer/inc/importer/class-wp-import.php:1031
+msgid "Invalid file type"
+msgstr ""
+
+#: redux/extensions/wbc_importer/inc/importer/class-wp-import.php:1075
+msgid "Could not create temporary file."
+msgstr ""
+
+#. translators: 1: The WordPress error message. 2: The WordPress error code.
+#: redux/extensions/wbc_importer/inc/importer/class-wp-import.php:1097
+msgid "Request failed due to an error: %1$s (%2$s)"
+msgstr ""
+
+#. translators: 1: The HTTP error message. 2: The HTTP error code.
+#: redux/extensions/wbc_importer/inc/importer/class-wp-import.php:1113
+msgid "Remote server returned the following unexpected result: %1$s (%2$s)"
+msgstr ""
+
+#: redux/extensions/wbc_importer/inc/importer/class-wp-import.php:1125
+msgid "Remote server did not respond"
+msgstr ""
+
+#: redux/extensions/wbc_importer/inc/importer/class-wp-import.php:1132
+msgid "Zero size file downloaded"
+msgstr ""
+
+#: redux/extensions/wbc_importer/inc/importer/class-wp-import.php:1137
+msgid "Downloaded file has incorrect size"
+msgstr ""
+
+#: redux/extensions/wbc_importer/inc/importer/class-wp-import.php:1143
+msgid "Remote file is too large, limit is %s"
+msgstr ""
+
+#: redux/extensions/wbc_importer/inc/importer/class-wp-import.php:1175
+msgid "Sorry, this file type is not permitted for security reasons."
+msgstr ""
+
+#: redux/extensions/wbc_importer/inc/importer/class-wp-import.php:1190
+msgid "The uploaded file could not be moved"
+msgstr ""
+
+#: redux/extensions/wbc_importer/inc/importer/class-wp-import.php:1312
+msgid "Import WordPress"
+msgstr ""
+
+#: redux/extensions/wbc_importer/inc/importer/class-wp-import.php:1319
+msgid ""
+"A new version of this importer is available. Please update to version %s to "
+"ensure compatibility with newer export files."
+msgstr ""
+
+#: redux/extensions/wbc_importer/inc/importer/class-wp-import.php:1334
+msgid ""
+"Howdy! Upload your WordPress eXtended RSS (WXR) file and we&#8217;ll import "
+"the posts, pages, comments, custom fields, categories, and tags into this "
+"site."
+msgstr ""
+
+#: redux/extensions/wbc_importer/inc/importer/class-wp-import.php:1335
+msgid "Choose a WXR (.xml) file to upload, then click Upload file and import."
+msgstr ""
+
+#: redux/extensions/wbc_importer/inc/importer/parsers/class-wxr-parser-regex.php:102
+#: redux/extensions/wbc_importer/inc/importer/parsers/class-wxr-parser-simplexml.php:46
+#: redux/extensions/wbc_importer/inc/importer/parsers/class-wxr-parser-simplexml.php:52
+#: redux/extensions/wbc_importer/inc/importer/parsers/class-wxr-parser-xml.php:107
+msgid ""
+"This does not appear to be a WXR file, missing/invalid WXR version number"
+msgstr ""
+
+#: redux/extensions/wbc_importer/inc/importer/parsers/class-wxr-parser-simplexml.php:33
+#: redux/extensions/wbc_importer/inc/importer/parsers/class-wxr-parser-simplexml.php:41
+#: redux/extensions/wbc_importer/inc/importer/parsers/class-wxr-parser.php:45
+msgid "There was an error when reading this WXR file"
+msgstr ""
+
+#: redux/extensions/wbc_importer/inc/importer/parsers/class-wxr-parser.php:46
+msgid ""
+"Details are shown above. The importer will now try again with a different "
+"parser..."
+msgstr ""
+
+#: redux/extensions/wbc_importer/inc/importer/radium-importer.php:254
+msgid "Theme options Import file could not be found. Please try again."
+msgstr ""
+
+#: redux/extensions/wbc_importer/inc/importer/radium-importer.php:329
+msgid "Widget Import file could not be found. Please try again."
+msgstr ""
+
+#: redux/extensions/wbc_importer/inc/importer/radium-importer.php:403
+msgid "Sidebar does not exist in theme (using Inactive)"
+msgstr ""
+
+#: redux/extensions/wbc_importer/inc/importer/radium-importer.php:425
+msgid "Site does not support widget"
+msgstr ""
+
+#: redux/extensions/wbc_importer/inc/importer/radium-importer.php:448
+msgid "Widget already exists"
+msgstr ""
+
+#: redux/extensions/wbc_importer/inc/importer/radium-importer.php:497
+#: redux/extensions/wbc_importer/wbc_importer/field_wbc_importer.php:112
+msgid "Imported"
+msgstr ""
+
+#: redux/extensions/wbc_importer/inc/importer/radium-importer.php:500
+msgid "Imported to Inactive"
+msgstr ""
+
+#: redux/extensions/wbc_importer/inc/importer/radium-importer.php:507
+msgid "No Title"
+msgstr ""
+
+#: redux/extensions/wbc_importer/wbc_importer/field_wbc_importer.php:89
+#: redux/extensions/wbc_importer/wbc_importer/field_wbc_importer.php:110
+msgid "Import Demo"
+msgstr ""
+
+#: redux/extensions/wbc_importer/wbc_importer/field_wbc_importer.php:93
+msgid "Demo Imported"
+msgstr ""
+
+#: redux/extensions/wbc_importer/wbc_importer/field_wbc_importer.php:110
+#: redux/extensions/wbc_importer/wbc_importer/field_wbc_importer.php:113
+msgid "Please Wait..."
+msgstr ""
+
+#: redux/extensions/wbc_importer/wbc_importer/field_wbc_importer.php:114
+msgid "Re-Import"
+msgstr ""
+
+#: redux/extensions/wbc_importer/wbc_importer/field_wbc_importer.php:123
+msgid "No Demo Data Provided"
+msgstr ""
+
+#: widgets/recent_posts.php:23
+msgid "Your site&#8217;s most recent Posts."
+msgstr ""
+
+#: widgets/recent_posts.php:26
+msgid "GVA Recent Posts"
+msgstr ""
+
+#: widgets/recent_posts.php:44
+msgid "Recent Posts"
+msgstr ""
+
+#: widgets/recent_posts.php:109
+msgid "(no title)"
+msgstr ""
+
+#: widgets/recent_posts.php:127
+msgid "0 Comments"
+msgstr ""
+
+#: widgets/recent_posts.php:127
+msgid "1 Comment"
+msgstr ""
+
+#: widgets/recent_posts.php:127
+msgid "% Comments"
+msgstr ""
+
+#: widgets/recent_posts.php:172
+msgid "Title:"
+msgstr ""
+
+#: widgets/recent_posts.php:177
+msgid "Number of posts to show:"
+msgstr ""
+
+#: widgets/recent_posts.php:183
+msgid "Display post date?"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Insonis Themer"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Open Setting, Post Type, Shortcode ... for theme"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Gaviasthemes Team"
+msgstr ""

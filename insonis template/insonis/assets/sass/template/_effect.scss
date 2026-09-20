@@ -1,0 +1,291 @@
+@-webkit-keyframes spin { 
+	100% { 
+		transform:rotate(360deg); 
+	} 
+}
+@keyframes spin { 
+	100% { 
+		transform:rotate(360deg); 
+	} 
+}
+
+@-webkit-keyframes spinAround {
+  from {
+    -webkit-transform: rotate(0deg)
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spinAround {
+  from {
+    transform: rotate(0deg)
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes beat{
+	0% {
+		transform:scale(1)
+	}
+	50% {
+		transform:scale(.82)
+	}
+}
+@keyframes beat{
+	0%{
+		transform:scale(1)
+	}
+	50%{
+		transform:scale(.82)
+	}
+}
+
+
+@-webkit-keyframes placeHolderShimmer{
+  0%{
+		background-position:-468px 0
+  }
+  100%{
+		background-position:468px 0;
+  }
+}
+
+@keyframes placeHolderShimmer{
+  0%{
+		background-position:-468px 0
+  }
+  100%{
+		background-position:468px 0
+  }
+ }
+.animated-background {
+  	animation-duration: 1s;
+  	animation-fill-mode: forwards;
+  	animation-iteration-count: infinite;
+  	animation-name: placeHolderShimmer;
+  	animation-timing-function: linear;
+  	background: #f6f7f8;
+  	background: #eeeeee;
+  	background: linear-gradient(to right,  #eeeeee 8%,#dddddd 18%,#eeeeee 33%);
+  	background-size: 800px 104px;
+  	height: 96px;
+  	position: relative;
+}
+
+.background-masker {
+  	background: #fff;
+  	position: absolute;
+  	box-sizing: border-box;
+}
+
+.blur {
+	filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='3');
+	-webkit-filter: url(#blur-filter);
+	filter: url(#blur-filter);
+	filter: blur(3px);
+}
+
+.blur-svg {
+	display: none;
+} 
+
+@keyframes animation_top_bottom {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(15px);
+  }
+  100% {
+    transform: translateY(0);
+  } 
+}
+@keyframes animation_top_bottom_2 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-40px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes animation_top_bottom_2 {
+  	0% {
+    	transform: translateY(0);
+  	}
+  	50% {
+    	transform: translateY(-40px);
+  	}
+  	100% {
+    	transform: translateY(0);
+  	} 
+}
+
+@-webkit-keyframes pulse {
+   0% {
+      transform: scaleX(1)
+   }
+   50% {
+      transform: scale3d(1.05, 1.05, 1.05)
+   }
+   to {
+      transform: scaleX(1)
+   }
+}
+@keyframes pulse {
+   0% {
+      transform: scaleX(1)
+   }
+   50% {
+      transform: scale3d(1.28, 1.28, 1.28)
+   }
+   to {
+      transform: scaleX(1)
+   }
+}
+
+
+
+@keyframes pulse-border {
+    0% {
+    @include transform(scale(1));
+    opacity: 1; 
+  }
+    100% {
+    @include transform(scale(1.2));
+    opacity: 0; 
+  } 
+}
+
+@keyframes pulse-border-2 {
+    0% {
+    @include transform(scale(1));
+    opacity: 1; 
+  }
+    100% {
+    @include transform(scale(1.5));
+    opacity: 0; 
+  } 
+}
+@keyframes shapeMover {
+  	0%, 100% {
+	 	transform: perspective(400px) translateY(0) rotate(0deg) translateZ(0px) translateX(0);
+  	}
+  	50% {
+	 	transform: perspective(400px) rotate(0deg) translateZ(15px) translateY(15px) translateX(15px);
+  	}
+}
+
+@-webkit-keyframes shapeRotate {
+  	0%,
+  	100% {
+    	transform: rotate(0deg) translateX(0);
+  	}
+  	25%,
+  	75% {
+    	transform: rotate(5deg) translateX(15px);
+  	}
+  	50% {
+    	transform: rotate(10deg) translateX(30px);
+  	}
+}
+/*** Animation 1 ***/
+@-webkit-keyframes animation1 {
+  	0%,
+  	100% {
+    	transform: rotate(0deg) translateX(0);
+  	}
+  	25%,
+  	75% {
+    	transform: rotate(5deg) translateX(15px);
+  	}
+  	50% {
+    	transform: rotate(10deg) translateX(30px);
+  	}
+}
+@keyframes animation1 {
+  	0%,
+  	100% {
+    	transform: rotate(0deg) translateX(0);
+  	}
+  	25%,
+  	75% {
+    	transform: rotate(5deg) translateX(15px);
+  	}
+  	50% {
+    	transform: rotate(10deg) translateX(30px);
+  	}
+}
+
+/*** Animation 2 ***/
+@-moz-keyframes animation2{
+  	0%{
+  		transform:rotate(0deg)
+  	}
+  	100%{
+  		transform:rotate(360deg)
+  	}
+}
+@keyframes animation2{
+  	0%{
+  		transform:rotate(0deg)
+  	}
+  	100%{
+  		transform:rotate(360deg)
+  	}
+}
+
+/*** squareMover 2 ***/
+@-webkit-keyframes squareMover {
+  	0%,
+  	100% {
+     	transform: translate(0, 0) rotate(0);
+  	}
+  	20%,
+  	60% {
+    	transform: translate(20px, 40px) rotate(180deg);
+  	}
+  	30%,
+  	80% {
+    	transform: translate(40px, 60px) rotate(0deg);
+  	}
+}
+
+@keyframes squareMover {
+  	0%,
+  	100% {
+    	transform: translate(0, 0) rotate(0);
+  	}
+  	20%,
+  	60% {
+    	transform: translate(20px, 40px) rotate(180deg);
+  	}
+  	30%,
+  	80% {
+     	transform: translate(40px, 60px) rotate(0deg);
+  	}
+}
+
+.effect-spin{
+	animation: spin 5s linear infinite;
+}
+
+.animate__pulse {
+  animation: pulse 3s linear infinite;
+}
+.animate__spinAround img{
+  animation: spinAround 9s linear infinite;
+}
+.animate__beat img{
+  animation: beat 2s linear infinite;
+}
+.animate__move{
+  animation: shapeMover 2s linear infinite;
+}
+.animate__top_bottom{
+  animation: animation_top_bottom 2s linear infinite;
+}
