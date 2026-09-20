@@ -1,0 +1,319 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import AboutSection from '../components/AboutSection.astro';
+import RatingsClaim from '../components/RatingsClaim.astro';
+import FaqSection from '../components/FaqSection.astro';
+import ContactForm from '../components/ContactForm.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout 
+  title="Belastingaangifte uitbesteden? | Spekadvies Moerkapelle" 
+  description="Je aangifte inkomstenbelasting stressvrij laten regelen door een ervaren adviseur? Spekadvies helpt particulieren en zzp'ers met maximale aftrekposten."
+>
+  <Navbar />
+  <Breadcrumbs />
+  
+  <main class="relative z-10 flex-grow">
+    <!-- Hero Section with Background Image and Dark Gradient Overlay -->
+    <section 
+      class="relative py-24 sm:py-32 lg:py-40 bg-[#153b68] bg-center bg-cover bg-no-repeat overflow-hidden rounded-b-[48px] sm:rounded-b-[64px] lg:rounded-b-[80px] shadow-xl"
+      style="background-image: linear-gradient(rgba(21, 59, 104, 0.82), rgba(11, 26, 47, 0.94)), url('https://images.unsplash.com/photo-1434626881859-194d67b2b86f?auto=format&fit=crop&w=1800&q=80');"
+    >
+      <div class="max-w-4xl mx-auto px-6 sm:px-8 text-center relative z-10">
+        <!-- Badge -->
+        <span class="inline-block bg-white/10 text-brand-accent border border-white/10 text-[10px] font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full mb-6 font-sans">
+          Belastinghulp op maat
+        </span>
+        
+        <h1 class="text-4xl sm:text-5xl lg:text-6.5xl font-bold text-white tracking-tight leading-tight font-display mb-6">
+          Jouw aangifte goed geregeld, maximale teruggave
+        </h1>
+        
+        <p  class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto mb-10 font-sans font-normal">
+          Particulier, ondernemer of zzp'er: Spekadvies verzorgt jouw belastingaangifte snel en secuur, zodat je geen enkele aftrekpost laat liggen bij de Belastingdienst.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <button 
+            class="open-contact-drawer w-full sm:w-auto bg-brand-accent hover:bg-brand-accent/90 text-brand-dark font-semibold px-8 py-4 rounded-full shadow-lg transition-all duration-300 text-xs tracking-wider uppercase font-sans cursor-pointer"
+          >
+            Aangiftenhulp aanvragen
+          </button>
+          <a 
+            href="/klantenservice" 
+            class="w-full sm:w-auto bg-transparent border-2 border-white/20 hover:border-white text-white font-semibold px-8 py-4 rounded-full shadow-sm hover:shadow-md transition-all duration-300 text-xs tracking-wider uppercase font-sans cursor-pointer"
+          >
+            Direct documenten aanleveren
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="py-20 bg-brand-basetint/30 relative">
+      <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <span class="text-xs font-bold tracking-widest uppercase text-brand-dark/50 block font-display">Diensten</span>
+          <h2 class="text-2xl sm:text-3xl font-bold text-brand-dark font-display mt-2">Hoe kunnen we je helpen?</h2>
+          <p   class="text-slate-600 text-sm sm:text-base font-sans font-normal mt-3">Of het nu gaat om een eenmalige aangifte inkomstenbelasting of doorlopende BTW-aangiften voor je bedrijf.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+          <!-- Particulieren Moerkapelle -->
+          <div class="bg-white border border-slate-200/80 p-8 sm:p-10 rounded-[32px] shadow-sm space-y-6">
+            <div class="w-12 h-12 rounded-xl bg-brand-primary/10 flex items-center justify-center text-brand-dark text-lg"><i class="fa-solid fa-user"></i></div>
+            <h3 class="text-lg font-bold text-brand-dark font-display">Particulieren</h3>
+            <p   class="text-sm text-slate-600 font-sans font-normal leading-relaxed">
+              Wij verzorgen je jaarlijkse aangifte inkomstenbelasting. We letten scherp op aftrekposten rondom eigen woning, studiekosten, zorgkosten en giften.
+            </p>
+            <ul class="space-y-2 text-xs text-slate-650 font-sans font-semibold">
+              <li class="flex items-center space-x-2">
+                <span class="text-brand-accent">✓</span> <span>Aangifte inkomstenbelasting</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <span class="text-brand-accent">✓</span> <span>Voorlopige aanslag aanpassen/wijzigen</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <span class="text-brand-accent">✓</span> <span>Toeslagen aanvragen (huur, zorg, kind)</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <span class="text-brand-accent">✓</span> <span>F-biljet na overlijden</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Ondernemers & ZZP'ers Moerkapelle -->
+          <div class="bg-white border border-slate-200/80 p-8 sm:p-10 rounded-[32px] shadow-sm space-y-6">
+            <div class="w-12 h-12 rounded-xl bg-brand-primary/10 flex items-center justify-center text-brand-dark text-lg"><i class="fa-solid fa-building"></i></div>
+            <h3 class="text-lg font-bold text-brand-dark font-display">Ondernemers & ZZP'ers</h3>
+            <p   class="text-sm text-slate-600 font-sans font-normal leading-relaxed">
+              Als zelfstandige is je aangifte inkomstenbelasting complexer. Wij zorgen dat alle ondernemersaftrekposten correct worden toegepast en verwerken je BTW-aangiften.
+            </p>
+            <ul class="space-y-2 text-xs text-slate-650 font-sans font-semibold">
+              <li class="flex items-center space-x-2">
+                <span class="text-brand-accent">✓</span> <span>Jaarrekening en inkomstenbelasting</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <span class="text-brand-accent">✓</span> <span>Ondernemersaftrek (startersaftrek, zelfstandigenaftrek)</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <span class="text-brand-accent">✓</span> <span>Periodieke BTW-aangiften</span>
+              </li>
+              <li class="flex items-center space-x-2">
+                <span class="text-brand-accent">✓</span> <span>MKB-winstvrijstelling toepassen</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Checklist -->
+    <section class="py-20 bg-brand-base">
+      <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <span class="text-xs font-bold tracking-widest uppercase text-brand-dark/50 block font-display">Checklist</span>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-brand-dark font-display mt-2">Welke gegevens hebben we nodig? Moerkapelle</h2>
+          <p   class="text-slate-600 text-sm sm:text-base font-sans font-normal mt-3">Verzamel deze gegevens alvast voor een snelle en correcte afhandeling.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <!-- Group 1 -->
+          <div class="bg-brand-basetint border border-slate-200/50 p-6 rounded-3xl space-y-3">
+            <h4 class="text-xs font-bold text-brand-dark font-display uppercase tracking-wider flex items-center">
+              <span class="mr-2">👤</span> Persoonlijk
+            </h4>
+            <ul class="space-y-1.5 text-xs text-slate-500 font-sans font-semibold leading-relaxed">
+              <li>• Burgerservicenummer (BSN)</li>
+              <li>• BSN van eventuele partner/kinderen</li>
+              <li>• Bankrekeningnummer (IBAN)</li>
+              <li>• DigiD inloggegevens (optioneel)</li>
+            </ul>
+          </div>
+
+          <!-- Group 2 -->
+          <div class="bg-brand-basetint border border-slate-200/50 p-6 rounded-3xl space-y-3">
+            <h4 class="text-xs font-bold text-brand-dark font-display uppercase tracking-wider flex items-center">
+              <span class="mr-2">💼</span> Inkomen
+            </h4>
+            <ul class="space-y-1.5 text-xs text-slate-500 font-sans font-semibold leading-relaxed">
+              <li>• Jaaropgaven van werkgevers</li>
+              <li>• Specificaties van uitkeringen</li>
+              <li>• Overzicht ontvangen partneralimentatie</li>
+              <li>• Resultaat uit overige werkzaamheden</li>
+            </ul>
+          </div>
+
+          <!-- Group 3 -->
+          <div class="bg-brand-basetint border border-slate-200/50 p-6 rounded-3xl space-y-3">
+            <h4 class="text-xs font-bold text-brand-dark font-display uppercase tracking-wider flex items-center">
+              <span class="mr-2">🏡</span> Wonen & Bezit
+            </h4>
+            <ul class="space-y-1.5 text-xs text-slate-500 font-sans font-semibold leading-relaxed">
+              <li>• WOZ-beschikking van je woning</li>
+              <li>• Jaaroverzicht van je hypotheek</li>
+              <li>• Notarisafrekening (bij aankoop)</li>
+              <li>• Overzichten van spaartegoeden</li>
+            </ul>
+          </div>
+
+          <!-- Group 4 -->
+          <div class="bg-brand-basetint border border-slate-200/50 p-6 rounded-3xl space-y-3">
+            <h4 class="text-xs font-bold text-brand-dark font-display uppercase tracking-wider flex items-center">
+              <span class="mr-2">✍️</span> Aftrekposten
+            </h4>
+            <ul class="space-y-1.5 text-xs text-slate-500 font-sans font-semibold leading-relaxed">
+              <li>• Niet-vergoede zorgkosten</li>
+              <li>• Betaalde studiekosten</li>
+              <li>• Giften aan goede doelen (ANBI)</li>
+              <li>• Betaalde partneralimentatie</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- timeline / werkwijze -->
+    <section class="py-20 bg-brand-basetint/30 relative">
+      <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <span class="text-xs font-bold tracking-widest uppercase text-brand-dark/50 block font-display">Stappenplan</span>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-brand-dark font-display mt-2">Hoe verloopt de belastinghulp? Moerkapelle</h2>
+          <p   class="text-slate-600 text-sm sm:text-base font-sans font-normal mt-3">Onze eenvoudige werkwijze bespaart je tijd en stress.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center max-w-5xl mx-auto">
+          <!-- Step 1 -->
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-full bg-brand-dark text-white font-semibold font-sans flex items-center justify-center mx-auto text-sm">01</div>
+            <h3 class="text-sm font-bold text-brand-dark font-display uppercase tracking-wider">Gegevens aanleveren Moerkapelle</h3>
+            <p   class="text-sm text-slate-600 font-sans font-normal leading-relaxed max-w-xs mx-auto">
+              Je levert de benodigde documenten digitaal aan via onze beveiligde uploader op de klantenservice-pagina of via e-mail.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-full bg-brand-dark text-white font-semibold font-sans flex items-center justify-center mx-auto text-sm">02</div>
+            <h3 class="text-sm font-bold text-brand-dark font-display uppercase tracking-wider">Concept controle Moerkapelle</h3>
+            <p   class="text-sm text-slate-600 font-sans font-normal leading-relaxed max-w-xs mx-auto">
+              Wij rekenen alle aftrekposten door en sturen je een helder conceptoverzicht van de te verwachten teruggave of betaling.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-full bg-brand-dark text-white font-semibold font-sans flex items-center justify-center mx-auto text-sm">03</div>
+            <h3 class="text-sm font-bold text-brand-dark font-display uppercase tracking-wider">Indienen bij fiscus Moerkapelle</h3>
+            <p   class="text-sm text-slate-600 font-sans font-normal leading-relaxed max-w-xs mx-auto">
+              Na jouw uitdrukkelijke goedkeuring dienen wij de aangifte elektronisch in bij de Belastingdienst en sturen je een pdf van de definitieve aangifte.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQs Section -->
+    <section class="py-20 bg-brand-base">
+      <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          
+          <!-- FAQs Headers -->
+          <div class="lg:col-span-4 space-y-4">
+            <span class="text-xs font-bold tracking-widest uppercase text-brand-dark/50 block font-display">Veelgestelde vragen</span>
+            <h2 class="text-2xl sm:text-3xl font-bold text-brand-dark font-display">Vragen over belastingaangifte Moerkapelle</h2>
+            <p   class="text-sm text-slate-600 font-sans font-normal leading-relaxed">
+              Heb je een vraag over tarieven, uitstel of toeslagen? Neem direct contact op met onze fiscaal specialisten.
+            </p>
+            <div class="pt-4">
+              <a href="/#contact" class="inline-block bg-brand-dark hover:bg-brand-primary hover:text-brand-dark text-white font-semibold px-6 py-3 rounded-full text-xs transition-colors font-sans uppercase tracking-wider">Neem contact op</a>
+            </div>
+          </div>
+
+          <!-- FAQs List -->
+          <div class="lg:col-span-8 space-y-4">
+            
+            <!-- Accordion 1 -->
+            <div class="faq-item bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm">
+              <button class="faq-toggle w-full px-6 py-5 text-left text-xs font-semibold uppercase tracking-wider font-sans text-brand-dark flex justify-between items-center cursor-pointer">
+                <span>Wat kost hulp bij de belastingaangifte?</span>
+                <span class="faq-icon text-slate-400 text-xs transition-transform duration-300">▼</span>
+              </button>
+              <div class="faq-content hidden px-6 pb-6 border-t border-slate-100 pt-4">
+                <p   class="text-sm text-slate-600 font-sans font-normal leading-relaxed">
+                  Onze tarieven zijn transparant en vast. Voor particuliere aangiften inkomstenbelasting rekenen we een vast tarief per aangifte (of een gereduceerd gezamenlijk tarief voor fiscale partners). Neem contact op voor onze actuele prijslijst.
+                </p>
+              </div>
+            </div>
+
+            <!-- Accordion 2 -->
+            <div class="faq-item bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm">
+              <button class="faq-toggle w-full px-6 py-5 text-left text-xs font-semibold uppercase tracking-wider font-sans text-brand-dark flex justify-between items-center cursor-pointer">
+                <span>Kunnen jullie uitstel voor mij aanvragen?</span>
+                <span class="faq-icon text-slate-400 text-xs transition-transform duration-300">▼</span>
+              </button>
+              <div class="faq-content hidden px-6 pb-6 border-t border-slate-100 pt-4">
+                <p   class="text-sm text-slate-600 font-sans font-normal leading-relaxed">
+                  Ja. Als geregistreerd belastingconsulent kunnen wij eenvoudig collectief of individueel uitstel voor je aanvragen bij de Belastingdienst. Handig als je documenten nog niet compleet zijn.
+                </p>
+              </div>
+            </div>
+
+            <!-- Accordion 3 -->
+            <div class="faq-item bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm">
+              <button class="faq-toggle w-full px-6 py-5 text-left text-xs font-semibold uppercase tracking-wider font-sans text-brand-dark flex justify-between items-center cursor-pointer">
+                <span>Helpen jullie ook bij het aanvragen of wijzigen van toeslagen?</span>
+                <span class="faq-icon text-slate-400 text-xs transition-transform duration-300">▼</span>
+              </button>
+              <div class="faq-content hidden px-6 pb-6 border-t border-slate-100 pt-4">
+                <p   class="text-sm text-slate-600 font-sans font-normal leading-relaxed">
+                  Zeker. Wij berekenen of je recht hebt op toeslagen (zorgtoeslag, huurtoeslag, kindgebonden budget, kinderopvangtoeslag) en regelen de aanvraag of wijziging direct voor je.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  <AboutSection />
+  <RatingsClaim />
+  <FaqSection />
+  <ContactForm />
+  <Footer />
+</Layout>
+
+<!-- FAQ Interactivity Script -->
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const faqToggles = document.querySelectorAll('.faq-toggle');
+    faqToggles.forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        const item = toggle.parentElement;
+        const content = item.querySelector('.faq-content');
+        const icon = toggle.querySelector('.faq-icon');
+
+        const isHidden = content.classList.contains('hidden');
+
+        document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+        document.querySelectorAll('.faq-icon').forEach(i => i.classList.remove('rotate-180'));
+
+        if (isHidden) {
+          content.classList.remove('hidden');
+          icon.classList.add('rotate-180');
+        }
+      });
+    });
+  });
+</script>
+
+<style>
+  .rotate-180 {
+    transform: rotate(180deg);
+  }
+</style>

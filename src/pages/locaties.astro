@@ -1,0 +1,126 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import Footer from '../components/Footer.astro';
+
+// Fetch all location entries
+const locaties = await getCollection('locaties');
+---
+
+<Layout 
+  title="Onze Werkgebieden | Spekadvies Onafhankelijk Advies" 
+  description="Bekijk alle locaties en regio's waar Spekadvies actief is voor onafhankelijk hypotheekadvies, verzekeringen en belastinghulp."
+>
+  <Navbar />
+  <Breadcrumbs />
+
+  <main class="relative z-10 flex-grow">
+    <!-- Hero Section -->
+    <section 
+      class="relative py-20 sm:py-28 bg-[#153b68] bg-center bg-cover bg-no-repeat overflow-hidden rounded-b-[48px] sm:rounded-b-[64px] lg:rounded-b-[80px] shadow-xl"
+      style="background-image: linear-gradient(rgba(21, 59, 104, 0.85), rgba(11, 26, 47, 0.95)), url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1800&q=80');"
+    >
+      <div class="max-w-4xl mx-auto px-6 sm:px-8 text-center relative z-10">
+        <span class="inline-block bg-white/10 text-brand-accent border border-white/10 text-[10px] font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full mb-6 font-sans">
+          Lokaal actief
+        </span>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-tight font-display mb-6">
+          Onze locaties en regio's
+        </h1>
+        <p  class="text-slate-350 text-xs sm:text-sm font-sans font-normal max-w-xl mx-auto leading-relaxed">
+          Spekadvies biedt persoonlijk en onafhankelijk advies door heel Zuid-Holland. Vind direct jouw regio voor advies op maat bij jou in de buurt.
+        </p>
+      </div>
+    </section>
+
+    <!-- Locations Grid & Search -->
+    <section class="py-20 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        
+        <!-- Search bar -->
+        <div class="max-w-md mx-auto mb-16">
+          <div class="relative">
+            <input 
+              type="text" 
+              id="location-search" 
+              placeholder="Zoek jouw gemeente of plaats..." 
+              class="w-full bg-white border border-slate-200/80 rounded-2xl px-5 py-4 pl-12 text-sm text-brand-dark placeholder-slate-400 focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary shadow-sm font-sans font-medium transition-all"
+            />
+            <span class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-sm">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </span>
+          </div>
+        </div>
+
+        <!-- Grid -->
+        <div id="locations-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {locaties.map((l) => (
+            <div class="location-card bg-white border border-slate-200/80 rounded-[32px] p-8 shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col justify-between" data-name={l.data.name.toLowerCase()}>
+              <div class="space-y-4">
+                <div class="w-12 h-12 rounded-2xl bg-brand-basetint/30 flex items-center justify-center text-brand-dark text-lg group-hover:bg-brand-primary group-hover:text-brand-dark transition-colors">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <h3 class="text-xl font-bold text-brand-dark font-display leading-tight">{l.data.name}</h3>
+                <p   class="text-sm text-slate-600 font-sans font-normal leading-relaxed">
+                  Onafhankelijk advies voor hypotheken, verzekeringen en belastinghulp in de regio {l.data.name}.
+                </p>
+              </div>
+              <div class="pt-8">
+                <a 
+                  href={`/hypotheekadviseur-in/${l.id}`} 
+                  class="inline-flex items-center text-xs font-bold text-brand-dark hover:text-brand-accent uppercase tracking-wider font-display transition-colors gap-1"
+                >
+                  Bekijk adviseur <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <!-- No results state -->
+        <div id="no-results" class="hidden text-center py-12 space-y-4">
+          <p   class="text-slate-600 text-sm font-sans font-normal">Geen locaties gevonden voor deze zoekopdracht.</p>
+          <button class="open-contact-drawer inline-block bg-brand-dark text-white px-6 py-3 rounded-full text-xs font-semibold uppercase tracking-wider font-sans cursor-pointer hover:bg-brand-primary hover:text-brand-dark transition-colors">
+            Neem direct contact op
+          </button>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.getElementById('location-search');
+    const cards = document.querySelectorAll('.location-card');
+    const noResults = document.getElementById('no-results');
+
+    if (!searchInput || cards.length === 0) return;
+
+    searchInput.addEventListener('input', (e) => {
+      const query = e.target.value.toLowerCase().trim();
+      let hasMatches = false;
+
+      cards.forEach(card => {
+        const name = card.getAttribute('data-name') || '';
+        if (name.includes(query)) {
+          card.classList.remove('hidden');
+          hasMatches = true;
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+
+      if (hasMatches) {
+        noResults.classList.add('hidden');
+      } else {
+        noResults.classList.remove('hidden');
+      }
+    });
+  });
+</script>

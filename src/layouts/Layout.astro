@@ -1,0 +1,124 @@
+---
+import '../styles/global.css';
+import SeoHeader from '../components/SeoHeader.astro';
+import ContactDrawer from '../components/ContactDrawer.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+}
+
+const { 
+  title = "Spekadvies | Hypotheek- & Verzekeringsadviseur Moerkapelle", 
+  description = "Spekadvies helpt je met onafhankelijk advies voor hypotheken en verzekeringen in Moerkapelle, Zoetermeer, Gouda en omgeving." 
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="nl" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    
+    <!-- Automatic SEO Header (Meta tags, Open Graph, Twitter, Canonical) -->
+    <SeoHeader title={title} description={description} />
+    
+    <!-- JSON-LD LocalBusiness & FinancialService Schema for Google & AI Engines -->
+    <script type="application/ld+json" is:inline>
+      {
+        "@context": "https://schema.org",
+        "@type": "FinancialService",
+        "name": "Spekadvies",
+        "url": "https://www.spekadvies.nl",
+        "logo": "https://www.spekadvies.nl/Logo/Middel%209.svg",
+        "image": "https://www.spekadvies.nl/Logo/Middel%209.svg",
+        "description": "Onafhankelijk hypotheek- en verzekeringsadviseur gefocust op maatwerk advies voor particulieren en ondernemers.",
+        "telephone": "+31795931241",
+        "email": "info@spekadvies.nl",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Herenweg 42",
+          "addressLocality": "Moerkapelle",
+          "addressRegion": "Zuid-Holland",
+          "postalCode": "2751 DB",
+          "addressCountry": "NL"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 52.0467,
+          "longitude": 4.5772
+        },
+        "priceRange": "$$",
+        "areaServed": [
+          {
+            "@type": "AdministrativeArea",
+            "name": "Moerkapelle"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Zuidplas"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Zoetermeer"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Gouda"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Waddinxveen"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Lansingerland"
+          }
+        ],
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "09:00",
+            "closes": "18:00"
+          }
+        ]
+      }
+    </script>
+    
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Async Google Font Loader for 100/100 PageSpeed Performance (Poppins) -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    </noscript>
+
+    <!-- FontAwesome Free Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body class="text-slate-700 font-sans antialiased overflow-x-clip min-h-screen flex flex-col bg-brand-base">
+    
+    <!-- Premium background mesh overlay -->
+    <div class="fixed inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_top,_var(--color-brand-basetint)_0%,_var(--color-brand-base)_70%,_var(--color-brand-base)_100%)] z-0"></div>
+
+    <div class="relative z-10 flex flex-col min-h-screen">
+      <!-- Slot for page contents (e.g. Navbar, Main, Footer) -->
+      <slot />
+    </div>
+
+    <!-- Global sliding contact drawer -->
+    <ContactDrawer />
+  </body>
+</html>

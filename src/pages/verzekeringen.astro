@@ -1,0 +1,531 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import AboutSection from '../components/AboutSection.astro';
+import RatingsClaim from '../components/RatingsClaim.astro';
+import FaqSection from '../components/FaqSection.astro';
+import ContactForm from '../components/ContactForm.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout 
+  title="Onafhankelijk Verzekeringsadvies | Spekadvies, Zorgeloos verzekerd" 
+  description="Onafhankelijk advies voor particuliere en zakelijke verzekeringen in Moerkapelle. Wij vergelijken premies en voorwaarden voor de beste dekking."
+>
+  <Navbar />
+  <Breadcrumbs />
+  
+  <main class="relative z-10 flex-grow">
+    <!-- Hero Section with Background Image and Dark Gradient Overlay -->
+    <section 
+      class="relative py-24 sm:py-32 lg:py-40 bg-[#153b68] bg-center bg-cover bg-no-repeat overflow-hidden rounded-b-[48px] sm:rounded-b-[64px] lg:rounded-b-[80px] shadow-xl"
+      style="background-image: linear-gradient(rgba(21, 59, 104, 0.82), rgba(11, 26, 47, 0.94)), url('https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=1800&q=80');"
+    >
+      <div class="max-w-4xl mx-auto px-6 sm:px-8 text-center relative z-10">
+        <!-- Badge -->
+        <span class="inline-block bg-white/10 text-brand-accent border border-white/10 text-[10px] font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full mb-6 font-sans">
+          Verzekeringen op maat
+        </span>
+        
+        <h1 class="text-4xl sm:text-5xl lg:text-6.5xl font-bold text-white tracking-tight leading-tight font-display mb-6">
+          Zorgeloos verzekerd, onafhankelijk en persoonlijk
+        </h1>
+        
+        <p  class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto mb-10 font-sans font-normal">
+          Of het nu gaat om je auto, je woning of je bedrijf: Spekadvies vergelijkt tientallen aanbieders en regelt het goed. Wij zijn jouw adviseur die verder kijkt dan de kleine lettertjes.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <button 
+            class="open-contact-drawer w-full sm:w-auto bg-brand-accent hover:bg-brand-accent/90 text-brand-dark font-semibold px-8 py-4 rounded-full shadow-lg transition-all duration-300 text-xs tracking-wider uppercase font-sans cursor-pointer"
+          >
+            Plan gratis verzekeringscheck
+          </button>
+          <a 
+            href="/klantenservice" 
+            class="w-full sm:w-auto bg-transparent border-2 border-white/20 hover:border-white text-white font-semibold px-8 py-4 rounded-full shadow-sm hover:shadow-md transition-all duration-300 text-xs tracking-wider uppercase font-sans cursor-pointer"
+          >
+            Schade direct melden
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Dashboard Profile Section -->
+    <section class="py-16 bg-brand-basetint/30 relative">
+      <div class="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12">
+        <div class="text-center max-w-xl mx-auto mb-12">
+          <h2 class="text-2xl sm:text-3xl font-bold text-brand-dark font-display">Je verzekeringen op maat</h2>
+          <p   class="text-slate-600 text-sm sm:text-base font-sans font-normal mt-2">Kies hieronder je profiel om de bijpassende dekkingen en de antwoorden op jouw vragen te bekijken.</p>
+        </div>
+
+        <!-- Profile Toggles -->
+        <div class="flex justify-center mb-12">
+          <div class="inline-flex bg-slate-100 p-1.5 rounded-full border border-slate-200">
+            <button 
+              id="profile-btn-particulier" 
+              class="profile-tab-btn active bg-brand-dark text-white text-xs font-semibold uppercase tracking-wider font-sans px-8 py-3.5 rounded-full cursor-pointer transition-all duration-300 flex items-center space-x-2"
+              data-target="particulier"
+            >
+              <i class="fa-solid fa-user"></i> <span>Particulier</span>
+            </button>
+            <button 
+              id="profile-btn-zakelijk" 
+              class="profile-tab-btn text-slate-500 text-xs font-semibold uppercase tracking-wider font-sans px-8 py-3.5 rounded-full cursor-pointer transition-all duration-300 flex items-center space-x-2"
+              data-target="zakelijk"
+            >
+              <i class="fa-solid fa-building"></i> <span>Zakelijk</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- ================= PARTICULIER PROFILE PANEL ================= -->
+        <div id="profile-panel-particulier" class="profile-panel space-y-6">
+          
+          <!-- Category 1: Auto & Verkeer -->
+          <div class="category-item bg-white border border-slate-200/80 rounded-3xl overflow-hidden shadow-sm">
+            <button class="category-toggle w-full px-6 py-5 text-left text-brand-dark flex justify-between items-center cursor-pointer">
+              <div class="flex items-center space-x-4">
+                <div class="w-10 h-10 rounded-xl bg-brand-primary/10 flex items-center justify-center text-brand-dark text-lg"><i class="fa-solid fa-car"></i></div>
+                <div>
+                  <span class="text-[9px] font-bold text-slate-400 uppercase tracking-widest block font-display">Auto & Verkeer</span>
+                  <h3 class="text-sm font-bold font-display">Veilig op weg</h3>
+                </div>
+              </div>
+              <span class="category-icon text-slate-400 text-xs transition-transform duration-300">▼</span>
+            </button>
+            <div class="category-content hidden px-6 pb-6 border-t border-slate-100 pt-6 space-y-4">
+              <p   class="text-sm text-slate-600 font-sans font-normal leading-relaxed">
+                Of je nu dagelijks de weg op gaat of je auto alleen in het weekend gebruikt: mobiliteit moet vanzelfsprekend zijn. Wij vergelijken voor jou tientallen aanbieders op premie én voorwaarden.
+              </p>
+              <div class="space-y-2 pt-2">
+                <div class="faq-sub bg-slate-50 rounded-xl p-4 border border-slate-100">
+                  <h4 class="text-xs font-bold text-brand-dark font-display uppercase tracking-wider">WA, Beperkt Casco of Allrisk?</h4>
+                  <p  class="text-[11px] text-slate-600 font-sans mt-2 leading-relaxed">
+                    WA is wettelijk verplicht en dekt schade aan anderen. Beperkt Casco (WA+) dekt ook brand, diefstal, storm en ruitbreuk. Allrisk dekt daarnaast schade aan je eigen auto door eigen schuld. Wij adviseren je de beste dekking op basis van de leeftijd en waarde van je auto.
+                  </p>
+                </div>
+                <div class="faq-sub bg-slate-50 rounded-xl p-4 border border-slate-100">
+                  <h4 class="text-xs font-bold text-brand-dark font-display uppercase tracking-wider">Aanvullende dekkingen (Inzittenden & Pech)</h4>
+                  <p  class="text-[11px] text-slate-600 font-sans mt-2 leading-relaxed">
+                    Bescherm je passagiers met een Schadeverzekering voor Inzittenden (SVI). Ook pechhulp in binnen- en buitenland en rechtsbijstand verkeer kunnen we voordelig direct meeverzekeren.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 2: Huis & Inboedel -->
+          <div class="category-item bg-white border border-slate-200/80 rounded-3xl overflow-hidden shadow-sm">
+            <button class="category-toggle w-full px-6 py-5 text-left text-brand-dark flex justify-between items-center cursor-pointer">
+              <div class="flex items-center space-x-4">
+                <div class="w-10 h-10 rounded-xl bg-brand-primary/10 flex items-center justify-center text-brand-dark text-lg"><i class="fa-solid fa-house"></i></div>
+                <div>
+                  <span class="text-[9px] font-bold text-slate-400 uppercase tracking-widest block font-display">Huis & Inboedel</span>
+                  <h3 class="text-sm font-bold font-display">Je Woning & Bezittingen</h3>
+                </div>
+              </div>
+              <span class="category-icon text-slate-400 text-xs transition-transform duration-300">▼</span>
+            </button>
+            <div class="category-content hidden px-6 pb-6 border-t border-slate-100 pt-6 space-y-4">
+              <p   class="text-sm text-slate-600 font-sans font-normal leading-relaxed">
+                Bescherm je woning en waardevolle spullen tegen risico's zoals brand, inbraak, lekkage of storm. Wij zorgen dat de herbouwwaarde en inboedelwaarde correct zijn verzekerd.
+              </p>
+              <div class="space-y-2 pt-2">
+                <div class="faq-sub bg-slate-50 rounded-xl p-4 border border-slate-100">
+                  <h4 class="text-xs font-bold text-brand-dark font-display uppercase tracking-wider">Woonhuis- en opstalverzekering</h4>
+                  <p  class="text-[11px] text-slate-600 font-sans mt-2 leading-relaxed">
+                    Verplicht bij een hypotheek. Dekt schade aan het huis zelf, inclusief de keuken, badkamer en zonnepanelen.
+                  </p>
+                </div>
+                <div class="faq-sub bg-slate-50 rounded-xl p-4 border border-slate-100">
+                  <h4 class="text-xs font-bold text-brand-dark font-display uppercase tracking-wider">Inboedelverzekering & Spullen</h4>
+                  <p  class="text-[11px] text-slate-600 font-sans mt-2 leading-relaxed">
+                    Dekt alle losse spullen in huis. Door de inboedelwaardemeter in te vullen, profiteer je van garantie tegen onderverzekering. Kostbaarheden en sieraden kunnen extra worden meeverzekerd.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 3: Gezin & Reizen -->
+          <div class="category-item bg-white border border-slate-200/80 rounded-3xl overflow-hidden shadow-sm">
+            <button class="category-toggle w-full px-6 py-5 text-left text-brand-dark flex justify-between items-center cursor-pointer">
+              <div class="flex items-center space-x-4">
+                <div class="w-10 h-10 rounded-xl bg-brand-primary/10 flex items-center justify-center text-brand-dark text-lg"><i class="fa-solid fa-umbrella-beach"></i></div>
+                <div>
+                  <span class="text-[9px] font-bold text-slate-400 uppercase tracking-widest block font-display">Gezin & Reizen</span>
+                  <h3 class="text-sm font-bold font-display">Zekerheid onderweg en thuis</h3>
+                </div>
+              </div>
+              <span class="category-icon text-slate-400 text-xs transition-transform duration-300">▼</span>
+            </button>
+            <div class="category-content hidden px-6 pb-6 border-t border-slate-100 pt-6 space-y-4">
+              <p   class="text-sm text-slate-600 font-sans font-normal leading-relaxed">
+                Of je nu op vakantie gaat, een weekendje weg boekt of nadenkt over de financiële zorg voor je gezin: wij bieden passende polissen voor elke levensfase.
+              </p>
+              <div class="space-y-2 pt-2">
+                <div class="faq-sub bg-slate-50 rounded-xl p-4 border border-slate-100">
+                  <h4 class="text-xs font-bold text-brand-dark font-display uppercase tracking-wider">Doorlopende reis- en annuleringsverzekering</h4>
+                  <p  class="text-[11px] text-slate-600 font-sans mt-2 leading-relaxed">
+                    Vanaf 14 tot 21 reisdagen per jaar is een doorlopende verzekering voordeliger dan een kortlopende. Dekt medische kosten, bagage en repatriëring wereldwijd.
+                  </p>
+                </div>
+                <div class="faq-sub bg-slate-50 rounded-xl p-4 border border-slate-100">
+                  <h4 class="text-xs font-bold text-brand-dark font-display uppercase tracking-wider">Ongevallen & Uitvaart</h4>
+                  <p  class="text-[11px] text-slate-600 font-sans mt-2 leading-relaxed">
+                    Een ongevallenverzekering keert een bedrag uit bij blijvende invaliditeit of overlijden door een ongeval. Een uitvaartverzekering zorgt dat nabestaanden niet voor onverwachte kosten komen te staan.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 4: Recht & Aansprakelijkheid -->
+          <div class="category-item bg-white border border-slate-200/80 rounded-3xl overflow-hidden shadow-sm">
+            <button class="category-toggle w-full px-6 py-5 text-left text-brand-dark flex justify-between items-center cursor-pointer">
+              <div class="flex items-center space-x-4">
+                <div class="w-10 h-10 rounded-xl bg-brand-primary/10 flex items-center justify-center text-brand-dark text-lg"><i class="fa-solid fa-scale-balanced"></i></div>
+                <div>
+                  <span class="text-[9px] font-bold text-slate-400 uppercase tracking-widest block font-display">Recht & Aansprakelijkheid</span>
+                  <h3 class="text-sm font-bold font-display">Juridische bescherming</h3>
+                </div>
+              </div>
+              <span class="category-icon text-slate-400 text-xs transition-transform duration-300">▼</span>
+            </button>
+            <div class="category-content hidden px-6 pb-6 border-t border-slate-100 pt-6 space-y-4">
+              <p   class="text-sm text-slate-600 font-sans font-normal leading-relaxed">
+                Een ongeluk zit in een klein hoekje. Als je aansprakelijk wordt gesteld voor letsel of materiële schade aan anderen, kan de claim fors oplopen.
+              </p>
+              <div class="space-y-2 pt-2">
+                <div class="faq-sub bg-slate-50 rounded-xl p-4 border border-slate-100">
+                  <h4 class="text-xs font-bold text-brand-dark font-display uppercase tracking-wider">Aansprakelijkheidsverzekering Particulieren (AVP)</h4>
+                  <p  class="text-[11px] text-slate-600 font-sans mt-2 leading-relaxed">
+                    Niet wettelijk verplicht, maar essentieel. Dekt claims wegens schade die jij, je gezinsleden of huisdieren toebrengen aan anderen.
+                  </p>
+                </div>
+                <div class="faq-sub bg-slate-50 rounded-xl p-4 border border-slate-100">
+                  <h4 class="text-xs font-bold text-brand-dark font-display uppercase tracking-wider">Rechtsbijstandverzekering</h4>
+                  <p  class="text-[11px] text-slate-600 font-sans mt-2 leading-relaxed">
+                    Verzekert je van professionele juridische hulp en dekt proceskosten bij conflicten over werk, wonen of aankopen. Modulair op te bouwen.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ================= ZAKELIJK PROFILE PANEL ================= -->
+        <div id="profile-panel-zakelijk" class="profile-panel hidden space-y-6">
+          
+          <!-- Category 1: Bedrijfsschade & Inventaris -->
+          <div class="category-item bg-white border border-slate-200/80 rounded-3xl overflow-hidden shadow-sm">
+            <button class="category-toggle w-full px-6 py-5 text-left text-brand-dark flex justify-between items-center cursor-pointer">
+              <div class="flex items-center space-x-4">
+                <div class="w-10 h-10 rounded-xl bg-brand-primary/10 flex items-center justify-center text-brand-dark text-lg"><i class="fa-solid fa-industry"></i></div>
+                <div>
+                  <span class="text-[9px] font-bold text-slate-400 uppercase tracking-widest block font-display">Gebouw & Inventaris</span>
+                  <h3 class="text-sm font-bold font-display">Continuïteit van jouw onderneming</h3>
+                </div>
+              </div>
+              <span class="category-icon text-slate-400 text-xs transition-transform duration-300">▼</span>
+            </button>
+            <div class="category-content hidden px-6 pb-6 border-t border-slate-100 pt-6 space-y-4">
+              <p   class="text-sm text-slate-600 font-sans font-normal leading-relaxed">
+                Brand, storm of waterschade mag niet het einde van jouw onderneming betekenen. Wij verzekeren je bedrijfspand, voorraad en vaste lasten.
+              </p>
+              <div class="space-y-2 pt-2">
+                <div class="faq-sub bg-slate-50 rounded-xl p-4 border border-slate-100">
+                  <h4 class="text-xs font-bold text-brand-dark font-display uppercase tracking-wider">Gebouwen & Inventarisverzekering</h4>
+                  <p  class="text-[11px] text-slate-600 font-sans mt-2 leading-relaxed">
+                    Dekt materiële schade aan het bedrijfspand, machines, computers en goederenvoorraad tegen nieuwwaarde.
+                  </p>
+                </div>
+                <div class="faq-sub bg-slate-50 rounded-xl p-4 border border-slate-100">
+                  <h4 class="text-xs font-bold text-brand-dark font-display uppercase tracking-wider">Bedrijfsschadeverzekering</h4>
+                  <p  class="text-[11px] text-slate-600 font-sans mt-2 leading-relaxed">
+                    Cruciaal bij stilstand. Dekt de misgelopen brutowinst en vaste doorlopende kosten (zoals huur en personeel) tijdens de herstelperiode.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 2: Aansprakelijkheid -->
+          <div class="category-item bg-white border border-slate-200/80 rounded-3xl overflow-hidden shadow-sm">
+            <button class="category-toggle w-full px-6 py-5 text-left text-brand-dark flex justify-between items-center cursor-pointer">
+              <div class="flex items-center space-x-4">
+                <div class="w-10 h-10 rounded-xl bg-brand-primary/10 flex items-center justify-center text-brand-dark text-lg"><i class="fa-solid fa-building-shield"></i></div>
+                <div>
+                  <span class="text-[9px] font-bold text-slate-400 uppercase tracking-widest block font-display">Aansprakelijkheid</span>
+                  <h3 class="text-sm font-bold font-display">Bescherming van je bedrijfskapitaal</h3>
+                </div>
+              </div>
+              <span class="category-icon text-slate-400 text-xs transition-transform duration-300">▼</span>
+            </button>
+            <div class="category-content hidden px-6 pb-6 border-t border-slate-100 pt-6 space-y-4">
+              <p   class="text-sm text-slate-600 font-sans font-normal leading-relaxed">
+                Claims van klanten, opdrachtgevers of werknemers kunnen enorm oplopen. Wij beschermen je privé- en bedrijfskapitaal tegen aansprakelijkheidsrisico's.
+              </p>
+              <div class="space-y-2 pt-2">
+                <div class="faq-sub bg-slate-50 rounded-xl p-4 border border-slate-100">
+                  <h4 class="text-xs font-bold text-brand-dark font-display uppercase tracking-wider">Bedrijfsaansprakelijkheid (AVB)</h4>
+                  <p  class="text-[11px] text-slate-600 font-sans mt-2 leading-relaxed">
+                    Dekt schade (letsel- of zaakschade) die jij of je werknemers toebrengen aan anderen tijdens het uitvoeren van werkzaamheden.
+                  </p>
+                </div>
+                <div class="faq-sub bg-slate-50 rounded-xl p-4 border border-slate-100">
+                  <h4 class="text-xs font-bold text-brand-dark font-display uppercase tracking-wider">Beroepsaansprakelijkheid (BAV) & Bestuurdersaansprakelijkheid</h4>
+                  <p  class="text-[11px] text-slate-600 font-sans mt-2 leading-relaxed">
+                    Specifiek voor consultants, IT'ers of architecten: dekt zuivere vermogensschade bij opdrachtgevers door beroepsfouten. Bestuurdersaansprakelijkheid beschermt privévermogen tegen claims wegens onbehoorlijk bestuur.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 3: Inkomen & Ondernemer (AOV) -->
+          <div class="category-item bg-white border border-slate-200/80 rounded-3xl overflow-hidden shadow-sm">
+            <button class="category-toggle w-full px-6 py-5 text-left text-brand-dark flex justify-between items-center cursor-pointer">
+              <div class="flex items-center space-x-4">
+                <div class="w-10 h-10 rounded-xl bg-brand-primary/10 flex items-center justify-center text-brand-dark text-lg"><i class="fa-solid fa-user-tie"></i></div>
+                <div>
+                  <span class="text-[9px] font-bold text-slate-400 uppercase tracking-widest block font-display">Inkomen & Ziekte</span>
+                  <h3 class="text-sm font-bold font-display">Je arbeidskracht verzekerd</h3>
+                </div>
+              </div>
+              <span class="category-icon text-slate-400 text-xs transition-transform duration-300">▼</span>
+            </button>
+            <div class="category-content hidden px-6 pb-6 border-t border-slate-100 pt-6 space-y-4">
+              <p   class="text-sm text-slate-600 font-sans font-normal leading-relaxed">
+                Als zelfstandig ondernemer of zzp'er heb je geen recht op de Ziektewet. Een arbeidsongeschiktheidsverzekering (AOV) is je belangrijkste inkomensgarantie.
+              </p>
+              <div class="space-y-2 pt-2">
+                <div class="faq-sub bg-slate-50 rounded-xl p-4 border border-slate-100">
+                  <h4 class="text-xs font-bold text-brand-dark font-display uppercase tracking-wider">Arbeidsongeschiktheidsverzekering (AOV)</h4>
+                  <p  class="text-[11px] text-slate-600 font-sans mt-2 leading-relaxed">
+                    Wij vergelijken AOV-tarieven van diverse verzekeraars. Je kunt kiezen voor een volledige inkomensdekking of een lagere premie door alleen je vaste lasten te verzekeren. De premie is fiscaal aftrekbaar.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 4: Zakelijke Mobiliteit -->
+          <div class="category-item bg-white border border-slate-200/80 rounded-3xl overflow-hidden shadow-sm">
+            <button class="category-toggle w-full px-6 py-5 text-left text-brand-dark flex justify-between items-center cursor-pointer">
+              <div class="flex items-center space-x-4">
+                <div class="w-10 h-10 rounded-xl bg-brand-primary/10 flex items-center justify-center text-brand-dark text-lg"><i class="fa-solid fa-truck-fast"></i></div>
+                <div>
+                  <span class="text-[9px] font-bold text-slate-400 uppercase tracking-widest block font-display">Wagenpark & Transport</span>
+                  <h3 class="text-sm font-bold font-display">Mobiliteit voor je bedrijf</h3>
+                </div>
+              </div>
+              <span class="category-icon text-slate-400 text-xs transition-transform duration-300">▼</span>
+            </button>
+            <div class="category-content hidden px-6 pb-6 border-t border-slate-100 pt-6 space-y-4">
+              <p   class="text-sm text-slate-600 font-sans font-normal leading-relaxed">
+                Bedrijfsauto's, bestelbussen of een heel wagenpark: stilstand kost geld. Wij zorgen dat jouw logistiek vlot en soepel gedekt is.
+              </p>
+              <div class="space-y-2 pt-2">
+                <div class="faq-sub bg-slate-50 rounded-xl p-4 border border-slate-100">
+                  <h4 class="text-xs font-bold text-brand-dark font-display uppercase tracking-wider">Bedrijfsauto's & Wagenpark</h4>
+                  <p  class="text-[11px] text-slate-600 font-sans mt-2 leading-relaxed">
+                    Vanaf 5 kentekens kunnen we voertuigen collectief onderbrengen op één wagenparkpolis met aanzienlijke administratieve voordelen en scherpe collectiviteitskortingen.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- timeline -->
+    <section class="py-20 bg-brand-base">
+      <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <span class="text-xs font-bold tracking-widest uppercase text-brand-dark/50 block font-display">Onze werkwijze</span>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-brand-dark font-display mt-2">Van inventarisatie tot optimale zekerheid</h2>
+          <p   class="text-slate-600 text-sm sm:text-base font-sans font-normal mt-3">Persoonlijke en onafhankelijke service bij elke stap.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center max-w-5xl mx-auto">
+          <!-- Step 1 -->
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-full bg-brand-dark text-white font-semibold font-sans flex items-center justify-center mx-auto text-sm">01</div>
+            <h3 class="text-sm font-bold text-brand-dark font-display uppercase tracking-wider">Persoonlijke Intake</h3>
+            <p   class="text-sm text-slate-600 font-sans font-normal leading-relaxed max-w-xs mx-auto">
+              In een vrijblijvend gesprek brengen we jouw gezinssituatie, risicobereidheid en wensen helder in kaart.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-full bg-brand-dark text-white font-semibold font-sans flex items-center justify-center mx-auto text-sm">02</div>
+            <h3 class="text-sm font-bold text-brand-dark font-display uppercase tracking-wider">Onafhankelijk Advies</h3>
+            <p   class="text-sm text-slate-600 font-sans font-normal leading-relaxed max-w-xs mx-auto">
+              We vergelijken premies en kleine lettertjes van tientallen maatschappijen om het beste pakket samen te stellen.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-full bg-brand-dark text-white font-semibold font-sans flex items-center justify-center mx-auto text-sm">03</div>
+            <h3 class="text-sm font-bold text-brand-dark font-display uppercase tracking-wider">Actieve Nazorg</h3>
+            <p   class="text-sm text-slate-600 font-sans font-normal leading-relaxed max-w-xs mx-auto">
+              Wij zijn en blijven jouw aanspreekpunt. Bij schade nemen wij alle communicatie en administratie met verzekeraars uit handen.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQs Section -->
+    <section class="py-20 bg-brand-basetint/30 relative">
+      <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          
+          <!-- FAQs Headers -->
+          <div class="lg:col-span-4 space-y-4">
+            <span class="text-xs font-bold tracking-widest uppercase text-brand-dark/50 block font-display">Veelgestelde vragen</span>
+            <h2 class="text-2xl sm:text-3xl font-bold text-brand-dark font-display">Vragen over onze service</h2>
+            <p   class="text-sm text-slate-600 font-sans font-normal leading-relaxed">
+              Heb je een vraag over schademeldingen of onafhankelijk advies? Onze specialisten staan altijd voor je klaar.
+            </p>
+            <div class="pt-4">
+              <a href="/#contact" class="inline-block bg-brand-dark hover:bg-brand-primary hover:text-brand-dark text-white font-semibold px-6 py-3 rounded-full text-xs transition-colors font-sans uppercase tracking-wider">Neem contact op</a>
+            </div>
+          </div>
+
+          <!-- FAQs List -->
+          <div class="lg:col-span-8 space-y-4">
+            
+            <!-- Accordion 1 -->
+            <div class="faq-item bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm">
+              <button class="faq-toggle w-full px-6 py-5 text-left text-xs font-semibold uppercase tracking-wider font-sans text-brand-dark flex justify-between items-center cursor-pointer">
+                <span>Welke soorten verzekeringen kan ik bij jullie afsluiten?</span>
+                <span class="faq-icon text-slate-400 text-xs transition-transform duration-300">▼</span>
+              </button>
+              <div class="faq-content hidden px-6 pb-6 border-t border-slate-100 pt-4">
+                <p   class="text-sm text-slate-600 font-sans font-normal leading-relaxed">
+                  Wij bieden een compleet pakket aan particuliere én zakelijke verzekeringen. Van een simpele autoverzekering en inboedel tot complexe aansprakelijkheidsrisico's en verzuim voor ondernemers. We kijken samen welke dekking écht nodig is, zonder dubbele polissen.
+                </p>
+              </div>
+            </div>
+
+            <!-- Accordion 2 -->
+            <div class="faq-item bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm">
+              <button class="faq-toggle w-full px-6 py-5 text-left text-xs font-semibold uppercase tracking-wider font-sans text-brand-dark flex justify-between items-center cursor-pointer">
+                <span>Wat kan ik verwachten als ik schade heb?</span>
+                <span class="faq-icon text-slate-400 text-xs transition-transform duration-300">▼</span>
+              </button>
+              <div class="faq-content hidden px-6 pb-6 border-t border-slate-100 pt-4">
+                <p   class="text-sm text-slate-600 font-sans font-normal leading-relaxed">
+                  Bij schade merk je precies waarom je voor Spekadvies kiest. Je hoeft niet in de wachtrij te staan bij grote verzekeringsmaatschappijen. Je belt of mailt ons direct, en wij nemen het complete traject met de schade-experts en verzekeraars uit handen.
+                </p>
+              </div>
+            </div>
+
+            <!-- Accordion 3 -->
+            <div class="faq-item bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm">
+              <button class="faq-toggle w-full px-6 py-5 text-left text-xs font-semibold uppercase tracking-wider font-sans text-brand-dark flex justify-between items-center cursor-pointer">
+                <span>Zijn jullie daadwerkelijk 100% onafhankelijk?</span>
+                <span class="faq-icon text-slate-400 text-xs transition-transform duration-300">▼</span>
+              </button>
+              <div class="faq-content hidden px-6 pb-6 border-t border-slate-100 pt-4">
+                <p   class="text-sm text-slate-600 font-sans font-normal leading-relaxed">
+                  Absoluut. Spekadvies is niet gebonden aan een bank of maatschappij. Wij vergelijken transparant de rentes, premies en voorwaarden van meer dan 40 aanbieders en kiezen simpelweg het product dat het beste is voor jou.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  <AboutSection />
+  <RatingsClaim />
+  <FaqSection />
+  <ContactForm />
+  <Footer />
+</Layout>
+
+<!-- Profile Toggle & Category Accordion Logic -->
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    // 1. Profile Switcher (Particulier vs Zakelijk)
+    const profileBtns = document.querySelectorAll('.profile-tab-btn');
+    const profilePanels = document.querySelectorAll('.profile-panel');
+
+    profileBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        profileBtns.forEach(b => {
+          b.classList.remove('active', 'bg-brand-dark', 'text-white');
+          b.classList.add('text-slate-500');
+        });
+        profilePanels.forEach(p => p.classList.add('hidden'));
+
+        btn.classList.add('active', 'bg-brand-dark', 'text-white');
+        btn.classList.remove('text-slate-500');
+
+        const targetId = `profile-panel-${btn.getAttribute('data-target')}`;
+        document.getElementById(targetId).classList.remove('hidden');
+      });
+    });
+
+    // 2. Category Accordions Logic
+    const categoryToggles = document.querySelectorAll('.category-toggle');
+    categoryToggles.forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        const item = toggle.parentElement;
+        const content = item.querySelector('.category-content');
+        const icon = toggle.querySelector('.category-icon');
+
+        const isHidden = content.classList.contains('hidden');
+
+        // Close all other categories in the active panel
+        const activePanel = item.closest('.profile-panel');
+        activePanel.querySelectorAll('.category-content').forEach(c => c.classList.add('hidden'));
+        activePanel.querySelectorAll('.category-icon').forEach(i => i.classList.remove('rotate-180'));
+
+        if (isHidden) {
+          content.classList.remove('hidden');
+          icon.classList.add('rotate-180');
+        }
+      });
+    });
+
+    // 3. FAQs Accordions
+    const faqToggles = document.querySelectorAll('.faq-toggle');
+    faqToggles.forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        const item = toggle.parentElement;
+        const content = item.querySelector('.faq-content');
+        const icon = toggle.querySelector('.faq-icon');
+
+        const isHidden = content.classList.contains('hidden');
+
+        document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+        document.querySelectorAll('.faq-icon').forEach(i => i.classList.remove('rotate-180'));
+
+        if (isHidden) {
+          content.classList.remove('hidden');
+          icon.classList.add('rotate-180');
+        }
+      });
+    });
+  });
+</script>
+
+<style>
+  .rotate-180 {
+    transform: rotate(180deg);
+  }
+</style>

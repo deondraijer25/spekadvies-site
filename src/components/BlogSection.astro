@@ -1,0 +1,82 @@
+---
+const posts = [
+  {
+    title: "De invloed van energielabels op je maximale hypotheek in 2026",
+    category: "Hypotheken",
+    date: "24 Juni 2026",
+    desc: "Een beter energielabel betekent extra leencapaciteit. Lees hoe je tot wel €20.000,- extra kunt lenen voor een energiezuinig huis.",
+    link: "#"
+  },
+  {
+    title: "AOV-verplichting voor ZZP'ers: wat is de huidige status?",
+    category: "Verzekeringen",
+    date: "12 Juni 2026",
+    desc: "De verplichte arbeidsongeschiktheidsverzekering voor zelfstandigen komt eraan. Wat betekent dit voor jouw premie en dekking?",
+    link: "#"
+  },
+  {
+    title: "Rentestijging of daling: moet ik mijn rente nu lang vastzetten?",
+    category: "Financieel",
+    date: "02 Juni 2026",
+    desc: "De hypotheekrente schommelt. We analyseren de markt en adviseren of 10 of 20 jaar rentevast nu de slimste keuze is.",
+    link: "#"
+  }
+];
+---
+
+<section id="nieuws" class="py-20 lg:py-28 relative scroll-mt-20">
+  <div class="absolute left-1/2 bottom-0 -translate-x-1/2 w-[350px] h-[350px] rounded-full bg-brand-primary/5 blur-[120px] pointer-events-none"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="flex flex-col sm:flex-row items-end justify-between gap-6 mb-16">
+      <div class="max-w-xl space-y-4">
+        <span class="text-brand-primary text-xs font-bold tracking-widest uppercase block font-display">Actuele Kennis</span>
+        <h2 class="text-3xl sm:text-5xl font-bold text-brand-dark tracking-tight font-display">
+          Laatste Updates & Blog
+        </h2>
+      </div>
+      <div>
+        <a 
+          href="#nieuws" 
+          class="inline-block bg-brand-basetint hover:bg-slate-200 text-brand-dark border border-slate-200 font-semibold px-8 py-3.5 rounded-xl text-xs tracking-wider uppercase transition-all font-sans"
+        >
+          Bekijk Alle Artikelen
+        </a>
+      </div>
+    </div>
+
+    <!-- Blog Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {posts.map((post) => (
+        <div class="bg-white border border-slate-200/80 rounded-3xl p-8 flex flex-col justify-between hover:border-brand-primary/30 transition-all duration-300 shadow-xl group">
+          <div>
+            <!-- Meta info -->
+            <div class="flex items-center justify-between text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-6">
+              <span>{post.date}</span>
+              <span class="text-brand-primary">•</span>
+              <span>{post.category}</span>
+            </div>
+
+            <h3 class="text-lg sm:text-xl font-bold text-brand-dark mb-3 font-display group-hover:text-brand-primary transition-colors leading-snug">
+              {post.title}
+            </h3>
+            
+            <p   class="text-slate-600 text-xs sm:text-sm leading-relaxed font-sans font-normal mb-6">
+              {post.desc}
+            </p>
+          </div>
+
+          <a 
+            href={post.link} 
+            class="text-brand-primary font-bold text-xs uppercase tracking-widest flex items-center hover:text-brand-dark transition-colors pt-4 border-t border-slate-100"
+          >
+            Lees Artikel <span class="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+          </a>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

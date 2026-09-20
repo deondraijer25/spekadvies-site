@@ -1,0 +1,269 @@
+---
+---
+<div id="contact-drawer" class="fixed inset-0 z-[100] invisible pointer-events-none transition-all duration-300">
+  <!-- Backdrop -->
+  <div 
+    id="contact-drawer-backdrop" 
+    class="absolute inset-0 bg-[#0b1a2f]/60 opacity-0 transition-opacity duration-300 backdrop-blur-sm cursor-pointer z-40"
+  ></div>
+
+  <!-- Panel -->
+  <div 
+    id="contact-drawer-panel"
+    class="absolute right-0 bottom-0 w-full md:w-[480px] h-[85vh] md:h-full bg-brand-dark border-t md:border-t-0 md:border-l border-white/10 shadow-2xl p-6 sm:p-10 overflow-y-auto translate-y-full md:translate-y-0 md:translate-x-full transition-transform duration-300 rounded-t-[32px] md:rounded-t-none z-50 flex flex-col justify-between"
+  >
+    <div class="space-y-8">
+      <!-- Header -->
+      <div class="flex items-center justify-between pb-4 border-b border-white/5">
+        <div>
+          <span class="text-brand-primary text-[10px] font-bold tracking-widest uppercase block font-display">Kennismaken</span>
+          <h3 class="text-lg sm:text-xl font-bold text-white font-display mt-1">Gratis adviesgesprek</h3>
+        </div>
+        <button 
+          id="contact-drawer-close" 
+          class="w-9 h-9 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 flex items-center justify-center text-white text-lg transition-colors cursor-pointer"
+          aria-label="Sluit formulier"
+        >
+          &times;
+        </button>
+      </div>
+
+      <!-- Success State -->
+      <div id="drawer-contact-success" class="hidden text-center py-12 space-y-4">
+        <div class="w-16 h-16 rounded-full bg-brand-accent/10 border border-brand-accent/20 flex items-center justify-center text-brand-accent text-3xl mx-auto">
+          <i class="fa-solid fa-check"></i>
+        </div>
+        <h4 class="text-lg font-bold text-white font-display uppercase tracking-wider">Bedankt voor je aanvraag!</h4>
+        <p  class="text-slate-300 text-xs sm:text-sm font-sans font-normal max-w-sm mx-auto leading-relaxed">
+          We hebben je gegevens ontvangen en nemen binnen 24 uur persoonlijk contact met je op.
+        </p>
+      </div>
+
+      <div id="drawer-contact-form-wrapper">
+        <!-- Form -->
+        <form id="drawer-contact-form" class="space-y-5">
+          <div>
+            <label  for="drawer-name" class="block text-[10px] font-semibold text-slate-300 uppercase tracking-widest mb-1.5 font-sans">Volledige Naam</label>
+            <input 
+              type="text" 
+              id="drawer-name" 
+              name="name" 
+              placeholder="Bijv. Jan de Vries" 
+              class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-brand-accent transition-colors font-sans font-medium" 
+              required 
+            />
+          </div>
+
+          <div>
+            <label  for="drawer-phone" class="block text-[10px] font-semibold text-slate-300 uppercase tracking-widest mb-1.5 font-sans">Telefoonnummer</label>
+            <input 
+              type="tel" 
+              id="drawer-phone" 
+              name="phone" 
+              placeholder="Bijv. 06 - 12345678" 
+              class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-brand-accent transition-colors font-sans font-medium" 
+              required 
+            />
+          </div>
+
+          <div>
+            <label  for="drawer-email" class="block text-[10px] font-semibold text-slate-300 uppercase tracking-widest mb-1.5 font-sans">E-mailadres</label>
+            <input 
+              type="email" 
+              id="drawer-email" 
+              name="email" 
+              placeholder="naam@voorbeeld.nl" 
+              class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-brand-accent transition-colors font-sans font-medium" 
+              required 
+            />
+          </div>
+
+          <div>
+            <label  for="drawer-service-type" class="block text-[10px] font-semibold text-slate-300 uppercase tracking-widest mb-1.5 font-sans">Waarmee kunnen we helpen?</label>
+            <select 
+              id="drawer-service-type" 
+              name="service-type" 
+              class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-xs text-white focus:outline-none focus:border-brand-accent transition-colors font-sans font-medium [&_option]:text-brand-dark" 
+              required
+            >
+              <option value="hypotheken">Hypotheken</option>
+              <option value="verzekeringen">Verzekeringen</option>
+              <option value="aangifte">Aangifte</option>
+              <option value="vermogensbeheer">Vermogensbeheer</option>
+              <option value="overig">Overig</option>
+            </select>
+          </div>
+
+          <div>
+            <label  for="drawer-message" class="block text-[10px] font-semibold text-slate-300 uppercase tracking-widest mb-1.5 font-sans">Bericht of toelichting (Optioneel)</label>
+            <textarea 
+              id="drawer-message" 
+              name="message" 
+              rows="3" 
+              placeholder="Vertel ons kort wat je wensen of vragen zijn..." 
+              class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-brand-accent transition-colors font-sans font-medium resize-none" 
+            ></textarea>
+          </div>
+
+          <div class="flex items-start space-x-3 pt-2">
+            <input 
+              type="checkbox" 
+              id="drawer-privacy" 
+              name="privacy" 
+              class="mt-1 rounded border-white/15 bg-white/5 text-brand-accent focus:ring-brand-accent focus:ring-offset-brand-dark" 
+              required 
+            />
+            <label for="drawer-privacy" class="text-[10px] text-slate-400 font-sans font-semibold leading-relaxed">
+              Ik ga akkoord met de verwerking van mijn gegevens conform het privacybeleid.
+            </label>
+          </div>
+
+          <div class="pt-2">
+            <button 
+              type="submit" 
+              class="w-full bg-brand-accent hover:bg-brand-accent/90 text-brand-dark font-semibold py-4 rounded-full text-xs tracking-wider uppercase font-sans transition-colors cursor-pointer shadow-lg shadow-brand-accent/10"
+            >
+              Verzend Aanvraag
+            </button>
+          </div>
+        </form>
+        <div id="drawer-contact-error" class="hidden mt-4 text-[10px] font-bold text-red-400 font-sans text-center"></div>
+      </div>
+    </div>
+
+    <!-- Footer Trust Info -->
+    <div class="pt-6 mt-6 border-t border-white/5 flex items-center justify-between text-[9px] text-brand-primary font-semibold uppercase tracking-wider font-sans">
+      <span>✓ KVK: 12345678</span>
+      <span>✓ AFM Geregistreerd</span>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const drawer = document.getElementById('contact-drawer');
+    const backdrop = document.getElementById('contact-drawer-backdrop');
+    const closeBtn = document.getElementById('contact-drawer-close');
+    const panel = document.getElementById('contact-drawer-panel');
+    const form = document.getElementById('drawer-contact-form');
+    const wrapper = document.getElementById('drawer-contact-form-wrapper');
+    const successDiv = document.getElementById('drawer-contact-success');
+    const errorDiv = document.getElementById('drawer-contact-error');
+    
+    // Select all triggers globally
+    const updateTriggers = () => {
+      const triggers = document.querySelectorAll('.open-contact-drawer');
+      triggers.forEach(trigger => {
+        trigger.removeEventListener('click', openDrawer);
+        trigger.addEventListener('click', openDrawer);
+      });
+    };
+
+    function openDrawer(e) {
+      if (e) e.preventDefault();
+      if (!drawer || !backdrop || !panel) return;
+
+      drawer.classList.remove('invisible', 'pointer-events-none');
+      drawer.classList.add('pointer-events-auto');
+      backdrop.classList.add('opacity-100');
+      
+      // Slide panel in
+      panel.classList.remove('translate-y-full', 'md:translate-x-full');
+      panel.classList.add('translate-y-0', 'md:translate-x-0');
+      document.body.classList.add('overflow-hidden');
+    }
+
+    function closeDrawer() {
+      if (!drawer || !backdrop || !panel) return;
+
+      backdrop.classList.remove('opacity-100');
+      
+      // Slide panel out
+      panel.classList.remove('translate-y-0', 'md:translate-x-0');
+      panel.classList.add('translate-y-full', 'md:translate-x-full');
+      document.body.classList.remove('overflow-hidden');
+      
+      setTimeout(() => {
+        drawer.classList.add('invisible', 'pointer-events-none');
+        drawer.classList.remove('pointer-events-auto');
+        // Reset form state after closure animation
+        if (form && wrapper && successDiv) {
+          form.reset();
+          wrapper.classList.remove('hidden');
+          successDiv.classList.add('hidden');
+        }
+        if (errorDiv) {
+          errorDiv.classList.add('hidden');
+          errorDiv.textContent = '';
+        }
+      }, 300);
+    }
+
+    if (backdrop) backdrop.addEventListener('click', closeDrawer);
+    if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
+
+    // Form submit logic
+    if (form && wrapper && successDiv) {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const submitBtn = form.querySelector('button[type="submit"]');
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.textContent = 'Verzenden...';
+        }
+        if (errorDiv) {
+          errorDiv.classList.add('hidden');
+          errorDiv.textContent = '';
+        }
+
+        const formData = new FormData(form);
+        const data = {
+          name: formData.get('name'),
+          phone: formData.get('phone'),
+          email: formData.get('email'),
+          'service-type': formData.get('service-type'),
+          message: formData.get('message')
+        };
+
+        try {
+          const response = await fetch('/api/contact', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+          });
+
+          const result = await response.json();
+
+          if (response.ok && result.success) {
+            wrapper.classList.add('hidden');
+            successDiv.classList.remove('hidden');
+            // Auto close drawer after a few seconds
+            setTimeout(closeDrawer, 3500);
+          } else {
+            throw new Error(result.error || 'Er ging iets fout bij het verzenden.');
+          }
+        } catch (err) {
+          console.error('Submit drawer error:', err);
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Verzend Aanvraag';
+          }
+          if (errorDiv) {
+            errorDiv.classList.remove('hidden');
+            errorDiv.textContent = err.message || 'Kon formulier niet verzenden. Probeer het later opnieuw.';
+          }
+        }
+      });
+    }
+
+    // Initial binding
+    updateTriggers();
+
+    // Re-bind triggers when DOM changes (for dynamic content / hydration)
+    const observer = new MutationObserver(updateTriggers);
+    observer.observe(document.body, { childList: true, subtree: true });
+  });
+</script>

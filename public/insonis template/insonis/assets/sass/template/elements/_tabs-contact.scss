@@ -1,0 +1,474 @@
+.tabs-contact-one{
+   &__nav{
+      margin-bottom: 10px;
+   }
+   &__nav-link{
+      margin-right: 10px;
+      margin-bottom: 10px;
+      padding: 8px 20px!important;
+      border: 1px solid $border-color;
+      font-size: 14px;
+      font-weight: 700;
+      color: $body-color;
+      display: inline-block;
+      border-radius: 8px;
+      background: $bg-gray;
+      @media(max-width: 1024px){
+         padding: 6px 15px!important;
+      }
+      i{
+         margin-right: 6px;
+         position: relative;
+         top: 2px;
+      }
+      &:hover, &.active{
+         background: $theme-color;
+         border-color: $theme-color;
+         color: $white;
+      }
+   }
+}
+
+
+// Tab Contact Two
+.tabs-contact-two{
+   &__single{
+      max-width: 1680px;
+      padding: 0 15px;
+      margin: 0 auto;
+   }
+   &__wrapper{
+      display: flex;
+      align-items: end;
+   }
+   &__forms{
+      flex: 0 0 60%;
+      width: 60%;
+      padding: 80px 0 125px;
+      padding-left: calc( (100% - 1170px) / 2 );
+      @media(max-width: 1200px){
+         flex: 0 0 65%;
+         width: 65%;
+      }
+      @media(max-width: 1024px){
+         padding: 70px 0 90px;
+      }
+      @media(max-width: 900px){
+         flex: 0 0 80%;
+         width: 80%;
+      }
+      @media(max-width: 500px){
+         flex: 0 0 100%;
+         width: 100%;
+         padding: 70px 0 80px;
+      }
+   }
+   &__forms-inner{
+      display: flex;
+      align-items: start;
+      flex-wrap: wrap;
+   }
+   &__heading{
+      margin-bottom: 36px;
+      max-width: 480px;
+   }
+   &__image{
+      flex: 0 0 40%;
+      width: 40%;
+      align-items: end;
+      position: relative;
+      z-index: 11;
+      @media(max-width: 1200px){
+         flex: 0 0 35%;
+         width: 35%;
+      }
+      @media(max-width: 900px){
+         flex: 0 0 20%;
+         width: 20%;
+      }
+      @media(max-width: 500px){
+         display: none;
+      }
+   }  
+   &__image-inner{
+      padding-top: 20px;
+      width: calc(100% + 60px);
+      margin-left: -60px;
+   }
+   &__nav{
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+      flex: 0 0 230px;
+      width: 230px;
+      display: block;
+      padding-right: 30px;
+      @media(max-width: 1100px){
+         padding-right: 10px;
+         flex: 0 0 180px;
+         width: 180px;
+      }
+      @media(max-width: 620px){
+         padding-right: 0;
+         flex: 0 0 100%;
+         width: 100%;
+         display: flex;
+         flex-wrap: wrap;
+         margin-left: -5px;
+         margin-right: -5px;
+      }
+   }
+   &__nav-item{
+      width: 100%;
+      @media(max-width: 620px){
+         padding: 0 5px;
+         flex: 0 0 50%;
+         width: 50%;
+      }
+   }
+   &__nav-link{
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 12px 25px!important;
+      font-size: 14px;
+      font-weight: 700;
+      background: $theme-color-2;
+      color: $white;
+      display: block;
+      position: relative;
+      z-index: 1;
+      @media(max-width: 1100px){
+         padding: 12px 15px!important;
+      }
+      @media(max-width: 992px){
+         padding: 12px 15px!important;
+      }
+      &:after{
+         content: '';
+         width: 0;
+         height: 100%;
+         position: absolute;
+         top: 0;
+         left: 0;
+         background: linear-gradient( 90deg, $theme-color-2 0%, $theme-color 100%);
+         z-index: -1;
+         transition: all 0.5s;
+      }
+      i, svg{
+         margin-right: 6px;
+      }
+      &:hover, &.active{
+         color: $white;
+         &:after{
+            width: 100%;
+         }
+      }
+   }
+   &__content{
+      padding: 50px 50px 30px;
+      flex: 0 0 calc(100% - 230px);
+      width: calc(100% - 230px);
+      background: $white;
+      @media(max-width: 1100px){
+         flex: 0 0 calc(100% - 180px);
+         width: calc(100% - 180px);
+         padding: 30px 20px 30px;
+      }
+      @media(max-width: 620px){
+         flex: 0 0 100%;
+         width: 100%;
+      }
+      input[type*="email"], input[type*="text"], input[type*="tel"], textarea, select{
+         background: $bg-input-gray!important;
+         color: $body-color;
+      }
+      .irs .irs-line{
+         background: $bg-gray!important;
+      }
+   }
+}
+
+// Tab Contact Three
+.tabs-contact-three{
+   max-width: 1680px;
+   padding: 0 15px;
+   margin: 0 auto;
+   &__wrap{
+      display: flex;
+      align-items: end;
+      @media(max-width: 900px){
+      	align-items: start;
+      }
+   }
+   &__forms{
+      flex: 0 0 50%;
+      width: 50%;
+      padding-top: 80px;
+      padding-bottom: 110px;
+      padding-left: calc( (100% - 1170px) / 2 );
+      padding-right: 20px;
+      @media(max-width: 1200px){
+         flex: 0 0 50%;
+         width: 50%;
+         padding-top: 70px;
+         padding-bottom: 80px;
+      }
+      @media(max-width: 1024px){
+      	padding-top: 50px;
+         padding-bottom: 60px;
+      }
+     
+      @media(max-width: 700px){
+         flex: 0 0 100%;
+         width: 100%;
+         padding-top: 70px;
+         padding-bottom: 80px;
+         padding-right: 0;
+      }
+   }
+   &__heading{
+      margin-bottom: 36px;
+      max-width: 480px;
+   }
+   &__image{
+   	flex: 0 0 50%;
+      width: 50%;
+      align-items: end;
+      z-index: 11;
+      height: 900px;
+      max-width: 755px;
+      position: relative;
+      margin-top: -75px;
+      @media(max-width: 1200px){
+      	flex: 0 0 50%;
+         width: 50%;
+      	height: 800px;
+      }
+      @media(max-width: 1024px){
+      	height: 700px;
+      }
+      @media(max-width: 900px){
+      	height: 600px;
+      	margin-top: 45px;
+      }
+      @media(max-width: 700px){
+         display: none;
+      }
+      &:after{
+      	content: '';
+	      background: url('#{$image-theme-path-base}bg-contact-1.png');
+	      background-size: 100% 100%;
+	      background-position: center center;
+	      background-repeat: no-repeat;
+	     	position: absolute;
+	     	width: 100%;
+	     	height: 100%;
+	     	top: 0;
+	     	left: 0;
+	      z-index: 9;
+      }
+      &:before{
+   		content: '';
+			width: 350px;
+			height: 350px;
+			background: $theme-color;
+			filter: blur(125px);
+			opacity: 0.5;
+			position: absolute;
+			top: -80px;
+			left: 50%;
+			margin-left: -175px;
+			z-index: -1;
+   	}
+   } 
+   &__arrow{
+   	width: 205px;
+ 		height: 135px;
+ 		position: absolute;
+ 		bottom: 30px;
+ 		left: -60px;
+   	background: url('#{$image-theme-path-base}arrow-plane-2.png');
+   	background-position: center center;
+ 		animation: animation_top_bottom 3s linear 0s infinite;
+ 		transform: rotate(90deg);
+ 		@media(max-width: 1024px){
+ 			width: 150px;
+ 			height: 100px;
+ 			bottom: 0;
+ 			left: 30px;
+ 		}
+   }
+   &__image-inner{
+      position: absolute;
+		top: 50px;
+		left: 50px;
+		right: 50px;
+		bottom: 80px;  
+		width: auto;
+		height: auto;  
+      mask-image: url('#{$image-theme-path-base}contact-mask-1.png');
+   	mask-size: cover;
+   	mask-repeat: no-repeat; 
+   	mask-position: center center;
+   	@media(max-width: 900px){
+   		bottom: 50px;
+   	}
+      img{
+      	object-fit: cover;
+      	width: 100%;
+      	height: 100%;
+      	position: relative;
+      	top: 50%;
+      	left: 50%;
+      	transform: translateX(-50%) translateY(-50%);
+      	z-index: 1;
+      }
+   }
+   &__nav{
+      margin-bottom: 10px;
+      display: block;
+      padding-right: 30px;
+      display: flex;
+      gap: 10px;
+   }
+   &__nav-link{
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 6px 18px!important;
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      background: $white;
+      color: $headings-color;
+      display: block;
+      position: relative;
+      z-index: 1;
+      border-radius: 10px;
+      &:before{
+      	content: '';
+      	width: 0;
+		  	height: 0;
+		  	border-left: 10px solid transparent;
+		  	border-right: 10px solid transparent;
+		  	border-top: 10px solid $black;
+		  	opacity: 0;
+		  	position: absolute;
+		  	top: 100%;
+		  	left: 50%;
+		  	transform: translateX(-50%);
+		  	opacity: 0;
+		  	transition: all 0.38s;
+		  	margin-top: -5px;
+		  	z-index: -11;
+      }
+      &:after{
+         content: '';
+         width: 0;
+         height: 100%;
+         position: absolute;
+         top: 0;
+         left: 0;
+         background: linear-gradient( 90deg, $theme-color-2 0%, $theme-color 100%);
+      	border-radius: 10px;
+         z-index: -1;
+         transition: all 0.6s;
+      }
+      i, svg{
+         margin-right: 6px;
+      }
+      &:hover, &.active{
+         color: $white;
+         &:before{
+         	opacity: 0.8;
+         	margin-top: 0;
+         }
+         &:after{
+            width: 100%;
+         }
+      }
+   }
+   &__content{
+   	max-width: 480px;
+      input[type*="email"], input[type*="text"], input[type*="tel"], textarea, select{
+         background: $white!important;
+         color: $body-color;
+      }
+      .irs .irs-line{
+         background: $bg-gray!important;
+      }
+   }
+}
+
+//Insurance Form
+.wpcf7-form .get-insurance{
+   &__form-control{
+      margin-bottom: 20px;
+      p{
+         margin-bottom: 0!important;
+      }
+      input[type*="email"], input[type*="text"], input[type*="tel"], textarea, select{
+         color: $body-color;
+      }
+   }
+   &__range{
+      margin-top: 25px;
+      p{
+         margin: 0;
+      }
+      .irs{
+         &.irs--flat{
+            height: 30px;
+         }
+         .irs-single, .irs-to, .irs-from{
+            display: none;
+         }
+         .irs-line{
+            top: 10px;
+            background: #f1f2f6;
+         }
+         .irs-bar{
+            top: 10px;
+            background: linear-gradient( 90deg, $theme-color-2 0%, $theme-color 100%);
+         }
+         .irs-handle{
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            border: 2px solid #f1f2f6;
+            background: $theme-color-2;
+            top: 4px;
+            &:hover{
+               cursor: pointer;
+            }
+            i{
+               display: none!important;
+            }
+         }
+      }
+   }
+   &__range-heading{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+   &__range-title{
+      font-size: 16px;
+      margin: 0;
+   }
+   &__range-slider{
+      height: 50px;
+   }
+   &__balance{
+      font-size: 16px;
+      font-weight: 700;
+      color: $headings-color;
+   }
+   &__balance-input{
+      display: none;
+   }
+}
+
+.label-white{
+   .get-insurance__range-title{
+      color: $white;
+   }
+}

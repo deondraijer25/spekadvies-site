@@ -1,0 +1,233 @@
+
+@-webkit-keyframes sfadeInUp {
+	from {
+		opacity: 0;
+		transform: translate3d(0, 100px, 0);
+	}
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+@keyframes sfadeInUp {
+	from {
+		opacity: 0;
+		transform: translate3d(0, 100px, 0);
+	}
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+// -----------------------
+@-webkit-keyframes sfadeInDown {
+	from {
+		opacity: 0;
+		-webkit-transform: translate3d(0, -100%, 0);
+		transform: translate3d(0, -100%, 0);
+	}
+	to {
+		opacity: 1;
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+}
+@keyframes sfadeInDown {
+	from {
+		opacity: 0;
+		-webkit-transform: translate3d(0, -100%, 0);
+		transform: translate3d(0, -100%, 0);
+	}
+	to {
+		opacity: 1;
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+}
+@-webkit-keyframes sfadeInRight {
+  from {
+	 opacity: 0;
+	 -webkit-transform: translate3d(100%, 0, 0);
+	 transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+	 opacity: 1;
+	 -webkit-transform: translate3d(0, 0, 0);
+	 transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes sfadeInRight {
+  from {
+	 opacity: 0;
+	 -webkit-transform: translate3d(100%, 0, 0);
+	 transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+	 opacity: 1;
+	 -webkit-transform: translate3d(0, 0, 0);
+	 transform: translate3d(0, 0, 0);
+  }
+}
+@-webkit-keyframes sfadeInLeft {
+  from {
+	 opacity: 0;
+	 -webkit-transform: translate3d(-100%, 0, 0);
+	 transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+	 opacity: 1;
+	 -webkit-transform: translate3d(0, 0, 0);
+	 transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes sfadeInLeft {
+  from {
+	 opacity: 0;
+	 -webkit-transform: translate3d(-100%, 0, 0);
+	 transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+	 opacity: 1;
+	 -webkit-transform: translate3d(0, 0, 0);
+	 transform: translate3d(0, 0, 0);
+  }
+}
+.s__fadeInDown {
+  animation-name: sfadeInDown;
+} 
+.s__fadeInUp {
+  animation-name: sfadeInUp;
+} 
+.s__fadeInRight {
+  animation-name: sfadeInRight;
+} 
+.s__fadeInLeft {
+  animation-name: sfadeInLeft;
+} 
+
+.s-animation{
+	animation-duration: 1000ms;
+	animation-fill-mode: both;
+}
+.n2-ss-slide{
+	 opacity: 1!important;
+	 transition: none!important;
+}
+// .n2-ss-layer{
+//   animation-fill-mode: both;
+//   animation-delay: 1200ms; 
+//   animation-duration: 1000ms;
+// }
+ .n2-ss-layer{
+ 	opacity: 0;
+ 	transition: none;
+ }
+.n2-ss-slide-active .n2-ss-layer{
+   opacity: 1;
+ }
+
+ .layer__beat img{
+  animation: beat 6s linear infinite;
+}
+.layer__top-bottom img{
+  animation: animation_top_bottom 3s linear infinite;
+}
+ 
+.n2-ss-layer.slider-overlay{ 
+	position: relative;
+	> .n2-ss-section-main-content{
+		background: rgba(0, 0, 0, 0.06);
+	}
+	&::before{
+		content: '';
+		display: block!important;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		//background: linear-gradient(75deg, rgba(1, 52, 74, 0) 55%, rgba(1, 52, 74, 0.8) 86%);
+		background: linear-gradient(75deg, rgba(1, 27, 38, 0) 55%, rgba(1, 27, 38, 0.8) 86%);
+		transform: rotate(180deg);
+		z-index: 1;
+	}
+	&::after{ 
+		content: '';
+		display: block!important;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		right: 0;
+		top: 0;
+		background: linear-gradient(65deg, rgba(1, 27, 38, 0) 75%, rgba(1, 27, 38, 0.8) 90%);
+		transform: matrix(1, 0, 0, -1, 0, 0);
+		z-index: 1;
+	}
+}
+
+.slider-subtitle {
+	display: flex!important;
+	align-items: center;
+	.icon{
+		font-size: 46px!important;
+		color: $theme-color!important;
+		margin: 6px 18px 6px 0;
+		position: relative;
+		top: 4px;
+		animation: spinAround 4s linear infinite;
+		@media(max-width: 960px){
+			font-size: 36px!important;
+			margin-right: 8px!important;
+		}
+	}
+	span{
+		display: inline-block;
+		background: $white;
+		border-radius: 30px!important;
+		padding-right: 18px;
+		overflow: hidden;
+		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+		@media(max-width: 960px){
+				padding-right: 8px;
+				font-size: 12px!important;
+			}
+		strong{
+			background: $black;
+			color: $theme-color;
+			padding: 10px 18px;
+			margin-right: 20px;
+			display: inline-block;
+			font-weight: 700;
+			@media(max-width: 960px){
+				margin-right: 8px;
+				padding: 8px!important;
+			}
+		}
+	}
+}
+
+a.n2-ow, button.n2-ow{
+	transition: all 0.6s!important;
+}
+
+.btn-slider a.n2-ow{
+	&:after{
+  		content: "\e981";
+  		font-family: 'iicomoon';
+  		display: inline-block;
+  		font-size: 10px;
+  		padding-left: 8px;
+  		font-weight: 400;
+  	}
+}
+
+.col-buttons > div{
+	flex-direction: row!important;
+	justify-content: flex-start!important;
+	gap: 10px;
+}

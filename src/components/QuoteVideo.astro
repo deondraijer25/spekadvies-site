@@ -1,0 +1,183 @@
+---
+---
+
+<section class="py-20 lg:py-28 relative overflow-hidden bg-brand-dark scroll-mt-20">
+  
+  <!-- Decorative background glows -->
+  <div class="absolute left-[-100px] top-[-100px] w-96 h-96 rounded-full bg-brand-primary/5 blur-3xl pointer-events-none"></div>
+  <div class="absolute right-[-100px] bottom-[-100px] w-96 h-96 rounded-full bg-brand-accent/5 blur-3xl pointer-events-none"></div>
+
+  <!-- Subtle large gold filled logo watermark (Option A - Variant 2 - Gold) -->
+  <div class="absolute left-[5%] top-[10%] w-[380px] sm:w-[480px] h-auto pointer-events-none select-none z-0 animate-pulse" style="color: rgba(255, 206, 118, 0.035); animation-duration: 11s;">
+    <svg viewBox="0 0 80.08 83.08" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path d="M80.08,43.04c0,10.89-8.87,19.76-19.76,19.76-.18,0-.35-.01-.53-.02,0,.18.01.36.01.53,0,10.9-8.87,19.77-19.76,19.77s-19.76-8.87-19.76-19.77c0-.17,0-.35.01-.53-.18,0-.36.02-.53.02C8.86,62.8,0,53.93,0,43.04s8.86-19.76,19.76-19.76c.17,0,.35,0,.53,0-.01-.18-.01-.36-.01-.53,0-8.09,10.4-17.07,16.61-21.71,1.88-1.4,4.41-1.4,6.3,0,6.2,4.64,16.61,13.62,16.61,21.71,0,.17-.01.35-.01.53.18,0,.35,0,.53,0,10.89,0,19.76,8.86,19.76,19.76Z"/>
+    </svg>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+      
+      <!-- Left Column: Tabbed Quote Request Form -->
+      <div class="lg:col-span-7 space-y-6">
+        <div class="space-y-3 text-left">
+          <span class="text-brand-primary text-xs font-bold tracking-widest uppercase block font-display">Snel Berekenen</span>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight font-display">
+            Vraag direct een gratis indicatie aan
+          </h2>
+          <p  class="text-slate-400 text-sm sm:text-base leading-relaxed font-sans font-normal">
+            Kies het type advies, vul je gegevens in en krijg binnen 24 uur een onafhankelijke indicatie of offerte in je mailbox.
+          </p>
+        </div>
+
+        <!-- Calculator Card -->
+        <div class="bg-[#122b44] border border-white/5 rounded-3xl p-6 sm:p-10 shadow-2xl relative overflow-hidden">
+          
+          <!-- Tabs selectors -->
+          <div class="flex space-x-2 border-b border-white/10 pb-4 mb-8">
+            <button id="tab-hypotheek" class="px-5 py-2.5 rounded-xl text-xs font-semibold tracking-wider uppercase font-sans bg-brand-primary text-brand-dark transition-all duration-300">
+              Hypotheek
+            </button>
+            <button id="tab-verzekering" class="px-5 py-2.5 rounded-xl text-xs font-semibold tracking-wider uppercase font-sans text-slate-400 hover:text-white transition-all duration-300">
+              Verzekering
+            </button>
+            <button id="tab-aov" class="px-5 py-2.5 rounded-xl text-xs font-semibold tracking-wider uppercase font-sans text-slate-400 hover:text-white transition-all duration-300">
+              AOV
+            </button>
+          </div>
+
+          <!-- Form Element -->
+          <form class="space-y-6 text-left">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <!-- Name Input -->
+              <div class="space-y-2">
+                <label class="text-[11px] font-bold tracking-widest uppercase text-slate-400 font-display">Naam</label>
+                <input 
+                  type="text" 
+                  placeholder="Volledige Naam" 
+                  class="w-full bg-[#0a1f33] border border-white/10 rounded-xl px-4 py-3.5 text-white text-sm placeholder-slate-500 focus:outline-none focus:border-brand-primary/50 transition-colors"
+                  required
+                />
+              </div>
+
+              <!-- Email Input -->
+              <div class="space-y-2">
+                <label class="text-[11px] font-bold tracking-widest uppercase text-slate-400 font-display">E-mailadres</label>
+                <input 
+                  type="email" 
+                  placeholder="adres@voorbeeld.nl" 
+                  class="w-full bg-[#0a1f33] border border-white/10 rounded-xl px-4 py-3.5 text-white text-sm placeholder-slate-500 focus:outline-none focus:border-brand-primary/50 transition-colors"
+                  required
+                />
+              </div>
+            </div>
+
+            <!-- Dropdown selector -->
+            <div class="space-y-2">
+              <label class="text-[11px] font-bold tracking-widest uppercase text-slate-400 font-display">Soort Aanvraag</label>
+              <select 
+                class="w-full bg-[#0a1f33] border border-white/10 rounded-xl px-4 py-3.5 text-white text-sm focus:outline-none focus:border-brand-primary/50 transition-colors cursor-pointer"
+              >
+                <option value="starter">Startershypotheek</option>
+                <option value="oversluiten">Hypotheek Oversluiten</option>
+                <option value="aankoop">Aankoophypotheek</option>
+                <option value="ondernemer">Ondernemershypotheek</option>
+              </select>
+            </div>
+
+            <!-- Range Slider (Limits of Balance) -->
+            <div class="space-y-4 pt-2">
+              <div class="flex justify-between items-center">
+                <label class="text-[11px] font-bold tracking-widest uppercase text-slate-400 font-display">
+                  Indicatieve Leensom / Waarde
+                </label>
+                <span id="slider-value" class="text-sm font-bold text-brand-primary font-display">
+                  € 350.000
+                </span>
+              </div>
+              <input 
+                id="loan-range"
+                type="range" 
+                min="100000" 
+                max="1000000" 
+                step="10000" 
+                value="350000" 
+                class="w-full h-2 bg-[#0a1f33] rounded-lg appearance-none cursor-pointer accent-brand-primary"
+              />
+              <div class="flex justify-between text-[10px] font-bold text-slate-500 font-sans">
+                <span>€ 100.000</span>
+                <span>€ 1.000.000</span>
+              </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="pt-4">
+              <button 
+                type="submit" 
+                class="w-full bg-brand-primary hover:bg-brand-primary-hover text-brand-dark font-semibold py-4.5 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5 text-xs tracking-wider uppercase font-sans"
+              >
+                Berekening Aanvragen
+              </button>
+            </div>
+          </form>
+
+        </div>
+      </div>
+
+      <!-- Right Column: Video Play Card -->
+      <div class="lg:col-span-5 space-y-8">
+        <div class="relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl group aspect-[4/3] w-full max-w-md mx-auto lg:max-w-none">
+          
+          <!-- Background image-04.jpg -->
+          <img 
+            src="/insonis template/insonis-themer/sample/uploads/2026/04/image-04.jpg" 
+            alt="Spekadvies Video Intro" 
+            class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          />
+          <div class="absolute inset-0 bg-brand-dark/40 z-10"></div>
+
+          <!-- Video Play Trigger Button -->
+          <a 
+            href="https://www.youtube.com/watch?v=IbhuV9xS8vc" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="absolute inset-0 flex items-center justify-center z-20 group/btn"
+          >
+            <!-- Glowing round play button -->
+            <div class="w-20 h-20 rounded-full bg-brand-primary flex items-center justify-center shadow-[0_15px_30px_rgba(91,194,231,0.4)] border-4 border-white transition-all duration-300 group-hover/btn:scale-110 relative">
+              <!-- Pulse ring -->
+              <div class="absolute inset-0 rounded-full bg-brand-primary animate-ping opacity-25"></div>
+              <!-- Play Icon SVG -->
+              <svg class="w-8 h-8 text-brand-base ml-1" fill="currentColor" viewBox="0 0 24 24">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </svg>
+            </div>
+          </a>
+
+        </div>
+
+        <div class="text-left space-y-3 max-w-md mx-auto lg:mx-0">
+          <h3 class="text-xl sm:text-2xl font-bold text-white font-display leading-snug">
+            Wij beschermen jouw toekomst met het beste onafhankelijke advies
+          </h3>
+          <p  class="text-slate-400 text-xs sm:text-sm leading-relaxed font-sans font-normal">
+            Bekijk in deze korte video hoe onze onafhankelijke werkwijze jou duizenden euro's voordeel kan opleveren gedurende de looptijd van je hypotheek.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Simple client-side range slider value updater -->
+<script>
+  const rangeInput = document.getElementById('loan-range');
+  const valueDisplay = document.getElementById('slider-value');
+  
+  if (rangeInput && valueDisplay) {
+    rangeInput.addEventListener('input', (e) => {
+      const val = parseInt(e.target.value);
+      valueDisplay.textContent = '€ ' + val.toLocaleString('nl-NL');
+    });
+  }
+</script>

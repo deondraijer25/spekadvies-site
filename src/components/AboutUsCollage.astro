@@ -1,0 +1,124 @@
+---
+import SectionDivider from './SectionDivider.astro';
+---
+
+<section id="over-ons" class="py-20 lg:py-28 relative overflow-hidden bg-white scroll-mt-20">
+  
+  <!-- Subtle decorative shapes in the background -->
+  <div class="absolute left-0 bottom-0 w-[450px] h-[450px] rounded-full bg-brand-primary/5 blur-[120px] pointer-events-none"></div>
+
+  <!-- Subtle large filled logo watermark (Option A - Variant 2) -->
+  <div class="absolute right-[-10%] top-[10%] w-[380px] sm:w-[480px] h-auto pointer-events-none select-none z-0 animate-pulse" style="color: rgba(21, 59, 104, 0.05); animation-duration: 14s;">
+    <svg viewBox="0 0 80.08 83.08" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path d="M80.08,43.04c0,10.89-8.87,19.76-19.76,19.76-.18,0-.35-.01-.53-.02,0,.18.01.36.01.53,0,10.9-8.87,19.77-19.76,19.77s-19.76-8.87-19.76-19.77c0-.17,0-.35.01-.53-.18,0-.36.02-.53.02C8.86,62.8,0,53.93,0,43.04s8.86-19.76,19.76-19.76c.17,0,.35,0,.53,0-.01-.18-.01-.36-.01-.53,0-8.09,10.4-17.07,16.61-21.71,1.88-1.4,4.41-1.4,6.3,0,6.2,4.64,16.61,13.62,16.61,21.71,0,.17-.01.35-.01.53.18,0,.35,0,.53,0,10.89,0,19.76,8.86,19.76,19.76Z"/>
+    </svg>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+      
+      <!-- Left Column: Overlapping Image Collage -->
+      <div class="lg:col-span-6 relative">
+        <div class="relative max-w-[500px] mx-auto lg:mx-0">
+          
+          <!-- Main Large Image (image-1.jpg) -->
+          <div class="rounded-3xl overflow-hidden border border-slate-200/50 shadow-2xl relative z-10 w-[85%] aspect-[4/5]">
+            <img 
+              src="/insonis template/insonis-themer/elementor/assets/images/image-1.jpg" 
+              alt="Spekadvies Kantoor" 
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+
+          <!-- Secondary Smaller Overlapping Image (image-2.jpg) -->
+          <div class="absolute right-0 bottom-10 w-[45%] aspect-square rounded-3xl overflow-hidden border-8 border-white shadow-[0_20px_40px_rgba(0,0,0,0.15)] z-20">
+            <img 
+              src="/insonis template/insonis-themer/elementor/assets/images/image-2.jpg" 
+              alt="Financieel Advies" 
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+
+
+
+        </div>
+      </div>
+
+      <!-- Right Column: Content & Bullet Points -->
+      <div class="lg:col-span-6 space-y-7 text-left">
+        <div class="space-y-3">
+          <span class="text-brand-primary text-xs font-bold tracking-widest uppercase block font-display">Over Spekadvies</span>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-dark tracking-tight leading-tight font-display">
+            Het beste advies & begeleiding voor jouw financiën
+          </h2>
+          <p  class="text-slate-600 text-sm sm:text-base leading-relaxed font-sans font-normal">
+            Een hypotheek of verzekering moet passen bij jouw manier van leven. Onze onafhankelijke aanpak zorgt ervoor dat we meer dan 40 geldverstrekkers vergelijken om voor jou de scherpste deal en beste voorwaarden te vinden.
+          </p>
+        </div>
+
+        <!-- Bullet List (Premium elements matching Home 01) -->
+        <div class="space-y-6 pt-2">
+          
+          <!-- Bullet 1: Easy Financial Planning -->
+          <div class="flex items-start space-x-4">
+            <div class="w-12 h-12 rounded-2xl bg-brand-basetint flex items-center justify-center flex-shrink-0 border border-slate-100 shadow-sm text-brand-primary">
+              <i class="fa-solid fa-chart-line text-lg"></i>
+            </div>
+            <div class="space-y-1">
+              <h3 class="text-base sm:text-lg font-bold text-brand-dark font-display">
+                Eenvoudige Financiële Planning
+              </h3>
+              <p  class="text-slate-600 text-sm leading-relaxed font-sans font-normal">
+                Wij vertalen ingewikkelde wet- en regelgeving naar heldere keuzes en duidelijke rekensommen die je begrijpt.
+              </p>
+            </div>
+          </div>
+
+          <!-- Bullet 2: Compare our Offers -->
+          <div class="flex items-start space-x-4">
+            <div class="w-12 h-12 rounded-2xl bg-brand-basetint flex items-center justify-center flex-shrink-0 border border-slate-100 shadow-sm text-brand-primary">
+              <i class="fa-solid fa-scale-balanced text-lg"></i>
+            </div>
+            <div class="space-y-1">
+              <h3 class="text-base sm:text-lg font-bold text-brand-dark font-display">
+                Vergelijk Alle Aanbieders
+              </h3>
+              <p  class="text-slate-600 text-sm leading-relaxed font-sans font-normal">
+                Doordat we onafhankelijk zijn, kijken we naar de gehele markt en staan we 100% aan jouw kant, niet aan die van de bank.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- CTA Button -->
+        <div class="pt-4">
+          <a 
+            href="#contact" 
+            class="inline-block bg-brand-primary hover:bg-brand-primary-hover text-brand-dark font-semibold px-8 py-4.5 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5 text-xs tracking-wider uppercase font-sans"
+          >
+            Maak Kennis Met Ons
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+<style>
+  @keyframes bounce-slow {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+  .animate-bounce-slow {
+    animation: bounce-slow 4s ease-in-out infinite;
+  }
+</style>

@@ -1,0 +1,250 @@
+.iconbox-style.style-1{
+	position: relative;
+	@include clearfix();
+	text-align: left;
+	margin-bottom: 30px;
+	.icon-box-content{
+		background: $theme-color;
+		padding: 40px 35px 35px;
+		border-radius: 8px;
+		@media(max-width: 1024px){
+			padding: 30px 15px 25px;
+		}
+		.icon-inner{
+			text-align: right;
+			margin-bottom: 40px;
+			@media(max-width: 1024px){
+				margin-bottom: 25px;
+			}
+			i{
+				color: $white;
+				font-size: 72px;
+			}
+			svg{
+				fill: $white;
+				width: 72px;
+				height: auto;
+			}
+		}
+		&:hover, &.active{
+			.icon-inner{
+				svg, i{ 
+					animation: beat 1.5s ease 0s infinite;
+				}
+			}
+		}
+	}
+	.box-content{
+		.title{
+			color: $white;
+			font-size: 20px;
+			line-height: 30px;
+			margin: 0 0 10px;
+			display: block;
+			transition: all 0.35s;
+			@include media-breakpoint-down(lg){
+				font-size: 18px;
+			}
+		}
+		.desc{
+			font-weight: 600;
+			line-height: 22px;
+			font-size: 14px;
+			color: rgba(255, 255, 255, 0.8);
+			letter-spacing: 1px;
+		}
+	}
+	.link-overlay{
+		@include size(100%, 100%);
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+	} 
+	&:hover, &.active{
+		.icon-inner{
+			svg, i{ 
+				animation: beat 1.5s ease 0s infinite;
+			}
+		}
+	}
+}
+	
+.iconbox-style.style-2{
+	.iconbox-wrap{
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+	.iconbox-icon{
+		flex: 0 0 66px;
+		width: 66px;
+		height: 66px;
+		background: $bg-gray;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		i{
+			font-size: 32px;
+			color: $theme-color;
+		}
+		svg{
+			width: 32px;
+			fill: $theme-color;
+		}
+	}
+	.iconbox-content{
+		display: flex;
+		flex-wrap: wrap;
+		flex: 0 0 calc(100% - 66px);
+		padding-left: 20px;
+		align-items: center;
+		.title{
+			font-size: 16px;
+			text-transform: uppercase;
+			font-weight: 600;
+			line-height: 24px;
+			margin: 0;
+			padding-right: 15px;
+			flex: 0 0 155px;
+			@media(max-width: 950px){
+				flex: 0 0 100%;
+			}
+		}
+	}
+	.iconbox-desc{
+		padding-left: 30px;
+		font-size: 14px;
+		line-height: 24px;
+		position: relative;
+		flex: 0 0 calc(100% - 155px);
+		p{
+			margin-bottom: 0;
+		}
+		&:after{
+			content: '';
+			position: absolute;
+			width: 1px;
+			background: $border-color;
+			top: -2px;
+			bottom: -2px;
+			left: 0;
+		}
+		@media(max-width: 1024px){
+			padding-left: 15px;
+		}
+		@media(max-width: 950px){
+			flex: 0 0 100%;
+			padding: 5px 0 0;
+			&:after{
+				display: none;
+			}
+		}
+	}
+}
+
+.iconbox-style.style-3{
+	margin: 0 auto;
+	border-radius: 30px;
+	position: relative;
+	z-index: 9; 
+	max-width: 375px;
+	.iconbox-content{
+		background: #f1f2f6;
+		mask-image: url('#{$image-theme-path-base}iconbox-mask-4.png');
+		mask-size: 100% 100%;
+		mask-position: top left;
+		padding: 40px 40px 10px 40px;
+		position: relative;
+		min-height: 225px;
+		@media(max-width: 1200px){
+			padding: 40px 15px 10px 15px;
+		}
+	}
+	.iconbox-icon{
+		width: 80px;
+		height: 80px;
+		border-radius: 50%;
+		background: $theme-color;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		top: 0;
+		right: 20px;
+		z-index: 1;
+		transition: all 0.6s;
+		@media(max-width: 1200px){
+			width: 62px;
+			height: 62px;
+			right: 6px;
+		}
+		i{
+			font-size: 32px;
+			color: $white;
+			transition: all 0.5s;
+			@media(max-width: 1200px){
+				font-size: 26px;
+			}
+		}
+		svg{
+			width: 32px;
+			fill: $white;
+			transition: all 0.5s;
+			@media(max-width: 1200px){
+				font-size: 26px;
+			}
+		}
+	}
+	.iconbox-title{
+		font-size: 18px;
+		margin: 0 0 25px;
+		padding: 0 0 25px;
+		transition: all 0.5s;
+		position: relative;
+		max-width: 110px;
+		line-height: 24px;
+		z-index: 9;
+		&:after{
+			content: '';
+			width: 100%;
+			height: 1px;
+			background: rgba(0, 0, 0, 0.1);
+			position: absolute;
+			bottom: 0;
+			left: 0;
+		}
+	}
+	.iconbox-desc{
+		font-size: 16px;
+		position: relative;
+		transition: all 0.5s;
+		a{
+			color: $body-color;
+			&:hover{
+				text-decoration: underline;
+				color: $theme-color;
+			}
+		}
+	}
+	.iconbox-link-overlay{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 11;
+	}
+	&:hover, &:focus, &.active{ 
+		.iconbox-icon{
+			background: $black;
+			i{
+				color: $theme-color;
+			}
+			svg{
+				fill: $theme-color;
+			}
+		}
+	}
+}

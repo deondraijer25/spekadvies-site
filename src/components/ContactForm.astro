@@ -1,0 +1,226 @@
+---
+import SectionDivider from './SectionDivider.astro';
+---
+<section id="contact" class="py-20 lg:py-28 relative scroll-mt-20">
+  <div class="absolute left-0 bottom-0 w-[400px] h-[400px] rounded-full bg-brand-primary/5 blur-[120px] pointer-events-none"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="bg-brand-dark border border-white/10 rounded-[40px] p-8 sm:p-12 lg:p-16 shadow-2xl relative overflow-hidden">
+      <!-- Background subtle patterns -->
+      <div class="absolute -right-24 -bottom-24 w-96 h-96 rounded-full bg-brand-primary/5 blur-3xl pointer-events-none"></div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start relative z-10">
+        
+        <!-- Contact details (Left Column) -->
+        <div class="lg:col-span-5 space-y-8">
+          <div class="space-y-4">
+            <span class="text-brand-primary text-xs font-semibold tracking-widest uppercase block font-sans">Persoonlijk contact</span>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight font-display">
+              Laat van je horen.
+            </h2>
+            <p  class="text-slate-300 text-sm sm:text-base leading-relaxed font-sans font-normal">
+              Heb je een specifieke vraag, wil je een berekening laten maken of wil je gewoon even sparren? Vul het formulier in of neem direct contact op met Spekadvies.
+            </p>
+          </div>
+
+          <div class="space-y-6">
+            <div class="flex items-start space-x-4">
+              <div class="w-12 h-12 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center flex-shrink-0 text-white">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div>
+                <h4 class="text-[10px] text-slate-400 font-semibold uppercase tracking-wider font-sans">Telefoon</h4>
+                <a href="tel:+31795931241" class="text-white hover:text-brand-primary font-semibold text-base transition-colors font-sans">079 593 1241</a>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4">
+              <div class="w-12 h-12 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center flex-shrink-0 text-white">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div>
+                <h4 class="text-[10px] text-slate-400 font-semibold uppercase tracking-wider font-sans">E-mailadres</h4>
+                <a href="mailto:info@spekadvies.nl" class="text-white hover:text-brand-primary font-semibold text-base transition-colors font-sans">info@spekadvies.nl</a>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4">
+              <div class="w-12 h-12 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center flex-shrink-0 text-white">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div>
+                <h4 class="text-[10px] text-slate-400 font-semibold uppercase tracking-wider font-sans">Kantoor</h4>
+                <p class="text-white font-semibold text-base font-sans">Herenweg 42, 2751 DB Moerkapelle</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-6 border-t border-white/10 flex flex-wrap gap-4 items-center">
+            <div class="text-brand-primary font-semibold text-xs uppercase tracking-widest font-sans">✓ KVK: 29051405</div>
+            <div class="w-1.5 h-1.5 rounded-full bg-slate-600 hidden sm:block"></div>
+            <div class="text-brand-primary font-semibold text-xs uppercase tracking-widest font-sans">✓ AFM: 12009127</div>
+          </div>
+        </div>
+
+        <!-- Form (Right Column) -->
+        <div class="lg:col-span-7 bg-brand-base/5 border border-white/10 p-6 sm:p-10 rounded-3xl shadow-xl relative">
+          
+          <!-- Success State -->
+          <div id="main-contact-success" class="hidden text-center py-12 space-y-4">
+            <div class="w-16 h-16 rounded-full bg-brand-accent/10 border border-brand-accent/20 flex items-center justify-center text-brand-accent text-3xl mx-auto">
+              <i class="fa-solid fa-check"></i>
+            </div>
+            <h4 class="text-lg font-bold text-white font-display uppercase tracking-wider">Bedankt voor je aanvraag!</h4>
+            <p  class="text-slate-300 text-xs sm:text-sm font-sans font-normal max-w-sm mx-auto leading-relaxed">
+              We hebben je gegevens ontvangen en nemen binnen 24 uur persoonlijk contact met je op.
+            </p>
+          </div>
+
+          <div id="main-contact-form-wrapper">
+            <h3 class="text-xl font-bold text-white mb-6 font-display">Gratis adviesgesprek inplannen</h3>
+            
+            <form id="main-contact-form" class="space-y-6">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div>
+                <label  for="name" class="block text-xs font-semibold text-slate-300 uppercase tracking-widest mb-2 font-sans">Volledige Naam</label>
+                <input 
+                  type="text" 
+                  id="name" 
+                  name="name" 
+                  placeholder="Bijv. Jan de Vries" 
+                  class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-brand-primary transition-colors font-sans" 
+                  required 
+                />
+              </div>
+              <div>
+                <label  for="phone" class="block text-xs font-semibold text-slate-300 uppercase tracking-widest mb-2 font-sans">Telefoonnummer</label>
+                <input 
+                  type="tel" 
+                  id="phone" 
+                  name="phone" 
+                  placeholder="06 - 12345678" 
+                  class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-brand-primary transition-colors font-sans" 
+                  required 
+                />
+              </div>
+            </div>
+
+            <div>
+              <label  for="email" class="block text-xs font-semibold text-slate-300 uppercase tracking-widest mb-2 font-sans">E-mailadres</label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                placeholder="naam@voorbeeld.nl" 
+                class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-brand-primary transition-colors font-sans" 
+                required 
+              />
+            </div>
+
+            <div>
+              <label  for="service-type" class="block text-xs font-semibold text-slate-300 uppercase tracking-widest mb-2 font-sans">Waarmee kunnen we helpen?</label>
+              <select 
+                id="service-type" 
+                name="service-type" 
+                class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-sm text-white focus:outline-none focus:border-brand-primary transition-colors font-sans [&_option]:text-brand-dark"
+                required
+              >
+                <option value="hypotheken">Hypotheken</option>
+                <option value="verzekeringen">Verzekeringen</option>
+                <option value="aangifte">Aangifte</option>
+                <option value="vermogensbeheer">Vermogensbeheer</option>
+                <option value="overig">Overig</option>
+              </select>
+            </div>
+
+            <div>
+              <label  for="message" class="block text-xs font-semibold text-slate-300 uppercase tracking-widest mb-2 font-sans">Bericht of toelichting (Optioneel)</label>
+              <textarea 
+                id="message" 
+                name="message" 
+                rows="4" 
+                placeholder="Vertel ons kort wat je wensen of vragen zijn..." 
+                class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-brand-primary transition-colors font-sans resize-none"
+              ></textarea>
+            </div>
+
+            <button 
+              type="submit" 
+              class="w-full bg-brand-primary hover:bg-brand-primary-hover text-brand-dark font-semibold py-4 rounded-full shadow-lg transition-colors duration-300 text-sm tracking-wider uppercase font-sans cursor-pointer"
+            >
+              Verzend Aanvraag
+            </button>
+          </form>
+          
+          <div id="main-contact-error" class="hidden mt-4 text-xs font-bold text-red-400 font-sans text-center"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <SectionDivider fillColor="#153b68" direction="left-high" />
+</section>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('main-contact-form');
+    const wrapper = document.getElementById('main-contact-form-wrapper');
+    const successDiv = document.getElementById('main-contact-success');
+    const errorDiv = document.getElementById('main-contact-error');
+
+    if (!form || !wrapper || !successDiv) return;
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const submitBtn = form.querySelector('button[type="submit"]');
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Verzenden...';
+      }
+      if (errorDiv) {
+        errorDiv.classList.add('hidden');
+        errorDiv.textContent = '';
+      }
+
+      const formData = new FormData(form);
+      const data = {
+        name: formData.get('name'),
+        phone: formData.get('phone'),
+        email: formData.get('email'),
+        'service-type': formData.get('service-type'),
+        message: formData.get('message')
+      };
+
+      try {
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(data)
+        });
+
+        const result = await response.json();
+
+        if (response.ok && result.success) {
+          wrapper.classList.add('hidden');
+          successDiv.classList.remove('hidden');
+        } else {
+          throw new Error(result.error || 'Er ging iets fout bij het verzenden.');
+        }
+      } catch (err) {
+        console.error('Submit error:', err);
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Verzend Aanvraag';
+        }
+        if (errorDiv) {
+          errorDiv.classList.remove('hidden');
+          errorDiv.textContent = err.message || 'Kon formulier niet verzenden. Probeer het later opnieuw.';
+        }
+      }
+    });
+  });
+</script>

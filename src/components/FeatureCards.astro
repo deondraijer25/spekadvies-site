@@ -1,0 +1,715 @@
+---
+const features = [
+  {
+    id: 1,
+    title: "Direct schade<br />melden",
+    description: "Vervelend dat u schade heeft. Wij zorgen voor een snelle afwikkeling zodat u weer verder kunt.",
+    linkText: "Schade melden",
+    link: "#",
+    modalType: "schade",
+    isGradient: false
+  },
+  {
+    id: 2,
+    title: "Starten met<br />FinSave",
+    description: "24/7 direct inzicht in uw polissen, hypotheken en documenten. Uw hele dossier veilig op één plek.",
+    linkText: "Inloggen",
+    link: "#",
+    modalType: "inloggen",
+    isGradient: true
+  },
+  {
+    id: 3,
+    title: "Verzekering<br />op maat",
+    description: "Van auto en inboedel to rechtsbijstand: wij zorgen dat de dekking precies past.",
+    linkText: "Meer informatie",
+    link: "#",
+    modalType: "offerte",
+    isGradient: false
+  }
+];
+import SectionDivider from './SectionDivider.astro';
+---
+
+<section class="w-full bg-[#0b1a2f] border-t border-white/10 relative z-30 -mt-4 sm:-mt-6 pb-20 sm:pb-24 lg:pb-28">
+  
+  <!-- Decorative background glow -->
+  <div class="absolute -right-24 -top-24 w-96 h-96 rounded-full bg-brand-accent/5 blur-3xl pointer-events-none"></div>
+
+  <!-- Tab positioning relative to the max-w container -->
+  <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative h-0">
+    <!-- 30K Customers Overlapping Tab (Offset to the right on desktop, centered on mobile) -->
+    <div class="absolute -top-[53px] left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:right-[26%] lg:right-[28%] h-[54px] bg-[#0b1a2f] rounded-t-[24px] border-t border-l border-r border-white/10 flex items-center justify-center px-6 z-25 flex-shrink-0">
+      
+      <!-- Left Concave Curve SVG -->
+      <svg class="absolute bottom-0 right-full w-6 h-6 pointer-events-none" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M24 24V0C24 13.2548 13.2548 24 0 24H24Z" fill="#0b1a2f"/>
+        <path d="M0 24C13.2548 24 24 13.2548 24 0" stroke="rgba(255,255,255,0.1)" stroke-width="1.2"/>
+      </svg>
+
+      <!-- Right Concave Curve SVG -->
+      <svg class="absolute bottom-0 left-full w-6 h-6 pointer-events-none" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 24V0C0 13.2548 10.7452 24 24 24H0Z" fill="#0b1a2f"/>
+        <path d="M24 24C10.7452 24 0 13.2548 0 0" stroke="rgba(255,255,255,0.1)" stroke-width="1.2"/>
+      </svg>
+
+      <!-- Tab Content (Using premium experience badge icon) -->
+      <div class="flex items-center space-x-2">
+        <svg class="h-[20px] w-[20px] text-brand-accent flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+        </svg>
+        <span class="text-[9px] sm:text-[10px] font-bold tracking-widest uppercase text-white font-display whitespace-nowrap">
+          20+ Jaar Ervaring
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Centered Content Container -->
+  <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 pt-16 sm:pt-20 lg:pt-24 relative z-10">
+    
+    <!-- 3 Stepped Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {features.map((feat, index) => (
+        <div class="feature-card relative w-full max-w-[360px] mx-auto min-h-[330px] transition-all duration-300 hover:-translate-y-3 group filter drop-shadow-[0_10px_20px_rgba(0,0,0,0.3)]">
+          
+          <!-- Outer Card Container -->
+          <div class="relative w-full h-[330px]">
+            
+            <!-- Masked Card Background & Content -->
+            <div class={`feature-card__content absolute inset-0 w-full h-full ${feat.isGradient ? 'gradient-card' : ''}`}>
+              
+              <!-- Expanding Circle Hover Background -->
+              <div class="feature-card__hover-bg"></div>
+
+              <!-- Content wrapper -->
+              <div class="relative z-10 flex flex-col justify-between h-full p-8 pt-12 pb-8">
+                <div>
+                  <!-- Title -->
+                  <h3 class="feature-card__title" set:html={feat.title}></h3>
+                  
+                  <!-- Upper Thin Divider Line -->
+                  <div class="feature-card__divider"></div>
+
+                  <p class="feature-card__desc">
+                    {feat.description}
+                  </p>
+                </div>
+                
+                <div>
+                  <!-- Lower Thin Divider Line -->
+                  <div class="feature-card__divider"></div>
+
+                  <button 
+                    data-modal-trigger={feat.modalType}
+                    class="feature-card__link cursor-pointer w-full text-left bg-transparent border-none focus:outline-none flex items-center justify-between p-0"
+                  >
+                    <span>{feat.linkText}</span>
+                    <span class="inline-block ml-2 group-hover:translate-x-1.5 transition-transform duration-200">→</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating Logo Shape Badge -->
+            <div class="feature-card__icon-badge">
+              <!-- Backing circle to fill the circular card mask cutout -->
+              <div class="badge-cutout-fill absolute inset-0 rounded-full"></div>
+              
+              <!-- Outer border logo shape (Middel 6.svg path literally) -->
+              <svg class="absolute w-[72px] h-[74.7px] text-[#0b1a2f]" viewBox="0 0 80.08 83.08" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M40.04,83.08c-10.9,0-19.76-8.87-19.76-19.76,0-.17,0-.35.01-.53-.18,0-.36.01-.53.01C8.86,62.8,0,53.93,0,43.04s8.86-19.76,19.76-19.76c.17,0,.35,0,.53.01,0-.18-.01-.36-.01-.53,0-8.08,10.41-17.07,16.61-21.7,1.88-1.41,4.42-1.41,6.3,0,6.2,4.64,16.61,13.62,16.61,21.7,0,.17,0,.35-.01.53.18,0,.36-.01.53-.01,10.9,0,19.76,8.86,19.76,19.76s-8.86,19.76-19.76,19.76c-.17,0-.35,0-.53-.01,0,.18.01.36.01.53,0,10.9-8.86,19.76-19.76,19.76ZM21.62,61.45l-.07.74c-.04.38-.06.76-.06,1.13,0,10.23,8.32,18.55,18.55,18.55s18.55-8.32,18.55-18.55c0-.36-.02-.74-.06-1.13l-.07-.73.73.07c.38.04.76.06,1.13.06,10.23,0,18.55-8.32,18.55-18.55s-8.32-18.55-18.55-18.55c-.36,0-.74.02-1.13.06l-.73.07.07-.73c.04-.39.06-.77.06-1.13,0-7.84-11.28-17.11-16.12-20.73-1.45-1.08-3.4-1.08-4.84,0-4.85,3.62-16.12,12.89-16.12,20.73,0,.36.02.74.06,1.12l.07.73-.73-.07c-.39-.04-.77-.06-1.13-.06-10.23,0-18.55,8.32-18.55,18.55s8.32,18.55,18.55,18.55c.36,0,.74-.02,1.13-.06l.74-.07Z"/>
+              </svg>
+ 
+              <!-- Inner solid logo shape (Middel 7.svg path literally) -->
+              <svg class="badge-bg absolute w-[72px] h-[74.7px]" viewBox="0 0 80.08 83.08" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M80.08,43.04c0,10.89-8.87,19.76-19.76,19.76-.18,0-.35-.01-.53-.02,0,.18.01.36.01.53,0,10.9-8.87,19.77-19.76,19.77s-19.76-8.87-19.76-19.77c0-.17,0-.35.01-.53-.18,0-.36.02-.53.02C8.86,62.8,0,53.93,0,43.04s8.86-19.76,19.76-19.76c.17,0,.35,0,.53,0-.01-.18-.01-.36-.01-.53,0-8.09,10.4-17.07,16.61-21.71,1.88-1.4,4.41-1.4,6.3,0,6.2,4.64,16.61,13.62,16.61,21.71,0,.17-.01.35-.01.53.18,0,.35,0,.53,0,10.89,0,19.76,8.86,19.76,19.76Z"/>
+              </svg>
+              
+              <!-- Centered Icon (FontAwesome) -->
+              <div class="badge-icon relative z-10 flex items-center justify-center w-7 h-7">
+                {index === 0 && (
+                  <i class="fa-solid fa-car-burst text-lg"></i>
+                )}
+                {index === 1 && (
+                  <i class="fa-solid fa-piggy-bank text-lg"></i>
+                )}
+                {index === 2 && (
+                  <i class="fa-solid fa-house text-lg"></i>
+                )}
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      ))}
+    </div>
+
+    <!-- Trusted Partners Banner (Insonis Style - exact match of screenshot) -->
+    <div class="mt-16 pt-12 border-t border-white/10 flex flex-col lg:flex-row items-center justify-between gap-8">
+      <div class="flex-shrink-0 text-white/50 font-display text-[9px] sm:text-[10px] font-bold tracking-widest uppercase leading-tight text-center lg:text-left">
+        SAMENWERKING MET<br>TOPAANBIEDERS
+      </div>
+      <div class="w-full lg:w-auto flex flex-wrap items-center justify-center lg:justify-end gap-x-12 gap-y-6 text-white/35 font-display select-none">
+        <span class="font-sans font-bold italic tracking-wide text-xl hover:text-white transition-colors duration-300 cursor-pointer">ING</span>
+        <span class="font-sans font-bold tracking-tight text-lg hover:text-white transition-colors duration-300 cursor-pointer">Rabobank</span>
+        <span class="font-serif font-bold tracking-widest text-base hover:text-white transition-colors duration-300 cursor-pointer">ABN AMRO</span>
+        <span class="font-sans font-extrabold tracking-widest text-sm hover:text-white transition-colors duration-300 cursor-pointer">AEGON</span>
+        <span class="font-sans font-semibold tracking-normal text-lg hover:text-white transition-colors duration-300 cursor-pointer">Allianz</span>
+      </div>
+    </div>
+
+  </div>
+  <SectionDivider fillColor="#ffffff" direction="left-low" />
+</section>
+
+<!-- ========================================== -->
+<!-- MODAL POPUPS (Zwolle & Willemse Inspired)  -->
+<!-- ========================================== -->
+
+<!-- Modal 1: Schade Melden -->
+<div id="modal-schade" class="modal-overlay fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-[100] flex items-center justify-center p-4 opacity-0 pointer-events-none transition-all duration-300">
+  <div class="bg-white rounded-[32px] p-6 sm:p-8 md:p-10 shadow-2xl relative w-full max-w-lg transform scale-95 opacity-0 transition-all duration-300 modal-card">
+    
+    <!-- Close Button -->
+    <button class="modal-close absolute top-5 right-5 w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 hover:text-slate-800 flex items-center justify-center transition-all cursor-pointer border-none outline-none">
+      <i class="fa-solid fa-xmark text-sm"></i>
+    </button>
+
+    <!-- Modal Header -->
+    <div class="flex items-center space-x-3 mb-6 text-left">
+      <div class="w-10 h-10 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-600 text-lg">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+      </div>
+      <h3 class="text-lg sm:text-xl font-bold text-brand-dark font-display">Hoe wilt u schade melden?</h3>
+    </div>
+
+    <!-- Modal Options Grid -->
+    <div class="space-y-4">
+      
+      <!-- Option 1: Online Schadetool (Recommended) -->
+      <a href="#contact" class="modal-item block bg-emerald-50/40 border-2 border-emerald-600 hover:bg-emerald-50/80 rounded-2xl p-4 transition-all relative text-left">
+        <span class="absolute top-2.5 right-4 bg-emerald-600 text-white text-[8px] font-bold tracking-widest uppercase px-2 py-0.5 rounded">
+          Aanbevolen
+        </span>
+        <div class="flex items-start space-x-4 pt-1">
+          <div class="w-10 h-10 rounded-xl bg-emerald-100 flex items-center justify-center text-emerald-700 flex-shrink-0 text-base">
+            <i class="fa-solid fa-bolt"></i>
+          </div>
+          <div class="pr-6">
+            <h4 class="text-xs sm:text-sm font-bold text-brand-dark font-display">Online schadetool</h4>
+            <p   class="text-slate-600 text-[10px] sm:text-xs leading-relaxed font-sans font-normal mt-0.5">
+              Snel, digitaal en gestructureerd melden — voor alle soorten schade. Wij ontvangen uw melding direct.
+            </p>
+          </div>
+        </div>
+      </a>
+
+      <div class="relative py-2 flex items-center justify-center">
+        <div class="absolute inset-0 flex items-center"><div class="w-full border-t border-slate-100"></div></div>
+        <span class="relative px-3 bg-white text-[9px] font-bold text-slate-400 uppercase tracking-widest">of download PDF formulier</span>
+      </div>
+
+      <!-- Option 2: Schadeformulier Algemeen -->
+      <a href="#" class="modal-item block bg-slate-50 border border-slate-200/80 hover:border-brand-accent/30 rounded-2xl p-4 transition-all text-left">
+        <div class="flex items-start space-x-4">
+          <div class="w-10 h-10 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 flex-shrink-0 text-base">
+            <i class="fa-solid fa-file-pdf"></i>
+          </div>
+          <div>
+            <h4 class="text-xs sm:text-sm font-bold text-brand-dark font-display">Schadeformulier Algemeen</h4>
+            <p   class="text-slate-600 text-[10px] sm:text-xs leading-relaxed font-sans font-normal mt-0.5">
+              Digitaal invulbaar. Voor de meeste soorten schade (inboedel, aansprakelijkheid, etc.).
+            </p>
+          </div>
+        </div>
+      </a>
+
+      <!-- Option 3: Europees Schadeformulier -->
+      <a href="#" class="modal-item block bg-slate-50 border border-slate-200/80 hover:border-brand-accent/30 rounded-2xl p-4 transition-all text-left">
+        <div class="flex items-start space-x-4">
+          <div class="w-10 h-10 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 flex-shrink-0 text-base">
+            <i class="fa-solid fa-car"></i>
+          </div>
+          <div>
+            <h4 class="text-xs sm:text-sm font-bold text-brand-dark font-display">Europees Schadeformulier Motorrijtuigen</h4>
+            <p   class="text-slate-600 text-[10px] sm:text-xs leading-relaxed font-sans font-normal mt-0.5">
+              Digitaal invulbaar. Vereist bij aanrijdingen met auto, motor of scooter.
+            </p>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</div>
+
+<!-- Modal 2: Inloggen -->
+<div id="modal-inloggen" class="modal-overlay fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-[100] flex items-center justify-center p-4 opacity-0 pointer-events-none transition-all duration-300">
+  <div class="bg-white rounded-[32px] p-6 sm:p-8 md:p-10 shadow-2xl relative w-full max-w-lg transform scale-95 opacity-0 transition-all duration-300 modal-card">
+    
+    <!-- Close Button -->
+    <button class="modal-close absolute top-5 right-5 w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 hover:text-slate-800 flex items-center justify-center transition-all cursor-pointer border-none outline-none">
+      <i class="fa-solid fa-xmark text-sm"></i>
+    </button>
+
+    <!-- Modal Header -->
+    <div class="flex items-center space-x-3 mb-6 text-left">
+      <div class="w-10 h-10 rounded-xl bg-[#ab7a22]/10 flex items-center justify-center text-[#ab7a22] text-lg">
+        <i class="fa-solid fa-user-lock"></i>
+      </div>
+      <h3 class="text-lg sm:text-xl font-bold text-brand-dark font-display">Kies uw digitale portaal</h3>
+    </div>
+
+    <!-- Options -->
+    <div class="space-y-4">
+
+      <!-- FinSave Hypotheek -->
+      <a href="https://spekadvies.finsave.nl" target="_blank" rel="noopener noreferrer" class="modal-item block bg-brand-accent/5 border-2 border-brand-accent hover:bg-brand-accent/10 rounded-2xl p-4 transition-all relative text-left">
+        <span class="absolute top-2.5 right-4 bg-[#ab7a22] text-white text-[8px] font-bold tracking-widest uppercase px-2 py-0.5 rounded">
+          Hypotheken
+        </span>
+        <div class="flex items-start space-x-4 pt-1">
+          <div class="w-10 h-10 rounded-xl bg-[#ab7a22]/10 flex items-center justify-center text-[#ab7a22] flex-shrink-0 text-base">
+            <i class="fa-solid fa-piggy-bank"></i>
+          </div>
+          <div class="pr-12">
+            <h4 class="text-xs sm:text-sm font-bold text-brand-dark font-display">FinSave Dossier</h4>
+            <p   class="text-slate-600 text-[10px] sm:text-xs leading-relaxed font-sans font-normal mt-0.5">
+              Volg uw lopende hypotheekaanvraag, rentevoorstellen en upload veilig uw documenten.
+            </p>
+          </div>
+        </div>
+      </a>
+
+      <!-- Polisportaal Verzekeringen -->
+      <a href="https://spekadvies.polisportaal.nl" target="_blank" rel="noopener noreferrer" class="modal-item block bg-slate-50 border border-slate-200/80 hover:border-brand-accent/30 rounded-2xl p-4 transition-all text-left">
+        <div class="flex items-start space-x-4">
+          <div class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center text-slate-700 flex-shrink-0 text-base">
+            <i class="fa-solid fa-vault"></i>
+          </div>
+          <div>
+            <h4 class="text-xs sm:text-sm font-bold text-brand-dark font-display">Polisportaal Verzekeringen</h4>
+            <p   class="text-slate-600 text-[10px] sm:text-xs leading-relaxed font-sans font-normal mt-0.5">
+              Inzicht in al uw lopende schadeverzekeringen, polisbladen downloaden en wijzigingen doorgeven.
+            </p>
+          </div>
+        </div>
+      </a>
+
+      <div class="relative py-2 flex items-center justify-center">
+        <div class="absolute inset-0 flex items-center"><div class="w-full border-t border-slate-100"></div></div>
+        <span class="relative px-3 bg-white text-[9px] font-bold text-slate-400 uppercase tracking-widest">Nog geen account?</span>
+      </div>
+
+      <!-- Vraag inlogcode aan -->
+      <a href="#contact" class="modal-item block bg-slate-50 border border-slate-200/80 hover:border-brand-accent/30 rounded-2xl p-4 transition-all text-left">
+        <div class="flex items-start space-x-4">
+          <div class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center text-slate-700 flex-shrink-0 text-base">
+            <i class="fa-solid fa-key"></i>
+          </div>
+          <div>
+            <h4 class="text-xs sm:text-sm font-bold text-brand-dark font-display">Vraag een inlogcode aan</h4>
+            <p   class="text-slate-600 text-[10px] sm:text-xs leading-relaxed font-sans font-normal mt-0.5">
+              Ontvang direct per e-mail de inloggegevens voor uw persoonlijke portalen.
+            </p>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</div>
+
+<!-- Modal 3: Offerte / Contact -->
+<div id="modal-offerte" class="modal-overlay fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-[100] flex items-center justify-center p-4 opacity-0 pointer-events-none transition-all duration-300">
+  <div class="bg-white rounded-[32px] p-6 sm:p-8 md:p-10 shadow-2xl relative w-full max-w-lg transform scale-95 opacity-0 transition-all duration-300 modal-card">
+    
+    <!-- Close Button -->
+    <button class="modal-close absolute top-5 right-5 w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 hover:text-slate-800 flex items-center justify-center transition-all cursor-pointer border-none outline-none">
+      <i class="fa-solid fa-xmark text-sm"></i>
+    </button>
+
+    <!-- Modal Header -->
+    <div class="flex items-center space-x-3 mb-6 text-left">
+      <div class="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center text-[#ab7a22] text-lg">
+        <i class="fa-solid fa-comments"></i>
+      </div>
+      <h3 class="text-lg sm:text-xl font-bold text-brand-dark font-display">Contact & Advies</h3>
+    </div>
+
+    <!-- Options -->
+    <div class="space-y-4">
+
+      <!-- WhatsApp -->
+      <a href="https://wa.me/31795931241" target="_blank" rel="noopener noreferrer" class="modal-item block bg-emerald-50/40 border-2 border-emerald-600 hover:bg-emerald-50/80 rounded-2xl p-4 transition-all relative text-left">
+        <span class="absolute top-2.5 right-4 bg-emerald-600 text-white text-[8px] font-bold tracking-widest uppercase px-2 py-0.5 rounded">
+          Snel & Direct
+        </span>
+        <div class="flex items-start space-x-4 pt-1">
+          <div class="w-10 h-10 rounded-xl bg-emerald-100 flex items-center justify-center text-emerald-600 flex-shrink-0 text-base">
+            <i class="fa-brands fa-whatsapp text-lg"></i>
+          </div>
+          <div class="pr-12">
+            <h4 class="text-xs sm:text-sm font-bold text-brand-dark font-display">Stuur een WhatsApp</h4>
+            <p   class="text-slate-600 text-[10px] sm:text-xs leading-relaxed font-sans font-normal mt-0.5">
+              Direct chatten met onze adviseur. Handig voor snelle vragen over uw hypotheek of verzekering.
+            </p>
+          </div>
+        </div>
+      </a>
+
+      <!-- Plan adviesgesprek -->
+      <a href="#contact" class="modal-item block bg-slate-50 border border-slate-200/80 hover:border-brand-accent/30 rounded-2xl p-4 transition-all text-left">
+        <div class="flex items-start space-x-4">
+          <div class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center text-slate-700 flex-shrink-0 text-base">
+            <i class="fa-solid fa-calendar-day"></i>
+          </div>
+          <div>
+            <h4 class="text-xs sm:text-sm font-bold text-brand-dark font-display">Plan gratis adviesgesprek</h4>
+            <p   class="text-slate-600 text-[10px] sm:text-xs leading-relaxed font-sans font-normal mt-0.5">
+              Kies direct een datum en tijdstip in onze agenda voor een persoonlijk kennismakingsgesprek.
+            </p>
+          </div>
+        </div>
+      </a>
+
+      <!-- Bel direct -->
+      <a href="tel:+31795931241" class="modal-item block bg-slate-50 border border-slate-200/80 hover:border-brand-accent/30 rounded-2xl p-4 transition-all text-left">
+        <div class="flex items-start space-x-4">
+          <div class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center text-slate-700 flex-shrink-0 text-base">
+            <i class="fa-solid fa-phone"></i>
+          </div>
+          <div>
+            <h4 class="text-xs sm:text-sm font-bold text-brand-dark font-display">Bel onze adviseur</h4>
+            <p   class="text-slate-600 text-[10px] sm:text-xs leading-relaxed font-sans font-normal mt-0.5">
+              Direct telefonisch contact voor dringende vragen of advies. Bereikbaar op werkdagen.
+            </p>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</div>
+
+<!-- ========================================== -->
+<!-- JAVASCRIPT FOR TOGGLING POPUP MODALS      -->
+<!-- ========================================== -->
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const triggers = document.querySelectorAll('[data-modal-trigger]');
+    
+    triggers.forEach(trigger => {
+      trigger.addEventListener('click', (e) => {
+        e.preventDefault();
+        const modalId = 'modal-' + trigger.getAttribute('data-modal-trigger');
+        const modal = document.getElementById(modalId);
+        
+        if (modal) {
+          openModal(modal);
+        }
+      });
+    });
+
+    function openModal(modal) {
+      document.body.classList.add('overflow-hidden');
+      modal.classList.remove('pointer-events-none', 'opacity-0');
+      modal.classList.add('opacity-100');
+      
+      const card = modal.querySelector('.modal-card');
+      if (card) {
+        card.classList.remove('scale-95', 'opacity-0');
+        card.classList.add('scale-100', 'opacity-100');
+      }
+    }
+
+    function closeModal(modal) {
+      document.body.classList.remove('overflow-hidden');
+      modal.classList.remove('opacity-100');
+      modal.classList.add('opacity-0', 'pointer-events-none');
+      
+      const card = modal.querySelector('.modal-card');
+      if (card) {
+        card.classList.remove('scale-100', 'opacity-100');
+        card.classList.add('scale-95', 'opacity-0');
+      }
+    }
+
+    // Attach closing handlers to all modals
+    const modals = document.querySelectorAll('.modal-overlay');
+    modals.forEach(modal => {
+      // Close on close button click
+      const closeBtn = modal.querySelector('.modal-close');
+      if (closeBtn) {
+        closeBtn.addEventListener('click', () => closeModal(modal));
+      }
+
+      // Close on backdrop overlay click
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          closeModal(modal);
+        }
+      });
+
+      // Close on link inside modal click (like #contact anchor links)
+      const links = modal.querySelectorAll('.modal-item');
+      links.forEach(link => {
+        link.addEventListener('click', () => closeModal(modal));
+      });
+    });
+
+    // Close on ESC keypress
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        const activeModal = document.querySelector('.modal-overlay.opacity-100');
+        if (activeModal) {
+          closeModal(activeModal);
+        }
+      }
+    });
+  });
+</script>
+
+<style>
+  /* Base Card styling using CSS Masks */
+  .feature-card__content {
+    -webkit-mask-image: url('/insonis template/insonis/assets/images/iconbox-mask-3.png');
+    mask-image: url('/insonis template/insonis/assets/images/iconbox-mask-3.png');
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    -webkit-mask-position: top left;
+    -webkit-mask-repeat: no-repeat;
+    mask-position: top left;
+    mask-repeat: no-repeat;
+    background: linear-gradient(135deg, #f3f7fb 0%, #ffffff 100%);
+    position: relative;
+    z-index: 9;
+    overflow: hidden;
+    transition: color 0.6s ease, background 0.6s ease, background-color 0.6s ease;
+  }
+
+  /* Gradient/Highlighted Card default state (Gold) */
+  .feature-card__content.gradient-card {
+    background: linear-gradient(135deg, #ffce76 0%, #e9ba64 100%);
+    transition: background 0.6s ease, background-color 0.6s ease, color 0.6s ease;
+  }
+
+  /* Expanding circle background wrapper */
+  .feature-card__hover-bg {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    background-color: #0b1a2f;
+    transform: scale(0);
+    transform-origin: center center;
+    transition: transform 0.6s ease-out;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  /* White cards hover expanding bg (turns gold/orange instead of dark blue) */
+  .feature-card:not(.gradient-card) .feature-card__hover-bg {
+    background-color: #ffce76;
+  }
+
+  /* Gold card hover expanding bg (explicitly dark blue) */
+  .feature-card:has(.gradient-card) .feature-card__hover-bg {
+    background-color: #0b1a2f;
+  }
+
+  .feature-card:hover .feature-card__hover-bg {
+    transform: scale(18);
+  }
+
+  /* Text color changes on card hover to contrast with the background */
+  .feature-card:not(.gradient-card):hover .feature-card__content {
+    color: #0b1a2f; /* Dark blue text on gold/orange hover background */
+  }
+
+  .feature-card:has(.gradient-card):hover .feature-card__content {
+    color: #ffffff; /* White text on dark blue hover background */
+  }
+
+  /* Floating Logo Shape Badge styling */
+  .feature-card__icon-badge {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    width: 100px;
+    height: 103px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.15));
+  }
+
+  /* Target background shape color */
+  .feature-card__icon-badge svg.badge-bg {
+    transition: color 0.6s ease;
+  }
+
+  /* Target centered icon color */
+  .feature-card__icon-badge .badge-icon {
+    transition: color 0.6s ease;
+  }
+
+  /* Target the backing circle fill */
+  .feature-card__icon-badge .badge-cutout-fill {
+    transition: fill 0.6s ease;
+  }
+
+  /* Default state: white cards (index 0, 2) */
+  .feature-card:not(.gradient-card) .feature-card__icon-badge svg.badge-bg {
+    color: #ffce76; /* Gold container */
+    opacity: 1;
+    transform: scale(1);
+  }
+  .feature-card:not(.gradient-card) .feature-card__icon-badge .badge-icon {
+    color: #0b1a2f; /* Deep blue icon */
+  }
+  .feature-card:not(.gradient-card) .feature-card__icon-badge .badge-cutout-fill {
+    fill: #ffffff; /* White fill to merge with white card body */
+  }
+
+  /* Default state: gradient gold card (index 1) */
+  .feature-card:has(.gradient-card) .feature-card__icon-badge svg.badge-bg {
+    color: #ffffff; /* White container */
+    opacity: 1;
+    transform: scale(1);
+  }
+  .feature-card:has(.gradient-card) .feature-card__icon-badge .badge-icon {
+    color: #ffce76; /* Gold icon */
+  }
+  .feature-card:has(.gradient-card) .feature-card__icon-badge .badge-cutout-fill {
+    fill: #ffce76; /* Gold fill to merge with gold card body */
+  }
+
+  /* Hover trigger state: icon badge */
+  .feature-card:hover .feature-card__icon-badge {
+    transform: scale(1.05);
+  }
+
+  /* Hover state: white cards (index 0, 2) */
+  .feature-card:not(.gradient-card):hover .feature-card__icon-badge svg.badge-bg {
+    color: #ffffff; /* Turns white on hover */
+  }
+  .feature-card:not(.gradient-card):hover .feature-card__icon-badge .badge-icon {
+    color: #ffce76; /* Turns gold on hover */
+  }
+  .feature-card:not(.gradient-card):hover .feature-card__icon-badge .badge-cutout-fill {
+    fill: #ffce76; /* Turns gold/orange to match expanding background */
+  }
+
+  /* Hover state: gradient gold card (index 1) */
+  .feature-card:has(.gradient-card):hover .feature-card__icon-badge svg.badge-bg {
+    color: #ffce76; /* Turns gold on hover */
+  }
+  .feature-card:has(.gradient-card):hover .feature-card__icon-badge .badge-icon {
+    color: #0b1a2f; /* Turns deep blue on hover */
+  }
+  .feature-card:has(.gradient-card):hover .feature-card__icon-badge .badge-cutout-fill {
+    fill: #0b1a2f; /* Turns dark blue to match expanding background */
+  }
+
+  /* Title styling */
+  .feature-card__title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    font-family: var(--font-display, sans-serif);
+    max-width: 220px; /* Increased to allow 2 lines without wrapping third */
+    height: 56px; /* Slightly taller for perfect 2-line spacing */
+    line-height: 1.25;
+    transition: color 0.5s ease;
+    color: #153b68;
+  }
+
+  .feature-card:has(.gradient-card) .feature-card__title {
+    color: #0b1a2f;
+  }
+
+  /* Title hover styling */
+  .feature-card:not(.gradient-card):hover .feature-card__title {
+    color: #0b1a2f;
+  }
+
+  .feature-card:has(.gradient-card):hover .feature-card__title {
+    color: #ffffff;
+  }
+
+  /* Divider line styling */
+  .feature-card__divider {
+    width: 100%;
+    height: 1px;
+    margin: 20px 0; /* Increased margin for better padding/spacing */
+    background: rgba(0, 0, 0, 0.08);
+    transition: background-color 0.5s ease;
+  }
+
+  .feature-card:has(.gradient-card) .feature-card__divider {
+    background: rgba(11, 26, 47, 0.1);
+  }
+
+  /* Divider hover styling */
+  .feature-card:not(.gradient-card):hover .feature-card__divider {
+    background: rgba(11, 26, 47, 0.12);
+  }
+
+  .feature-card:has(.gradient-card):hover .feature-card__divider {
+    background: rgba(255, 255, 255, 0.15);
+  }
+
+  /* Description styling */
+  .feature-card__desc {
+    font-size: 13.5px;
+    line-height: 24px;
+    padding-right: 8px;
+    font-weight: 400;
+    height: 72px; /* Fixed height for 3 lines */
+    transition: color 0.5s ease;
+    color: #64748b;
+  }
+
+  .feature-card:has(.gradient-card) .feature-card__desc {
+    color: rgba(11, 26, 47, 0.85);
+  }
+
+  /* Description hover styling */
+  .feature-card:not(.gradient-card):hover .feature-card__desc {
+    color: rgba(11, 26, 47, 0.85);
+  }
+
+  .feature-card:has(.gradient-card):hover .feature-card__desc {
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  /* Button/Link styling */
+  .feature-card__link {
+    font-size: 13.5px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    transition: color 0.5s ease;
+    color: #153b68;
+  }
+
+  .feature-card:has(.gradient-card) .feature-card__link {
+    color: #0b1a2f;
+  }
+
+  /* Link hover styling */
+  .feature-card:not(.gradient-card):hover .feature-card__link {
+    color: #0b1a2f;
+  }
+
+  .feature-card:has(.gradient-card):hover .feature-card__link {
+    color: #ffffff;
+  }
+</style>

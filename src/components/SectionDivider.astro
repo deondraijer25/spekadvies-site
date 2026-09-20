@@ -1,0 +1,20 @@
+---
+interface Props {
+  fillColor: string; // The color of the next section to fill the SVG shape
+  direction?: 'left-low' | 'left-high'; // Left-low: left side is lower, right is higher. Left-high: left side is higher, right is lower.
+  className?: string;
+}
+
+const { fillColor, direction = 'left-low', className = "" } = Astro.props;
+
+// Path definitions matching the user's uploaded stepped divider designs
+const path = direction === 'left-low'
+  ? "M0,30 L600,30 C612,30 614,0 626,0 L1200,0 L1200,30 L0,30 Z"
+  : "M0,30 L0,0 L600,0 C612,0 614,30 626,30 L1200,30 L1200,30 L0,30 Z";
+---
+
+<div class={`absolute bottom-0 left-0 right-0 w-full overflow-hidden leading-none z-20 pointer-events-none ${className}`}>
+  <svg class="relative block w-full h-[20px] sm:h-[30px]" viewBox="0 0 1200 30" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style={`fill: ${fillColor};`}>
+    <path d={path}></path>
+  </svg>
+</div>

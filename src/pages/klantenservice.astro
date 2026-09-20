@@ -1,0 +1,482 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import AboutSection from '../components/AboutSection.astro';
+import RatingsClaim from '../components/RatingsClaim.astro';
+import FaqSection from '../components/FaqSection.astro';
+import ContactForm from '../components/ContactForm.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout 
+  title="Klantenservice & Downloads | Spekadvies, Alles op één plek" 
+  description="Direct schade melden, formulieren downloaden of documenten aanleveren voor je hypotheekaanvraag. Bekijk onze openingstijden en neem direct contact op met Spekadvies."
+>
+  <Navbar />
+  <Breadcrumbs />
+  
+  <main class="relative z-10 flex-grow">
+    <!-- Hero Section with Background Image and Dark Gradient Overlay -->
+    <section 
+      class="relative py-24 sm:py-32 lg:py-40 bg-[#153b68] bg-center bg-cover bg-no-repeat overflow-hidden rounded-b-[48px] sm:rounded-b-[64px] lg:rounded-b-[80px] shadow-xl"
+      style="background-image: linear-gradient(rgba(21, 59, 104, 0.82), rgba(11, 26, 47, 0.94)), url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=1800&q=80');"
+    >
+      <div class="max-w-4xl mx-auto px-6 sm:px-8 text-center relative z-10">
+        <!-- Badge -->
+        <span class="inline-block bg-white/10 text-brand-accent border border-white/10 text-[10px] font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full mb-6 font-sans">
+          Klantenservice
+        </span>
+        
+        <h1 class="text-4xl sm:text-5xl lg:text-6.5xl font-bold text-white tracking-tight leading-tight font-display mb-6">
+          Klantenservice en downloads
+        </h1>
+        
+        <p  class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto font-sans font-normal">
+          Alles op één plek. Download formulieren, lever documenten veilig bij ons aan of neem direct contact op.
+        </p>
+      </div>
+    </section>
+
+    <!-- Tab Navigation -->
+    <div class="border-b border-slate-200 bg-white sticky top-0 z-40 shadow-sm">
+      <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        <div class="flex space-x-8 overflow-x-auto hide-scrollbar py-1">
+          <button 
+            id="tab-btn-verzekeringen" 
+            class="tab-btn active border-b-2 border-brand-accent px-4 py-4 text-xs font-semibold uppercase tracking-wider font-sans text-brand-dark cursor-pointer transition-all duration-200 whitespace-nowrap flex items-center space-x-2"
+            data-tab="verzekeringen"
+          >
+            <span>Verzekeringen</span>
+          </button>
+          <button 
+            id="tab-btn-hypotheken" 
+            class="tab-btn border-b-2 border-transparent px-4 py-4 text-xs font-semibold uppercase tracking-wider font-sans text-slate-400 hover:text-brand-dark cursor-pointer transition-all duration-200 whitespace-nowrap flex items-center space-x-2"
+            data-tab="hypotheken"
+          >
+            <span>Hypotheken</span>
+          </button>
+          <button 
+            id="tab-btn-klantenservice" 
+            class="tab-btn border-b-2 border-transparent px-4 py-4 text-xs font-semibold uppercase tracking-wider font-sans text-slate-400 hover:text-brand-dark cursor-pointer transition-all duration-200 whitespace-nowrap flex items-center space-x-2"
+            data-tab="klantenservice"
+          >
+            <span>Klantenservice</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab Panels Content -->
+    <div class="py-16 bg-brand-basetint/30 min-h-[500px]">
+      <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+
+        <!-- 1. VERZEKERINGEN TAB PANEL -->
+        <div id="panel-verzekeringen" class="tab-panel space-y-12">
+          <div class="bg-brand-dark border border-white/10 rounded-[32px] p-8 sm:p-10 text-white shadow-xl relative overflow-hidden flex flex-col md:flex-row items-center gap-6">
+            <div class="absolute -right-24 -bottom-24 w-96 h-96 rounded-full bg-brand-primary/5 blur-3xl pointer-events-none"></div>
+            <div class="w-16 h-16 rounded-2xl bg-brand-primary/10 flex items-center justify-center text-brand-primary text-3xl flex-shrink-0">
+              <i class="fa-solid fa-umbrella"></i>
+            </div>
+            <div>
+              <h2 class="text-xl sm:text-2xl font-semibold font-sans text-brand-primary">Verzekeringsdocumenten</h2>
+              <p  class="text-slate-300 text-sm sm:text-base mt-2 font-sans font-normal max-w-2xl leading-relaxed">
+                Download schadeformulieren, voorwaarden en officiële documenten voor al je verzekeringszaken. Vul ze digitaal of handmatig in.
+              </p>
+            </div>
+          </div>
+
+          <!-- Document Cards Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Doc 1 -->
+            <div class="bg-white border border-slate-200/80 p-8 rounded-3xl shadow-sm hover:shadow-md transition-shadow flex flex-col h-full">
+              <div class="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center text-brand-dark text-xl mb-6">
+                <i class="fa-regular fa-file-pdf"></i>
+              </div>
+              <h3 class="text-base font-semibold text-brand-dark font-sans mb-3">Schadeformulier Algemeen</h3>
+              <p   class="text-sm text-slate-600 font-sans font-normal mb-6 leading-relaxed flex-grow">
+                Algemeen schadeformulier voor de meeste schadecategorieën (inboedel, opstal, aansprakelijkheid). Download en vul digitaal in.
+              </p>
+              <a 
+                href="/assets/downloads/schadeformulier_algemeen.pdf" 
+                download
+                class="w-full bg-slate-100 hover:bg-brand-dark hover:text-white text-brand-dark font-semibold py-3.5 rounded-full text-xs text-center transition-all duration-300 font-sans uppercase tracking-wider"
+              >
+                Download PDF
+              </a>
+            </div>
+
+            <!-- Doc 2 -->
+            <div class="bg-white border border-slate-200/80 p-8 rounded-3xl shadow-sm hover:shadow-md transition-shadow flex flex-col h-full">
+              <div class="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center text-brand-dark text-xl mb-6">
+                <i class="fa-solid fa-car-burst"></i>
+              </div>
+              <h3 class="text-base font-semibold text-brand-dark font-sans mb-3">Europees Schadeformulier</h3>
+              <p   class="text-sm text-slate-600 font-sans font-normal mb-6 leading-relaxed flex-grow">
+                Het verplichte Europees schadeformulier voor aanrijdingen met motorrijtuigen (auto, motor, scooter). Digitaal invulbaar.
+              </p>
+              <a 
+                href="/assets/downloads/schadeformulier_europa_digitaal.pdf" 
+                download
+                class="w-full bg-slate-100 hover:bg-brand-dark hover:text-white text-brand-dark font-semibold py-3.5 rounded-full text-xs text-center transition-all duration-300 font-sans uppercase tracking-wider"
+              >
+                Download PDF
+              </a>
+            </div>
+
+            <!-- Doc 3 -->
+            <div class="bg-white border border-slate-200/80 p-8 rounded-3xl shadow-sm hover:shadow-md transition-shadow flex flex-col h-full">
+              <div class="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center text-brand-dark text-xl mb-6">
+                <i class="fa-solid fa-shield-halved"></i>
+              </div>
+              <h3 class="text-base font-semibold text-brand-dark font-sans mb-3">Aanvraag Aanvullende Polis</h3>
+              <p   class="text-sm text-slate-600 font-sans font-normal mb-6 leading-relaxed flex-grow">
+                Aanvraagformulier voor het uitbreiden van een bestaande polis of het afsluiten van een aanvullende dekking.
+              </p>
+              <a 
+                href="/assets/downloads/aanvraag_aanvullend.pdf" 
+                download
+                class="w-full bg-slate-100 hover:bg-brand-dark hover:text-white text-brand-dark font-semibold py-3.5 rounded-full text-xs text-center transition-all duration-300 font-sans uppercase tracking-wider"
+              >
+                Download PDF
+              </a>
+            </div>
+          </div>
+
+          <!-- Direct Schade Melden Banner -->
+          <div class="bg-brand-primary/10 border border-brand-primary/20 rounded-[32px] p-8 sm:p-10 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-sm">
+            <div class="space-y-2">
+              <h3 class="text-lg font-semibold text-brand-dark font-sans">Schade direct online melden?</h3>
+              <p   class="text-slate-600 text-xs sm:text-sm font-sans font-normal max-w-xl">
+                Gebruik onze digitale schadetool voor een snelle en gestructureerde melding. Wij nemen de afhandeling direct in behandeling.
+              </p>
+            </div>
+            <a 
+              href="https://schadetool.leadfabriek.io" 
+              target="_blank"
+              class="bg-brand-dark hover:bg-brand-primary hover:text-brand-dark text-white font-semibold px-8 py-4 rounded-full shadow-md transition-all duration-300 text-xs tracking-wider uppercase font-sans whitespace-nowrap"
+            >
+              <i class="fa-solid fa-triangle-exclamation mr-2"></i> Online melden
+            </a>
+          </div>
+        </div>
+
+        <!-- 2. HYPOTHEKEN TAB PANEL -->
+        <div id="panel-hypotheken" class="tab-panel hidden space-y-12">
+          <div class="bg-brand-dark border border-white/10 rounded-[32px] p-8 sm:p-10 text-white shadow-xl relative overflow-hidden flex flex-col md:flex-row items-center gap-6">
+            <div class="absolute -right-24 -bottom-24 w-96 h-96 rounded-full bg-brand-primary/5 blur-3xl pointer-events-none"></div>
+            <div class="w-16 h-16 rounded-2xl bg-brand-primary/10 flex items-center justify-center text-brand-primary text-3xl flex-shrink-0">
+              <i class="fa-solid fa-house-chimney"></i>
+            </div>
+            <div>
+              <h2 class="text-xl sm:text-2xl font-semibold font-sans text-brand-primary">Hypotheekdocumenten & Checklist</h2>
+              <p  class="text-slate-300 text-sm sm:text-base mt-2 font-sans font-normal max-w-2xl leading-relaxed">
+                Download handige sjablonen voor je hypotheekaanvraag of bekijk de checklist om te zien welke stukken we nodig hebben voor je aanvraag.
+              </p>
+            </div>
+          </div>
+
+          <!-- Document Cards Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Doc 1 -->
+            <div class="bg-white border border-slate-200/80 p-8 rounded-3xl shadow-sm hover:shadow-md transition-shadow flex flex-col h-full">
+              <div class="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center text-brand-dark text-xl mb-6">
+                <i class="fa-solid fa-pen-nib"></i>
+              </div>
+              <h3 class="text-base font-semibold text-brand-dark font-sans mb-3">Werkgeversverklaring</h3>
+              <p   class="text-sm text-slate-600 font-sans font-normal mb-6 leading-relaxed flex-grow">
+                In te vullen door jou en je werkgever. Verplicht onderdeel van elke hypotheekaanvraag in loondienst.
+              </p>
+              <a 
+                href="/assets/downloads/werkgeversverklaring_2026.pdf" 
+                download
+                class="w-full bg-slate-100 hover:bg-brand-dark hover:text-white text-brand-dark font-semibold py-3.5 rounded-full text-xs text-center transition-all duration-300 font-sans uppercase tracking-wider"
+              >
+                Download PDF
+              </a>
+            </div>
+
+            <!-- Doc 2 -->
+            <div class="bg-white border border-slate-200/80 p-8 rounded-3xl shadow-sm hover:shadow-md transition-shadow flex flex-col h-full">
+              <div class="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center text-brand-dark text-xl mb-6">
+                <i class="fa-solid fa-file-invoice-dollar"></i>
+              </div>
+              <h3 class="text-base font-semibold text-brand-dark font-sans mb-3">Opgave Eigenwoningschuld</h3>
+              <p   class="text-sm text-slate-600 font-sans font-normal mb-6 leading-relaxed flex-grow">
+                Formulier voor het doorgeven van de actuele stand van je hypotheekschuld aan de Belastingdienst.
+              </p>
+              <a 
+                href="/assets/downloads/opgave_eigenwoningschuld.pdf" 
+                download
+                class="w-full bg-slate-100 hover:bg-brand-dark hover:text-white text-brand-dark font-semibold py-3.5 rounded-full text-xs text-center transition-all duration-300 font-sans uppercase tracking-wider"
+              >
+                Download PDF
+              </a>
+            </div>
+
+            <!-- Doc 3 -->
+            <div class="bg-white border border-slate-200/80 p-8 rounded-3xl shadow-sm hover:shadow-md transition-shadow flex flex-col h-full">
+              <div class="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center text-brand-dark text-xl mb-6">
+                <i class="fa-solid fa-list-check"></i>
+              </div>
+              <h3 class="text-base font-semibold text-brand-dark font-sans mb-3">Aanvraag Checklist</h3>
+              <p   class="text-sm text-slate-600 font-sans font-normal mb-6 leading-relaxed flex-grow">
+                Een handig overzicht van alle benodigde documenten bij een hypotheekaanvraag. Print en vink af.
+              </p>
+              <a 
+                href="/assets/downloads/checklist_hypotheek.pdf" 
+                download
+                class="w-full bg-slate-100 hover:bg-brand-dark hover:text-white text-brand-dark font-semibold py-3.5 rounded-full text-xs text-center transition-all duration-300 font-sans uppercase tracking-wider"
+              >
+                Download PDF
+              </a>
+            </div>
+          </div>
+
+          <!-- AVG-Proof Hypotheek Checklist Section -->
+          <div class="bg-white border border-slate-200/80 rounded-[40px] p-8 sm:p-12 shadow-xl">
+            <div class="max-w-3xl mx-auto text-center mb-12">
+              <span class="text-brand-accent text-[10px] font-semibold tracking-wider block mb-2 font-sans uppercase">AVG-Proof aanleveren</span>
+              <h3 class="text-xl sm:text-2xl font-semibold text-brand-dark font-sans">Hypotheek checklist</h3>
+              <p   class="text-slate-600 text-sm sm:text-base font-sans font-normal leading-relaxed mt-2">
+                Om je privacy en persoonsgegevens optimaal te beschermen, werken wij via het beveiligde FinSave portaal. Verzamel onderstaande documenten om je aanvraag soepel te laten verlopen.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start border-b border-slate-100 pb-12">
+              <!-- Left Column: Particulieren -->
+              <div class="space-y-6">
+                <h4 class="text-sm font-semibold text-brand-dark font-sans tracking-wide flex items-center">
+                  <i class="fa-solid fa-user text-brand-accent mr-2.5"></i> Particulier in loondienst
+                </h4>
+                <ul class="space-y-4">
+                  <li class="flex items-start space-x-3 text-xs text-slate-650 font-sans font-semibold">
+                    <span class="text-emerald-500 mt-0.5">✓</span>
+                    <div>
+                      <strong class="text-brand-dark block">Geldig legitimatiebewijs</strong>
+                      <span class="text-[11px] text-slate-500 font-medium">Een geldig paspoort of identiteitskaart van alle aanvragers (geen rijbewijs).</span>
+                    </div>
+                  </li>
+                  <li class="flex items-start space-x-3 text-xs text-slate-650 font-sans font-semibold">
+                    <span class="text-emerald-500 mt-0.5">✓</span>
+                    <div>
+                      <strong class="text-brand-dark block">3 Recente salarisstroken</strong>
+                      <span class="text-[11px] text-slate-500 font-medium">Van de afgelopen 3 aaneengesloten maanden, passend bij de werkgeversverklaring.</span>
+                    </div>
+                  </li>
+                  <li class="flex items-start space-x-3 text-xs text-slate-650 font-sans font-semibold">
+                    <span class="text-emerald-500 mt-0.5">✓</span>
+                    <div>
+                      <strong class="text-brand-dark block">Ingevulde werkgeversverklaring</strong>
+                      <span class="text-[11px] text-slate-500 font-medium">Volledig ingevuld, ondertekend en voorzien van firmastempel (of digitale code).</span>
+                    </div>
+                  </li>
+                  <li class="flex items-start space-x-3 text-xs text-slate-650 font-sans font-semibold">
+                    <span class="text-emerald-500 mt-0.5">✓</span>
+                    <div>
+                      <strong class="text-brand-dark block">UWV Verzekeringsbericht & Pensioen</strong>
+                      <span class="text-[11px] text-slate-500 font-medium">Je arbeidsverleden (pdf via mijnuwv.nl) en pensioenoverzicht (mijnpensioenoverzicht.nl).</span>
+                    </div>
+                  </li>
+                  <li class="flex items-start space-x-3 text-xs text-slate-650 font-sans font-semibold">
+                    <span class="text-emerald-500 mt-0.5">✓</span>
+                    <div>
+                      <strong class="text-brand-dark block">Bankafschriften & Woning</strong>
+                      <span class="text-[11px] text-slate-500 font-medium">Bankafschrift met loonstorting en de getekende (voorlopige) koopovereenkomst.</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Right Column: Ondernemers -->
+              <div class="space-y-6">
+                <h4 class="text-sm font-semibold text-brand-dark font-sans tracking-wide flex items-center">
+                  <i class="fa-solid fa-briefcase text-brand-accent mr-2.5"></i> Zelfstandig ondernemers
+                </h4>
+                <ul class="space-y-4">
+                  <li class="flex items-start space-x-3 text-xs text-slate-650 font-sans font-semibold">
+                    <span class="text-emerald-500 mt-0.5">✓</span>
+                    <div>
+                      <strong class="text-brand-dark block">Jaarrekeningen (laatste 3 jaar)</strong>
+                      <span class="text-[11px] text-slate-500 font-medium">Balans, winst- en verliesrekeningen opgesteld door een boekhouder of accountant.</span>
+                    </div>
+                  </li>
+                  <li class="flex items-start space-x-3 text-xs text-slate-650 font-sans font-semibold">
+                    <span class="text-emerald-500 mt-0.5">✓</span>
+                    <div>
+                      <strong class="text-brand-dark block">Belastingaangiften (laatste 3 jaar)</strong>
+                      <span class="text-[11px] text-slate-500 font-medium">De definitieve aangiften en aanslagen inkomstenbelasting van de afgelopen 3 jaar.</span>
+                    </div>
+                  </li>
+                  <li class="flex items-start space-x-3 text-xs text-slate-650 font-sans font-semibold">
+                    <span class="text-emerald-500 mt-0.5">✓</span>
+                    <div>
+                      <strong class="text-brand-dark block">Kamer van Koophandel uittreksel</strong>
+                      <span class="text-[11px] text-slate-500 font-medium">Een actueel uittreksel uit het handelsregister (niet ouder dan 3 maanden).</span>
+                    </div>
+                  </li>
+                  <li class="flex items-start space-x-3 text-xs text-slate-650 font-sans font-semibold">
+                    <span class="text-emerald-500 mt-0.5">✓</span>
+                    <div>
+                      <strong class="text-brand-dark block">Zakelijke bankafschriften</strong>
+                      <span class="text-[11px] text-slate-500 font-medium">Recente overzichten van je zakelijke rekening en eventuele lopende zakelijke kredieten.</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Portal CTA -->
+            <div class="pt-12 text-center space-y-6">
+              <div class="max-w-xl mx-auto">
+                <h4 class="text-base font-semibold text-brand-dark font-sans">Hoe lever je deze documenten aan?</h4>
+                <p   class="text-sm text-slate-600 font-sans font-normal mt-2 leading-relaxed">
+                  Turing je adviestraject ontvang je van ons een persoonlijke uitnodigingslink voor het beveiligde FinSave portaal. Hier kun je al je documenten in een streng beveiligde bankomgeving uploaden. Dit is de enige AVG-proof methode om persoonsgegevens met ons te delen.
+                </p>
+              </div>
+              <div>
+                <a 
+                  href="https://start.finsave.nl/app/login" 
+                  target="_blank"
+                  class="inline-flex bg-brand-dark hover:bg-brand-primary hover:text-brand-dark text-white font-semibold px-8 py-4 rounded-full shadow-md transition-all duration-300 text-xs tracking-wider uppercase font-sans"
+                >
+                  Direct inloggen FinSave ↗
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. KLANTENSERVICE TAB PANEL -->
+        <div id="panel-klantenservice" class="tab-panel hidden space-y-12">
+          <div class="bg-brand-dark border border-white/10 rounded-[32px] p-8 sm:p-10 text-white shadow-xl relative overflow-hidden flex flex-col md:flex-row items-center gap-6">
+            <div class="absolute -right-24 -bottom-24 w-96 h-96 rounded-full bg-brand-primary/5 blur-3xl pointer-events-none"></div>
+            <div class="w-16 h-16 rounded-2xl bg-brand-primary/10 flex items-center justify-center text-brand-primary text-3xl flex-shrink-0">
+              <i class="fa-solid fa-headset"></i>
+            </div>
+            <div>
+              <h2 class="text-xl sm:text-2xl font-semibold font-sans text-brand-primary">Direct contact</h2>
+              <p  class="text-slate-300 text-sm sm:text-base mt-2 font-sans font-normal max-w-2xl leading-relaxed">
+                Wij zijn bereikbaar op werkdagen van 09:00 tot 18:00 uur. Heb je een dringende vraag? Bel ons direct!
+              </p>
+            </div>
+          </div>
+
+          <!-- Contact Channels Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Channel 1: Phone -->
+            <div class="bg-white border border-slate-200/80 p-8 rounded-3xl shadow-sm text-center flex flex-col justify-between h-full">
+              <div class="space-y-4">
+                <div class="w-12 h-12 rounded-xl bg-brand-primary/10 text-brand-dark text-lg flex items-center justify-center mx-auto">
+                  <i class="fa-solid fa-phone"></i>
+                </div>
+                <h3 class="text-base font-semibold text-brand-dark font-sans">Bel direct</h3>
+                <p   class="text-sm text-slate-600 font-sans font-normal leading-relaxed">Spreek direct met een van onze adviseurs in Moerkapelle.</p>
+              </div>
+              <a 
+                href="tel:+31795931241" 
+                class="w-full bg-brand-dark hover:bg-brand-primary hover:text-brand-dark text-white font-semibold py-3 rounded-full text-xs text-center transition-all duration-300 font-sans uppercase tracking-wider block mt-6"
+              >
+                079 593 1241
+              </a>
+            </div>
+
+            <!-- Channel 2: Email -->
+            <div class="bg-white border border-slate-200/80 p-8 rounded-3xl shadow-sm text-center flex flex-col justify-between h-full">
+              <div class="space-y-4">
+                <div class="w-12 h-12 rounded-xl bg-brand-primary/10 text-brand-dark text-lg flex items-center justify-center mx-auto">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <h3 class="text-base font-semibold text-brand-dark font-sans">Mail ons</h3>
+                <p   class="text-sm text-slate-600 font-sans font-normal leading-relaxed">Stuur een e-mail en we reageren binnen 1 werkdag.</p>
+              </div>
+              <a 
+                href="mailto:info@spekadvies.nl" 
+                class="w-full bg-slate-100 hover:bg-brand-dark hover:text-white text-brand-dark font-semibold py-3 rounded-full text-xs text-center transition-all duration-300 font-sans uppercase tracking-wider block mt-6 lowercase"
+              >
+                info@spekadvies.nl
+              </a>
+            </div>
+
+            <!-- Channel 3: Google Reviews -->
+            <div class="bg-white border border-slate-200/80 p-8 rounded-3xl shadow-sm text-center flex flex-col justify-between h-full">
+              <div class="space-y-4">
+                <div class="w-12 h-12 rounded-xl bg-brand-primary/10 text-brand-dark text-lg flex items-center justify-center mx-auto">
+                  <i class="fa-brands fa-google"></i>
+                </div>
+                <h3 class="text-base font-semibold text-brand-dark font-sans">Beoordeel ons</h3>
+                <p   class="text-sm text-slate-600 font-sans font-normal leading-relaxed">Tevreden? Laat een review achter op Google en help ons groeien.</p>
+              </div>
+              <a 
+                href="https://g.page/r/CdfgD9T6D_XpEAE/review" 
+                target="_blank"
+                class="w-full bg-slate-100 hover:bg-brand-dark hover:text-white text-brand-dark font-semibold py-3 rounded-full text-xs text-center transition-all duration-300 font-sans uppercase tracking-wider block mt-6"
+              >
+                Review schrijven ➔
+              </a>
+            </div>
+
+            <!-- Channel 4: FinSave Portal -->
+            <div class="bg-white border border-slate-200/80 p-8 rounded-3xl shadow-sm text-center flex flex-col justify-between h-full">
+              <div class="space-y-4">
+                <div class="w-12 h-12 rounded-xl bg-brand-primary/10 text-brand-dark text-lg flex items-center justify-center mx-auto">
+                  <i class="fa-solid fa-right-to-bracket"></i>
+                </div>
+                <h3 class="text-base font-semibold text-brand-dark font-sans">Mijn FinSave</h3>
+                <p   class="text-sm text-slate-600 font-sans font-normal leading-relaxed">Bekijk 24/7 je polissen en documenten in het beveiligde portaal.</p>
+              </div>
+              <a 
+                href="https://start.finsave.nl/app/login" 
+                target="_blank"
+                class="w-full bg-brand-primary hover:bg-brand-primary-hover text-brand-dark font-semibold py-3 rounded-full text-xs text-center transition-all duration-300 font-sans uppercase tracking-wider block mt-6"
+              >
+                Inloggen FinSave ➔
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  <AboutSection />
+  <RatingsClaim />
+  <FaqSection />
+  <ContactForm />
+  <Footer />
+</Layout>
+
+<!-- Client side tab logic -->
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Tab Navigation Logic
+    const tabs = document.querySelectorAll('.tab-btn');
+    const panels = document.querySelectorAll('.tab-panel');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        // Deactivate all tabs & panels
+        tabs.forEach(t => {
+          t.classList.remove('active', 'border-brand-accent', 'text-brand-dark');
+          t.classList.add('border-transparent', 'text-slate-400');
+        });
+        panels.forEach(p => p.classList.add('hidden'));
+
+        // Activate clicked tab & panel
+        tab.classList.add('active', 'border-brand-accent', 'text-brand-dark');
+        tab.classList.remove('border-transparent', 'text-slate-400');
+        const targetId = `panel-${tab.getAttribute('data-tab')}`;
+        document.getElementById(targetId).classList.remove('hidden');
+      });
+    });
+
+    // Handle initial tab selection via URL parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const initialTab = urlParams.get('tab');
+    if (initialTab) {
+      const targetTab = document.querySelector(`.tab-btn[data-tab="${initialTab}"]`);
+      if (targetTab) {
+        targetTab.click();
+      }
+    }
+  });
+</script>

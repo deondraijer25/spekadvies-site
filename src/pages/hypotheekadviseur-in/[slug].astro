@@ -1,0 +1,246 @@
+---
+import { getCollection, render } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import RatingsClaim from '../../components/RatingsClaim.astro';
+import ContactForm from '../../components/ContactForm.astro';
+import AboutSection from '../../components/AboutSection.astro';
+import Footer from '../../components/Footer.astro';
+
+// Generate paths for each markdown file in src/content/locaties/
+export async function getStaticPaths() {
+  const locatiesEntries = await getCollection('locaties');
+  return locatiesEntries.map(entry => ({
+    params: { slug: entry.id },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { name, seoTitle, seoDescription, heroTitle, heroSubtitle, ctaText, usps, problemsTitle, problems, faqItems, articleBlocks } = entry.data;
+const { Content } = await render(entry);
+---
+
+<Layout title={seoTitle} description={seoDescription}>
+  <Navbar />
+  <Breadcrumbs />
+  
+  <main class="relative z-10 flex-grow bg-slate-50/50">
+    
+    <!-- Premium Curved Hero Section (Dark Blue Background) -->
+    <section 
+      class="relative py-24 sm:py-32 bg-[#153b68] bg-center bg-cover bg-no-repeat overflow-hidden rounded-b-[48px] sm:rounded-b-[64px] lg:rounded-b-[80px] shadow-xl"
+      style="background-image: linear-gradient(rgba(21, 59, 104, 0.82), rgba(11, 26, 47, 0.94)), url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1800&q=80');"
+    >
+      <div class="max-w-4xl mx-auto px-6 sm:px-8 text-center relative z-10">
+        <!-- Badge -->
+        <span class="inline-block bg-white/10 text-brand-accent border border-white/10 text-[10px] font-black tracking-widest uppercase px-4 py-1.5 rounded-full mb-6 font-display">
+          Lokaal Advies in {name}
+        </span>
+        
+        <h1 class="text-4xl sm:text-5xl lg:text-6.5xl font-black text-white tracking-tight leading-tight font-display mb-6">
+          {heroTitle}
+        </h1>
+        
+        <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto mb-10 font-sans font-medium">
+          {heroSubtitle}
+        </p>
+        
+        <div>
+          <button 
+            class="open-contact-drawer inline-block bg-brand-accent hover:bg-brand-accent/90 text-brand-dark font-black px-8 py-4 rounded-full shadow-lg transition-all duration-300 text-xs tracking-wider uppercase font-display cursor-pointer"
+          >
+            {ctaText}
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- USPs Section -->
+    {usps && usps.length > 0 && (
+      <section class="py-16 bg-white relative">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {usps.map((usp) => (
+              <div class="bg-slate-50/50 border border-slate-200/60 p-8 rounded-3xl transition-all duration-300 hover:shadow-md hover:border-brand-primary/50 group">
+                <h3 class="text-sm font-black text-brand-dark mb-3 flex items-center font-display uppercase tracking-wider">
+                  <span class="text-brand-primary mr-2.5">✦</span> {usp.title}
+                </h3>
+                <p class="text-slate-500 leading-relaxed text-xs font-sans font-semibold">{usp.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    <!-- Problems / Challenges Section (Spacious layout instead of squished sidebar) -->
+    {problems && (
+      <section class="py-20 bg-slate-50 border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+          <div class="text-center max-w-2xl mx-auto mb-14 space-y-3">
+            <span class="text-xs font-black tracking-widest uppercase text-brand-dark/50 block font-display">Gemeenschappelijke obstakels</span>
+            <h2 class="text-2xl sm:text-3xl font-black text-brand-dark font-display leading-tight">
+              {problemsTitle || `Waarom een adviseur in ${name} belangrijk is`}
+            </h2>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {problems.map((prob) => (
+              <div class="bg-white border border-slate-200/80 p-8 rounded-[32px] shadow-sm flex items-start gap-4">
+                <span class="flex-shrink-0 w-10 h-10 rounded-2xl bg-brand-dark text-brand-accent flex items-center justify-center font-black text-base font-display">
+                  !
+                </span>
+                <div class="space-y-1.5">
+                  <h4 class="text-sm font-black text-brand-dark uppercase tracking-wider font-display">{prob.title}</h4>
+                  <p class="text-slate-500 text-xs leading-relaxed font-sans font-semibold">{prob.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    <!-- Slimme Rekentools (Highly convincing call-to-actions) -->
+    <section class="py-20 bg-brand-dark text-white relative overflow-hidden rounded-[40px] sm:rounded-[60px] max-w-7xl mx-auto my-12 shadow-2xl">
+      <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] rounded-full bg-brand-primary/10 blur-[150px] pointer-events-none"></div>
+
+      <div class="px-6 sm:px-12 lg:px-16 text-center relative z-10">
+        <span class="text-xs font-black tracking-widest uppercase text-brand-accent block font-display mb-3">Zelf Berekenen</span>
+        <h2 class="text-2xl sm:text-3xl font-black font-display text-white">Slimme Rekentools voor {name}</h2>
+        <p class="text-slate-300 text-xs sm:text-sm font-sans font-medium max-w-lg mx-auto mt-4 leading-relaxed">
+          Bereken direct jouw maximale leencapaciteit of vergelijk de actuele marktrentes.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mt-12">
+          <!-- Card 1: Maximale hypotheek -->
+          <div class="bg-white/5 border border-white/10 rounded-[32px] p-8 text-center flex flex-col justify-between hover:bg-white/10 hover:border-brand-accent/50 transition-all duration-300 group">
+            <div class="space-y-4">
+              <div class="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center text-brand-accent text-xl mx-auto group-hover:scale-105 transition-transform">
+                <i class="fa-solid fa-calculator"></i>
+              </div>
+              <h3 class="text-base font-black font-display uppercase tracking-wider text-white">Maximale hypotheek</h3>
+              <p class="text-xs text-slate-350 font-sans font-medium leading-relaxed">
+                Bereken direct wat je verantwoord kunt lenen op basis van jouw inkomen en lasten.
+              </p>
+            </div>
+            <div class="mt-8">
+              <a 
+                href="https://start.finsave.nl/app/public/maximale-hypotheek" 
+                target="_blank" 
+                class="inline-block w-full bg-brand-accent hover:bg-brand-accent/90 text-brand-dark font-black py-3.5 rounded-full text-xs tracking-wider uppercase font-display cursor-pointer transition-colors"
+              >
+                Bereken maximaliteit
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 2: Actuele rentestanden -->
+          <div class="bg-white/5 border border-white/10 rounded-[32px] p-8 text-center flex flex-col justify-between hover:bg-white/10 hover:border-brand-accent/50 transition-all duration-300 group">
+            <div class="space-y-4">
+              <div class="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center text-brand-accent text-xl mx-auto group-hover:scale-105 transition-transform">
+                <i class="fa-solid fa-chart-line"></i>
+              </div>
+              <h3 class="text-base font-black font-display uppercase tracking-wider text-white">Actuele rentestanden</h3>
+              <p class="text-xs text-slate-355 font-sans font-medium leading-relaxed">
+                Vergelijk direct de rentetarieven van meer dan 40 verschillende geldverstrekkers.
+              </p>
+            </div>
+            <div class="mt-8">
+              <a 
+                href="https://start.finsave.nl/app/public/hypotheek-rentes" 
+                target="_blank" 
+                class="inline-block w-full border-2 border-white/20 hover:border-brand-accent text-white hover:text-brand-accent font-black py-3 rounded-full text-xs tracking-wider uppercase font-display cursor-pointer transition-all duration-300"
+              >
+                Bekijk actuele rentes
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Deep SEO Content Section (Beautiful single column prose for readability) -->
+    <section class="py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-6 sm:px-8">
+        <article class="bg-slate-50/50 border border-slate-200/60 p-8 sm:p-12 rounded-[32px] shadow-sm prose prose-slate max-w-none">
+          <h2 class="text-2xl sm:text-3xl font-black text-brand-dark mb-6 border-b border-slate-250/30 pb-4 font-display">
+            Onafhankelijk advies in {name}
+          </h2>
+          <div class="text-slate-650 space-y-6 leading-relaxed text-xs sm:text-sm font-sans font-medium">
+            <Content />
+          </div>
+          
+          {articleBlocks && articleBlocks.map((block) => (
+            <div class="mt-8 pt-8 border-t border-slate-250/30">
+              <h3 class="text-lg font-black text-brand-dark mb-3 font-display">{block.title}</h3>
+              <p class="text-slate-500 leading-relaxed text-xs sm:text-sm font-sans font-semibold">{block.body}</p>
+            </div>
+          ))}
+        </article>
+      </div>
+    </section>
+
+    <!-- FAQ Accordion (Light Theme) -->
+    {faqItems && faqItems.length > 0 && (
+      <section class="py-20 bg-slate-50 border-t border-b border-slate-200/60">
+        <div class="max-w-4xl mx-auto px-6">
+          <h2 class="text-2xl sm:text-3xl font-black text-center text-brand-dark mb-10 font-display">Veelgestelde Vragen</h2>
+          <div class="space-y-4">
+            {faqItems.map((faq, index) => (
+              <div class="faq-item bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm">
+                <button class="faq-toggle w-full px-6 py-5 text-left text-xs font-black uppercase tracking-wider font-display text-brand-dark flex justify-between items-center cursor-pointer">
+                  <span class="pr-4">{faq.question}</span>
+                  <span class="faq-icon text-slate-400 text-xs transition-transform duration-300">▼</span>
+                </button>
+                <div class="faq-content hidden px-6 pb-6 border-t border-slate-100 pt-4">
+                  <p class="text-xs text-slate-500 font-sans font-semibold leading-relaxed">
+                    {faq.answer}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+  <!-- Complete Homepage Footer Stack -->
+  <AboutSection />
+  <RatingsClaim />
+  <ContactForm />
+  <Footer />
+</Layout>
+
+<!-- FAQ Accordion Script -->
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const faqToggles = document.querySelectorAll('.faq-toggle');
+    faqToggles.forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        const item = toggle.parentElement;
+        const content = item.querySelector('.faq-content');
+        const icon = toggle.querySelector('.faq-icon');
+
+        const isHidden = content.classList.contains('hidden');
+
+        // Close all other FAQs
+        document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+        document.querySelectorAll('.faq-icon').forEach(i => i.classList.remove('rotate-180'));
+
+        if (isHidden) {
+          content.classList.remove('hidden');
+          icon.classList.add('rotate-180');
+        }
+      });
+    });
+  });
+</script>
+
+<style>
+  .rotate-180 {
+    transform: rotate(180deg);
+  }
+</style>

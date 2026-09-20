@@ -1,0 +1,115 @@
+---
+import SectionDivider from './SectionDivider.astro';
+---
+
+<section id="lokale-adviseur" class="py-20 lg:py-28 relative overflow-hidden bg-white scroll-mt-20">
+  
+  <!-- Subtle decorative shape in the background -->
+  <div class="absolute right-0 bottom-0 w-[450px] h-[450px] rounded-full bg-brand-primary/5 blur-[120px] pointer-events-none"></div>
+
+  <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+      
+      <!-- Left Column: Text Block -->
+      <div class="lg:col-span-6 space-y-8 order-2 lg:order-1 text-left">
+        <div class="space-y-3">
+          <span class="text-brand-accent text-xs font-bold tracking-widest uppercase block font-sans">
+            Lokale adviseur, landelijke kennis
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-bold text-brand-dark tracking-tight leading-tight font-display">
+            Persoonlijk & dichtbij, met de kracht van de hele markt
+          </h2>
+          <p class="text-slate-650 text-sm sm:text-base leading-relaxed font-sans font-normal">
+            Als jouw lokale adviseur in Moerkapelle ken ik de regio door en door. Ik spreek je taal, weet wat er speelt in de buurt en ben flexibel bereikbaar – ook in de avonduren. Tegelijkertijd profiteer je bij Spekadvies van de professionaliteit en vergelijkingskracht van een grote landelijke speler.
+          </p>
+        </div>
+
+        <!-- Custom USP list -->
+        <div class="space-y-5">
+          <!-- USP 1 -->
+          <div class="flex items-start space-x-4">
+            <div class="flex-shrink-0 w-11 h-11 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center text-brand-accent">
+              <!-- Shield Icon -->
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+              </svg>
+            </div>
+            <div>
+              <h4 class="text-base font-bold text-brand-dark font-display">Persoonlijk aanspreekpunt</h4>
+              <p class="text-xs sm:text-sm text-slate-500 font-sans font-medium mt-1 leading-relaxed">
+                Geen wachttijden of callcenters. Je hebt altijd direct contact met Martin van der Spek voor al je vragen.
+              </p>
+            </div>
+          </div>
+
+          <!-- USP 2 -->
+          <div class="flex items-start space-x-4">
+            <div class="flex-shrink-0 w-11 h-11 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center text-brand-accent">
+              <!-- Globe Icon -->
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-.778.099-1.533.284-2.253"></path>
+              </svg>
+            </div>
+            <div>
+              <h4 class="text-base font-bold text-brand-dark font-display">Landelijke vergelijkingskracht</h4>
+              <p class="text-xs sm:text-sm text-slate-500 font-sans font-medium mt-1 leading-relaxed">
+                Wij vergelijken meer dan 40 aanbieders op rente en voorwaarden. Zo garanderen we de beste deal van Nederland.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-2">
+          <button class="open-contact-drawer inline-block bg-brand-primary hover:bg-brand-primary-hover text-brand-dark font-semibold px-8 py-4.5 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5 text-xs tracking-wider uppercase font-sans cursor-pointer">
+            Plan gratis adviesgesprek
+          </button>
+        </div>
+      </div>
+
+      <!-- Right Column: Overlapping Image Collage (Mirrored) -->
+      <div class="lg:col-span-6 relative order-1 lg:order-2">
+        <div class="relative max-w-[500px] mx-auto lg:mr-0 lg:ml-auto">
+          
+          <!-- Main Large Image -->
+          <div class="rounded-3xl overflow-hidden border border-slate-200/50 shadow-2xl relative z-10 w-[85%] ml-auto aspect-[4/5]">
+            <img 
+              src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=600&q=80" 
+              alt="Spekadvies Martin Adviesgesprek" 
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+
+          <!-- Smaller Overlapping Image (Bottom-Left) -->
+          <div class="absolute left-0 bottom-[-30px] w-[50%] aspect-square border-8 border-white shadow-2xl rounded-3xl overflow-hidden z-20 animate-bounce-slow">
+            <img 
+              src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?auto=format&fit=crop&w=400&q=80" 
+              alt="Lokale Adviseur Moerkapelle" 
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Branded Stepped Divider to ServicesGrid (#f8fafc) -->
+  <SectionDivider fillColor="#f8fafc" direction="left-high" />
+</section>
+
+<style>
+  @keyframes bounce-slow {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+  .animate-bounce-slow {
+    animation: bounce-slow 4s ease-in-out infinite;
+  }
+</style>

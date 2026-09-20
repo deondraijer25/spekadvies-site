@@ -1,0 +1,53 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+import FeatureCards from '../components/FeatureCards.astro';
+import AboutUsCollage from '../components/AboutUsCollage.astro';
+import LocalAdvisorSection from '../components/LocalAdvisorSection.astro';
+import ServicesGrid from '../components/ServicesGrid.astro';
+import RatingsClaim from '../components/RatingsClaim.astro';
+import QuoteVideo from '../components/QuoteVideo.astro';
+import FaqSection from '../components/FaqSection.astro';
+import ContactForm from '../components/ContactForm.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout 
+  title="Spekadvies | Onafhankelijk Hypotheekadviseur Moerkapelle & Regio"
+  description="Onafhankelijk en deskundig hypotheekadvies en verzekeringsadvies bij Spekadvies. Gevestigd in Moerkapelle en actief in de regio Zuid-Holland."
+>
+  <!-- Insonis Theme Header & Navigation -->
+  <Navbar />
+  
+  <main class="w-full relative">
+    <!-- 1. Hero Header Section -->
+    <Hero />
+
+    <!-- 2. Feature Cards Section (Stepped custom shapes) & Partners Banner -->
+    <FeatureCards />
+
+    <!-- 3. About Us Collage Section (Official Image Collage and Bullets) -->
+    <AboutUsCollage />
+
+    <!-- New: Local Advisor / Reversed Image-Text Section -->
+    <LocalAdvisorSection />
+
+    <!-- 4. Services Grid Section -->
+    <ServicesGrid />
+
+
+
+    <!-- 6. Testimonials & Dossier Tracker Section (with Stats counters) -->
+    <RatingsClaim />
+
+    <!-- 9. FAQ Accordions Section -->
+    <FaqSection />
+
+    <!-- 11. Contact / Lead Form Section -->
+    <ContactForm />
+  </main>
+
+  <!-- Insonis Footer -->
+  <Footer />
+</Layout>

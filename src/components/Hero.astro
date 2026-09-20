@@ -1,0 +1,119 @@
+---
+---
+<section class="relative pt-24 pb-28 lg:pt-36 lg:pb-40 overflow-hidden bg-brand-dark flex items-center justify-center min-h-[600px] lg:min-h-[700px]">
+  <!-- Soft background blur glows -->
+  <div class="absolute left-1/4 top-1/4 w-[400px] h-[400px] rounded-full bg-brand-primary/5 blur-[120px] pointer-events-none"></div>
+  <div class="absolute right-1/4 bottom-1/4 w-[300px] h-[300px] rounded-full bg-brand-lighttint/10 blur-[100px] pointer-events-none"></div>
+
+  <!-- Full-screen Desktop/Mobile Background Hero Video -->
+  <div class="absolute inset-0 w-full h-full z-0 select-none overflow-hidden">
+    <!-- Beautiful gradient overlay to ensure high readability of text (light text on dark bg) -->
+    <div class="absolute inset-0 bg-gradient-to-br from-brand-dark/95 via-brand-dark/80 to-slate-900/40 z-10"></div>
+    <video 
+      autoplay 
+      loop 
+      muted 
+      playsinline 
+      class="w-full h-full object-cover object-center scale-105"
+      poster="/assets/spekadvies-hero.png"
+    >
+      <source src="/videos/hero-video.mp4" type="video/mp4" />
+    </video>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10 flex flex-col items-center justify-center text-center">
+    <div class="max-w-4xl flex flex-col items-center space-y-6 animate-fade-in-up relative">
+      <!-- Subtle large logo watermark behind the title -->
+      <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[320px] sm:w-[420px] h-auto pointer-events-none select-none text-white/5" style="z-index: -1;">
+        <svg viewBox="0 0 80.08 83.08" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M40.04,83.08c-10.9,0-19.76-8.87-19.76-19.76,0-.17,0-.35.01-.53-.18,0-.36.01-.53.01C8.86,62.8,0,53.93,0,43.04s8.86-19.76,19.76-19.76c.17,0,.35,0,.53.01,0-.18-.01-.36-.01-.53,0-8.08,10.41-17.07,16.61-21.7,1.88-1.41,4.42-1.41,6.3,0,6.2,4.64,16.61,13.62,16.61,21.7,0,.17,0,.35-.01.53.18,0,.36-.01.53-.01,10.9,0,19.76,8.86,19.76,19.76s-8.86,19.76-19.76,19.76c-.17,0-.35,0-.53-.01,0,.18.01.36.01.53,0,10.9-8.86,19.76-19.76,19.76ZM21.62,61.45l-.07.74c-.04.38-.06.76-.06,1.13,0,10.23,8.32,18.55,18.55,18.55s18.55-8.32,18.55-18.55c0-.36-.02-.74-.06-1.13l-.07-.73.73.07c.38.04.76.06,1.13.06,10.23,0,18.55-8.32,18.55-18.55s-8.32-18.55-18.55-18.55c-.36,0-.74.02-1.13.06l-.73.07.07-.73c.04-.39.06-.77.06-1.13,0-7.84-11.28-17.11-16.12-20.73-1.45-1.08-3.4-1.08-4.84,0-4.85,3.62-16.12,12.89-16.12,20.73,0,.36.02.74.06,1.12l.07.73-.73-.07c-.39-.04-.77-.06-1.13-.06-10.23,0-18.55,8.32-18.55,18.55s8.32,18.55,18.55,18.55c.36,0,.74-.02,1.13-.06l.74-.07Z"/>
+        </svg>
+      </div>
+      
+      <h1 class="text-3xl sm:text-4xl lg:text-[52px] font-bold text-white tracking-tight leading-[1.22] font-display max-w-4xl relative z-10">
+        Jouw droomhuis & toekomst perfect geregeld.
+      </h1>
+      
+      <p class="text-slate-200 text-sm sm:text-base leading-relaxed max-w-lg font-sans font-normal">
+        Onafhankelijk advies van een expert in jouw regio. Waar kan ik je mee helpen?
+      </p>
+
+      <!-- Service Selector Tiles (Independer-style, Solid White with Brand Hover) -->
+      <div class="w-full max-w-2xl mt-4">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+
+          <!-- Hypotheek -->
+          <a 
+            href="/hypotheken"
+            class="service-tile group flex flex-col items-center justify-center gap-2 p-4 sm:p-5 rounded-2xl bg-white hover:bg-brand-accent hover:border-brand-accent transition-all duration-300 shadow-xl border-2 border-transparent text-center"
+          >
+            <div class="w-10 h-10 rounded-xl bg-slate-100 group-hover:bg-white flex items-center justify-center transition-all duration-300">
+              <!-- House icon -->
+              <svg class="w-5 h-5 text-slate-500 group-hover:text-brand-accent transition-colors duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+              </svg>
+            </div>
+            <div>
+              <div class="font-bold text-xs sm:text-sm text-brand-dark font-display transition-colors duration-300">Hypotheek</div>
+              <div class="text-[10px] text-slate-400 group-hover:text-brand-dark/70 font-normal mt-0.5 transition-colors duration-300 hidden sm:block">Kopen & oversluiten</div>
+            </div>
+          </a>
+
+          <!-- Verzekering -->
+          <a 
+            href="/verzekeringen"
+            class="service-tile group flex flex-col items-center justify-center gap-2 p-4 sm:p-5 rounded-2xl bg-white hover:bg-brand-accent hover:border-brand-accent transition-all duration-300 shadow-xl border-2 border-transparent text-center"
+          >
+            <div class="w-10 h-10 rounded-xl bg-slate-100 group-hover:bg-white flex items-center justify-center transition-all duration-300">
+              <!-- Shield icon -->
+              <svg class="w-5 h-5 text-slate-500 group-hover:text-brand-accent transition-colors duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+              </svg>
+            </div>
+            <div>
+              <div class="font-bold text-xs sm:text-sm text-brand-dark font-display transition-colors duration-300">Verzekering</div>
+              <div class="text-[10px] text-slate-400 group-hover:text-brand-dark/70 font-normal mt-0.5 transition-colors duration-300 hidden sm:block">Wonen & leven</div>
+            </div>
+          </a>
+
+          <!-- Vermogensbeheer -->
+          <a 
+            href="/diensten/vermogensbeheer"
+            class="service-tile group flex flex-col items-center justify-center gap-2 p-4 sm:p-5 rounded-2xl bg-white hover:bg-brand-accent hover:border-brand-accent transition-all duration-300 shadow-xl border-2 border-transparent text-center"
+          >
+            <div class="w-10 h-10 rounded-xl bg-slate-100 group-hover:bg-white flex items-center justify-center transition-all duration-300">
+              <!-- Chart line icon -->
+              <svg class="w-5 h-5 text-slate-500 group-hover:text-brand-accent transition-colors duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+              </svg>
+            </div>
+            <div>
+              <div class="font-bold text-xs sm:text-sm text-brand-dark font-display transition-colors duration-300">Vermogensbeheer</div>
+              <div class="text-[10px] text-slate-400 group-hover:text-brand-dark/70 font-normal mt-0.5 transition-colors duration-300 hidden sm:block">Groei & toekomst</div>
+            </div>
+          </a>
+
+        </div>
+
+        <!-- Secondary trust stats -->
+        <div class="mt-6 flex items-center space-x-5 justify-center">
+          <div class="flex items-center space-x-1.5">
+            <span class="text-brand-accent font-bold text-sm">✓</span>
+            <span class="text-xs text-slate-200 font-normal">Eerste gesprek gratis</span>
+          </div>
+          <div class="w-px h-4 bg-white/20"></div>
+          <div class="flex items-center space-x-1.5">
+            <span class="text-brand-accent font-bold text-sm">✓</span>
+            <span class="text-xs text-slate-200 font-normal">40+ aanbieders</span>
+          </div>
+          <div class="w-px h-4 bg-white/20"></div>
+          <div class="flex items-center space-x-1.5">
+            <span class="text-brand-accent font-bold text-sm">✓</span>
+            <span class="text-xs text-slate-200 font-normal">9.4 beoordeling</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

@@ -1,0 +1,567 @@
+.service-one{
+   margin-bottom: 30px;
+   background: $white;
+   border-radius: 20px;
+   overflow: hidden;
+   box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.07);
+   position: relative;
+   &__image{
+      position: relative;
+      &:after{
+         content: '';
+         clip-path: polygon(50% 28px, 100% 0, 100% 12px, 50% 40px, 0 12px, 0 0);
+         width: 100%;
+         height: 39px;
+         left: 0;
+         bottom: -16px;
+         z-index: 1;
+         position: absolute;
+         background: $white;
+         transition: all 0.5s;
+      }
+   }
+   &__content-inner{
+      padding: 15px 30px 15px;
+      position: relative;
+      text-align: center;
+      clip-path: polygon(50% 18px, 100% 0%, 100% 100%, 0 100%, 0% 0%);
+      background: $white;
+      top: -14px;
+      @media(max-width: 1200px){
+         padding: 15px;
+      }
+   }
+   &__icon{
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      font-size: 32px;
+      background: $theme-color-2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $white;
+      position: absolute;
+      bottom: -40px;
+      left: 50%;
+      margin-left: -40px;
+      z-index: 9;
+      transition: all 0.5s;
+   }
+   &__title{
+      margin: 0;
+      padding: 60px 0 10px;
+   }
+   &__desc{
+      font-size: 15px;
+      line-height: 26px;
+   }
+   &__link-overlay{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 11;
+   }
+   &:hover, &:focus, &.active{ 
+      .service-one{
+         &__image{
+            &:after{
+               background: $theme-color;
+            }
+         }
+         &__icon{
+            background: $theme-color;
+         }
+      }
+   }
+}
+
+.last-special {
+	&.service-one{
+		min-height: 300px;
+	   border-radius: 20px;
+	}
+	.service-one{
+	   &__image{
+	      position: absolute;
+	      z-index: 9;
+	      top: 4px;
+	      left: 4px;
+	      right: 4px;
+	      bottom: 4px;
+	      border-radius: 20px;
+	      overflow: hidden;
+	      &:after{
+	         display: none;
+	      }
+	      img{
+	         position: absolute;
+	         height: 100%;
+	         width: 100%;
+	         object-fit: cover;
+	         transform: translate(-50%, -50%);
+	         top: 50%;
+	         left: 50%;
+	      }
+	      &:before{
+	         content: '';
+	         z-index: 1;
+	         width: 100%;
+	         height: 100%;
+	         position: absolute;
+	         top: 0;
+	         left: 0;
+	         background: $theme-color-2;
+	         opacity: 0.9;
+	      }
+	   }
+	   &__icon{
+	      display: none;
+	   }
+	   &__content{
+	      position: relative;
+	      padding: 4px;
+	      display: flex;
+	      justify-content: center;
+	      align-items: center;
+	      &:after{
+	         content: '';
+	         z-index: 1;
+	         width: 100%;
+	         height: 100%;
+	         border-radius: 8px;
+	         background: linear-gradient( 0deg, $theme-color-2 0%, $theme-color 100%);
+	         position: absolute;
+	         top: 0;
+	         left: 0;
+	      }
+	   }
+	   &__content-inner{
+	      z-index: 11;
+	      padding: 30px;
+	      clip-path: none;
+	      background: none;
+	      @media(max-width: 1024px){
+	         padding: 30px 15px;
+	      }
+	   }
+	   &__title{
+	      color: $white;
+	      font-size: 20px;
+	      padding: 0 0 30px;
+	   }
+	   &__desc{
+	      color: rgba(255, 255, 255, 0.8);
+	      margin-bottom: 30px;
+	   }
+	   &__link{
+	   	font-size: 12px;
+	   	padding: 8px 18px;
+	   	&:after{
+	   		font-size: 8px;
+	   		padding-left: 4px;
+	   	}
+	   }
+	}
+	&.service-one{
+	   &:hover, &:focus{
+	   	.service-one__link{
+	   		padding-left: 25px;
+	   		padding-right: 25px;
+	   	}
+	   }
+	}
+}
+
+.service-two{
+   position: relative;
+   margin: 0 auto 30px;
+   overflow: hidden;
+   border-radius: 30px;
+   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+   max-width: 600px;
+   @media(max-width: 860px){
+   	border-radius: 20px;
+   }
+   &__image{
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 135px;
+      height: 135px;
+      z-index: 1;
+      transition: 2s;
+      img{
+         position: absolute;
+         height: 100%!important;
+         width: 100%!important;
+         object-fit: cover;
+         object-position: center center;
+         transform: translate(-50%,-50%);
+         top: 50%;
+         left: 50%;
+      }
+   }
+   &__content{
+   	background: $white;
+      padding: 38px 30px 110px 50px;
+      transition: all 0.8s;
+	   width: 100%;
+	   height: 100%;
+	   mask-image: url('#{$image-theme-path-base}service-mask-1.png');
+	   mask-size: 100% 100%;
+	   mask-position: top right;
+	   position: relative;
+	   z-index: 6;
+	   @media(max-width: 1600px){
+	   	padding-left: 30px;
+	   }
+	   @media(max-width: 860px){
+	   	padding: 35px 15px 90px 15px;
+	   }
+   }
+   &__icon{
+      width: 145px;
+      height: 72px;
+      font-size: 32px;
+      background: $theme-color;
+      color: $white;
+      mask-image: url('#{$image-theme-path-base}service-mask-2.png');
+      mask-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      bottom: -3px;
+      left: 30px;
+      z-index: 8;
+      @media(max-width: 800px){
+      	width: 120px;
+      	height: 59px;
+      	left: 15px;
+      	font-size: 28px;
+      }
+      &:before{
+         content: '';
+         width: 100%;
+         height: 0;
+         position: absolute;
+         bottom: 0;
+         left: 0;
+         background: $white;
+         transition: all 0.5s;
+         z-index: -1;
+      }
+   }
+   &__title{
+      margin: 0 0 28px;
+      padding-bottom: 28px;
+      padding-right: 80px;
+      position: relative;
+      font-size: 24px;
+      transition: all 0.6s;
+      @media(max-width: 992px){
+      	font-size: 20px;
+      	margin-bottom: 22px;
+      	padding-bottom: 22px;
+      }
+      &:after{
+      	content: '';
+      	width: 100px;
+      	height: 1px;
+      	background: $border-color;
+      	display: block;
+      	position: absolute;
+      	bottom: 0;
+      	left: 0;
+      }
+   }
+   &__desc{
+      font-size: 15px;
+      line-height: 26px;
+      max-width: 390px;
+      transition: all 0.6s;
+   }
+   &__button{
+   	position: absolute;
+   	bottom: 20px;
+   	right: 35px;
+   	left: 185px;
+   	z-index: 1;
+   	border-top: 1px solid $border-color;
+   	padding-top: 15px;
+   	line-height: 18px;
+   	text-align: right;
+   	@media(max-width: 1200px){
+			right: 20px;
+   		left: 165px;
+   	}
+   	@media(max-width: 992px){
+   		position: static;
+   		border-top: 0;
+   		text-align: left;
+   	}
+   	a{
+   		text-transform: uppercase;
+   		font-size: 14px;
+   	}
+   }
+   &__link-overlay{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 11;
+   }
+   &:hover, &:focus, &.active{
+      .service-two{
+      	&__content{
+      		background: $theme-color;
+      	}
+       	&__image{
+       		transform: scale(1.2);
+       	}
+       	&__title{
+       		color: $white;
+       		&:after{
+       			background: rgba(255, 255, 255, 0.3);
+       		}
+       	}
+       	&__desc{
+       		color: rgba(255, 255, 255, 0.8);
+       	}
+       	&__button{
+       		border-top-color: rgba(255, 255, 255, 0.3);
+       		a{
+       			color: $white;
+       		}
+       	}
+         &__icon{
+         	color: $theme-color;  
+            &:before{
+               height: 100%;
+            }
+         }
+      }
+   }
+}
+
+.service-three{
+   background: $white;
+   text-align: center;
+   margin-top: 70px;
+   margin-bottom: 30px;
+   transition: all 0.5s;
+   position: relative;
+   &__image{
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 9;
+      transition: 0.8s;
+      border-radius: 8px;
+      img{
+         position: absolute;
+         height: 100%!important;
+         width: 100%!important;
+         -o-object-fit: cover;
+         object-fit: cover;
+         -webkit-transform: translate(-50%,-50%);
+         transform: translate(-50%,-50%);
+         top: 50%;
+         left: 50%;
+         border-radius: 20px;
+      }
+   }
+   &__wrap{
+      padding: 90px 30px 50px;
+      transition: all 0.8s;
+      position: relative;
+      border-radius: 20px;
+      border: 1px solid $border-color;
+      @media(max-width: 1024px){
+         padding-left: 15px;
+         padding-right: 15px;
+      }
+      &:after{
+         content: '';
+         background: $theme-color;
+         width: 100%;
+         height: 0%;
+         position: absolute;
+         top: 0;
+         left: 0;
+         z-index: 1;
+         transition: all 0.8s;
+         opacity: 0;
+         border-radius: 20px;
+      }
+   }
+   &__content{
+      position: relative;
+      z-index: 11;
+   }
+   &__icon{
+      width: 120px;
+      height: 120px;
+      margin: 0 auto;
+      position: absolute;
+      top: -60px;
+      left: 50%;
+      margin-left: -60px;
+      border-radius: 50%;
+      z-index: 11;
+      display: inline-block;
+      padding: 10px;
+      background: $border-color;
+      transition: all 0.8s;
+      &:after{
+         content: '';
+         width: 100%;
+         height: 100%;
+         position: absolute;
+         top: 0;
+         left: 0;
+         border-radius: 50%;
+         background: linear-gradient( 180deg, $theme-color 0%, $theme-color-2 100%);
+         transform: scale(1.2);
+         transition: all 0.8s;
+         z-index: -1;
+         opacity: 0;
+      }
+   }
+   &__icon-inner{
+      width: 100%;
+      height: 100%;
+      background: $white;
+      color: $theme-color;
+      font-size: 38px;
+      background: $white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.8s;
+      svg{
+         fill: $white;
+      }
+   }
+   &__title{
+      margin: 0 0 15px;
+      font-size: 24px;
+      transition: all 0.38s;
+   }
+   &__desc{
+      line-height: 28px;
+      transition: all 0.38s;
+   }
+   &__button{
+      margin-top: 25px;
+   }
+   &__link-overlay{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 11;
+   }
+   &:hover, &:focus, &.active{
+      border-color: $theme-color;
+      .service-three{
+         &__image{
+            opacity: 0.1;
+         }
+         &__wrap{
+            border-color: $theme-color;
+            &:after{
+               opacity: 1;
+               height: 100%;
+            }
+         }
+         &__icon{
+            &:after{
+               transform: scale(1);
+               opacity: 1;
+            }
+         }
+         &__icon-inner{
+            color: $white;
+            background: $theme-color;
+            svg{
+               fill: $white;
+            }
+         }
+         &__title{
+            color: $white;
+            a{
+               color: $white;
+            }
+         }
+         &__desc{
+            color: rgba(255, 255, 255, 0.9);
+         }
+         &__button{
+		      a{
+		      	color: $headings-color;
+		      	background: $white;
+		      	transition: all 0.35s;
+		      	transition-delay: 0.5s;
+		      	padding-left: 26px;
+		      	padding-right: 26px;
+		      }
+		   }
+      }
+   }
+}
+
+.swiper-slide.item-active.center{
+   .service-three{
+      border-color: $theme-color;
+      .service-three{
+         &__image{
+            opacity: 0.1;
+         }
+         &__wrap{
+            &:after{
+               opacity: 1;
+               height: 100%;
+            }
+         }
+         &__icon{
+            &:after{
+               transform: scale(1);
+               opacity: 1;
+            }
+         }
+         &__icon-inner{
+            color: $white;
+            background: $theme-color;
+            svg{
+               fill: $white;
+            }
+         }
+         &__title{
+            color: $white;
+            a{
+               color: $white;
+            }
+         }
+         &__desc{
+            color: rgba(255, 255, 255, 0.9);
+         }
+         &__button{
+		      a{
+		      	color: $headings-color;
+		      	background: $white;
+		      }
+		   }
+      }
+   }
+}

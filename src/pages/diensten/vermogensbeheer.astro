@@ -1,0 +1,255 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import ContactForm from '../../components/ContactForm.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout 
+  title="Vermogensbeheer & Financieel Advies | Spekadvies Moerkapelle" 
+  description="Je vermogen professioneel laten beheren of laten adviseren? Spekadvies helpt je bouwen aan een gezonde financiële toekomst met onafhankelijk advies."
+>
+  <Navbar />
+  <Breadcrumbs />
+  
+  <main class="relative z-10 flex-grow bg-white">
+    
+    <!-- Hero Section (matching hypotheken.astro style) -->
+    <section 
+      class="relative py-24 sm:py-32 bg-[#153b68] bg-center bg-cover bg-no-repeat overflow-hidden rounded-b-[48px] sm:rounded-b-[64px] lg:rounded-b-[80px] shadow-xl"
+      style="background-image: linear-gradient(rgba(21, 59, 104, 0.82), rgba(11, 26, 47, 0.94)), url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1800&q=80');"
+    >
+      <div class="max-w-4xl mx-auto px-6 sm:px-8 text-center relative z-10">
+        <!-- Badge -->
+        <span class="inline-block bg-white/10 text-brand-accent border border-white/10 text-[10px] font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full mb-6 font-sans">
+          Vermogensbeheer & advies
+        </span>
+        
+        <h1 class="text-4xl sm:text-5xl lg:text-6.5xl font-bold text-white tracking-tight leading-tight font-display mb-6">
+          Bouw aan een gezonde financiële toekomst
+        </h1>
+        
+        <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto mb-10 font-sans font-normal">
+          Samen bouwen we aan een financieel vangnet. Onafhankelijk advies over vermogensopbouw en vermogensbeheer voor particulieren en ondernemers.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <button 
+            class="open-contact-drawer w-full sm:w-auto bg-brand-accent hover:bg-brand-accent/90 text-brand-dark font-semibold px-8 py-4 rounded-full shadow-lg transition-all duration-300 text-xs tracking-wider uppercase font-sans cursor-pointer"
+          >
+            Plan gratis adviesgesprek
+          </button>
+          <a 
+            href="#contact" 
+            class="w-full sm:w-auto bg-transparent border-2 border-white/20 hover:border-white text-white font-semibold px-8 py-4 rounded-full shadow-sm hover:shadow-md transition-all duration-300 text-xs tracking-wider uppercase font-sans cursor-pointer text-center"
+          >
+            Neem direct contact op
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 Overlapping USPs Cards (matching hypotheken.astro style) -->
+    <section class="py-12 bg-brand-basetint/30 relative">
+      <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <!-- USP 1 -->
+          <div class="bg-white border border-slate-200/80 p-8 rounded-3xl shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center text-brand-dark text-xl mb-6">
+              <i class="fa-solid fa-chart-line"></i>
+            </div>
+            <h3 class="text-base font-bold text-brand-dark font-display mb-3">Gecontroleerde Groei</h3>
+            <p class="text-sm text-slate-600 font-sans font-normal leading-relaxed">
+              Wij helpen je om je vermogen verstandig en binnen jouw risicoprofiel te laten groeien voor de lange termijn, met een strak en realistisch plan.
+            </p>
+          </div>
+
+          <!-- USP 2 -->
+          <div class="bg-white border border-slate-200/80 p-8 rounded-3xl shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center text-brand-dark text-xl mb-6">
+              <i class="fa-solid fa-scale-balanced"></i>
+            </div>
+            <h3 class="text-base font-bold text-brand-dark font-display mb-3">Onafhankelijk Advies</h3>
+            <p class="text-sm text-slate-600 font-sans font-normal leading-relaxed">
+              Wij vergelijken vermogensbeheerders en beleggingsfondsen objectief en transparant. Geen verborgen commissies, puur gericht op jouw rendement.
+            </p>
+          </div>
+
+          <!-- USP 3 -->
+          <div class="bg-white border border-slate-200/80 p-8 rounded-3xl shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center text-brand-dark text-xl mb-6">
+              <i class="fa-solid fa-peace"></i>
+            </div>
+            <h3 class="text-base font-bold text-brand-dark font-display mb-3">Financiële Rust</h3>
+            <p class="text-sm text-slate-600 font-sans font-normal leading-relaxed">
+              Je vermogen wordt professioneel begeleid en gemonitord, zodat jij met een gerust hart kunt focussen op wat echt belangrijk is in je leven.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 2 alternating info text-image sections underneath each other -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 space-y-24">
+        
+        <!-- Info Sectie 1: Vermogensopbouw (Text Left, Image Right) -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div class="lg:col-span-7 space-y-6">
+            <span class="inline-block bg-brand-primary/10 text-brand-dark text-[10px] font-semibold tracking-widest uppercase px-3 py-1 rounded-full font-sans">Jouw Doelen</span>
+            <h2 class="text-3xl font-bold text-brand-dark font-display">Slim vermogen opbouwen voor later</h2>
+            <p class="text-slate-600 text-sm sm:text-base leading-relaxed font-sans font-normal">
+              Of het nu gaat om eerder stoppen met werken, de studie van je kinderen, of gewoon het opbouwen van een stevige buffer voor onvoorziene tijden: vermogensopbouw vraagt om een doordacht plan. Wij kijken onafhankelijk naar je inkomsten, uitgaven, doelen en risicobereidheid om een plan op te stellen dat écht bij jou past.
+            </p>
+            <ul class="space-y-4 pt-2">
+              <li class="flex items-start space-x-3 text-sm text-slate-600 font-sans">
+                <span class="text-brand-accent font-bold">✓</span>
+                <span>Exacte berekening van de benodigde inleg op basis van je einddoel</span>
+              </li>
+              <li class="flex items-start space-x-3 text-sm text-slate-600 font-sans">
+                <span class="text-brand-accent font-bold">✓</span>
+                <span>Fiscale optimalisatie (zoals benutten van jaarruimte of box 3-vrijstellingen)</span>
+              </li>
+              <li class="flex items-start space-x-3 text-sm text-slate-600 font-sans">
+                <span class="text-brand-accent font-bold">✓</span>
+                <span>Keuze uit diverse periodieke inlegopties passend bij je budget</span>
+              </li>
+            </ul>
+          </div>
+          <div class="lg:col-span-5 relative">
+            <div class="absolute -inset-2 bg-gradient-to-tr from-brand-accent/30 to-brand-primary/20 rounded-[32px] blur-xl opacity-75"></div>
+            <div class="relative rounded-[32px] overflow-hidden border border-slate-200 shadow-xl aspect-[4/3]">
+              <img 
+                src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&w=800&q=80" 
+                alt="Financiële grafiek en vermogensgroei" 
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Info Sectie 2: Risicobeheersing (Image Left, Text Right) -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div class="lg:col-span-5 order-2 lg:order-1 relative">
+            <div class="absolute -inset-2 bg-gradient-to-tr from-brand-accent/30 to-brand-primary/20 rounded-[32px] blur-xl opacity-75"></div>
+            <div class="relative rounded-[32px] overflow-hidden border border-slate-200 shadow-xl aspect-[4/3]">
+              <img 
+                src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=800&q=80" 
+                alt="Plant groeiend uit munten" 
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+          <div class="lg:col-span-7 order-1 lg:order-2 space-y-6">
+            <span class="inline-block bg-brand-primary/10 text-brand-dark text-[10px] font-semibold tracking-widest uppercase px-3 py-1 rounded-full font-sans">Spreiding & Beheer</span>
+            <h2 class="text-3xl font-bold text-brand-dark font-display">Risico's beheersen en rendement optimaliseren</h2>
+            <p class="text-slate-600 text-sm sm:text-base leading-relaxed font-sans font-normal">
+              Sparen levert vandaag de dag nauwelijks rendement op, waardoor de inflatie je spaargeld langzaam minder waard maakt. Beleggen is een uitstekend alternatief, maar brengt risico's met zich mee. Onze adviseurs helpen je om risico's optimaal te spreiden over verschillende vermogenscategorieën en professionele beheerders.
+            </p>
+            <ul class="space-y-4 pt-2">
+              <li class="flex items-start space-x-3 text-sm text-slate-600 font-sans">
+                <span class="text-brand-accent font-bold">✓</span>
+                <span>Vaststellen van een persoonlijk risicoprofiel (defensief tot offensief)</span>
+              </li>
+              <li class="flex items-start space-x-3 text-sm text-slate-600 font-sans">
+                <span class="text-brand-accent font-bold">✓</span>
+                <span>Brede spreiding in wereldwijde indexfondsen of betrouwbare beheerders</span>
+              </li>
+              <li class="flex items-start space-x-3 text-sm text-slate-600 font-sans">
+                <span class="text-brand-accent font-bold">✓</span>
+                <span>Periodieke monitoring en herbalancering van je portefeuille</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FAQ Section (matching hypotheken.astro split style) -->
+    <section class="py-20 bg-brand-basetint/30 relative">
+      <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          
+          <!-- Left side: FAQs Headers -->
+          <div class="lg:col-span-5 space-y-6">
+            <span class="text-xs font-bold tracking-widest uppercase text-brand-dark/50 block font-display">Veelgestelde vragen</span>
+            <h2 class="text-3xl sm:text-4xl font-bold text-brand-dark font-display leading-tight">
+              Veelgestelde vragen over Vermogensbeheer
+            </h2>
+            <p class="text-slate-600 text-sm sm:text-base font-sans font-normal">
+              Hier vind je antwoorden op de meest gestelde vragen over vermogensopbouw en vermogensadvies. Staat je vraag er niet tussen? Neem gerust contact op.
+            </p>
+          </div>
+
+          <!-- Right side: Accordion content -->
+          <div class="lg:col-span-7 space-y-4">
+            
+            <details class="group bg-white border border-slate-200/80 rounded-2xl p-6 shadow-sm transition-all duration-300 [&_summary::-webkit-details-marker]:hidden">
+              <summary class="flex justify-between items-center font-bold text-brand-dark cursor-pointer select-none outline-none font-display">
+                <span class="text-base sm:text-lg leading-snug">Vanaf welk bedrag is vermogensbeheer interessant?</span>
+                <span class="transition-transform duration-300 group-open:rotate-180 text-brand-accent font-bold text-xl ml-4">
+                  ↓
+                </span>
+              </summary>
+              <p class="mt-4 text-slate-600 text-sm sm:text-base leading-relaxed border-t border-slate-100 pt-4 font-sans font-normal">
+                Vermogensbeheer is al interessant vanaf relatief kleine bedragen (bijvoorbeeld een eenmalige inleg van € 10.000 of via een periodieke maandelijkse inleg vanaf € 100). De specifieke maatwerkmogelijkheden en actieve begeleiding nemen toe bij grotere vermogens, maar vermogensopbouw is voor iedereen toegankelijk.
+              </p>
+            </details>
+
+            <details class="group bg-white border border-slate-200/80 rounded-2xl p-6 shadow-sm transition-all duration-300 [&_summary::-webkit-details-marker]:hidden">
+              <summary class="flex justify-between items-center font-bold text-brand-dark cursor-pointer select-none outline-none font-display">
+                <span class="text-base sm:text-lg leading-snug">Wat is het verschil tussen vermogensbeheer en beleggingsadvies?</span>
+                <span class="transition-transform duration-300 group-open:rotate-180 text-brand-accent font-bold text-xl ml-4">
+                  ↓
+                </span>
+              </summary>
+              <p class="mt-4 text-slate-600 text-sm sm:text-base leading-relaxed border-t border-slate-100 pt-4 font-sans font-normal">
+                Bij vermogensbeheer geef je de dagelijkse beslissingen uit handen aan professionals die binnen de afgesproken kaders en jouw risicoprofiel beleggen. Bij beleggingsadvies neem je zelf de uiteindelijke koop- en verkoopbeslissingen op basis van adviezen van de adviseur.
+              </p>
+            </details>
+
+            <details class="group bg-white border border-slate-200/80 rounded-2xl p-6 shadow-sm transition-all duration-300 [&_summary::-webkit-details-marker]:hidden">
+              <summary class="flex justify-between items-center font-bold text-brand-dark cursor-pointer select-none outline-none font-display">
+                <span class="text-base sm:text-lg leading-snug">Hoe betrouwbaar is vermogensbeheer via Spekadvies?</span>
+                <span class="transition-transform duration-300 group-open:rotate-180 text-brand-accent font-bold text-xl ml-4">
+                  ↓
+                </span>
+              </summary>
+              <p class="mt-4 text-slate-600 text-sm sm:text-base leading-relaxed border-t border-slate-100 pt-4 font-sans font-normal">
+                Spekadvies werkt uitsluitend samen met gerenommeerde, door de AFM (Autoriteit Financiële Markten) en DNB (De Nederlandsche Bank) geregistreerde en gereguleerde vermogensbeheerders en partijen. Je geld staat altijd veilig geregistreerd op een aparte rekening op jouw naam.
+              </p>
+            </details>
+
+            <details class="group bg-white border border-slate-200/80 rounded-2xl p-6 shadow-sm transition-all duration-300 [&_summary::-webkit-details-marker]:hidden">
+              <summary class="flex justify-between items-center font-bold text-brand-dark cursor-pointer select-none outline-none font-display">
+                <span class="text-base sm:text-lg leading-snug">Hoe zit het met de risico's van beleggen?</span>
+                <span class="transition-transform duration-300 group-open:rotate-180 text-brand-accent font-bold text-xl ml-4">
+                  ↓
+                </span>
+              </summary>
+              <p class="mt-4 text-slate-600 text-sm sm:text-base leading-relaxed border-t border-slate-100 pt-4 font-sans font-normal">
+                Beleggen brengt risico's met zich mee; de waarde van je beleggingen kan fluctueren. Wij zorgen voor een zorgvuldige spreiding en bepalen samen met jou een passend risicoprofiel, zodat de risico's binnen jouw comfortzone blijven en passen bij je doelen.
+              </p>
+            </details>
+
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form section underneath -->
+    <section id="contact" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto">
+        <ContactForm />
+      </div>
+    </section>
+
+  </main>
+  
+  <Footer />
+</Layout>
