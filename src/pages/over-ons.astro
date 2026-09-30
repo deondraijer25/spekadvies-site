@@ -21,13 +21,13 @@ import Footer from '../components/Footer.astro';
       class="relative py-24 sm:py-32 lg:py-40 bg-[#153b68] bg-center bg-cover bg-no-repeat overflow-hidden rounded-b-[48px] sm:rounded-b-[64px] lg:rounded-b-[80px] shadow-xl"
       style="background-image: linear-gradient(rgba(21, 59, 104, 0.82), rgba(11, 26, 47, 0.94)), url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1800&q=80');"
     >
-      <div class="max-w-4xl mx-auto px-6 sm:px-8 text-center relative z-10">
+      <div class="max-w-4xl mx-auto px-4 sm:px-8 text-center relative z-10">
         <!-- Badge -->
         <span class="inline-block bg-white/10 text-brand-accent border border-white/10 text-[10px] font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full mb-6 font-sans">
           Over Spekadvies
         </span>
         
-        <h1 class="text-4xl sm:text-5xl lg:text-6.5xl font-bold text-white tracking-tight leading-tight font-display mb-6">
+        <h1 class="text-3xl sm:text-5xl lg:text-6.5xl font-bold text-white tracking-tight leading-tight font-display mb-6">
           Welkom bij Spekadvies, waar je geen nummer bent
         </h1>
         
@@ -39,9 +39,9 @@ import Footer from '../components/Footer.astro';
 
     <!-- Main Content Section -->
     <section class="py-12 pb-24 relative overflow-hidden bg-brand-basetint/40">
-      <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 relative z-10">
         
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 sm:gap-16 items-center">
           <!-- Left Column: Story -->
           <div class="lg:col-span-7 space-y-6">
             <span class="text-xs font-bold tracking-widest uppercase text-brand-dark/50 block font-display">Kennismaken</span>
@@ -54,7 +54,7 @@ import Footer from '../components/Footer.astro';
             </p>
             
             <!-- Quote Block -->
-            <div class="bg-brand-primary/10 border-l-4 border-brand-accent p-6 rounded-r-3xl my-6">
+            <div class="bg-brand-primary/10 border-l-4 border-brand-accent p-4 sm:p-6 rounded-r-2xl sm:rounded-r-3xl my-6">
               <i class="fa-solid fa-quote-left text-brand-accent text-2xl mb-2 block"></i>
               <p class="text-brand-dark font-extrabold text-sm sm:text-base font-display leading-relaxed">
                 Geen snelle verkoop of onpersoonlijke formulieren, maar een vertrouwensband opbouwen aan de keukentafel.
@@ -68,7 +68,7 @@ import Footer from '../components/Footer.astro';
             <div class="pt-4">
               <a 
                 href="/#contact" 
-                class="inline-block bg-brand-dark hover:bg-brand-primary hover:text-brand-dark text-white font-semibold px-8 py-4 rounded-full shadow-md hover:shadow-lg transition-all duration-300 text-xs tracking-wider uppercase font-sans"
+                class="inline-block bg-brand-dark hover:bg-brand-primary hover:text-brand-dark text-white font-semibold px-8 py-4 rounded-full shadow-md hover:shadow-lg transition-all duration-300 text-xs tracking-wider uppercase font-sans w-full sm:w-auto text-center"
               >
                 Plan een gratis kennismaking ↗
               </a>
@@ -78,13 +78,13 @@ import Footer from '../components/Footer.astro';
           <!-- Right Column: Stats & Visual Block -->
           <div class="lg:col-span-5 space-y-8">
             <!-- Modern styled Stats Box -->
-            <div class="bg-white border border-slate-200/80 rounded-[32px] p-8 sm:p-10 shadow-xl space-y-8 relative overflow-hidden">
+            <div class="bg-white border border-slate-200/80 rounded-2xl sm:rounded-[32px] p-5 sm:p-10 shadow-xl space-y-8 relative overflow-hidden">
               <div class="absolute -right-16 -top-16 w-36 h-36 rounded-full bg-brand-primary/10 blur-2xl pointer-events-none"></div>
               
               <h3 class="text-lg font-semibold text-brand-dark font-sans border-b border-slate-100 pb-4">Onze garanties</h3>
               
               <!-- Stat 1 -->
-              <div class="flex items-start space-x-5">
+              <div class="flex items-start space-x-4 sm:space-x-5">
                 <div class="w-12 h-12 bg-brand-primary/10 border border-brand-primary/20 rounded-xl flex items-center justify-center flex-shrink-0 text-brand-dark text-lg font-bold">
                   20+
                 </div>
@@ -95,7 +95,7 @@ import Footer from '../components/Footer.astro';
               </div>
 
               <!-- Stat 2 -->
-              <div class="flex items-start space-x-5">
+              <div class="flex items-start space-x-4 sm:space-x-5">
                 <div class="w-12 h-12 bg-brand-primary/10 border border-brand-primary/20 rounded-xl flex items-center justify-center flex-shrink-0 text-brand-dark text-lg">
                   <i class="fa-solid fa-handshake"></i>
                 </div>
@@ -106,7 +106,7 @@ import Footer from '../components/Footer.astro';
               </div>
 
               <!-- Stat 3 -->
-              <div class="flex items-start space-x-5">
+              <div class="flex items-start space-x-4 sm:space-x-5">
                 <div class="w-12 h-12 bg-brand-primary/10 border border-brand-primary/20 rounded-xl flex items-center justify-center flex-shrink-0 text-brand-dark text-lg">
                   <i class="fa-solid fa-scale-balanced"></i>
                 </div>
@@ -118,7 +118,7 @@ import Footer from '../components/Footer.astro';
             </div>
 
             <!-- Trust Badge Card -->
-            <div class="bg-brand-dark border border-white/10 rounded-[32px] p-6 text-center text-white shadow-xl relative overflow-hidden">
+            <div class="bg-brand-dark border border-white/10 rounded-2xl sm:rounded-[32px] p-5 sm:p-6 text-center text-white shadow-xl relative overflow-hidden">
               <div class="absolute -left-12 -bottom-12 w-28 h-28 rounded-full bg-brand-primary/5 blur-xl pointer-events-none"></div>
               <div class="text-4xl mb-3">🛡️</div>
               <h4 class="text-sm font-bold font-display uppercase tracking-wider text-brand-primary">Erkend Financieel Adviseur</h4>

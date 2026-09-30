@@ -22,13 +22,13 @@ import Footer from '../components/Footer.astro';
       class="relative py-24 sm:py-32 lg:py-40 bg-[#153b68] bg-center bg-cover bg-no-repeat overflow-hidden rounded-b-[48px] sm:rounded-b-[64px] lg:rounded-b-[80px] shadow-xl"
       style="background-image: linear-gradient(rgba(21, 59, 104, 0.82), rgba(11, 26, 47, 0.94)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=80');"
     >
-      <div class="max-w-4xl mx-auto px-6 sm:px-8 text-center relative z-10">
+      <div class="max-w-4xl mx-auto px-4 sm:px-8 text-center relative z-10">
         <!-- Badge -->
         <span class="inline-block bg-white/10 text-brand-accent border border-white/10 text-[10px] font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full mb-6 font-sans">
           Hypotheekadvies op maat
         </span>
         
-        <h1 id="hero-title" class="text-4xl sm:text-5xl lg:text-6.5xl font-bold text-white tracking-tight leading-tight font-display mb-6">
+        <h1 id="hero-title" class="text-3xl sm:text-5xl lg:text-6.5xl font-bold text-white tracking-tight leading-tight font-display mb-6">
           De eerste stap naar jouw eigen plek
         </h1>
         
@@ -55,11 +55,11 @@ import Footer from '../components/Footer.astro';
 
     <!-- 3 Overlapping Info Cards -->
     <section class="py-12 bg-brand-basetint/30 relative">
-      <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
           
           <!-- Card 1 -->
-          <div class="bg-white border border-slate-200/80 p-8 rounded-3xl shadow-sm hover:shadow-md transition-shadow">
+          <div class="bg-white border border-slate-200/80 p-5 sm:p-8 rounded-2xl sm:rounded-3xl shadow-sm hover:shadow-md transition-shadow">
             <div class="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center text-brand-dark text-xl mb-6">
               <i class="fa-solid fa-piggy-bank"></i>
             </div>
@@ -70,7 +70,7 @@ import Footer from '../components/Footer.astro';
           </div>
 
           <!-- Card 2 -->
-          <div class="bg-white border border-slate-200/80 p-8 rounded-3xl shadow-sm hover:shadow-md transition-shadow">
+          <div class="bg-white border border-slate-200/80 p-5 sm:p-8 rounded-2xl sm:rounded-3xl shadow-sm hover:shadow-md transition-shadow">
             <div class="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center text-brand-dark text-xl mb-6">
               <i class="fa-solid fa-calculator"></i>
             </div>
@@ -81,7 +81,7 @@ import Footer from '../components/Footer.astro';
           </div>
 
           <!-- Card 3 -->
-          <div class="bg-white border border-slate-200/80 p-8 rounded-3xl shadow-sm hover:shadow-md transition-shadow">
+          <div class="bg-white border border-slate-200/80 p-5 sm:p-8 rounded-2xl sm:rounded-3xl shadow-sm hover:shadow-md transition-shadow">
             <div class="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center text-brand-dark text-xl mb-6">
               <i class="fa-solid fa-shield-halved"></i>
             </div>
@@ -97,7 +97,7 @@ import Footer from '../components/Footer.astro';
 
     <!-- Journey Tabs Section -->
     <section class="py-20 bg-brand-base overflow-hidden">
-      <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
         <div class="text-center max-w-2xl mx-auto mb-12">
           <span class="text-xs font-bold tracking-widest uppercase text-brand-dark/50 block font-display">Je situatie</span>
           <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-brand-dark font-display mt-2">Heb je al een koopwoning?</h2>
@@ -105,18 +105,18 @@ import Footer from '../components/Footer.astro';
         </div>
 
         <!-- Tab buttons -->
-        <div class="flex justify-center mb-16">
-          <div class="inline-flex bg-slate-100 p-1.5 rounded-full border border-slate-200">
+        <div class="flex justify-center mb-12 sm:mb-16">
+          <div class="flex flex-col sm:inline-flex sm:flex-row w-full sm:w-auto bg-slate-100 p-1.5 rounded-2xl sm:rounded-full border border-slate-200 gap-1.5 sm:gap-0">
             <button 
               id="journey-btn-doorstromers" 
-              class="journey-tab-btn active bg-brand-dark text-white text-xs font-semibold uppercase tracking-wider font-sans px-6 py-3 rounded-full cursor-pointer transition-all duration-300"
+              class="journey-tab-btn active bg-brand-dark text-white text-xs font-semibold uppercase tracking-wider font-sans px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl sm:rounded-full cursor-pointer transition-all duration-300 text-center"
               data-target="doorstromers"
             >
               Doorstromers
             </button>
             <button 
               id="journey-btn-verduurzamen" 
-              class="journey-tab-btn text-slate-500 text-xs font-semibold uppercase tracking-wider font-sans px-6 py-3 rounded-full cursor-pointer transition-all duration-300"
+              class="journey-tab-btn text-slate-500 text-xs font-semibold uppercase tracking-wider font-sans px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl sm:rounded-full cursor-pointer transition-all duration-300 text-center"
               data-target="verduurzamen"
             >
               Oversluiten & verduurzamen
@@ -164,7 +164,7 @@ import Footer from '../components/Footer.astro';
             </ul>
           </div>
           
-          <div class="lg:col-span-5 bg-brand-basetint rounded-3xl p-8 border border-slate-200/50 flex flex-col justify-center text-center space-y-6">
+          <div class="lg:col-span-5 bg-brand-basetint rounded-2xl sm:rounded-3xl p-5 sm:p-8 border border-slate-200/50 flex flex-col justify-center text-center space-y-6">
             <div class="text-5xl">🗝️</div>
             <h4 class="text-base font-bold text-brand-dark font-display uppercase tracking-wider">Naadloze overdracht</h4>
             <p   class="text-sm text-slate-600 font-sans font-normal leading-relaxed max-w-sm mx-auto">
@@ -214,7 +214,7 @@ import Footer from '../components/Footer.astro';
             </ul>
           </div>
           
-          <div class="lg:col-span-5 bg-brand-basetint rounded-3xl p-8 border border-slate-200/50 flex flex-col justify-center text-center space-y-6">
+          <div class="lg:col-span-5 bg-brand-basetint rounded-2xl sm:rounded-3xl p-5 sm:p-8 border border-slate-200/50 flex flex-col justify-center text-center space-y-6">
             <div class="text-5xl text-emerald-600">⚡</div>
             <h4 class="text-base font-bold text-brand-dark font-display uppercase tracking-wider">Bespaar op energielasten</h4>
             <p   class="text-sm text-slate-600 font-sans font-normal leading-relaxed max-w-sm mx-auto">
@@ -229,16 +229,16 @@ import Footer from '../components/Footer.astro';
 
     <!-- Checklist section -->
     <section class="py-20 bg-brand-basetint/30 relative">
-      <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
         <div class="text-center max-w-2xl mx-auto mb-16">
           <span class="text-xs font-bold tracking-widest uppercase text-brand-dark/50 block font-display">Voorbereiding</span>
           <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-brand-dark font-display mt-2">Welke documenten hebben we nodig?</h2>
           <p   class="text-slate-600 text-sm sm:text-base font-sans font-normal mt-3">Om jouw aanvraag soepel te laten verlopen, verzamelen we in de intakefase een aantal documenten.</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 sm:gap-8">
           <!-- Card 1 -->
-          <div class="bg-white border border-slate-200/80 p-8 rounded-3xl shadow-sm text-center space-y-4">
+          <div class="bg-white border border-slate-200/80 p-5 sm:p-8 rounded-2xl sm:rounded-3xl shadow-sm text-center space-y-4">
             <div class="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center text-brand-dark text-lg mx-auto">
               <i class="fa-solid fa-id-card"></i>
             </div>
@@ -249,7 +249,7 @@ import Footer from '../components/Footer.astro';
           </div>
 
           <!-- Card 2 -->
-          <div class="bg-white border border-slate-200/80 p-8 rounded-3xl shadow-sm text-center space-y-4">
+          <div class="bg-white border border-slate-200/80 p-5 sm:p-8 rounded-2xl sm:rounded-3xl shadow-sm text-center space-y-4">
             <div class="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center text-brand-dark text-lg mx-auto">
               <i class="fa-solid fa-file-invoice"></i>
             </div>
@@ -260,7 +260,7 @@ import Footer from '../components/Footer.astro';
           </div>
 
           <!-- Card 3 -->
-          <div class="bg-white border border-slate-200/80 p-8 rounded-3xl shadow-sm text-center space-y-4">
+          <div class="bg-white border border-slate-200/80 p-5 sm:p-8 rounded-2xl sm:rounded-3xl shadow-sm text-center space-y-4">
             <div class="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center text-brand-dark text-lg mx-auto">
               <i class="fa-solid fa-laptop-file"></i>
             </div>
@@ -271,7 +271,7 @@ import Footer from '../components/Footer.astro';
           </div>
 
           <!-- Card 4 -->
-          <div class="bg-white border border-slate-200/80 p-8 rounded-3xl shadow-sm text-center space-y-4">
+          <div class="bg-white border border-slate-200/80 p-5 sm:p-8 rounded-2xl sm:rounded-3xl shadow-sm text-center space-y-4">
             <div class="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center text-brand-dark text-lg mx-auto">
               <i class="fa-solid fa-house-chimney-crack"></i>
             </div>
@@ -286,7 +286,7 @@ import Footer from '../components/Footer.astro';
 
     <!-- timeline -->
     <section class="py-20 bg-brand-base overflow-hidden">
-      <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
         <div class="text-center max-w-2xl mx-auto mb-16">
           <span class="text-xs font-bold tracking-widest uppercase text-brand-dark/50 block font-display">Stappenplan</span>
           <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-brand-dark font-display mt-2">Hoe verloopt een hypotheekaanvraag?</h2>
@@ -298,11 +298,11 @@ import Footer from '../components/Footer.astro';
           <!-- Horizontal scroll area -->
           <div 
             id="timeline-scroll-container"
-            class="flex space-x-6 overflow-x-auto pb-8 pt-4 snap-x snap-mandatory scroll-smooth hide-scrollbar w-full"
+            class="flex space-x-4 sm:space-x-6 overflow-x-auto pb-8 pt-4 snap-x snap-mandatory scroll-smooth hide-scrollbar w-full"
             style="scrollbar-width: none; -ms-overflow-style: none;"
           >
             <!-- Step 1 -->
-            <div class="flex-shrink-0 w-[300px] sm:w-[360px] snap-start bg-white border border-slate-200/80 rounded-[32px] p-6 sm:p-8 shadow-md hover:shadow-lg transition-all duration-300 relative overflow-hidden flex flex-col justify-between group min-h-[220px]">
+            <div class="flex-shrink-0 w-[270px] sm:w-[360px] snap-start bg-white border border-slate-200/80 rounded-2xl sm:rounded-[32px] p-5 sm:p-8 shadow-md hover:shadow-lg transition-all duration-300 relative overflow-hidden flex flex-col justify-between group min-h-[220px]">
               <div class="absolute -right-10 -bottom-10 w-32 h-32 rounded-full bg-brand-primary/5 blur-2xl pointer-events-none transition-all group-hover:bg-brand-primary/10"></div>
               <div class="space-y-4 relative z-10">
                 <div class="w-10 h-10 rounded-full bg-brand-dark text-white flex items-center justify-center font-sans font-semibold text-xs shadow-sm">
@@ -319,7 +319,7 @@ import Footer from '../components/Footer.astro';
             </div>
 
             <!-- Step 2 -->
-            <div class="flex-shrink-0 w-[300px] sm:w-[360px] snap-start bg-white border border-slate-200/80 rounded-[32px] p-6 sm:p-8 shadow-md hover:shadow-lg transition-all duration-300 relative overflow-hidden flex flex-col justify-between group min-h-[220px]">
+            <div class="flex-shrink-0 w-[270px] sm:w-[360px] snap-start bg-white border border-slate-200/80 rounded-2xl sm:rounded-[32px] p-5 sm:p-8 shadow-md hover:shadow-lg transition-all duration-300 relative overflow-hidden flex flex-col justify-between group min-h-[220px]">
               <div class="absolute -right-10 -bottom-10 w-32 h-32 rounded-full bg-brand-primary/5 blur-2xl pointer-events-none transition-all group-hover:bg-brand-primary/10"></div>
               <div class="space-y-4 relative z-10">
                 <div class="w-10 h-10 rounded-full bg-brand-dark text-white flex items-center justify-center font-sans font-semibold text-xs shadow-sm">
@@ -336,7 +336,7 @@ import Footer from '../components/Footer.astro';
             </div>
 
             <!-- Step 3 -->
-            <div class="flex-shrink-0 w-[300px] sm:w-[360px] snap-start bg-white border border-slate-200/80 rounded-[32px] p-6 sm:p-8 shadow-md hover:shadow-lg transition-all duration-300 relative overflow-hidden flex flex-col justify-between group min-h-[220px]">
+            <div class="flex-shrink-0 w-[270px] sm:w-[360px] snap-start bg-white border border-slate-200/80 rounded-2xl sm:rounded-[32px] p-5 sm:p-8 shadow-md hover:shadow-lg transition-all duration-300 relative overflow-hidden flex flex-col justify-between group min-h-[220px]">
               <div class="absolute -right-10 -bottom-10 w-32 h-32 rounded-full bg-brand-primary/5 blur-2xl pointer-events-none transition-all group-hover:bg-brand-primary/10"></div>
               <div class="space-y-4 relative z-10">
                 <div class="w-10 h-10 rounded-full bg-brand-dark text-white flex items-center justify-center font-sans font-semibold text-xs shadow-sm">
@@ -353,7 +353,7 @@ import Footer from '../components/Footer.astro';
             </div>
 
             <!-- Step 4 -->
-            <div class="flex-shrink-0 w-[300px] sm:w-[360px] snap-start bg-white border border-slate-200/80 rounded-[32px] p-6 sm:p-8 shadow-md hover:shadow-lg transition-all duration-300 relative overflow-hidden flex flex-col justify-between group min-h-[220px]">
+            <div class="flex-shrink-0 w-[270px] sm:w-[360px] snap-start bg-white border border-slate-200/80 rounded-2xl sm:rounded-[32px] p-5 sm:p-8 shadow-md hover:shadow-lg transition-all duration-300 relative overflow-hidden flex flex-col justify-between group min-h-[220px]">
               <div class="absolute -right-10 -bottom-10 w-32 h-32 rounded-full bg-brand-primary/5 blur-2xl pointer-events-none transition-all group-hover:bg-brand-primary/10"></div>
               <div class="space-y-4 relative z-10">
                 <div class="w-10 h-10 rounded-full bg-brand-dark text-white flex items-center justify-center font-sans font-semibold text-xs shadow-sm">
@@ -370,7 +370,7 @@ import Footer from '../components/Footer.astro';
             </div>
 
             <!-- Step 5 -->
-            <div class="flex-shrink-0 w-[300px] sm:w-[360px] snap-start bg-white border border-slate-200/80 rounded-[32px] p-6 sm:p-8 shadow-md hover:shadow-lg transition-all duration-300 relative overflow-hidden flex flex-col justify-between group min-h-[220px]">
+            <div class="flex-shrink-0 w-[270px] sm:w-[360px] snap-start bg-white border border-slate-200/80 rounded-2xl sm:rounded-[32px] p-5 sm:p-8 shadow-md hover:shadow-lg transition-all duration-300 relative overflow-hidden flex flex-col justify-between group min-h-[220px]">
               <div class="absolute -right-10 -bottom-10 w-32 h-32 rounded-full bg-brand-primary/5 blur-2xl pointer-events-none transition-all group-hover:bg-brand-primary/10"></div>
               <div class="space-y-4 relative z-10">
                 <div class="w-10 h-10 rounded-full bg-brand-dark text-white flex items-center justify-center font-sans font-semibold text-xs shadow-sm">
@@ -387,7 +387,7 @@ import Footer from '../components/Footer.astro';
             </div>
 
             <!-- Step 6 -->
-            <div class="flex-shrink-0 w-[300px] sm:w-[360px] snap-start bg-white border border-slate-200/80 rounded-[32px] p-6 sm:p-8 shadow-md hover:shadow-lg transition-all duration-300 relative overflow-hidden flex flex-col justify-between group min-h-[220px]">
+            <div class="flex-shrink-0 w-[270px] sm:w-[360px] snap-start bg-white border border-slate-200/80 rounded-2xl sm:rounded-[32px] p-5 sm:p-8 shadow-md hover:shadow-lg transition-all duration-300 relative overflow-hidden flex flex-col justify-between group min-h-[220px]">
               <div class="absolute -right-10 -bottom-10 w-32 h-32 rounded-full bg-brand-primary/5 blur-2xl pointer-events-none transition-all group-hover:bg-brand-primary/10"></div>
               <div class="space-y-4 relative z-10">
                 <div class="w-10 h-10 rounded-full bg-brand-dark text-white flex items-center justify-center font-sans font-semibold text-xs shadow-sm">
@@ -444,7 +444,7 @@ import Footer from '../components/Footer.astro';
 
     <!-- FAQs Section -->
     <section class="py-20 bg-brand-basetint/30 relative">
-      <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
           
           <!-- FAQs Headers -->
@@ -464,11 +464,11 @@ import Footer from '../components/Footer.astro';
             
             <!-- Accordion 1 -->
             <div class="faq-item bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm">
-              <button class="faq-toggle w-full px-6 py-5 text-left text-xs font-semibold uppercase tracking-wider font-sans text-brand-dark flex justify-between items-center cursor-pointer">
+              <button class="faq-toggle w-full px-4 sm:px-6 py-4 sm:py-5 text-left text-xs font-semibold uppercase tracking-wider font-sans text-brand-dark flex justify-between items-center cursor-pointer">
                 <span>Welke hypotheekvormen bieden jullie aan?</span>
                 <span class="faq-icon text-slate-400 text-xs transition-transform duration-300">▼</span>
               </button>
-              <div class="faq-content hidden px-6 pb-6 border-t border-slate-100 pt-4">
+              <div class="faq-content hidden px-4 sm:px-6 pb-5 sm:pb-6 border-t border-slate-100 pt-4">
                 <p   class="text-sm text-slate-600 font-sans font-normal leading-relaxed">
                   Wij adviseren en bemiddelen in verschillende hypotheekvormen, waaronder annuïteitenhypotheken, lineaire hypotheken, aflossingsvrije en hybride oplossingen. We kiezen samen de vorm die past bij jouw financiële situatie en toekomstplannen.
                 </p>
@@ -477,11 +477,11 @@ import Footer from '../components/Footer.astro';
 
             <!-- Accordion 2 -->
             <div class="faq-item bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm">
-              <button class="faq-toggle w-full px-6 py-5 text-left text-xs font-semibold uppercase tracking-wider font-sans text-brand-dark flex justify-between items-center cursor-pointer">
+              <button class="faq-toggle w-full px-4 sm:px-6 py-4 sm:py-5 text-left text-xs font-semibold uppercase tracking-wider font-sans text-brand-dark flex justify-between items-center cursor-pointer">
                 <span>Wat zijn de kosten van hypotheekadvies?</span>
                 <span class="faq-icon text-slate-400 text-xs transition-transform duration-300">▼</span>
               </button>
-              <div class="faq-content hidden px-6 pb-6 border-t border-slate-100 pt-4">
+              <div class="faq-content hidden px-4 sm:px-6 pb-5 sm:pb-6 border-t border-slate-100 pt-4">
                 <p   class="text-sm text-slate-600 font-sans font-normal leading-relaxed">
                   Onze kosten zijn transparant: we werken met vaste advies- en bemiddelingskosten of een vooraf afgesproken tarief. In veel gevallen ontvang je een duidelijke prijsopgave vooraf. Informeer naar eventuele bijkomende kosten zoals taxatie- en afsluitkosten.
                 </p>
@@ -490,11 +490,11 @@ import Footer from '../components/Footer.astro';
 
             <!-- Accordion 3 -->
             <div class="faq-item bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm">
-              <button class="faq-toggle w-full px-6 py-5 text-left text-xs font-semibold uppercase tracking-wider font-sans text-brand-dark flex justify-between items-center cursor-pointer">
+              <button class="faq-toggle w-full px-4 sm:px-6 py-4 sm:py-5 text-left text-xs font-semibold uppercase tracking-wider font-sans text-brand-dark flex justify-between items-center cursor-pointer">
                 <span>Hoe verloopt het aanvraagproces?</span>
                 <span class="faq-icon text-slate-400 text-xs transition-transform duration-300">▼</span>
               </button>
-              <div class="faq-content hidden px-6 pb-6 border-t border-slate-100 pt-4">
+              <div class="faq-content hidden px-4 sm:px-6 pb-5 sm:pb-6 border-t border-slate-100 pt-4">
                 <p   class="text-sm text-slate-600 font-sans font-normal leading-relaxed">
                   Het proces begint met een intake en financieel advies, gevolgd door het verzamelen van documenten en het aanvragen van offertes. Wij verzorgen de aanvraag bij de geldverstrekker en begeleiden de afronding tot en met de transportakte bij de notaris. Gewoonlijk duurt dit enkele weken.
                 </p>
@@ -503,11 +503,11 @@ import Footer from '../components/Footer.astro';
 
             <!-- Accordion 4 -->
             <div class="faq-item bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm">
-              <button class="faq-toggle w-full px-6 py-5 text-left text-xs font-semibold uppercase tracking-wider font-sans text-brand-dark flex justify-between items-center cursor-pointer">
+              <button class="faq-toggle w-full px-4 sm:px-6 py-4 sm:py-5 text-left text-xs font-semibold uppercase tracking-wider font-sans text-brand-dark flex justify-between items-center cursor-pointer">
                 <span>Begeleiden jullie ook bij taxatie en geven jullie renteadvies?</span>
                 <span class="faq-icon text-slate-400 text-xs transition-transform duration-300">▼</span>
               </button>
-              <div class="faq-content hidden px-6 pb-6 border-t border-slate-100 pt-4">
+              <div class="faq-content hidden px-4 sm:px-6 pb-5 sm:pb-6 border-t border-slate-100 pt-4">
                 <p   class="text-sm text-slate-600 font-sans font-normal leading-relaxed">
                   Ja. Wij regelen en begeleiden de taxatie en vergelijken rentetarieven van verschillende geldverstrekkers. We geven advies over rentevastperiodes, boetevrij extra aflossen en mogelijke rentewijzigingen, zodat je een weloverwogen keuze maakt.
                 </p>
@@ -516,6 +516,7 @@ import Footer from '../components/Footer.astro';
 
           </div>
 
+        </div>
       </div>
     </section>
 
@@ -524,7 +525,7 @@ import Footer from '../components/Footer.astro';
       <!-- Glow effect -->
       <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] rounded-full bg-brand-primary/10 blur-[150px] pointer-events-none"></div>
 
-      <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10 text-center">
+      <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 relative z-10 text-center">
         <span class="text-xs font-bold tracking-widest uppercase text-brand-accent block font-display mb-3">Zelf Berekenen</span>
         <h2 class="text-3xl sm:text-4xl font-bold font-display text-white">Slimme Rekentools</h2>
         <p  class="text-slate-300 text-xs sm:text-sm font-sans font-normal max-w-lg mx-auto mt-4 leading-relaxed">
@@ -533,7 +534,7 @@ import Footer from '../components/Footer.astro';
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mt-14">
           <!-- Card 1: Maximale hypotheek -->
-          <div class="bg-white/5 border border-white/10 rounded-[32px] p-8 sm:p-10 text-center flex flex-col justify-between hover:bg-white/10 hover:border-brand-accent/50 transition-all duration-300 group">
+          <div class="bg-white/5 border border-white/10 rounded-2xl sm:rounded-[32px] p-5 sm:p-10 text-center flex flex-col justify-between hover:bg-white/10 hover:border-brand-accent/50 transition-all duration-300 group">
             <div class="space-y-4">
               <div class="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center text-brand-accent text-2xl mx-auto group-hover:scale-105 transition-transform">
                 <i class="fa-solid fa-calculator"></i>
@@ -555,7 +556,7 @@ import Footer from '../components/Footer.astro';
           </div>
 
           <!-- Card 2: Actuele rentestanden -->
-          <div class="bg-white/5 border border-white/10 rounded-[32px] p-8 sm:p-10 text-center flex flex-col justify-between hover:bg-white/10 hover:border-brand-accent/50 transition-all duration-300 group">
+          <div class="bg-white/5 border border-white/10 rounded-2xl sm:rounded-[32px] p-5 sm:p-10 text-center flex flex-col justify-between hover:bg-white/10 hover:border-brand-accent/50 transition-all duration-300 group">
             <div class="space-y-4">
               <div class="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center text-brand-accent text-2xl mx-auto group-hover:scale-105 transition-transform">
                 <i class="fa-solid fa-chart-line"></i>
@@ -581,7 +582,7 @@ import Footer from '../components/Footer.astro';
 
     <!-- Informatieve Artikelen Section -->
     <section class="py-24 bg-slate-50 relative">
-      <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-16">
           <div class="lg:col-span-6 space-y-3">
             <span class="text-xs font-bold tracking-widest uppercase text-brand-dark/50 block font-display">Nieuws & Updates</span>
@@ -596,7 +597,7 @@ import Footer from '../components/Footer.astro';
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           <!-- Article Card 1 -->
-          <div class="bg-white border border-slate-200/80 rounded-[32px] overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col justify-between">
+          <div class="bg-white border border-slate-200/80 rounded-2xl sm:rounded-[32px] overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col justify-between">
             <div class="relative h-60 overflow-hidden">
               <img 
                 src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=800&q=80" 
@@ -607,7 +608,7 @@ import Footer from '../components/Footer.astro';
                 Renteontwikkeling
               </div>
             </div>
-            <div class="p-8 flex-grow flex flex-col justify-between space-y-6">
+            <div class="p-5 sm:p-8 flex-grow flex flex-col justify-between space-y-6">
               <div class="space-y-3">
                 <h3 class="text-lg font-bold text-brand-dark font-display leading-snug">Rente- en hypotheeknieuws: Actuele inzichten en afwegingen</h3>
                 <p   class="text-sm text-slate-600 font-sans font-normal leading-relaxed">
@@ -623,7 +624,7 @@ import Footer from '../components/Footer.astro';
           </div>
 
           <!-- Article Card 2 -->
-          <div class="bg-white border border-slate-200/80 rounded-[32px] overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col justify-between">
+          <div class="bg-white border border-slate-200/80 rounded-2xl sm:rounded-[32px] overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col justify-between">
             <div class="relative h-60 overflow-hidden">
               <img 
                 src="https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=800&q=80" 
@@ -634,7 +635,7 @@ import Footer from '../components/Footer.astro';
                 Aanvraag Tips
               </div>
             </div>
-            <div class="p-8 flex-grow flex flex-col justify-between space-y-6">
+            <div class="p-5 sm:p-8 flex-grow flex flex-col justify-between space-y-6">
               <div class="space-y-3">
                 <h3 class="text-lg font-bold text-brand-dark font-display leading-snug">Tips voor jouw hypotheekaanvraag: Documentatie en voorbereiding</h3>
                 <p   class="text-sm text-slate-600 font-sans font-normal leading-relaxed">

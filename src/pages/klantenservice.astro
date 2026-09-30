@@ -22,13 +22,13 @@ import Footer from '../components/Footer.astro';
       class="relative py-24 sm:py-32 lg:py-40 bg-[#153b68] bg-center bg-cover bg-no-repeat overflow-hidden rounded-b-[48px] sm:rounded-b-[64px] lg:rounded-b-[80px] shadow-xl"
       style="background-image: linear-gradient(rgba(21, 59, 104, 0.82), rgba(11, 26, 47, 0.94)), url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=1800&q=80');"
     >
-      <div class="max-w-4xl mx-auto px-6 sm:px-8 text-center relative z-10">
+      <div class="max-w-4xl mx-auto px-4 sm:px-8 text-center relative z-10">
         <!-- Badge -->
         <span class="inline-block bg-white/10 text-brand-accent border border-white/10 text-[10px] font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full mb-6 font-sans">
           Klantenservice
         </span>
         
-        <h1 class="text-4xl sm:text-5xl lg:text-6.5xl font-bold text-white tracking-tight leading-tight font-display mb-6">
+        <h1 class="text-3xl sm:text-5xl lg:text-6.5xl font-bold text-white tracking-tight leading-tight font-display mb-6">
           Klantenservice en downloads
         </h1>
         
@@ -40,25 +40,25 @@ import Footer from '../components/Footer.astro';
 
     <!-- Tab Navigation -->
     <div class="border-b border-slate-200 bg-white sticky top-0 z-40 shadow-sm">
-      <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-        <div class="flex space-x-8 overflow-x-auto hide-scrollbar py-1">
+      <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
+        <div class="flex space-x-3 sm:space-x-8 overflow-x-auto hide-scrollbar py-1">
           <button 
             id="tab-btn-verzekeringen" 
-            class="tab-btn active border-b-2 border-brand-accent px-4 py-4 text-xs font-semibold uppercase tracking-wider font-sans text-brand-dark cursor-pointer transition-all duration-200 whitespace-nowrap flex items-center space-x-2"
+            class="tab-btn active border-b-2 border-brand-accent px-3 sm:px-4 py-3 sm:py-4 text-xs font-semibold uppercase tracking-wider font-sans text-brand-dark cursor-pointer transition-all duration-200 whitespace-nowrap flex items-center space-x-2"
             data-tab="verzekeringen"
           >
             <span>Verzekeringen</span>
           </button>
           <button 
             id="tab-btn-hypotheken" 
-            class="tab-btn border-b-2 border-transparent px-4 py-4 text-xs font-semibold uppercase tracking-wider font-sans text-slate-400 hover:text-brand-dark cursor-pointer transition-all duration-200 whitespace-nowrap flex items-center space-x-2"
+            class="tab-btn border-b-2 border-transparent px-3 sm:px-4 py-3 sm:py-4 text-xs font-semibold uppercase tracking-wider font-sans text-slate-400 hover:text-brand-dark cursor-pointer transition-all duration-200 whitespace-nowrap flex items-center space-x-2"
             data-tab="hypotheken"
           >
             <span>Hypotheken</span>
           </button>
           <button 
             id="tab-btn-klantenservice" 
-            class="tab-btn border-b-2 border-transparent px-4 py-4 text-xs font-semibold uppercase tracking-wider font-sans text-slate-400 hover:text-brand-dark cursor-pointer transition-all duration-200 whitespace-nowrap flex items-center space-x-2"
+            class="tab-btn border-b-2 border-transparent px-3 sm:px-4 py-3 sm:py-4 text-xs font-semibold uppercase tracking-wider font-sans text-slate-400 hover:text-brand-dark cursor-pointer transition-all duration-200 whitespace-nowrap flex items-center space-x-2"
             data-tab="klantenservice"
           >
             <span>Klantenservice</span>
@@ -69,13 +69,13 @@ import Footer from '../components/Footer.astro';
 
     <!-- Tab Panels Content -->
     <div class="py-16 bg-brand-basetint/30 min-h-[500px]">
-      <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
 
         <!-- 1. VERZEKERINGEN TAB PANEL -->
-        <div id="panel-verzekeringen" class="tab-panel space-y-12">
-          <div class="bg-brand-dark border border-white/10 rounded-[32px] p-8 sm:p-10 text-white shadow-xl relative overflow-hidden flex flex-col md:flex-row items-center gap-6">
+        <div id="panel-verzekeringen" class="tab-panel space-y-8 sm:space-y-12">
+          <div class="bg-brand-dark border border-white/10 rounded-2xl sm:rounded-[32px] p-5 sm:p-10 text-white shadow-xl relative overflow-hidden flex flex-col md:flex-row items-start md:items-center gap-6">
             <div class="absolute -right-24 -bottom-24 w-96 h-96 rounded-full bg-brand-primary/5 blur-3xl pointer-events-none"></div>
-            <div class="w-16 h-16 rounded-2xl bg-brand-primary/10 flex items-center justify-center text-brand-primary text-3xl flex-shrink-0">
+            <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-brand-primary/10 flex items-center justify-center text-brand-primary text-2xl sm:text-3xl flex-shrink-0">
               <i class="fa-solid fa-umbrella"></i>
             </div>
             <div>
@@ -87,9 +87,9 @@ import Footer from '../components/Footer.astro';
           </div>
 
           <!-- Document Cards Grid -->
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
             <!-- Doc 1 -->
-            <div class="bg-white border border-slate-200/80 p-8 rounded-3xl shadow-sm hover:shadow-md transition-shadow flex flex-col h-full">
+            <div class="bg-white border border-slate-200/80 p-5 sm:p-8 rounded-2xl sm:rounded-3xl shadow-sm hover:shadow-md transition-shadow flex flex-col h-full">
               <div class="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center text-brand-dark text-xl mb-6">
                 <i class="fa-regular fa-file-pdf"></i>
               </div>
@@ -107,7 +107,7 @@ import Footer from '../components/Footer.astro';
             </div>
 
             <!-- Doc 2 -->
-            <div class="bg-white border border-slate-200/80 p-8 rounded-3xl shadow-sm hover:shadow-md transition-shadow flex flex-col h-full">
+            <div class="bg-white border border-slate-200/80 p-5 sm:p-8 rounded-2xl sm:rounded-3xl shadow-sm hover:shadow-md transition-shadow flex flex-col h-full">
               <div class="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center text-brand-dark text-xl mb-6">
                 <i class="fa-solid fa-car-burst"></i>
               </div>
@@ -125,7 +125,7 @@ import Footer from '../components/Footer.astro';
             </div>
 
             <!-- Doc 3 -->
-            <div class="bg-white border border-slate-200/80 p-8 rounded-3xl shadow-sm hover:shadow-md transition-shadow flex flex-col h-full">
+            <div class="bg-white border border-slate-200/80 p-5 sm:p-8 rounded-2xl sm:rounded-3xl shadow-sm hover:shadow-md transition-shadow flex flex-col h-full">
               <div class="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center text-brand-dark text-xl mb-6">
                 <i class="fa-solid fa-shield-halved"></i>
               </div>
@@ -144,7 +144,7 @@ import Footer from '../components/Footer.astro';
           </div>
 
           <!-- Direct Schade Melden Banner -->
-          <div class="bg-brand-primary/10 border border-brand-primary/20 rounded-[32px] p-8 sm:p-10 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-sm">
+          <div class="bg-brand-primary/10 border border-brand-primary/20 rounded-2xl sm:rounded-[32px] p-5 sm:p-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 shadow-sm">
             <div class="space-y-2">
               <h3 class="text-lg font-semibold text-brand-dark font-sans">Schade direct online melden?</h3>
               <p   class="text-slate-600 text-xs sm:text-sm font-sans font-normal max-w-xl">
@@ -154,7 +154,7 @@ import Footer from '../components/Footer.astro';
             <a 
               href="https://schadetool.leadfabriek.io" 
               target="_blank"
-              class="bg-brand-dark hover:bg-brand-primary hover:text-brand-dark text-white font-semibold px-8 py-4 rounded-full shadow-md transition-all duration-300 text-xs tracking-wider uppercase font-sans whitespace-nowrap"
+              class="w-full sm:w-auto text-center bg-brand-dark hover:bg-brand-primary hover:text-brand-dark text-white font-semibold px-8 py-4 rounded-full shadow-md transition-all duration-300 text-xs tracking-wider uppercase font-sans whitespace-nowrap"
             >
               <i class="fa-solid fa-triangle-exclamation mr-2"></i> Online melden
             </a>
@@ -162,10 +162,10 @@ import Footer from '../components/Footer.astro';
         </div>
 
         <!-- 2. HYPOTHEKEN TAB PANEL -->
-        <div id="panel-hypotheken" class="tab-panel hidden space-y-12">
-          <div class="bg-brand-dark border border-white/10 rounded-[32px] p-8 sm:p-10 text-white shadow-xl relative overflow-hidden flex flex-col md:flex-row items-center gap-6">
+        <div id="panel-hypotheken" class="tab-panel hidden space-y-8 sm:space-y-12">
+          <div class="bg-brand-dark border border-white/10 rounded-2xl sm:rounded-[32px] p-5 sm:p-10 text-white shadow-xl relative overflow-hidden flex flex-col md:flex-row items-start md:items-center gap-6">
             <div class="absolute -right-24 -bottom-24 w-96 h-96 rounded-full bg-brand-primary/5 blur-3xl pointer-events-none"></div>
-            <div class="w-16 h-16 rounded-2xl bg-brand-primary/10 flex items-center justify-center text-brand-primary text-3xl flex-shrink-0">
+            <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-brand-primary/10 flex items-center justify-center text-brand-primary text-2xl sm:text-3xl flex-shrink-0">
               <i class="fa-solid fa-house-chimney"></i>
             </div>
             <div>
@@ -177,9 +177,9 @@ import Footer from '../components/Footer.astro';
           </div>
 
           <!-- Document Cards Grid -->
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
             <!-- Doc 1 -->
-            <div class="bg-white border border-slate-200/80 p-8 rounded-3xl shadow-sm hover:shadow-md transition-shadow flex flex-col h-full">
+            <div class="bg-white border border-slate-200/80 p-5 sm:p-8 rounded-2xl sm:rounded-3xl shadow-sm hover:shadow-md transition-shadow flex flex-col h-full">
               <div class="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center text-brand-dark text-xl mb-6">
                 <i class="fa-solid fa-pen-nib"></i>
               </div>
@@ -197,7 +197,7 @@ import Footer from '../components/Footer.astro';
             </div>
 
             <!-- Doc 2 -->
-            <div class="bg-white border border-slate-200/80 p-8 rounded-3xl shadow-sm hover:shadow-md transition-shadow flex flex-col h-full">
+            <div class="bg-white border border-slate-200/80 p-5 sm:p-8 rounded-2xl sm:rounded-3xl shadow-sm hover:shadow-md transition-shadow flex flex-col h-full">
               <div class="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center text-brand-dark text-xl mb-6">
                 <i class="fa-solid fa-file-invoice-dollar"></i>
               </div>
@@ -215,7 +215,7 @@ import Footer from '../components/Footer.astro';
             </div>
 
             <!-- Doc 3 -->
-            <div class="bg-white border border-slate-200/80 p-8 rounded-3xl shadow-sm hover:shadow-md transition-shadow flex flex-col h-full">
+            <div class="bg-white border border-slate-200/80 p-5 sm:p-8 rounded-2xl sm:rounded-3xl shadow-sm hover:shadow-md transition-shadow flex flex-col h-full">
               <div class="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center text-brand-dark text-xl mb-6">
                 <i class="fa-solid fa-list-check"></i>
               </div>
@@ -234,8 +234,8 @@ import Footer from '../components/Footer.astro';
           </div>
 
           <!-- AVG-Proof Hypotheek Checklist Section -->
-          <div class="bg-white border border-slate-200/80 rounded-[40px] p-8 sm:p-12 shadow-xl">
-            <div class="max-w-3xl mx-auto text-center mb-12">
+          <div class="bg-white border border-slate-200/80 rounded-2xl sm:rounded-[40px] p-5 sm:p-12 shadow-xl">
+            <div class="max-w-3xl mx-auto text-center mb-8 sm:mb-12">
               <span class="text-brand-accent text-[10px] font-semibold tracking-wider block mb-2 font-sans uppercase">AVG-Proof aanleveren</span>
               <h3 class="text-xl sm:text-2xl font-semibold text-brand-dark font-sans">Hypotheek checklist</h3>
               <p   class="text-slate-600 text-sm sm:text-base font-sans font-normal leading-relaxed mt-2">
@@ -243,7 +243,7 @@ import Footer from '../components/Footer.astro';
               </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start border-b border-slate-100 pb-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 items-start border-b border-slate-100 pb-8 sm:pb-12">
               <!-- Left Column: Particulieren -->
               <div class="space-y-6">
                 <h4 class="text-sm font-semibold text-brand-dark font-sans tracking-wide flex items-center">
@@ -327,18 +327,18 @@ import Footer from '../components/Footer.astro';
             </div>
 
             <!-- Portal CTA -->
-            <div class="pt-12 text-center space-y-6">
+            <div class="pt-8 sm:pt-12 text-center space-y-6">
               <div class="max-w-xl mx-auto">
                 <h4 class="text-base font-semibold text-brand-dark font-sans">Hoe lever je deze documenten aan?</h4>
                 <p   class="text-sm text-slate-600 font-sans font-normal mt-2 leading-relaxed">
-                  Turing je adviestraject ontvang je van ons een persoonlijke uitnodigingslink voor het beveiligde FinSave portaal. Hier kun je al je documenten in een streng beveiligde bankomgeving uploaden. Dit is de enige AVG-proof methode om persoonsgegevens met ons te delen.
+                  Tijdens je adviestraject ontvang je van ons een persoonlijke uitnodigingslink voor het beveiligde FinSave portaal. Hier kun je al je documenten in een streng beveiligde bankomgeving uploaden. Dit is de enige AVG-proof methode om persoonsgegevens met ons te delen.
                 </p>
               </div>
               <div>
                 <a 
                   href="https://start.finsave.nl/app/login" 
                   target="_blank"
-                  class="inline-flex bg-brand-dark hover:bg-brand-primary hover:text-brand-dark text-white font-semibold px-8 py-4 rounded-full shadow-md transition-all duration-300 text-xs tracking-wider uppercase font-sans"
+                  class="inline-flex bg-brand-dark hover:bg-brand-primary hover:text-brand-dark text-white font-semibold px-8 py-4 rounded-full shadow-md transition-all duration-300 text-xs tracking-wider uppercase font-sans w-full sm:w-auto justify-center"
                 >
                   Direct inloggen FinSave ↗
                 </a>
@@ -348,10 +348,10 @@ import Footer from '../components/Footer.astro';
         </div>
 
         <!-- 3. KLANTENSERVICE TAB PANEL -->
-        <div id="panel-klantenservice" class="tab-panel hidden space-y-12">
-          <div class="bg-brand-dark border border-white/10 rounded-[32px] p-8 sm:p-10 text-white shadow-xl relative overflow-hidden flex flex-col md:flex-row items-center gap-6">
+        <div id="panel-klantenservice" class="tab-panel hidden space-y-8 sm:space-y-12">
+          <div class="bg-brand-dark border border-white/10 rounded-2xl sm:rounded-[32px] p-5 sm:p-10 text-white shadow-xl relative overflow-hidden flex flex-col md:flex-row items-start md:items-center gap-6">
             <div class="absolute -right-24 -bottom-24 w-96 h-96 rounded-full bg-brand-primary/5 blur-3xl pointer-events-none"></div>
-            <div class="w-16 h-16 rounded-2xl bg-brand-primary/10 flex items-center justify-center text-brand-primary text-3xl flex-shrink-0">
+            <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-brand-primary/10 flex items-center justify-center text-brand-primary text-2xl sm:text-3xl flex-shrink-0">
               <i class="fa-solid fa-headset"></i>
             </div>
             <div>
@@ -363,9 +363,9 @@ import Footer from '../components/Footer.astro';
           </div>
 
           <!-- Contact Channels Grid -->
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             <!-- Channel 1: Phone -->
-            <div class="bg-white border border-slate-200/80 p-8 rounded-3xl shadow-sm text-center flex flex-col justify-between h-full">
+            <div class="bg-white border border-slate-200/80 p-5 sm:p-8 rounded-2xl sm:rounded-3xl shadow-sm text-center flex flex-col justify-between h-full">
               <div class="space-y-4">
                 <div class="w-12 h-12 rounded-xl bg-brand-primary/10 text-brand-dark text-lg flex items-center justify-center mx-auto">
                   <i class="fa-solid fa-phone"></i>
@@ -382,7 +382,7 @@ import Footer from '../components/Footer.astro';
             </div>
 
             <!-- Channel 2: Email -->
-            <div class="bg-white border border-slate-200/80 p-8 rounded-3xl shadow-sm text-center flex flex-col justify-between h-full">
+            <div class="bg-white border border-slate-200/80 p-5 sm:p-8 rounded-2xl sm:rounded-3xl shadow-sm text-center flex flex-col justify-between h-full">
               <div class="space-y-4">
                 <div class="w-12 h-12 rounded-xl bg-brand-primary/10 text-brand-dark text-lg flex items-center justify-center mx-auto">
                   <i class="fa-solid fa-envelope"></i>
@@ -399,7 +399,7 @@ import Footer from '../components/Footer.astro';
             </div>
 
             <!-- Channel 3: Google Reviews -->
-            <div class="bg-white border border-slate-200/80 p-8 rounded-3xl shadow-sm text-center flex flex-col justify-between h-full">
+            <div class="bg-white border border-slate-200/80 p-5 sm:p-8 rounded-2xl sm:rounded-3xl shadow-sm text-center flex flex-col justify-between h-full">
               <div class="space-y-4">
                 <div class="w-12 h-12 rounded-xl bg-brand-primary/10 text-brand-dark text-lg flex items-center justify-center mx-auto">
                   <i class="fa-brands fa-google"></i>
@@ -417,7 +417,7 @@ import Footer from '../components/Footer.astro';
             </div>
 
             <!-- Channel 4: FinSave Portal -->
-            <div class="bg-white border border-slate-200/80 p-8 rounded-3xl shadow-sm text-center flex flex-col justify-between h-full">
+            <div class="bg-white border border-slate-200/80 p-5 sm:p-8 rounded-2xl sm:rounded-3xl shadow-sm text-center flex flex-col justify-between h-full">
               <div class="space-y-4">
                 <div class="w-12 h-12 rounded-xl bg-brand-primary/10 text-brand-dark text-lg flex items-center justify-center mx-auto">
                   <i class="fa-solid fa-right-to-bracket"></i>

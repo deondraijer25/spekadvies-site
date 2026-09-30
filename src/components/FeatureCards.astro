@@ -169,20 +169,20 @@ import SectionDivider from './SectionDivider.astro';
 <!-- ========================================== -->
 
 <!-- Modal 1: Schade Melden -->
-<div id="modal-schade" class="modal-overlay fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-[100] flex items-center justify-center p-4 opacity-0 pointer-events-none transition-all duration-300">
-  <div class="bg-white rounded-[32px] p-6 sm:p-8 md:p-10 shadow-2xl relative w-full max-w-lg transform scale-95 opacity-0 transition-all duration-300 modal-card">
+<div id="modal-schade" class="modal-overlay fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-[100] flex items-center justify-center p-3 sm:p-4 opacity-0 pointer-events-none transition-all duration-300">
+  <div class="bg-white rounded-[28px] sm:rounded-[32px] p-5 sm:p-8 md:p-10 shadow-2xl relative w-full max-w-lg max-h-[88dvh] overflow-y-auto transform scale-95 opacity-0 transition-all duration-300 modal-card">
     
     <!-- Close Button -->
-    <button class="modal-close absolute top-5 right-5 w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 hover:text-slate-800 flex items-center justify-center transition-all cursor-pointer border-none outline-none">
+    <button class="modal-close absolute top-4 right-4 sm:top-5 sm:right-5 w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 hover:text-slate-800 flex items-center justify-center transition-all cursor-pointer border-none outline-none z-10">
       <i class="fa-solid fa-xmark text-sm"></i>
     </button>
 
     <!-- Modal Header -->
-    <div class="flex items-center space-x-3 mb-6 text-left">
-      <div class="w-10 h-10 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-600 text-lg">
+    <div class="flex items-center space-x-3 mb-6 text-left pr-8">
+      <div class="w-10 h-10 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-600 text-lg flex-shrink-0">
         <i class="fa-solid fa-triangle-exclamation"></i>
       </div>
-      <h3 class="text-lg sm:text-xl font-bold text-brand-dark font-display">Hoe wilt u schade melden?</h3>
+      <h3 class="text-base sm:text-xl font-bold text-brand-dark font-display leading-snug">Hoe wilt u schade melden?</h3>
     </div>
 
     <!-- Modal Options Grid -->
@@ -246,20 +246,20 @@ import SectionDivider from './SectionDivider.astro';
 </div>
 
 <!-- Modal 2: Inloggen -->
-<div id="modal-inloggen" class="modal-overlay fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-[100] flex items-center justify-center p-4 opacity-0 pointer-events-none transition-all duration-300">
-  <div class="bg-white rounded-[32px] p-6 sm:p-8 md:p-10 shadow-2xl relative w-full max-w-lg transform scale-95 opacity-0 transition-all duration-300 modal-card">
+<div id="modal-inloggen" class="modal-overlay fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-[100] flex items-center justify-center p-3 sm:p-4 opacity-0 pointer-events-none transition-all duration-300">
+  <div class="bg-white rounded-[28px] sm:rounded-[32px] p-5 sm:p-8 md:p-10 shadow-2xl relative w-full max-w-lg max-h-[88dvh] overflow-y-auto transform scale-95 opacity-0 transition-all duration-300 modal-card">
     
     <!-- Close Button -->
-    <button class="modal-close absolute top-5 right-5 w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 hover:text-slate-800 flex items-center justify-center transition-all cursor-pointer border-none outline-none">
+    <button class="modal-close absolute top-4 right-4 sm:top-5 sm:right-5 w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 hover:text-slate-800 flex items-center justify-center transition-all cursor-pointer border-none outline-none z-10">
       <i class="fa-solid fa-xmark text-sm"></i>
     </button>
 
     <!-- Modal Header -->
-    <div class="flex items-center space-x-3 mb-6 text-left">
-      <div class="w-10 h-10 rounded-xl bg-[#ab7a22]/10 flex items-center justify-center text-[#ab7a22] text-lg">
+    <div class="flex items-center space-x-3 mb-6 text-left pr-8">
+      <div class="w-10 h-10 rounded-xl bg-[#ab7a22]/10 flex items-center justify-center text-[#ab7a22] text-lg flex-shrink-0">
         <i class="fa-solid fa-user-lock"></i>
       </div>
-      <h3 class="text-lg sm:text-xl font-bold text-brand-dark font-display">Kies uw digitale portaal</h3>
+      <h3 class="text-base sm:text-xl font-bold text-brand-dark font-display leading-snug">Kies uw digitale portaal</h3>
     </div>
 
     <!-- Options -->
@@ -323,11 +323,11 @@ import SectionDivider from './SectionDivider.astro';
 </div>
 
 <!-- Modal 3: Offerte / Contact -->
-<div id="modal-offerte" class="modal-overlay fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-[100] flex items-center justify-center p-4 opacity-0 pointer-events-none transition-all duration-300">
-  <div class="bg-white rounded-[32px] p-6 sm:p-8 md:p-10 shadow-2xl relative w-full max-w-lg transform scale-95 opacity-0 transition-all duration-300 modal-card">
+<div id="modal-offerte" class="modal-overlay fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-[100] flex items-center justify-center p-3 sm:p-4 opacity-0 pointer-events-none transition-all duration-300">
+  <div class="bg-white rounded-[28px] sm:rounded-[32px] p-5 sm:p-8 md:p-10 shadow-2xl relative w-full max-w-lg max-h-[88dvh] overflow-y-auto transform scale-95 opacity-0 transition-all duration-300 modal-card">
     
     <!-- Close Button -->
-    <button class="modal-close absolute top-5 right-5 w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 hover:text-slate-800 flex items-center justify-center transition-all cursor-pointer border-none outline-none">
+    <button class="modal-close absolute top-4 right-4 sm:top-5 sm:right-5 w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 hover:text-slate-800 flex items-center justify-center transition-all cursor-pointer border-none outline-none z-10">
       <i class="fa-solid fa-xmark text-sm"></i>
     </button>
 

@@ -73,16 +73,29 @@
 }
 
 @layer base {
+  html, body {
+    overflow-x: clip;
+    width: 100%;
+    max-width: 100vw;
+    -webkit-text-size-adjust: 100%;
+  }
+
   body {
     @apply bg-brand-base text-slate-700 font-sans antialiased font-normal;
+    -webkit-tap-highlight-color: transparent;
   }
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-bold font-display text-brand-dark tracking-tight;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
   }
 
   p {
     @apply font-normal text-slate-600 font-sans leading-relaxed;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
   }
 }
 
@@ -110,33 +123,48 @@ button[class*="border-"] {
   letter-spacing: normal !important;
 }
 
-/* Global Uniform Typography Scale (AFM/Klant proof consistency) */
+/* Global Uniform Typography Scale (Optimized for Dutch words & Samsung S24 / Z Flip) */
 h1, .h1 {
-  font-size: clamp(2rem, 5vw, 3.25rem) !important; /* Mobile: 32px, Desktop: 52px */
-  line-height: 1.22 !important;
-  font-weight: 900 !important;
+  font-size: clamp(1.65rem, 5vw, 3.25rem) !important; /* Mobile: ~26px, Desktop: 52px */
+  line-height: 1.2 !important;
+  font-weight: 800 !important;
+  overflow-wrap: break-word !important;
+  hyphens: auto !important;
 }
 
 h2, .h2 {
-  font-size: clamp(1.5rem, 4vw, 2.25rem) !important; /* Mobile: 24px, Desktop: 36px */
+  font-size: clamp(1.35rem, 3.5vw, 2.25rem) !important; /* Mobile: ~21.6px, Desktop: 36px */
   line-height: 1.25 !important;
-  font-weight: 900 !important;
+  font-weight: 800 !important;
+  overflow-wrap: break-word !important;
+  hyphens: auto !important;
 }
 
 h3, .h3 {
-  font-size: clamp(1.25rem, 3vw, 1.5rem) !important; /* Mobile: 20px, Desktop: 24px */
+  font-size: clamp(1.15rem, 2.8vw, 1.5rem) !important; /* Mobile: ~18.4px, Desktop: 24px */
   line-height: 1.3 !important;
   font-weight: 700 !important;
+  overflow-wrap: break-word !important;
 }
 
 h4, .h4 {
-  font-size: clamp(1.05rem, 2vw, 1.15rem) !important; /* Mobile: 16.8px, Desktop: 18.4px */
+  font-size: clamp(1rem, 2vw, 1.15rem) !important; /* Mobile: 16px, Desktop: 18.4px */
   line-height: 1.35 !important;
   font-weight: 700 !important;
+  overflow-wrap: break-word !important;
 }
 
 /* Consistent body paragraphs, leaving small helper texts/labels intact */
 p:not(.text-xs):not(.text-sm):not(.text-\[9px\]):not(.text-\[10px\]):not(.text-\[11px\]):not(.text-slate-400):not(.text-slate-500) {
   font-size: 1rem !important; /* 16px */
   line-height: 1.68 !important;
+}
+
+/* Prevent unwanted mobile form auto-zoom on Samsung Internet and mobile Safari */
+@media (max-width: 639px) {
+  input:not([type="checkbox"]):not([type="radio"]),
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
 }

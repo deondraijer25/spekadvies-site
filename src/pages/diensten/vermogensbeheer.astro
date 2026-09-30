@@ -20,13 +20,13 @@ import Footer from '../../components/Footer.astro';
       class="relative py-24 sm:py-32 bg-[#153b68] bg-center bg-cover bg-no-repeat overflow-hidden rounded-b-[48px] sm:rounded-b-[64px] lg:rounded-b-[80px] shadow-xl"
       style="background-image: linear-gradient(rgba(21, 59, 104, 0.82), rgba(11, 26, 47, 0.94)), url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1800&q=80');"
     >
-      <div class="max-w-4xl mx-auto px-6 sm:px-8 text-center relative z-10">
+      <div class="max-w-4xl mx-auto px-4 sm:px-8 text-center relative z-10">
         <!-- Badge -->
         <span class="inline-block bg-white/10 text-brand-accent border border-white/10 text-[10px] font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full mb-6 font-sans">
           Vermogensbeheer & advies
         </span>
         
-        <h1 class="text-4xl sm:text-5xl lg:text-6.5xl font-bold text-white tracking-tight leading-tight font-display mb-6">
+        <h1 class="text-3xl sm:text-5xl lg:text-6.5xl font-bold text-white tracking-tight leading-tight font-display mb-6">
           Bouw aan een gezonde financiële toekomst
         </h1>
         
@@ -52,11 +52,11 @@ import Footer from '../../components/Footer.astro';
 
     <!-- 3 Overlapping USPs Cards (matching hypotheken.astro style) -->
     <section class="py-12 bg-brand-basetint/30 relative">
-      <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
           
           <!-- USP 1 -->
-          <div class="bg-white border border-slate-200/80 p-8 rounded-3xl shadow-sm hover:shadow-md transition-shadow">
+          <div class="bg-white border border-slate-200/80 p-5 sm:p-8 rounded-2xl sm:rounded-3xl shadow-sm hover:shadow-md transition-shadow">
             <div class="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center text-brand-dark text-xl mb-6">
               <i class="fa-solid fa-chart-line"></i>
             </div>
@@ -67,7 +67,7 @@ import Footer from '../../components/Footer.astro';
           </div>
 
           <!-- USP 2 -->
-          <div class="bg-white border border-slate-200/80 p-8 rounded-3xl shadow-sm hover:shadow-md transition-shadow">
+          <div class="bg-white border border-slate-200/80 p-5 sm:p-8 rounded-2xl sm:rounded-3xl shadow-sm hover:shadow-md transition-shadow">
             <div class="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center text-brand-dark text-xl mb-6">
               <i class="fa-solid fa-scale-balanced"></i>
             </div>
@@ -78,7 +78,7 @@ import Footer from '../../components/Footer.astro';
           </div>
 
           <!-- USP 3 -->
-          <div class="bg-white border border-slate-200/80 p-8 rounded-3xl shadow-sm hover:shadow-md transition-shadow">
+          <div class="bg-white border border-slate-200/80 p-5 sm:p-8 rounded-2xl sm:rounded-3xl shadow-sm hover:shadow-md transition-shadow">
             <div class="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center text-brand-dark text-xl mb-6">
               <i class="fa-solid fa-peace"></i>
             </div>
@@ -94,7 +94,7 @@ import Footer from '../../components/Footer.astro';
 
     <!-- 2 alternating info text-image sections underneath each other -->
     <section class="py-20 bg-white">
-      <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 space-y-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 space-y-16 sm:space-y-24">
         
         <!-- Info Sectie 1: Vermogensopbouw (Text Left, Image Right) -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -121,7 +121,7 @@ import Footer from '../../components/Footer.astro';
           </div>
           <div class="lg:col-span-5 relative">
             <div class="absolute -inset-2 bg-gradient-to-tr from-brand-accent/30 to-brand-primary/20 rounded-[32px] blur-xl opacity-75"></div>
-            <div class="relative rounded-[32px] overflow-hidden border border-slate-200 shadow-xl aspect-[4/3]">
+            <div class="relative rounded-2xl sm:rounded-[32px] overflow-hidden border border-slate-200 shadow-xl aspect-[4/3]">
               <img 
                 src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&w=800&q=80" 
                 alt="Financiële grafiek en vermogensgroei" 
@@ -135,7 +135,7 @@ import Footer from '../../components/Footer.astro';
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div class="lg:col-span-5 order-2 lg:order-1 relative">
             <div class="absolute -inset-2 bg-gradient-to-tr from-brand-accent/30 to-brand-primary/20 rounded-[32px] blur-xl opacity-75"></div>
-            <div class="relative rounded-[32px] overflow-hidden border border-slate-200 shadow-xl aspect-[4/3]">
+            <div class="relative rounded-2xl sm:rounded-[32px] overflow-hidden border border-slate-200 shadow-xl aspect-[4/3]">
               <img 
                 src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=800&q=80" 
                 alt="Plant groeiend uit munten" 
@@ -171,7 +171,7 @@ import Footer from '../../components/Footer.astro';
 
     <!-- FAQ Section (matching hypotheken.astro split style) -->
     <section class="py-20 bg-brand-basetint/30 relative">
-      <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
           
           <!-- Left side: FAQs Headers -->
@@ -188,7 +188,7 @@ import Footer from '../../components/Footer.astro';
           <!-- Right side: Accordion content -->
           <div class="lg:col-span-7 space-y-4">
             
-            <details class="group bg-white border border-slate-200/80 rounded-2xl p-6 shadow-sm transition-all duration-300 [&_summary::-webkit-details-marker]:hidden">
+            <details class="group bg-white border border-slate-200/80 rounded-2xl p-4 sm:p-6 shadow-sm transition-all duration-300 [&_summary::-webkit-details-marker]:hidden">
               <summary class="flex justify-between items-center font-bold text-brand-dark cursor-pointer select-none outline-none font-display">
                 <span class="text-base sm:text-lg leading-snug">Vanaf welk bedrag is vermogensbeheer interessant?</span>
                 <span class="transition-transform duration-300 group-open:rotate-180 text-brand-accent font-bold text-xl ml-4">
@@ -200,7 +200,7 @@ import Footer from '../../components/Footer.astro';
               </p>
             </details>
 
-            <details class="group bg-white border border-slate-200/80 rounded-2xl p-6 shadow-sm transition-all duration-300 [&_summary::-webkit-details-marker]:hidden">
+            <details class="group bg-white border border-slate-200/80 rounded-2xl p-4 sm:p-6 shadow-sm transition-all duration-300 [&_summary::-webkit-details-marker]:hidden">
               <summary class="flex justify-between items-center font-bold text-brand-dark cursor-pointer select-none outline-none font-display">
                 <span class="text-base sm:text-lg leading-snug">Wat is het verschil tussen vermogensbeheer en beleggingsadvies?</span>
                 <span class="transition-transform duration-300 group-open:rotate-180 text-brand-accent font-bold text-xl ml-4">
@@ -212,7 +212,7 @@ import Footer from '../../components/Footer.astro';
               </p>
             </details>
 
-            <details class="group bg-white border border-slate-200/80 rounded-2xl p-6 shadow-sm transition-all duration-300 [&_summary::-webkit-details-marker]:hidden">
+            <details class="group bg-white border border-slate-200/80 rounded-2xl p-4 sm:p-6 shadow-sm transition-all duration-300 [&_summary::-webkit-details-marker]:hidden">
               <summary class="flex justify-between items-center font-bold text-brand-dark cursor-pointer select-none outline-none font-display">
                 <span class="text-base sm:text-lg leading-snug">Hoe betrouwbaar is vermogensbeheer via Spekadvies?</span>
                 <span class="transition-transform duration-300 group-open:rotate-180 text-brand-accent font-bold text-xl ml-4">
@@ -224,7 +224,7 @@ import Footer from '../../components/Footer.astro';
               </p>
             </details>
 
-            <details class="group bg-white border border-slate-200/80 rounded-2xl p-6 shadow-sm transition-all duration-300 [&_summary::-webkit-details-marker]:hidden">
+            <details class="group bg-white border border-slate-200/80 rounded-2xl p-4 sm:p-6 shadow-sm transition-all duration-300 [&_summary::-webkit-details-marker]:hidden">
               <summary class="flex justify-between items-center font-bold text-brand-dark cursor-pointer select-none outline-none font-display">
                 <span class="text-base sm:text-lg leading-snug">Hoe zit het met de risico's van beleggen?</span>
                 <span class="transition-transform duration-300 group-open:rotate-180 text-brand-accent font-bold text-xl ml-4">
