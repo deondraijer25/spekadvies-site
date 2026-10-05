@@ -3,6 +3,7 @@ import { getCollection, render } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import Navbar from '../../components/Navbar.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import FaqSchema from '../../components/FaqSchema.astro';
 import RatingsClaim from '../../components/RatingsClaim.astro';
 import ContactForm from '../../components/ContactForm.astro';
 import AboutSection from '../../components/AboutSection.astro';
@@ -23,6 +24,7 @@ const { Content } = await render(entry);
 ---
 
 <Layout title={seoTitle} description={seoDescription}>
+  {faqItems && faqItems.length > 0 && <FaqSchema faqs={faqItems} />}
   <Navbar />
   <Breadcrumbs />
   

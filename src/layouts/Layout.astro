@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import SeoHeader from '../components/SeoHeader.astro';
 import ContactDrawer from '../components/ContactDrawer.astro';
+import { COMPANY_DATA } from '../data/company';
 
 interface Props {
   title?: string;
@@ -13,6 +14,73 @@ const {
   title = "Spekadvies | Hypotheek- & Verzekeringsadviseur Moerkapelle", 
   description = "Spekadvies helpt je met onafhankelijk advies voor hypotheken en verzekeringen in Moerkapelle, Zoetermeer, Gouda en omgeving." 
 } = Astro.props;
+
+const currentUrl = new URL(Astro.url.pathname, Astro.site || 'https://www.spekadvies.nl').toString();
+
+const schemaGraph = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "FinancialService",
+      "@id": "https://www.spekadvies.nl/#organization",
+      "name": COMPANY_DATA.name,
+      "legalName": COMPANY_DATA.legalName,
+      "url": "https://www.spekadvies.nl",
+      "logo": "https://www.spekadvies.nl/Logo/Middel%209.svg",
+      "image": "https://www.spekadvies.nl/Logo/Middel%209.svg",
+      "description": `${COMPANY_DATA.accreditations.independent}. Gevestigd aan de Herenweg 42 te Moerkapelle.`,
+      "telephone": COMPANY_DATA.contact.phoneRaw,
+      "email": COMPANY_DATA.contact.email,
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": COMPANY_DATA.address.street,
+        "addressLocality": COMPANY_DATA.address.city,
+        "addressRegion": COMPANY_DATA.address.region,
+        "postalCode": COMPANY_DATA.address.postalCode,
+        "addressCountry": COMPANY_DATA.address.country
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": COMPANY_DATA.geo.latitude,
+        "longitude": COMPANY_DATA.geo.longitude
+      },
+      "areaServed": COMPANY_DATA.serviceAreas.map(area => ({
+        "@type": "AdministrativeArea",
+        "name": area.name
+      })),
+      "openingHoursSpecification": COMPANY_DATA.openingHours.flatMap(h => 
+        h.schemaDays.map(day => ({
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": day,
+          "opens": h.opens,
+          "closes": h.closes
+        }))
+      ),
+      "founder": {
+        "@id": "https://www.spekadvies.nl/#founder"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": COMPANY_DATA.rating.score,
+        "bestRating": COMPANY_DATA.rating.maxScore,
+        "reviewCount": COMPANY_DATA.rating.reviewCount
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.spekadvies.nl/#founder",
+      "name": COMPANY_DATA.founder.name,
+      "jobTitle": COMPANY_DATA.founder.role,
+      "description": COMPANY_DATA.founder.bio,
+      "image": COMPANY_DATA.founder.image,
+      "worksFor": {
+        "@id": "https://www.spekadvies.nl/#organization"
+      },
+      "sameAs": COMPANY_DATA.founder.sameAs
+    }
+  ]
+};
 ---
 
 <!doctype html>
@@ -26,74 +94,8 @@ const {
     <!-- Automatic SEO Header (Meta tags, Open Graph, Twitter, Canonical) -->
     <SeoHeader title={title} description={description} />
     
-    <!-- JSON-LD LocalBusiness & FinancialService Schema for Google & AI Engines -->
-    <script type="application/ld+json" is:inline>
-      {
-        "@context": "https://schema.org",
-        "@type": "FinancialService",
-        "name": "Spekadvies",
-        "url": "https://www.spekadvies.nl",
-        "logo": "https://www.spekadvies.nl/Logo/Middel%209.svg",
-        "image": "https://www.spekadvies.nl/Logo/Middel%209.svg",
-        "description": "Onafhankelijk hypotheek- en verzekeringsadviseur gefocust op maatwerk advies voor particulieren en ondernemers.",
-        "telephone": "+31795931241",
-        "email": "info@spekadvies.nl",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Herenweg 42",
-          "addressLocality": "Moerkapelle",
-          "addressRegion": "Zuid-Holland",
-          "postalCode": "2751 DB",
-          "addressCountry": "NL"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 52.0467,
-          "longitude": 4.5772
-        },
-        "priceRange": "$$",
-        "areaServed": [
-          {
-            "@type": "AdministrativeArea",
-            "name": "Moerkapelle"
-          },
-          {
-            "@type": "AdministrativeArea",
-            "name": "Zuidplas"
-          },
-          {
-            "@type": "AdministrativeArea",
-            "name": "Zoetermeer"
-          },
-          {
-            "@type": "AdministrativeArea",
-            "name": "Gouda"
-          },
-          {
-            "@type": "AdministrativeArea",
-            "name": "Waddinxveen"
-          },
-          {
-            "@type": "AdministrativeArea",
-            "name": "Lansingerland"
-          }
-        ],
-        "openingHoursSpecification": [
-          {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": [
-              "Monday",
-              "Tuesday",
-              "Wednesday",
-              "Thursday",
-              "Friday"
-            ],
-            "opens": "09:00",
-            "closes": "18:00"
-          }
-        ]
-      }
-    </script>
+    <!-- JSON-LD Entity Graph (FinancialService + Person Martin van der Spek) for Google & GEO AI Engines -->
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(schemaGraph)} />
     
     <!-- Preconnect to Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

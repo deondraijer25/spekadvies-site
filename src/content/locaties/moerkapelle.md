@@ -1,38 +1,50 @@
 ---
 name: "Moerkapelle"
-seoTitle: "Hypotheekadviseur Moerkapelle | Onafhankelijk Advies | Spekadvies"
-seoDescription: "Op zoek naar een betrouwbare, onafhankelijke hypotheekadviseur in Moerkapelle? Spekadvies helpt je met persoonlijk advies voor jouw hypotheek en verzekeringen."
-heroTitle: "Jouw Hypotheek- en Verzekeringsadviseur in Moerkapelle"
-heroSubtitle: "Persoonlijk, onafhankelijk en altijd dichtbij. Wij vergelijken meer dan 40 geldverstrekkers voor jouw perfecte hypotheek in Moerkapelle en omstreken."
+seoTitle: "Hypotheekadviseur Moerkapelle | Onafhankelijk Advies Martin van der Spek"
+seoDescription: "Zoek je een onafhankelijke hypotheekadviseur in Moerkapelle? Spekadvies (Herenweg 42) vergelijkt 40+ banken voor starters, doorstromers en ondernemers."
+heroTitle: "Onafhankelijk Hypotheekadviseur in Moerkapelle"
+heroSubtitle: "Gevestigd aan de Herenweg 42 te Moerkapelle. Martin van der Spek vergelijkt meer dan 40 geldverstrekkers voor jouw perfecte hypotheek, overwaarde of verhuizing."
 ctaText: "Plan een gratis adviesgesprek in Moerkapelle"
+category: "locaties"
+
 usps:
-  - icon: "ShieldCheck"
-    title: "100% Onafhankelijk"
-    description: "Wij vergelijken vrijwel alle banken en verzekeraars voor de scherpste rente en voorwaarden."
-  - icon: "UserCheck"
-    title: "Lokaal Betrokken"
-    description: "Wij kennen de woningmarkt in Moerkapelle, Zevenhuizen en de gemeente Zuidplas door en door."
-  - icon: "Chats"
-    title: "Eerste Gesprek Gratis"
-    description: "Altijd een kosteloos en vrijblijvend kennismakingsgesprek om jouw opties door te nemen."
-problemsTitle: "Waarom is een onafhankelijke adviseur in Moerkapelle belangrijk?"
+  - title: "Kantoor in het Hart van Moerkapelle"
+    description: "Geen anoniem callcenter: loop eenvoudig binnen aan de Herenweg 42 (gratis parkeren voor de deur) of we spreken af bij jou thuis."
+  - title: "100% Onafhankelijk van Banken"
+    description: "Wij vergelijken objectief meer dan 40 hypotheekbanken, van Rabobank en ING tot Florius, a.s.r. en Vista Hypotheken."
+  - title: "Specialist in Jonge Veenen & Nieuwbouw"
+    description: "Door en door bekend met lokale nieuwbouwprojecten, kaveluitgiftes en de gemeentelijke procedures in Zuidplas."
+
+problemsTitle: "Waarom kiezen huizenkopers in Moerkapelle voor Martin van der Spek?"
 problems:
-  - icon: "Warning"
-    title: "Hoge concurrentie op de woningmarkt"
-    description: "Huizen in Moerkapelle en Zuid-Holland zijn populair. Snelheid en een getekende hypotheekbelofte maken het verschil bij het bieden."
-  - icon: "Coins"
-    title: "Te veel betalen bij de eigen bank"
-    description: "Veel mensen stappen naar hun vertrouwde bank, maar missen daardoor lagere rentes en betere voorwaarden van andere verstrekkers."
+  - title: "Hoge concurrentie op de lokale dorpsmarkt"
+    description: "Woningen in Moerkapelle zijn zeer gewild bij gezinnen uit de regio Rotterdam/Den Haag. Een snelle financiële check en betrouwbaar biedcertificaat geven je direct voorsprong."
+  - title: "Te veel betalen bij de eigen huisbank"
+    description: "Wie alleen naar zijn eigen bank stapt, mist lagere rentes, soepelere overbruggingsregelingen en betere voorwaarden van andere aanbieders."
+  - title: "Complexe inkomens van ondernemers en tuinders"
+    description: "Moerkapelle kent veel zelfstandigen en agrarische ondernemers. Wij zijn gespecialiseerd in het vaststellen van toetsinkomens uit jaarcijfers."
+
 faqItems:
-  - question: "Wat kost het eerste gesprek bij Spekadvies Moerkapelle?"
-    answer: "Het eerste oriënterende gesprek is 100% gratis en volledig vrijblijvend. We brengen hierin je wensen en mogelijkheden in kaart."
-  - question: "Kan ik bij Spekadvies ook terecht voor mijn verzekeringen?"
-    answer: "Ja, wij adviseren en bemiddelen in zowel hypotheken als bijbehorende woon- en levensverzekeringen. Zo heb je alles onder één dak."
+  - question: "Waar is het kantoor van Spekadvies in Moerkapelle gevestigd?"
+    answer: "Ons kantoor is gevestigd aan de Herenweg 42, 2751 DB Moerkapelle. Je kunt gratis voor de deur parkeren. Ook avondgesprekken zijn op afspraak mogelijk."
+  - question: "Wat kost een eerste hypotheekgesprek in Moerkapelle?"
+    answer: "Het eerste oriënterende kennismakingsgesprek is 100% kosteloos en vrijblijvend. Martin van der Spek brengt jouw leencapaciteit, maandlasten en wensen helder in kaart."
+  - question: "Kan Spekadvies ook helpen bij de aankoop in De Jonge Veenen?"
+    answer: "Jazeker. Wij hebben talloze kopers in de nieuwbouwwijk De Jonge Veenen begeleid bij hun bouwdepot, meerwerkfinanciering en renteverlies tijdens de bouw."
+  - question: "Regelt Spekadvies ook de bijbehorende woonverzekeringen?"
+    answer: "Ja, Spekadvies is een volwaardig financieel advieskantoor. Wij verzorgen naast je hypotheek ook direct je opstal-, inboedel- en overlijdensrisicoverzekering."
+
 articleBlocks:
-  - title: "Wonen in Moerkapelle en de gemeente Zuidplas"
-    body: "Moerkapelle is een fijne, rustige plek om te wonen met uitstekende verbindingen naar Rotterdam, Den Haag en Utrecht. Of je nu een starter bent die op zoek is naar zijn eerste woning in de Jonge Veenen, of wilt doorstromen naar een ruimere eengezinswoning: het financieren van een huis vraagt om een slimme en stabiele aanpak."
-  - title: "Hypotheekadvies op maat voor particulieren & ondernemers"
-    body: "Als zelfstandig ondernemer in Moerkapelle kan het aanvragen van een hypotheek soms complexer lijken. Spekadvies heeft ruime ervaring met het berekenen van het toetsinkomen van ZZP'ers en ondernemers, zodat je vaak al na één jaar zelfstandigheid een hypotheek kunt afsluiten."
+  - title: "Wonen in Moerkapelle: Rust, ruimte en dorps karakter"
+    body: "Moerkapelle combineert een hechte dorpsgemeenschap en groene polders met een centrale ligging ten opzichte van Zoetermeer, Gouda en Rotterdam. Of je nu op zoek bent naar een karakteristieke woning aan de Herenweg of Dorpsstraat, of kiest voor modern en energiezuinig wonen in de Jonge Veenen: Spekadvies kent de lokale markt als geen ander."
+  - title: "Hypotheekadvies voor starters, doorstromers en senioren"
+    body: "Van het benutten van de startersvrijstelling en de gemeentelijke Starterslening tot een complexe overbruggingshypotheek of een verzilverhypotheek voor senioren: Martin van der Spek staat al meer dan 20 jaar voor nuchter, deskundig en betrouwbaar maatwerk."
 ---
 
-Welkom bij Spekadvies in Moerkapelle. Wij loodsen je stap voor stap door het hele hypotheekproces heen, van de eerste berekening tot het tekenen bij de notaris.
+Welkom bij Spekadvies, hét vertrouwde gezicht voor hypotheken en financiële planning in Moerkapelle. Als lokaal gevestigd kantoor aan de Herenweg 42 kennen wij elk straatje, elke wijk en de specifieke dynamiek van de lokale woningmarkt.
+
+### Lokale binding maakt het verschil
+Waar grote landelijke ketens en online platforms opereren vanuit afstandelijke helpdesks, hechten wij aan persoonlijk contact. Martin van der Spek schuift met hetzelfde gemak bij jou aan de keukentafel aan als dat je langskomt op ons kantoor in Moerkapelle. Wij nemen de tijd om jouw wensen en toekomstplannen echt te begrijpen.
+
+### 40+ Banken objectief vergeleken
+Onafhankelijkheid is onze absolute belofte. Wij hebben geen enkele contractuele verplichting aan welke bank dan ook. We vergelijken voor jou meer dan 40 geldverstrekkers op rente, verhuisregeling, boetevrije aflosruimte en acceptatiesnelheid.
