@@ -98,15 +98,12 @@
     hyphens: manual;
   }
 
-  /* Maximaal semi-bold voor alle titels (geen agressieve bold/black op Unbounded) */
+  /* Project-wide Typography Invariant: Semi-Bold (600) Maximum across all elements */
   h1, h2, h3, h4, h5, h6,
-  h1.font-bold, h1.font-extrabold, h1.font-black,
-  h2.font-bold, h2.font-extrabold, h2.font-black,
-  h3.font-bold, h3.font-extrabold, h3.font-black,
-  h4.font-bold, h4.font-extrabold, h4.font-black,
-  h5.font-bold, h5.font-extrabold, h5.font-black,
-  h6.font-bold, h6.font-extrabold, h6.font-black {
-    font-weight: 600;
+  .h1, .h2, .h3, .h4, .h5, .h6,
+  .font-bold, .font-extrabold, .font-black,
+  b, strong {
+    font-weight: 600 !important;
   }
 
   p {

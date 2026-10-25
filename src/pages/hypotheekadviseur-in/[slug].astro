@@ -37,11 +37,11 @@ const { Content } = await render(entry);
     >
       <div class="max-w-4xl mx-auto px-4 sm:px-8 text-center relative z-10">
         <!-- Badge -->
-        <span class="inline-block bg-white/10 text-brand-accent border border-white/10 text-[10px] font-black tracking-widest uppercase px-4 py-1.5 rounded-full mb-6 font-display">
+        <span class="inline-block bg-white/10 text-brand-accent border border-white/10 text-[10px] font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full mb-6 font-display">
           Lokaal Advies in {name}
         </span>
         
-        <h1 class="text-3xl sm:text-5xl lg:text-6.5xl font-black text-white tracking-tight leading-tight font-display mb-6">
+        <h1 class="text-3xl sm:text-5xl lg:text-6.5xl font-semibold text-white tracking-tight leading-tight font-display mb-6">
           {heroTitle}
         </h1>
         
@@ -51,7 +51,7 @@ const { Content } = await render(entry);
         
         <div>
           <button 
-            class="open-contact-drawer inline-block bg-brand-accent hover:bg-brand-accent/90 text-brand-dark font-black px-8 py-4 rounded-full shadow-lg transition-all duration-300 text-xs tracking-wider uppercase font-display cursor-pointer w-full sm:w-auto text-center"
+            class="open-contact-drawer inline-block bg-brand-accent hover:bg-brand-accent/90 text-brand-dark font-semibold px-8 py-4 rounded-full shadow-lg transition-all duration-300 text-xs tracking-wider uppercase font-display cursor-pointer w-full sm:w-auto text-center"
           >
             {ctaText}
           </button>
@@ -67,10 +67,10 @@ const { Content } = await render(entry);
             {usps.map((usp) => (
               <div class="bento-card p-6 sm:p-8 flex flex-col justify-between group hover:border-amber-300">
                 <div>
-                  <div class="w-10 h-10 rounded-2xl bg-amber-50 border border-amber-200/60 flex items-center justify-center text-amber-800 font-bold mb-4 shadow-xs">
+                  <div class="w-10 h-10 rounded-2xl bg-amber-50 border border-amber-200/60 flex items-center justify-center text-amber-800 font-semibold mb-4 shadow-xs">
                     ✦
                   </div>
-                  <h3 class="text-base font-bold text-brand-dark mb-2 font-display">
+                  <h3 class="text-base font-semibold text-brand-dark mb-2 font-display">
                     {usp.title}
                   </h3>
                   <p class="text-slate-600 leading-relaxed text-xs sm:text-[13px] font-sans">{usp.description}</p>
@@ -87,10 +87,10 @@ const { Content } = await render(entry);
       <section class="py-20 bg-slate-50/70 border-t border-slate-200/60">
         <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
           <div class="text-center max-w-2xl mx-auto mb-14 space-y-2">
-            <span class="inline-block bg-amber-50 text-amber-800 border border-amber-200/80 text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full font-sans">
+            <span class="inline-block bg-amber-50 text-amber-800 border border-amber-200/80 text-[10px] font-semibold uppercase tracking-wider px-3 py-1 rounded-full font-sans">
               Lokale Aandachtspunten
             </span>
-            <h2 class="text-2xl sm:text-3.5xl font-bold text-brand-dark font-display">
+            <h2 class="text-2xl sm:text-3.5xl font-semibold text-brand-dark font-display">
               {problemsTitle || `Waarom een adviseur in ${name} belangrijk is`}
             </h2>
           </div>
@@ -98,11 +98,11 @@ const { Content } = await render(entry);
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-5xl mx-auto">
             {problems.map((prob) => (
               <div class="bento-card p-6 sm:p-8 flex items-start gap-4 hover:border-amber-300">
-                <span class="flex-shrink-0 w-10 h-10 rounded-2xl bg-brand-dark text-brand-primary flex items-center justify-center font-bold text-sm font-display shadow-xs">
+                <span class="flex-shrink-0 w-10 h-10 rounded-2xl bg-brand-dark text-brand-primary flex items-center justify-center font-semibold text-sm font-display shadow-xs">
                   !
                 </span>
                 <div class="space-y-1.5">
-                  <h4 class="text-sm font-bold text-brand-dark font-display">{prob.title}</h4>
+                  <h4 class="text-sm font-semibold text-brand-dark font-display">{prob.title}</h4>
                   <p class="text-slate-600 text-xs sm:text-[13px] leading-relaxed font-sans">{prob.description}</p>
                 </div>
               </div>
@@ -117,8 +117,8 @@ const { Content } = await render(entry);
       <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] rounded-full bg-brand-primary/10 blur-[150px] pointer-events-none"></div>
 
       <div class="px-4 sm:px-12 lg:px-16 text-center relative z-10">
-        <span class="text-xs font-black tracking-widest uppercase text-brand-accent block font-display mb-3">Zelf Berekenen</span>
-        <h2 class="text-2xl sm:text-3xl font-black font-display text-white">Slimme Rekentools voor {name}</h2>
+        <span class="text-xs font-semibold tracking-widest uppercase text-brand-accent block font-display mb-3">Zelf Berekenen</span>
+        <h2 class="text-2xl sm:text-3xl font-semibold font-display text-white">Slimme Rekentools voor {name}</h2>
         <p class="text-slate-300 text-xs sm:text-sm font-sans font-medium max-w-lg mx-auto mt-4 leading-relaxed">
           Bereken direct jouw maximale leencapaciteit of vergelijk de actuele marktrentes.
         </p>
@@ -130,7 +130,7 @@ const { Content } = await render(entry);
               <div class="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center text-brand-accent text-xl mx-auto group-hover:scale-105 transition-transform">
                 <i class="fa-solid fa-calculator"></i>
               </div>
-              <h3 class="text-base font-black font-display uppercase tracking-wider text-white">Maximale hypotheek</h3>
+              <h3 class="text-base font-semibold font-display uppercase tracking-wider text-white">Maximale hypotheek</h3>
               <p class="text-xs text-slate-300 font-sans font-medium leading-relaxed">
                 Bereken direct wat je verantwoord kunt lenen op basis van jouw inkomen en lasten.
               </p>
@@ -139,7 +139,7 @@ const { Content } = await render(entry);
               <a 
                 href="https://start.finsave.nl/app/public/maximale-hypotheek" 
                 target="_blank" 
-                class="inline-block w-full bg-brand-accent hover:bg-brand-accent/90 text-brand-dark font-black py-3.5 rounded-full text-xs tracking-wider uppercase font-display cursor-pointer transition-colors"
+                class="inline-block w-full bg-brand-accent hover:bg-brand-accent/90 text-brand-dark font-semibold py-3.5 rounded-full text-xs tracking-wider uppercase font-display cursor-pointer transition-colors"
               >
                 Bereken maximaliteit
               </a>
@@ -152,7 +152,7 @@ const { Content } = await render(entry);
               <div class="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center text-brand-accent text-xl mx-auto group-hover:scale-105 transition-transform">
                 <i class="fa-solid fa-chart-line"></i>
               </div>
-              <h3 class="text-base font-black font-display uppercase tracking-wider text-white">Actuele rentestanden</h3>
+              <h3 class="text-base font-semibold font-display uppercase tracking-wider text-white">Actuele rentestanden</h3>
               <p class="text-xs text-slate-300 font-sans font-medium leading-relaxed">
                 Vergelijk direct de rentetarieven van meer dan 40 verschillende geldverstrekkers.
               </p>
@@ -161,7 +161,7 @@ const { Content } = await render(entry);
               <a 
                 href="https://start.finsave.nl/app/public/hypotheek-rentes" 
                 target="_blank" 
-                class="inline-block w-full border-2 border-white/20 hover:border-brand-accent text-white hover:text-brand-accent font-black py-3 rounded-full text-xs tracking-wider uppercase font-display cursor-pointer transition-all duration-300"
+                class="inline-block w-full border-2 border-white/20 hover:border-brand-accent text-white hover:text-brand-accent font-semibold py-3 rounded-full text-xs tracking-wider uppercase font-display cursor-pointer transition-all duration-300"
               >
                 Bekijk actuele rentes
               </a>
@@ -175,7 +175,7 @@ const { Content } = await render(entry);
     <section class="py-20 bg-white">
       <div class="max-w-4xl mx-auto px-4 sm:px-8">
         <article class="bg-slate-50/50 border border-slate-200/60 p-5 sm:p-12 rounded-2xl sm:rounded-[32px] shadow-sm prose prose-slate max-w-none">
-          <h2 class="text-2xl sm:text-3xl font-black text-brand-dark mb-6 border-b border-slate-250/30 pb-4 font-display">
+          <h2 class="text-2xl sm:text-3xl font-semibold text-brand-dark mb-6 border-b border-slate-250/30 pb-4 font-display">
             Onafhankelijk advies in {name}
           </h2>
           <div class="text-slate-650 space-y-6 leading-relaxed text-xs sm:text-sm font-sans font-medium">
@@ -184,7 +184,7 @@ const { Content } = await render(entry);
           
           {articleBlocks && articleBlocks.map((block) => (
             <div class="mt-8 pt-8 border-t border-slate-250/30">
-              <h3 class="text-lg font-black text-brand-dark mb-3 font-display">{block.title}</h3>
+              <h3 class="text-lg font-semibold text-brand-dark mb-3 font-display">{block.title}</h3>
               <p class="text-slate-500 leading-relaxed text-xs sm:text-sm font-sans font-semibold">{block.body}</p>
             </div>
           ))}
@@ -196,7 +196,7 @@ const { Content } = await render(entry);
     {faqItems && faqItems.length > 0 && (
       <section class="py-20 bg-slate-50 border-t border-b border-slate-200/60">
         <div class="max-w-4xl mx-auto px-4 sm:px-6">
-          <h2 class="text-2xl sm:text-3xl font-black text-center text-brand-dark mb-10 font-display">Veelgestelde Vragen</h2>
+          <h2 class="text-2xl sm:text-3xl font-semibold text-center text-brand-dark mb-10 font-display">Veelgestelde Vragen</h2>
           <div class="space-y-4">
             {faqItems.map((faq, index) => (
               <div class="faq-item bg-white border border-slate-200/90 rounded-2xl overflow-hidden shadow-xs hover:border-slate-300 transition-colors">

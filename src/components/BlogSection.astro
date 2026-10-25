@@ -32,8 +32,8 @@ const posts = [
     <!-- Section Header -->
     <div class="flex flex-col sm:flex-row items-end justify-between gap-6 mb-16">
       <div class="max-w-xl space-y-4">
-        <span class="text-brand-primary text-xs font-bold tracking-widest uppercase block font-display">Actuele Kennis</span>
-        <h2 class="text-3xl sm:text-5xl font-bold text-brand-dark tracking-tight font-display">
+        <span class="text-brand-primary text-xs font-semibold tracking-widest uppercase block font-display">Actuele Kennis</span>
+        <h2 class="text-3xl sm:text-5xl font-semibold text-brand-dark tracking-tight font-display">
           Laatste Updates & Blog
         </h2>
       </div>
@@ -53,13 +53,13 @@ const posts = [
         <div class="bg-white border border-slate-200/80 rounded-3xl p-8 flex flex-col justify-between hover:border-brand-primary/30 transition-all duration-300 shadow-xl group">
           <div>
             <!-- Meta info -->
-            <div class="flex items-center justify-between text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-6">
+            <div class="flex items-center justify-between text-[10px] font-semibold text-slate-500 uppercase tracking-widest mb-6">
               <span>{post.date}</span>
               <span class="text-brand-primary">•</span>
               <span>{post.category}</span>
             </div>
 
-            <h3 class="text-lg sm:text-xl font-bold text-brand-dark mb-3 font-display group-hover:text-brand-primary transition-colors leading-snug">
+            <h3 class="text-lg sm:text-xl font-semibold text-brand-dark mb-3 font-display group-hover:text-brand-primary transition-colors leading-snug">
               {post.title}
             </h3>
             
@@ -70,7 +70,7 @@ const posts = [
 
           <a 
             href={post.link} 
-            class="text-brand-primary font-bold text-xs uppercase tracking-widest flex items-center hover:text-brand-dark transition-colors pt-4 border-t border-slate-100"
+            class="text-brand-primary font-semibold text-xs uppercase tracking-widest flex items-center hover:text-brand-dark transition-colors pt-4 border-t border-slate-100"
           >
             Lees Artikel <span class="ml-2 group-hover:translate-x-1 transition-transform">→</span>
           </a>
