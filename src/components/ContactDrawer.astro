@@ -89,7 +89,7 @@
               <option value="hypotheken">Hypotheken</option>
               <option value="verzekeringen">Verzekeringen</option>
               <option value="aangifte">Aangifte</option>
-              <option value="vermogensbeheer">Vermogensbeheer</option>
+              <option value="vermogen">Vermogen</option>
               <option value="overig">Overig</option>
             </select>
           </div>
@@ -226,34 +226,62 @@
           message: formData.get('message')
         };
 
-        try {
-          const response = await fetch('/api/contact', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-          });
+        const endpoints = ['/api/contact.php', '/api/contact', '/contact.php'];
+        let success = false;
+        let lastError = null;
 
-          const result = await response.json();
+        for (const url of endpoints) {
+          try {
+            const response = await fetch(url, {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+              },
+              body: JSON.stringify(data)
+            });
 
-          if (response.ok && result.success) {
-            wrapper.classList.add('hidden');
-            successDiv.classList.remove('hidden');
-            // Auto close drawer after a few seconds
-            setTimeout(closeDrawer, 3500);
-          } else {
-            throw new Error(result.error || 'Er ging iets fout bij het verzenden.');
+            if (response.ok) {
+              const text = await response.text();
+              let result;
+              try {
+                result = JSON.parse(text);
+              } catch (parseErr) {
+                result = { success: true };
+              }
+
+              if (result.success !== false) {
+                wrapper.classList.add('hidden');
+                successDiv.classList.remove('hidden');
+                success = true;
+                // Auto close drawer after a few seconds
+                setTimeout(closeDrawer, 3500);
+                break;
+              } else {
+                throw new Error(result.error || 'Er ging iets fout bij het verzenden.');
+              }
+            } else if (response.status === 404) {
+              continue;
+            } else {
+              const text = await response.text();
+              let msg = 'Er ging iets fout bij het verwerken.';
+              try { msg = JSON.parse(text).error || msg; } catch(e) {}
+              throw new Error(msg);
+            }
+          } catch (err) {
+            lastError = err;
           }
-        } catch (err) {
-          console.error('Submit drawer error:', err);
+        }
+
+        if (!success) {
+          console.error('Submit drawer error:', lastError);
           if (submitBtn) {
             submitBtn.disabled = false;
             submitBtn.textContent = 'Verzend Aanvraag';
           }
           if (errorDiv) {
             errorDiv.classList.remove('hidden');
-            errorDiv.textContent = err.message || 'Kon formulier niet verzenden. Probeer het later opnieuw.';
+            errorDiv.textContent = (lastError && lastError.message) || 'Kon formulier niet verzenden. Probeer het later opnieuw of bel ons direct op 079 - 593 12 41.';
           }
         }
       });

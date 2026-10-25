@@ -65,11 +65,16 @@ const { Content } = await render(entry);
         <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
             {usps.map((usp) => (
-              <div class="bg-slate-50/50 border border-slate-200/60 p-5 sm:p-8 rounded-2xl sm:rounded-3xl transition-all duration-300 hover:shadow-md hover:border-brand-primary/50 group">
-                <h3 class="text-sm font-black text-brand-dark mb-3 flex items-center font-display uppercase tracking-wider">
-                  <span class="text-brand-primary mr-2.5">✦</span> {usp.title}
-                </h3>
-                <p class="text-slate-500 leading-relaxed text-xs font-sans font-semibold">{usp.description}</p>
+              <div class="bento-card p-6 sm:p-8 flex flex-col justify-between group hover:border-amber-300">
+                <div>
+                  <div class="w-10 h-10 rounded-2xl bg-amber-50 border border-amber-200/60 flex items-center justify-center text-amber-800 font-bold mb-4 shadow-xs">
+                    ✦
+                  </div>
+                  <h3 class="text-base font-bold text-brand-dark mb-2 font-display">
+                    {usp.title}
+                  </h3>
+                  <p class="text-slate-600 leading-relaxed text-xs sm:text-[13px] font-sans">{usp.description}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -79,24 +84,26 @@ const { Content } = await render(entry);
 
     <!-- Problems / Challenges Section (Spacious layout instead of squished sidebar) -->
     {problems && (
-      <section class="py-20 bg-slate-50 border-t border-slate-100">
+      <section class="py-20 bg-slate-50/70 border-t border-slate-200/60">
         <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
-          <div class="text-center max-w-2xl mx-auto mb-14 space-y-3">
-            <span class="text-xs font-black tracking-widest uppercase text-brand-dark/50 block font-display">Gemeenschappelijke obstakels</span>
-            <h2 class="text-2xl sm:text-3xl font-black text-brand-dark font-display leading-tight">
+          <div class="text-center max-w-2xl mx-auto mb-14 space-y-2">
+            <span class="inline-block bg-amber-50 text-amber-800 border border-amber-200/80 text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full font-sans">
+              Lokale Aandachtspunten
+            </span>
+            <h2 class="text-2xl sm:text-3.5xl font-bold text-brand-dark font-display">
               {problemsTitle || `Waarom een adviseur in ${name} belangrijk is`}
             </h2>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-5xl mx-auto">
             {problems.map((prob) => (
-              <div class="bg-white border border-slate-200/80 p-5 sm:p-8 rounded-2xl sm:rounded-[32px] shadow-sm flex items-start gap-4">
-                <span class="flex-shrink-0 w-10 h-10 rounded-2xl bg-brand-dark text-brand-accent flex items-center justify-center font-black text-base font-display">
+              <div class="bento-card p-6 sm:p-8 flex items-start gap-4 hover:border-amber-300">
+                <span class="flex-shrink-0 w-10 h-10 rounded-2xl bg-brand-dark text-brand-primary flex items-center justify-center font-bold text-sm font-display shadow-xs">
                   !
                 </span>
                 <div class="space-y-1.5">
-                  <h4 class="text-sm font-black text-brand-dark uppercase tracking-wider font-display">{prob.title}</h4>
-                  <p class="text-slate-500 text-xs leading-relaxed font-sans font-semibold">{prob.description}</p>
+                  <h4 class="text-sm font-bold text-brand-dark font-display">{prob.title}</h4>
+                  <p class="text-slate-600 text-xs sm:text-[13px] leading-relaxed font-sans">{prob.description}</p>
                 </div>
               </div>
             ))}
@@ -124,7 +131,7 @@ const { Content } = await render(entry);
                 <i class="fa-solid fa-calculator"></i>
               </div>
               <h3 class="text-base font-black font-display uppercase tracking-wider text-white">Maximale hypotheek</h3>
-              <p class="text-xs text-slate-350 font-sans font-medium leading-relaxed">
+              <p class="text-xs text-slate-300 font-sans font-medium leading-relaxed">
                 Bereken direct wat je verantwoord kunt lenen op basis van jouw inkomen en lasten.
               </p>
             </div>
@@ -146,7 +153,7 @@ const { Content } = await render(entry);
                 <i class="fa-solid fa-chart-line"></i>
               </div>
               <h3 class="text-base font-black font-display uppercase tracking-wider text-white">Actuele rentestanden</h3>
-              <p class="text-xs text-slate-355 font-sans font-medium leading-relaxed">
+              <p class="text-xs text-slate-300 font-sans font-medium leading-relaxed">
                 Vergelijk direct de rentetarieven van meer dan 40 verschillende geldverstrekkers.
               </p>
             </div>
@@ -192,13 +199,13 @@ const { Content } = await render(entry);
           <h2 class="text-2xl sm:text-3xl font-black text-center text-brand-dark mb-10 font-display">Veelgestelde Vragen</h2>
           <div class="space-y-4">
             {faqItems.map((faq, index) => (
-              <div class="faq-item bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm">
-                <button class="faq-toggle w-full px-4 sm:px-6 py-4 sm:py-5 text-left text-xs font-black uppercase tracking-wider font-display text-brand-dark flex justify-between items-center cursor-pointer">
-                  <span class="pr-4">{faq.question}</span>
-                  <span class="faq-icon text-slate-400 text-xs transition-transform duration-300">▼</span>
+              <div class="faq-item bg-white border border-slate-200/90 rounded-2xl overflow-hidden shadow-xs hover:border-slate-300 transition-colors">
+                <button class="faq-toggle w-full px-4 sm:px-6 py-4 sm:py-5 text-left text-sm sm:text-base font-semibold font-sans text-slate-800 flex justify-between items-center cursor-pointer">
+                  <span class="pr-4 leading-snug">{faq.question}</span>
+                  <span class="faq-icon text-slate-400 text-xs transition-transform duration-300 w-7 h-7 rounded-full bg-slate-100 flex items-center justify-center shrink-0">▼</span>
                 </button>
                 <div class="faq-content hidden px-4 sm:px-6 pb-5 sm:pb-6 border-t border-slate-100 pt-4">
-                  <p class="text-xs text-slate-500 font-sans font-semibold leading-relaxed">
+                  <p class="text-xs sm:text-sm text-slate-650 font-sans font-normal leading-relaxed">
                     {faq.answer}
                   </p>
                 </div>

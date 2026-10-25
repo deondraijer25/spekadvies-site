@@ -48,11 +48,16 @@
   --color-brand-primary: #ffce76; /* Lichte kleur / goud */
   --color-brand-primary-hover: #e9ba64;
   --color-brand-dark: #153b68; /* Donkere kleur / diepblauw */
+  --color-brand-navy: #0b1a2f; /* Diep nachtblauw */
   --color-brand-base: #ffffff; /* Wit als basispagina-achtergrond */
-  --color-brand-basetint: #f4f7fa; /* Zeer lichtblauw/grijs voor sectie-achtergronden */
+  --color-brand-basetint: #f8fafc; /* Zeer lichtblauw/grijs voor sectie-achtergronden */
   --color-brand-lighttint: #153b68; /* Gebruikt voor high-contrast elementen */
   --color-brand-cardbg: #ffffff; /* Wit voor kaarten */
   --color-brand-accent: #ffce76; /* Gold accent */
+  --color-brand-accent-dark: #b45309; /* Warm amber/brons for high-contrast on light backgrounds (WCAG AAA) */
+  --color-brand-accent-soft: #fef3c7; /* Zachte amber achtergrond voor badges */
+  --color-slate-350: #cbd5e1; /* Fail-safe light slate */
+  --color-slate-650: #475569; /* Fail-safe body slate */
   
   --font-sans: 'Poppins', sans-serif;
   --font-display: 'Unbounded', sans-serif;
@@ -81,15 +86,16 @@
   }
 
   body {
-    @apply bg-brand-base text-slate-700 font-sans antialiased font-normal;
+    @apply bg-brand-base text-slate-700 font-sans antialiased font-normal selection:bg-brand-primary/30 selection:text-brand-dark;
     -webkit-tap-highlight-color: transparent;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-bold font-display text-brand-dark tracking-tight;
+    @apply font-bold font-display text-brand-dark;
+    letter-spacing: -0.025em;
     overflow-wrap: break-word;
     word-wrap: break-word;
-    hyphens: auto;
+    hyphens: manual;
   }
 
   p {
@@ -106,6 +112,39 @@
   .hide-scrollbar {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
+  }
+
+  /* Bento Card Elevation & Border Dynamics */
+  .bento-card {
+    background-color: #ffffff;
+    border: 1px solid rgba(226, 232, 240, 0.9);
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 20px -2px rgba(21, 59, 104, 0.05);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .bento-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(255, 206, 118, 0.6);
+    box-shadow: 0 16px 36px -4px rgba(21, 59, 104, 0.10);
+  }
+
+  /* Horizontal Table Scroll Indicator */
+  .table-scroll-hint {
+    background: linear-gradient(to right, white 30%, rgba(255, 255, 255, 0)),
+                linear-gradient(to right, rgba(255, 255, 255, 0), white 70%) 0 100%,
+                radial-gradient(farthest-side at 0% 50%, rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0)),
+                radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0)) 0 100%;
+    background-repeat: no-repeat;
+    background-size: 40px 100%, 40px 100%, 14px 100%, 14px 100%;
+    background-position: 0 0, 100% 0, 0 0, 100% 0;
+    background-attachment: local, local, scroll, scroll;
+  }
+
+  /* Text wrapping safeguard for titles */
+  .keep-words {
+    overflow-wrap: normal !important;
+    word-break: keep-all !important;
+    hyphens: none !important;
   }
 }
 
@@ -128,22 +167,25 @@ h1, .h1 {
   font-size: clamp(1.65rem, 5vw, 3.25rem) !important; /* Mobile: ~26px, Desktop: 52px */
   line-height: 1.2 !important;
   font-weight: 800 !important;
+  letter-spacing: -0.025em !important;
   overflow-wrap: break-word !important;
-  hyphens: auto !important;
+  hyphens: manual !important;
 }
 
 h2, .h2 {
   font-size: clamp(1.35rem, 3.5vw, 2.25rem) !important; /* Mobile: ~21.6px, Desktop: 36px */
   line-height: 1.25 !important;
   font-weight: 800 !important;
+  letter-spacing: -0.02em !important;
   overflow-wrap: break-word !important;
-  hyphens: auto !important;
+  hyphens: manual !important;
 }
 
 h3, .h3 {
   font-size: clamp(1.15rem, 2.8vw, 1.5rem) !important; /* Mobile: ~18.4px, Desktop: 24px */
   line-height: 1.3 !important;
   font-weight: 700 !important;
+  letter-spacing: -0.015em !important;
   overflow-wrap: break-word !important;
 }
 
@@ -151,6 +193,7 @@ h4, .h4 {
   font-size: clamp(1rem, 2vw, 1.15rem) !important; /* Mobile: 16px, Desktop: 18.4px */
   line-height: 1.35 !important;
   font-weight: 700 !important;
+  letter-spacing: -0.01em !important;
   overflow-wrap: break-word !important;
 }
 
@@ -158,6 +201,15 @@ h4, .h4 {
 p:not(.text-xs):not(.text-sm):not(.text-\[9px\]):not(.text-\[10px\]):not(.text-\[11px\]):not(.text-slate-400):not(.text-slate-500) {
   font-size: 1rem !important; /* 16px */
   line-height: 1.68 !important;
+}
+
+/* Footer headings: enforce Poppins, natural tracking, and non-breaking words */
+footer h3 {
+  font-family: var(--font-sans) !important;
+  letter-spacing: normal !important;
+  word-break: keep-all !important;
+  overflow-wrap: normal !important;
+  hyphens: none !important;
 }
 
 /* Prevent unwanted mobile form auto-zoom on Samsung Internet and mobile Safari */

@@ -70,11 +70,18 @@ export async function POST({ request }) {
     // ==========================================
     // STAP 2: Tag toevoegen op basis van hulpvraag
     // ==========================================
-    let tag = 'overige';
-    if (serviceType === 'starter') tag = 'hypotheken';
-    else if (serviceType === 'verzekeringen') tag = 'verzekeringen';
-    else if (serviceType === 'belastingaangifte') tag = 'belastingaangifte';
-    else if (serviceType === 'overige') tag = 'overige';
+    const tagMap = {
+      'hypotheken': 'hypotheken',
+      'starter': 'hypotheken',
+      'verzekeringen': 'verzekeringen',
+      'aangifte': 'belastingaangifte',
+      'belastingaangifte': 'belastingaangifte',
+      'vermogen': 'vermogen',
+      'vermogensbeheer': 'vermogen',
+      'overig': 'overige',
+      'overige': 'overige'
+    };
+    const tag = tagMap[serviceType] || 'overige';
 
     const tagResponse = await fetch(`https://services.leadconnectorhq.com/contacts/${contactId}/tags`, {
       method: 'POST',
@@ -114,10 +121,15 @@ export async function POST({ request }) {
     // STAP 4: Bericht opslaan als notitie
     // ==========================================
     const labels = {
-      starter: 'Ik wil een eerste huis kopen (starter)',
-      verzekeringen: 'Verzekeringen',
-      belastingaangifte: 'Belastingaangifte',
-      overige: 'Anders / Overige'
+      'hypotheken': 'Hypotheekadvies',
+      'starter': 'Startershypotheek',
+      'verzekeringen': 'Verzekeringen',
+      'aangifte': 'Belastingaangifte',
+      'belastingaangifte': 'Belastingaangifte',
+      'vermogen': 'Vermogen & Pensioen',
+      'vermogensbeheer': 'Vermogen & Pensioen',
+      'overig': 'Anders / Overige',
+      'overige': 'Anders / Overige'
     };
     const serviceTypeLabel = labels[serviceType] || serviceType;
 

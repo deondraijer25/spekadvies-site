@@ -17,69 +17,83 @@ const description = "Onafhankelijke uitleg, rekenregels en antwoorden op al jouw
 
     <!-- Hero Section -->
     <section 
-      class="relative py-20 sm:py-28 bg-[#153b68] bg-center bg-cover bg-no-repeat overflow-hidden rounded-b-[40px] sm:rounded-b-[56px] lg:rounded-b-[72px] shadow-xl"
-      style="background-image: linear-gradient(rgba(21, 59, 104, 0.88), rgba(11, 26, 47, 0.96)), url('https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=1800&q=80');"
+      class="relative py-20 sm:py-28 lg:py-32 bg-brand-dark bg-center bg-cover bg-no-repeat overflow-hidden rounded-b-[40px] sm:rounded-b-[56px] lg:rounded-b-[72px] shadow-2xl"
+      style="background-image: linear-gradient(rgba(21, 59, 104, 0.90), rgba(11, 26, 47, 0.97)), url('https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=1800&q=80');"
     >
+      <!-- Subtle ambient glow -->
+      <div class="absolute left-1/2 -top-20 -translate-x-1/2 w-[600px] h-[300px] bg-brand-primary/10 blur-[120px] pointer-events-none rounded-full"></div>
+
       <div class="max-w-4xl mx-auto px-4 sm:px-8 text-center relative z-10">
-        <span class="inline-block bg-white/10 text-brand-accent border border-white/15 text-[11px] font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full mb-6 font-sans">
+        <span class="inline-block bg-white/10 text-brand-primary border border-white/20 text-[11px] font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full mb-6 font-sans backdrop-blur-md shadow-xs">
           Financiële Kennis & Adviesgidsen
         </span>
         
-        <h1 class="text-3xl sm:text-5xl lg:text-5.5xl font-bold text-white tracking-tight leading-tight font-display mb-6">
+        <h1 class="text-3xl sm:text-5xl lg:text-5.5xl font-extrabold text-white tracking-tight leading-[1.18] font-display mb-6">
           Kennisbank: Duidelijke Antwoorden op Complexe Financiële Vragen
         </h1>
         
         <p class="text-slate-200 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto mb-8 font-sans font-normal">
           Geen onbegrijpelijk bancair jargon, maar heldere uitleg van erkend adviseur <strong>Martin van der Spek</strong> over overbruggingshypotheken, boeterente, startersleningen en ondernemershypotheken.
         </p>
+
+        <!-- Quick Search / Stats Pill -->
+        <div class="inline-flex items-center gap-3 bg-white/5 border border-white/15 backdrop-blur-md px-5 py-2 rounded-full text-xs text-slate-300 font-sans">
+          <span>📚 {KENNISBANK_ARTIKELEN.length} Diepgaande Gidsen</span>
+          <span class="text-white/30">•</span>
+          <span>📍 100% Onafhankelijk Moerkapelle</span>
+        </div>
       </div>
     </section>
 
     <!-- Articles Grid Section -->
-    <section class="py-16 sm:py-24 bg-white">
+    <section class="py-16 sm:py-24 bg-slate-50/50">
       <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
         
-        <div class="text-center max-w-2xl mx-auto mb-16">
-          <h2 class="text-2xl sm:text-3xl font-bold text-brand-dark font-display mb-3">
+        <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
+          <h2 class="text-2xl sm:text-3.5xl font-bold text-brand-dark font-display mb-3">
             Populaire Gidsen & Artikelen
           </h2>
-          <p class="text-slate-600 text-sm font-sans">
+          <p class="text-slate-600 text-sm sm:text-base font-sans">
             Klik op een artikel voor een direct en volledig antwoord op jouw financiële vraagstuk.
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {KENNISBANK_ARTIKELEN.map((artikel) => (
-            <article class="bg-[#f8fafc] border border-slate-200/80 rounded-3xl p-6 sm:p-8 flex flex-col justify-between shadow-xs hover:shadow-lg transition-all duration-300 group">
+            <article class="bento-card p-6 sm:p-8 flex flex-col justify-between group relative overflow-hidden">
+              <!-- Top subtle ambient highlight on hover -->
+              <div class="absolute -right-8 -top-8 w-24 h-24 bg-amber-100/40 rounded-full blur-xl group-hover:bg-amber-200/50 transition-colors pointer-events-none"></div>
+
               <div>
                 <div class="flex items-center justify-between gap-2 mb-4">
-                  <span class="text-[10px] font-bold uppercase tracking-wider text-brand-accent bg-brand-dark px-3 py-1 rounded-full font-sans">
+                  <span class="text-[10px] font-bold uppercase tracking-wider text-brand-primary bg-brand-dark px-3 py-1 rounded-full font-sans shadow-xs">
                     {artikel.category}
                   </span>
-                  <span class="text-[11px] text-slate-400 font-sans">
-                    {artikel.readTime}
+                  <span class="text-[11px] font-medium text-slate-400 font-sans">
+                    ⏱ {artikel.readTime}
                   </span>
                 </div>
                 
-                <h3 class="text-lg sm:text-xl font-bold text-brand-dark font-display mb-3 group-hover:text-brand-accent transition-colors leading-snug">
+                <h3 class="text-lg sm:text-xl font-bold text-brand-dark font-display mb-3 group-hover:text-amber-800 transition-colors leading-snug">
                   <a href={`/kennisbank/${artikel.slug}`} class="focus:outline-none">
                     {artikel.title}
                   </a>
                 </h3>
 
-                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans mb-6 line-clamp-3">
+                <p class="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-sans mb-6 line-clamp-3">
                   {artikel.directAnswer}
                 </p>
               </div>
 
-              <div class="pt-4 border-t border-slate-200/60 flex items-center justify-between">
+              <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
                 <a 
                   href={`/kennisbank/${artikel.slug}`} 
-                  class="text-xs font-bold text-brand-dark group-hover:text-brand-accent transition-colors flex items-center gap-1.5 font-sans"
+                  class="text-xs font-bold text-brand-dark group-hover:text-amber-800 transition-colors flex items-center gap-1.5 font-sans"
                 >
                   <span>Lees complete gids</span>
-                  <span>➔</span>
+                  <span class="group-hover:translate-x-1 transition-transform">➔</span>
                 </a>
+                <span class="text-[11px] text-slate-400 font-sans">Martin v.d. Spek</span>
               </div>
             </article>
           ))}
@@ -89,16 +103,19 @@ const description = "Onafhankelijke uitleg, rekenregels en antwoorden op al jouw
     </section>
 
     <!-- Consultation CTA Section -->
-    <section class="py-16 bg-[#153b68] text-white text-center">
-      <div class="max-w-4xl mx-auto px-4 sm:px-8">
+    <section class="py-16 sm:py-20 bg-brand-dark text-white text-center relative overflow-hidden">
+      <!-- Glow effect -->
+      <div class="absolute left-1/2 top-0 -translate-x-1/2 w-[500px] h-[250px] bg-brand-primary/10 blur-[100px] pointer-events-none rounded-full"></div>
+
+      <div class="max-w-4xl mx-auto px-4 sm:px-8 relative z-10">
         <h2 class="text-2xl sm:text-4xl font-bold font-display tracking-tight mb-4">
-          Staat jouw vraag er niet tussen?
+          Staat jouw specifieke situatie er niet tussen?
         </h2>
-        <p class="text-slate-200 text-sm sm:text-base max-w-xl mx-auto mb-8 font-sans">
-          Elke persoonlijke situatie is uniek. Neem direct contact op met Martin van der Spek voor een vrijblijvend en deskundig antwoord.
+        <p class="text-slate-200 text-sm sm:text-base max-w-xl mx-auto mb-8 font-sans font-normal leading-relaxed">
+          Elke persoonlijke situatie is uniek. Neem direct contact op met Martin van der Spek voor een vrijblijvend en deskundig antwoord op maat.
         </p>
         <button 
-          class="open-contact-drawer inline-block bg-brand-accent hover:bg-brand-accent/90 text-brand-dark font-bold px-8 py-4 rounded-full shadow-lg transition-all text-xs tracking-wider uppercase font-sans cursor-pointer"
+          class="open-contact-drawer inline-block bg-brand-primary hover:bg-brand-primary-hover text-brand-dark font-bold px-8 py-4 rounded-full shadow-[0_10px_25px_rgba(255,206,118,0.25)] hover:-translate-y-0.5 transition-all text-xs tracking-wider uppercase font-sans cursor-pointer"
         >
           Stel jouw vraag direct ➔
         </button>

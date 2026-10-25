@@ -56,50 +56,64 @@ import Footer from '../components/Footer.astro';
     <section class="py-16 bg-white border-b border-slate-100">
       <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
         <div class="text-center max-w-2xl mx-auto mb-12">
-          <span class="text-xs font-bold tracking-widest uppercase text-brand-accent block font-sans">Specialistische Dekkingen</span>
-          <h2 class="text-2xl sm:text-3xl font-bold text-brand-dark font-display mt-2">
+          <span class="inline-block bg-amber-50 text-amber-800 border border-amber-200/80 text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-2 font-sans">
+            Specialistische Dekkingen
+          </span>
+          <h2 class="text-2xl sm:text-3.5xl font-bold text-brand-dark font-display mt-1">
             Onze Kernverzekeringen op Maat
           </h2>
-          <p class="text-slate-600 text-sm font-sans mt-2">
+          <p class="text-slate-600 text-sm sm:text-base font-sans mt-2">
             Bekijk onze gespecialiseerde adviespagina's voor diepgaande voorwaarden, scherpe premies en onafhankelijke vergelijkingen.
           </p>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <a href="/diensten/aov-zzp-verzekering" class="bg-[#f8fafc] border border-slate-200/80 p-6 rounded-3xl hover:border-brand-accent hover:shadow-lg transition-all group flex flex-col justify-between">
+          <a href="/diensten/aov-zzp-verzekering" class="bento-card p-6 flex flex-col justify-between group">
             <div>
-              <div class="w-10 h-10 rounded-xl bg-white text-brand-accent flex items-center justify-center font-bold mb-4 shadow-xs">🛡️</div>
-              <h3 class="text-base font-bold text-brand-dark font-display mb-2 group-hover:text-brand-accent transition-colors">AOV voor Ondernemers</h3>
-              <p class="text-xs text-slate-600 leading-relaxed font-sans">Inkomenszekerheid bij ziekte en ongeval voor ZZP'ers en DGA's. Volledig fiscaal aftrekbaar.</p>
+              <div class="w-11 h-11 rounded-2xl bg-amber-50 border border-amber-200/60 text-xl flex items-center justify-center font-bold mb-4 shadow-xs">🛡️</div>
+              <h3 class="text-base font-bold text-brand-dark font-display mb-2 group-hover:text-amber-800 transition-colors">AOV voor Ondernemers</h3>
+              <p class="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-sans">Inkomenszekerheid bij ziekte en ongeval voor ZZP'ers en DGA's. Volledig fiscaal aftrekbaar.</p>
             </div>
-            <span class="text-xs font-bold text-brand-dark group-hover:text-brand-accent pt-4 block font-sans">Bekijk AOV advies ➔</span>
+            <span class="text-xs font-bold text-brand-dark group-hover:text-amber-800 pt-4 flex items-center gap-1 font-sans">
+              <span>Bekijk AOV advies</span>
+              <span class="group-hover:translate-x-1 transition-transform">➔</span>
+            </span>
           </a>
 
-          <a href="/diensten/woonverzekeringen" class="bg-[#f8fafc] border border-slate-200/80 p-6 rounded-3xl hover:border-brand-accent hover:shadow-lg transition-all group flex flex-col justify-between">
+          <a href="/diensten/woonverzekeringen" class="bento-card p-6 flex flex-col justify-between group">
             <div>
-              <div class="w-10 h-10 rounded-xl bg-white text-brand-accent flex items-center justify-center font-bold mb-4 shadow-xs">🏡</div>
-              <h3 class="text-base font-bold text-brand-dark font-display mb-2 group-hover:text-brand-accent transition-colors">Woonverzekeringen</h3>
-              <p class="text-xs text-slate-600 leading-relaxed font-sans">Opstal en inboedel mét garantie tegen onderverzekering, inclusief zonnepanelen en Allrisk.</p>
+              <div class="w-11 h-11 rounded-2xl bg-amber-50 border border-amber-200/60 text-xl flex items-center justify-center font-bold mb-4 shadow-xs">🏡</div>
+              <h3 class="text-base font-bold text-brand-dark font-display mb-2 group-hover:text-amber-800 transition-colors">Woonverzekeringen</h3>
+              <p class="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-sans">Opstal en inboedel mét garantie tegen onderverzekering, inclusief zonnepanelen en Allrisk.</p>
             </div>
-            <span class="text-xs font-bold text-brand-dark group-hover:text-brand-accent pt-4 block font-sans">Bekijk woonpakket ➔</span>
+            <span class="text-xs font-bold text-brand-dark group-hover:text-amber-800 pt-4 flex items-center gap-1 font-sans">
+              <span>Bekijk woonpakket</span>
+              <span class="group-hover:translate-x-1 transition-transform">➔</span>
+            </span>
           </a>
 
-          <a href="/diensten/overlijdensrisicoverzekering" class="bg-[#f8fafc] border border-slate-200/80 p-6 rounded-3xl hover:border-brand-accent hover:shadow-lg transition-all group flex flex-col justify-between">
+          <a href="/diensten/overlijdensrisicoverzekering" class="bento-card p-6 flex flex-col justify-between group">
             <div>
-              <div class="w-10 h-10 rounded-xl bg-white text-brand-accent flex items-center justify-center font-bold mb-4 shadow-xs">🤝</div>
-              <h3 class="text-base font-bold text-brand-dark font-display mb-2 group-hover:text-brand-accent transition-colors">Overlijdensrisico (ORV)</h3>
-              <p class="text-xs text-slate-600 leading-relaxed font-sans">Financiële rust voor je nabestaanden. Fiscaal optimaal met kruislingse premiebetaling.</p>
+              <div class="w-11 h-11 rounded-2xl bg-amber-50 border border-amber-200/60 text-xl flex items-center justify-center font-bold mb-4 shadow-xs">🤝</div>
+              <h3 class="text-base font-bold text-brand-dark font-display mb-2 group-hover:text-amber-800 transition-colors">Overlijdensrisico (ORV)</h3>
+              <p class="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-sans">Financiële rust voor je nabestaanden. Fiscaal optimaal met kruislingse premiebetaling.</p>
             </div>
-            <span class="text-xs font-bold text-brand-dark group-hover:text-brand-accent pt-4 block font-sans">Bekijk ORV advies ➔</span>
+            <span class="text-xs font-bold text-brand-dark group-hover:text-amber-800 pt-4 flex items-center gap-1 font-sans">
+              <span>Bekijk ORV advies</span>
+              <span class="group-hover:translate-x-1 transition-transform">➔</span>
+            </span>
           </a>
 
-          <a href="/diensten/zakelijke-verzekeringen" class="bg-[#f8fafc] border border-slate-200/80 p-6 rounded-3xl hover:border-brand-accent hover:shadow-lg transition-all group flex flex-col justify-between">
+          <a href="/diensten/zakelijke-verzekeringen" class="bento-card p-6 flex flex-col justify-between group">
             <div>
-              <div class="w-10 h-10 rounded-xl bg-white text-brand-accent flex items-center justify-center font-bold mb-4 shadow-xs">💼</div>
-              <h3 class="text-base font-bold text-brand-dark font-display mb-2 group-hover:text-brand-accent transition-colors">Zakelijke Verzekeringen</h3>
-              <p class="text-xs text-slate-600 leading-relaxed font-sans">Bedrijfsaansprakelijkheid (AVB), beroepsaansprakelijkheid, inventaris en rechtsbijstand.</p>
+              <div class="w-11 h-11 rounded-2xl bg-amber-50 border border-amber-200/60 text-xl flex items-center justify-center font-bold mb-4 shadow-xs">💼</div>
+              <h3 class="text-base font-bold text-brand-dark font-display mb-2 group-hover:text-amber-800 transition-colors">Zakelijke Verzekeringen</h3>
+              <p class="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-sans">Bedrijfsaansprakelijkheid (AVB), beroepsaansprakelijkheid, inventaris en rechtsbijstand.</p>
             </div>
-            <span class="text-xs font-bold text-brand-dark group-hover:text-brand-accent pt-4 block font-sans">Bekijk zakelijk pakket ➔</span>
+            <span class="text-xs font-bold text-brand-dark group-hover:text-amber-800 pt-4 flex items-center gap-1 font-sans">
+              <span>Bekijk zakelijk pakket</span>
+              <span class="group-hover:translate-x-1 transition-transform">➔</span>
+            </span>
           </a>
         </div>
       </div>
@@ -154,13 +168,13 @@ import Footer from '../components/Footer.astro';
               </p>
               <div class="space-y-2 pt-2">
                 <div class="faq-sub bg-slate-50 rounded-xl p-3.5 sm:p-4 border border-slate-100">
-                  <h4 class="text-xs font-bold text-brand-dark font-display uppercase tracking-wider">WA, Beperkt Casco of Allrisk?</h4>
+                  <h4 class="text-xs sm:text-sm font-semibold text-slate-800 font-sans">WA, Beperkt Casco of Allrisk?</h4>
                   <p  class="text-[11px] text-slate-600 font-sans mt-2 leading-relaxed">
                     WA is wettelijk verplicht en dekt schade aan anderen. Beperkt Casco (WA+) dekt ook brand, diefstal, storm en ruitbreuk. Allrisk dekt daarnaast schade aan je eigen auto door eigen schuld. Wij adviseren je de beste dekking op basis van de leeftijd en waarde van je auto.
                   </p>
                 </div>
                 <div class="faq-sub bg-slate-50 rounded-xl p-3.5 sm:p-4 border border-slate-100">
-                  <h4 class="text-xs font-bold text-brand-dark font-display uppercase tracking-wider">Aanvullende dekkingen (Inzittenden & Pech)</h4>
+                  <h4 class="text-xs sm:text-sm font-semibold text-slate-800 font-sans">Aanvullende dekkingen (Inzittenden & Pech)</h4>
                   <p  class="text-[11px] text-slate-600 font-sans mt-2 leading-relaxed">
                     Bescherm je passagiers met een Schadeverzekering voor Inzittenden (SVI). Ook pechhulp in binnen- en buitenland en rechtsbijstand verkeer kunnen we voordelig direct meeverzekeren.
                   </p>
@@ -187,13 +201,13 @@ import Footer from '../components/Footer.astro';
               </p>
               <div class="space-y-2 pt-2">
                 <div class="faq-sub bg-slate-50 rounded-xl p-3.5 sm:p-4 border border-slate-100">
-                  <h4 class="text-xs font-bold text-brand-dark font-display uppercase tracking-wider">Woonhuis- en opstalverzekering</h4>
+                  <h4 class="text-xs sm:text-sm font-semibold text-slate-800 font-sans">Woonhuis- en opstalverzekering</h4>
                   <p  class="text-[11px] text-slate-600 font-sans mt-2 leading-relaxed">
                     Verplicht bij een hypotheek. Dekt schade aan het huis zelf, inclusief de keuken, badkamer en zonnepanelen.
                   </p>
                 </div>
                 <div class="faq-sub bg-slate-50 rounded-xl p-3.5 sm:p-4 border border-slate-100">
-                  <h4 class="text-xs font-bold text-brand-dark font-display uppercase tracking-wider">Inboedelverzekering & Spullen</h4>
+                  <h4 class="text-xs sm:text-sm font-semibold text-slate-800 font-sans">Inboedelverzekering & Spullen</h4>
                   <p  class="text-[11px] text-slate-600 font-sans mt-2 leading-relaxed">
                     Dekt alle losse spullen in huis. Door de inboedelwaardemeter in te vullen, profiteer je van garantie tegen onderverzekering. Kostbaarheden en sieraden kunnen extra worden meeverzekerd.
                   </p>
@@ -220,13 +234,13 @@ import Footer from '../components/Footer.astro';
               </p>
               <div class="space-y-2 pt-2">
                 <div class="faq-sub bg-slate-50 rounded-xl p-3.5 sm:p-4 border border-slate-100">
-                  <h4 class="text-xs font-bold text-brand-dark font-display uppercase tracking-wider">Doorlopende reis- en annuleringsverzekering</h4>
+                  <h4 class="text-xs sm:text-sm font-semibold text-slate-800 font-sans">Doorlopende reis- en annuleringsverzekering</h4>
                   <p  class="text-[11px] text-slate-600 font-sans mt-2 leading-relaxed">
                     Vanaf 14 tot 21 reisdagen per jaar is een doorlopende verzekering voordeliger dan een kortlopende. Dekt medische kosten, bagage en repatriëring wereldwijd.
                   </p>
                 </div>
                 <div class="faq-sub bg-slate-50 rounded-xl p-3.5 sm:p-4 border border-slate-100">
-                  <h4 class="text-xs font-bold text-brand-dark font-display uppercase tracking-wider">Ongevallen & Uitvaart</h4>
+                  <h4 class="text-xs sm:text-sm font-semibold text-slate-800 font-sans">Ongevallen & Uitvaart</h4>
                   <p  class="text-[11px] text-slate-600 font-sans mt-2 leading-relaxed">
                     Een ongevallenverzekering keert een bedrag uit bij blijvende invaliditeit of overlijden door een ongeval. Een uitvaartverzekering zorgt dat nabestaanden niet voor onverwachte kosten komen te staan.
                   </p>
@@ -253,13 +267,13 @@ import Footer from '../components/Footer.astro';
               </p>
               <div class="space-y-2 pt-2">
                 <div class="faq-sub bg-slate-50 rounded-xl p-3.5 sm:p-4 border border-slate-100">
-                  <h4 class="text-xs font-bold text-brand-dark font-display uppercase tracking-wider">Aansprakelijkheidsverzekering Particulieren (AVP)</h4>
+                  <h4 class="text-xs sm:text-sm font-semibold text-slate-800 font-sans">Aansprakelijkheidsverzekering Particulieren (AVP)</h4>
                   <p  class="text-[11px] text-slate-600 font-sans mt-2 leading-relaxed">
                     Niet wettelijk verplicht, maar essentieel. Dekt claims wegens schade die jij, je gezinsleden of huisdieren toebrengen aan anderen.
                   </p>
                 </div>
                 <div class="faq-sub bg-slate-50 rounded-xl p-3.5 sm:p-4 border border-slate-100">
-                  <h4 class="text-xs font-bold text-brand-dark font-display uppercase tracking-wider">Rechtsbijstandverzekering</h4>
+                  <h4 class="text-xs sm:text-sm font-semibold text-slate-800 font-sans">Rechtsbijstandverzekering</h4>
                   <p  class="text-[11px] text-slate-600 font-sans mt-2 leading-relaxed">
                     Verzekert je van professionele juridische hulp en dekt proceskosten bij conflicten over werk, wonen of aankopen. Modulair op te bouwen.
                   </p>
@@ -291,13 +305,13 @@ import Footer from '../components/Footer.astro';
               </p>
               <div class="space-y-2 pt-2">
                 <div class="faq-sub bg-slate-50 rounded-xl p-3.5 sm:p-4 border border-slate-100">
-                  <h4 class="text-xs font-bold text-brand-dark font-display uppercase tracking-wider">Gebouwen & Inventarisverzekering</h4>
+                  <h4 class="text-xs sm:text-sm font-semibold text-slate-800 font-sans">Gebouwen & Inventarisverzekering</h4>
                   <p  class="text-[11px] text-slate-600 font-sans mt-2 leading-relaxed">
                     Dekt materiële schade aan het bedrijfspand, machines, computers en goederenvoorraad tegen nieuwwaarde.
                   </p>
                 </div>
                 <div class="faq-sub bg-slate-50 rounded-xl p-3.5 sm:p-4 border border-slate-100">
-                  <h4 class="text-xs font-bold text-brand-dark font-display uppercase tracking-wider">Bedrijfsschadeverzekering</h4>
+                  <h4 class="text-xs sm:text-sm font-semibold text-slate-800 font-sans">Bedrijfsschadeverzekering</h4>
                   <p  class="text-[11px] text-slate-600 font-sans mt-2 leading-relaxed">
                     Cruciaal bij stilstand. Dekt de misgelopen brutowinst en vaste doorlopende kosten (zoals huur en personeel) tijdens de herstelperiode.
                   </p>
@@ -324,13 +338,13 @@ import Footer from '../components/Footer.astro';
               </p>
               <div class="space-y-2 pt-2">
                 <div class="faq-sub bg-slate-50 rounded-xl p-3.5 sm:p-4 border border-slate-100">
-                  <h4 class="text-xs font-bold text-brand-dark font-display uppercase tracking-wider">Bedrijfsaansprakelijkheid (AVB)</h4>
+                  <h4 class="text-xs sm:text-sm font-semibold text-slate-800 font-sans">Bedrijfsaansprakelijkheid (AVB)</h4>
                   <p  class="text-[11px] text-slate-600 font-sans mt-2 leading-relaxed">
                     Dekt schade (letsel- of zaakschade) die jij of je werknemers toebrengen aan anderen tijdens het uitvoeren van werkzaamheden.
                   </p>
                 </div>
                 <div class="faq-sub bg-slate-50 rounded-xl p-3.5 sm:p-4 border border-slate-100">
-                  <h4 class="text-xs font-bold text-brand-dark font-display uppercase tracking-wider">Beroepsaansprakelijkheid (BAV) & Bestuurdersaansprakelijkheid</h4>
+                  <h4 class="text-xs sm:text-sm font-semibold text-slate-800 font-sans">Beroepsaansprakelijkheid (BAV) & Bestuurdersaansprakelijkheid</h4>
                   <p  class="text-[11px] text-slate-600 font-sans mt-2 leading-relaxed">
                     Specifiek voor consultants, IT'ers of architecten: dekt zuivere vermogensschade bij opdrachtgevers door beroepsfouten. Bestuurdersaansprakelijkheid beschermt privévermogen tegen claims wegens onbehoorlijk bestuur.
                   </p>
@@ -357,7 +371,7 @@ import Footer from '../components/Footer.astro';
               </p>
               <div class="space-y-2 pt-2">
                 <div class="faq-sub bg-slate-50 rounded-xl p-3.5 sm:p-4 border border-slate-100">
-                  <h4 class="text-xs font-bold text-brand-dark font-display uppercase tracking-wider">Arbeidsongeschiktheidsverzekering (AOV)</h4>
+                  <h4 class="text-xs sm:text-sm font-semibold text-slate-800 font-sans">Arbeidsongeschiktheidsverzekering (AOV)</h4>
                   <p  class="text-[11px] text-slate-600 font-sans mt-2 leading-relaxed">
                     Wij vergelijken AOV-tarieven van diverse verzekeraars. Je kunt kiezen voor een volledige inkomensdekking of een lagere premie door alleen je vaste lasten te verzekeren. De premie is fiscaal aftrekbaar.
                   </p>
@@ -384,7 +398,7 @@ import Footer from '../components/Footer.astro';
               </p>
               <div class="space-y-2 pt-2">
                 <div class="faq-sub bg-slate-50 rounded-xl p-3.5 sm:p-4 border border-slate-100">
-                  <h4 class="text-xs font-bold text-brand-dark font-display uppercase tracking-wider">Bedrijfsauto's & Wagenpark</h4>
+                  <h4 class="text-xs sm:text-sm font-semibold text-slate-800 font-sans">Bedrijfsauto's & Wagenpark</h4>
                   <p  class="text-[11px] text-slate-600 font-sans mt-2 leading-relaxed">
                     Vanaf 5 kentekens kunnen we voertuigen collectief onderbrengen op één wagenparkpolis met aanzienlijke administratieve voordelen en scherpe collectiviteitskortingen.
                   </p>
@@ -460,7 +474,7 @@ import Footer from '../components/Footer.astro';
             
             <!-- Accordion 1 -->
             <div class="faq-item bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm">
-              <button class="faq-toggle w-full px-4 sm:px-6 py-4 sm:py-5 text-left text-xs font-semibold uppercase tracking-wider font-sans text-brand-dark flex justify-between items-center cursor-pointer">
+              <button class="faq-toggle w-full px-4 sm:px-6 py-4 sm:py-5 text-left text-sm sm:text-base font-semibold font-sans text-slate-800 flex justify-between items-center cursor-pointer">
                 <span>Welke soorten verzekeringen kan ik bij jullie afsluiten?</span>
                 <span class="faq-icon text-slate-400 text-xs transition-transform duration-300">▼</span>
               </button>
@@ -473,7 +487,7 @@ import Footer from '../components/Footer.astro';
 
             <!-- Accordion 2 -->
             <div class="faq-item bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm">
-              <button class="faq-toggle w-full px-4 sm:px-6 py-4 sm:py-5 text-left text-xs font-semibold uppercase tracking-wider font-sans text-brand-dark flex justify-between items-center cursor-pointer">
+              <button class="faq-toggle w-full px-4 sm:px-6 py-4 sm:py-5 text-left text-sm sm:text-base font-semibold font-sans text-slate-800 flex justify-between items-center cursor-pointer">
                 <span>Wat kan ik verwachten als ik schade heb?</span>
                 <span class="faq-icon text-slate-400 text-xs transition-transform duration-300">▼</span>
               </button>
@@ -486,7 +500,7 @@ import Footer from '../components/Footer.astro';
 
             <!-- Accordion 3 -->
             <div class="faq-item bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm">
-              <button class="faq-toggle w-full px-4 sm:px-6 py-4 sm:py-5 text-left text-xs font-semibold uppercase tracking-wider font-sans text-brand-dark flex justify-between items-center cursor-pointer">
+              <button class="faq-toggle w-full px-4 sm:px-6 py-4 sm:py-5 text-left text-sm sm:text-base font-semibold font-sans text-slate-800 flex justify-between items-center cursor-pointer">
                 <span>Zijn jullie daadwerkelijk 100% onafhankelijk?</span>
                 <span class="faq-icon text-slate-400 text-xs transition-transform duration-300">▼</span>
               </button>

@@ -59,36 +59,42 @@ import Footer from '../components/Footer.astro';
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
           
           <!-- Card 1 -->
-          <div class="bg-white border border-slate-200/80 p-5 sm:p-8 rounded-2xl sm:rounded-3xl shadow-sm hover:shadow-md transition-shadow">
-            <div class="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center text-brand-dark text-xl mb-6">
-              <i class="fa-solid fa-piggy-bank"></i>
+          <div class="bento-card p-6 sm:p-8 flex flex-col justify-between group">
+            <div>
+              <div class="w-12 h-12 rounded-2xl bg-amber-50 border border-amber-200/60 flex items-center justify-center text-amber-800 text-xl mb-6 shadow-xs group-hover:scale-105 transition-transform">
+                <i class="fa-solid fa-piggy-bank"></i>
+              </div>
+              <h3 class="text-base font-bold text-brand-dark font-display mb-3">Slimme financiering</h3>
+              <p class="text-sm text-slate-600 font-sans font-normal leading-relaxed">
+                Advies over belastingvoordelen, schenkingen, erfpacht en de Nationale Hypotheek Garantie (NHG) om jouw maandlasten te minimaliseren.
+              </p>
             </div>
-            <h3 class="text-base font-bold text-brand-dark font-display mb-3">Slimme financiering</h3>
-            <p   class="text-sm text-slate-600 font-sans font-normal leading-relaxed">
-              Advies over belastingvoordelen, schenkingen, erfpacht en de Nationale Hypotheek Garantie (NHG) om jouw maandlasten te minimaliseren.
-            </p>
           </div>
 
           <!-- Card 2 -->
-          <div class="bg-white border border-slate-200/80 p-5 sm:p-8 rounded-2xl sm:rounded-3xl shadow-sm hover:shadow-md transition-shadow">
-            <div class="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center text-brand-dark text-xl mb-6">
-              <i class="fa-solid fa-calculator"></i>
+          <div class="bento-card p-6 sm:p-8 flex flex-col justify-between group">
+            <div>
+              <div class="w-12 h-12 rounded-2xl bg-amber-50 border border-amber-200/60 flex items-center justify-center text-amber-800 text-xl mb-6 shadow-xs group-hover:scale-105 transition-transform">
+                <i class="fa-solid fa-calculator"></i>
+              </div>
+              <h3 class="text-base font-bold text-brand-dark font-display mb-3">Maximale leencapaciteit</h3>
+              <p class="text-sm text-slate-600 font-sans font-normal leading-relaxed">
+                Wat kun je verantwoord lenen op basis van jouw inkomen en eventuele schulden? Wij rekenen het exact en onafhankelijk voor je uit.
+              </p>
             </div>
-            <h3 class="text-base font-bold text-brand-dark font-display mb-3">Maximale leencapaciteit</h3>
-            <p   class="text-sm text-slate-600 font-sans font-normal leading-relaxed">
-              Wat kun je verantwoord lenen op basis van jouw inkomen en eventuele schulden? Wij rekenen het exact en onafhankelijk voor je uit.
-            </p>
           </div>
 
           <!-- Card 3 -->
-          <div class="bg-white border border-slate-200/80 p-5 sm:p-8 rounded-2xl sm:rounded-3xl shadow-sm hover:shadow-md transition-shadow">
-            <div class="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center text-brand-dark text-xl mb-6">
-              <i class="fa-solid fa-shield-halved"></i>
+          <div class="bento-card p-6 sm:p-8 flex flex-col justify-between group">
+            <div>
+              <div class="w-12 h-12 rounded-2xl bg-amber-50 border border-amber-200/60 flex items-center justify-center text-amber-800 text-xl mb-6 shadow-xs group-hover:scale-105 transition-transform">
+                <i class="fa-solid fa-shield-halved"></i>
+              </div>
+              <h3 class="text-base font-bold text-brand-dark font-display mb-3">Risico's afgedekt</h3>
+              <p class="text-sm text-slate-600 font-sans font-normal leading-relaxed">
+                Wij adviseren je over overlijdensrisico- en woonlastenverzekeringen, zodat je bij arbeidsongeschiktheid of tegenslag in je woning kunt blijven.
+              </p>
             </div>
-            <h3 class="text-base font-bold text-brand-dark font-display mb-3">Risico's afgedekt</h3>
-            <p   class="text-sm text-slate-600 font-sans font-normal leading-relaxed">
-              Wij adviseren je over overlijdensrisico- en woonlastenverzekeringen, zodat je bij arbeidsongeschiktheid of tegenslag in je woning kunt blijven.
-            </p>
           </div>
 
         </div>
@@ -555,7 +561,7 @@ import Footer from '../components/Footer.astro';
             
             <!-- Accordion 1 -->
             <div class="faq-item bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm">
-              <button class="faq-toggle w-full px-4 sm:px-6 py-4 sm:py-5 text-left text-xs font-semibold uppercase tracking-wider font-sans text-brand-dark flex justify-between items-center cursor-pointer">
+              <button class="faq-toggle w-full px-4 sm:px-6 py-4 sm:py-5 text-left text-sm sm:text-base font-semibold font-sans text-slate-800 flex justify-between items-center cursor-pointer">
                 <span>Welke hypotheekvormen bieden jullie aan?</span>
                 <span class="faq-icon text-slate-400 text-xs transition-transform duration-300">▼</span>
               </button>
@@ -568,7 +574,7 @@ import Footer from '../components/Footer.astro';
 
             <!-- Accordion 2 -->
             <div class="faq-item bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm">
-              <button class="faq-toggle w-full px-4 sm:px-6 py-4 sm:py-5 text-left text-xs font-semibold uppercase tracking-wider font-sans text-brand-dark flex justify-between items-center cursor-pointer">
+              <button class="faq-toggle w-full px-4 sm:px-6 py-4 sm:py-5 text-left text-sm sm:text-base font-semibold font-sans text-slate-800 flex justify-between items-center cursor-pointer">
                 <span>Wat zijn de kosten van hypotheekadvies?</span>
                 <span class="faq-icon text-slate-400 text-xs transition-transform duration-300">▼</span>
               </button>
@@ -581,7 +587,7 @@ import Footer from '../components/Footer.astro';
 
             <!-- Accordion 3 -->
             <div class="faq-item bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm">
-              <button class="faq-toggle w-full px-4 sm:px-6 py-4 sm:py-5 text-left text-xs font-semibold uppercase tracking-wider font-sans text-brand-dark flex justify-between items-center cursor-pointer">
+              <button class="faq-toggle w-full px-4 sm:px-6 py-4 sm:py-5 text-left text-sm sm:text-base font-semibold font-sans text-slate-800 flex justify-between items-center cursor-pointer">
                 <span>Hoe verloopt het aanvraagproces?</span>
                 <span class="faq-icon text-slate-400 text-xs transition-transform duration-300">▼</span>
               </button>
@@ -594,7 +600,7 @@ import Footer from '../components/Footer.astro';
 
             <!-- Accordion 4 -->
             <div class="faq-item bg-white border border-slate-200/80 rounded-2xl overflow-hidden shadow-sm">
-              <button class="faq-toggle w-full px-4 sm:px-6 py-4 sm:py-5 text-left text-xs font-semibold uppercase tracking-wider font-sans text-brand-dark flex justify-between items-center cursor-pointer">
+              <button class="faq-toggle w-full px-4 sm:px-6 py-4 sm:py-5 text-left text-sm sm:text-base font-semibold font-sans text-slate-800 flex justify-between items-center cursor-pointer">
                 <span>Begeleiden jullie ook bij taxatie en geven jullie renteadvies?</span>
                 <span class="faq-icon text-slate-400 text-xs transition-transform duration-300">▼</span>
               </button>

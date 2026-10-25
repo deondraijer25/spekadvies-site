@@ -3,28 +3,31 @@ name: "Startershypotheek"
 seoTitle: "Startershypotheek Moerkapelle | Hypotheekadvies Eerste Huis | Spekadvies"
 seoDescription: "Eerste huis kopen in Moerkapelle of regio? Spekadvies berekent jouw maximale startershypotheek, SVn Starterslening en rentekorting via 40+ geldverstrekkers."
 heroTitle: "Jouw Eerste Woning Kopen: Onafhankelijk Startershypotheek Advies"
-heroSubtitle: "Van maximale leenberekening tot de sleuteloverdracht. Martin van der Spek helpt starters in Moerkapelle en omstreken met onafhankelijk maatwerk, subsidies en biedcertificaten."
-ctaText: "Bereken gratis jouw mogelijkheden als starter"
+heroSubtitle: "Van maximale leenberekening tot de sleuteloverdracht. Martin van der Spek helpt starters in Moerkapelle en omstreken met onafhankelijk maatwerk, subsidies en een solide financiële check vooraf."
+ctaText: "Plan gratis adviesgesprek"
 category: "hypotheken"
 
 statsBento:
-  - stat: "€ 510.000"
-    label: "NHG Kostengrens (2024/2025)"
-    detail: "Profiteer van maximale rentekorting en veiligheid via de Nationale Hypotheek Garantie."
-  - stat: "0%"
-    label: "Overdrachtsbelasting"
-    detail: "Als starter tussen 18 en 35 jaar betaal je tot de wettelijke woningwaardegrens 0% overdrachtsbelasting."
   - stat: "40+"
     label: "Geldverstrekkers Vergeleken"
     detail: "Onafhankelijk advies: wij selecteren de scherpste rente en soepelste acceptatievoorwaarden."
+  - stat: "100%"
+    label: "Maatwerk Berekening"
+    detail: "Tot op de euro berekend inclusief studieschuld, flexcontract of perspectiefverklaring."
+  - stat: "0%"
+    label: "Startersvrijstelling"
+    detail: "Profiteer van 0% overdrachtsbelasting en optimale benutting van de SVn Starterslening."
 
 usps:
-  - title: "Maximale Leencapaciteit Berekend"
-    description: "Geen globale schatting, maar een tot op de euro kloppende berekening inclusief eventuele studieschuld en provisies."
-  - title: "SVn Starterslening Begeleiding"
-    description: "Volledige ondersteuning bij de aanvraag van gemeentelijke startersleningen in Zuidplas, Waddinxveen en omliggende gemeenten."
-  - title: "Sterk Bieden met Zekerheid"
-    description: "Een deskundige financiële check vooraf, zodat je sneller en met minder onzekerheid een bod kunt uitbrengen."
+  - icon: "fa-solid fa-scale-balanced"
+    title: "Onafhankelijk Advies (40+ Banken)"
+    description: "Martin vergelijkt meer dan 40 banken en geldverstrekkers voor de scherpste rente, laagste maandlasten en soepelste voorwaarden."
+  - icon: "fa-solid fa-calculator"
+    title: "Maximale Leencapaciteit & Zekerheid"
+    description: "Een tot op de euro nauwkeurige berekening inclusief studieschuld (DUO), flexcontract of provisies, zodat je exact weet wat je kunt bieden."
+  - icon: "fa-solid fa-piggy-bank"
+    title: "Starterslening & Subsidies (SVn & NHG)"
+    description: "Begeleiding bij de SVn Starterslening in Zuidplas, Waddinxveen en omstreken, 0% overdrachtsbelasting en maximale NHG-rentekorting."
 
 comparisonTable:
   title: "Hypotheekvormen voor Starters Vergeleken"
@@ -40,17 +43,17 @@ comparisonTable:
 expertTips:
   - title: "Let op de startersvrijstelling overdrachtsbelasting"
     tip: "Koop je samen en is één van jullie 35 jaar of ouder? Dan betaalt de partner van 35+ alsnog 2% over zijn of haar eigendomsdeel, terwijl de jongere partner van de vrijstelling profiteert. Wij berekenen de exacte uitsplitsing vooraf."
-  - title: "Studieschuld verzwijgen is riskant"
+  - title: "Studieschuld verzwijgen is riskant én achterhaald"
     tip: "Sinds 2024 kijken banken naar de actuele studieschuld in plaats van de oorspronkelijke studieschuld als je extra hebt afgelost. Geef dit altijd eerlijk door; banken controleren dit via DUO bij finale toetsing."
 
-problemsTitle: "Waar lopen starters tegenaan op de lokale woningmarkt?"
+problemsTitle: "Belangrijke aandachtspunten voor starters"
 problems:
-  - title: "Bieden zonder voorbehoud van financiering"
-    description: "Verkopers prefereren vaak biedingen zonder financieringsvoorbehoud. Met onze grondige voorbereiding weet je precies waar jouw veilige financiële grens ligt."
-  - title: "Eigen geld voor kosten koper"
-    description: "Je kunt maximaal 100% van de woningwaarde lenen. Notaris-, taxatie- en kadasterkosten dien je met eigen middelen of schenking te financieren."
-  - title: "Studieschuld of flexcontract"
-    description: "Ook met een DUO-lening of een flexibele arbeidsovereenkomst (perspectiefverklaring) zijn er volop hypotheekmogelijkheden."
+  - title: "Sterk bieden mét financieringsvoorbehoud"
+    description: "Zonder voorbehoud bieden is voor starters veel te risicovol. Met onze vooraf getoetste financiële check weet de verkopend makelaar dat jouw financiering 100% solide is, waardoor jouw bod mét voorbehoud serieus voorrang krijgt."
+  - title: "Eigen geld voor de kosten koper"
+    description: "Je kunt maximaal 100% van de woningwaarde lenen. Voor de bijkomende aankoopkosten (notaris, taxatie, advies) is circa 3% tot 5% eigen inbreng nodig — eventueel aangevuld met een schenking of de SVn Starterslening."
+  - title: "Studieschuld of flexibel contract"
+    description: "Een studieschuld (DUO) of flexcontract (zoals een intentieverklaring of perspectiefverklaring) sluit een hypotheek geenszins uit. Sinds 2024 telt de werkelijke maandlast, waardoor je leencapaciteit vaak ruimer uitvalt."
 
 reviewQuote:
   quote: "Als starters wisten we totaal niet waar we moesten beginnen. Martin heeft ons stap voor stap begeleid en voor ons een prachtige startershypotheek geregeld met NHG. Zonder zijn advies hadden we dit huis nooit kunnen kopen!"
@@ -76,3 +79,6 @@ Waar een reguliere bank enkel haar eigen hypotheekproducten aanbiedt, vergelijkt
 
 ### Starterslening via SVn
 Veel gemeenten in ons werkgebied bieden startersleningen aan via het SVn (Stimuleringsfonds Volkshuisvesting Nederlandse gemeenten). Dit is een aanvullende lening bovenop je reguliere hypotheek, waarbij je de eerste drie jaar geen rente of aflossing betaalt. Spekadvies toetst direct of jouw droomwoning en situatie aan de gemeentelijke voorwaarden voldoen.
+
+### Met zekerheid een bod uitbrengen
+In de huidige woningmarkt wil een verkopend makelaar weten of een koper de financiering daadwerkelijk rondkrijgt. Voordat je gaat bezichtigen of bieden, voeren wij een complete financiële haalbaarheidstoets uit. Met deze onderbouwing op zak kun je met een gerust hart een bod uitbrengen mét financieringsvoorbehoud, terwijl de verkoper weet dat jouw bod financieel solide is.

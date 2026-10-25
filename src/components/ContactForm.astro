@@ -128,7 +128,7 @@ import SectionDivider from './SectionDivider.astro';
                 <option value="hypotheken">Hypotheken</option>
                 <option value="verzekeringen">Verzekeringen</option>
                 <option value="aangifte">Aangifte</option>
-                <option value="vermogensbeheer">Vermogensbeheer</option>
+                <option value="vermogen">Vermogen</option>
                 <option value="overig">Overig</option>
               </select>
             </div>
@@ -163,64 +163,104 @@ import SectionDivider from './SectionDivider.astro';
 </section>
 
 <script is:inline>
-  document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('main-contact-form');
-    const wrapper = document.getElementById('main-contact-form-wrapper');
-    const successDiv = document.getElementById('main-contact-success');
-    const errorDiv = document.getElementById('main-contact-error');
+  (function() {
+    function initForm() {
+      const form = document.getElementById('main-contact-form');
+      const wrapper = document.getElementById('main-contact-form-wrapper');
+      const successDiv = document.getElementById('main-contact-success');
+      const errorDiv = document.getElementById('main-contact-error');
 
-    if (!form || !wrapper || !successDiv) return;
+      if (!form || !wrapper || !successDiv) return;
+      if (form.dataset.initialized === 'true') return;
+      form.dataset.initialized = 'true';
 
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      
-      const submitBtn = form.querySelector('button[type="submit"]');
-      if (submitBtn) {
-        submitBtn.disabled = true;
-        submitBtn.textContent = 'Verzenden...';
-      }
-      if (errorDiv) {
-        errorDiv.classList.add('hidden');
-        errorDiv.textContent = '';
-      }
-
-      const formData = new FormData(form);
-      const data = {
-        name: formData.get('name'),
-        phone: formData.get('phone'),
-        email: formData.get('email'),
-        'service-type': formData.get('service-type'),
-        message: formData.get('message')
-      };
-
-      try {
-        const response = await fetch('/api/contact', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(data)
-        });
-
-        const result = await response.json();
-
-        if (response.ok && result.success) {
-          wrapper.classList.add('hidden');
-          successDiv.classList.remove('hidden');
-        } else {
-          throw new Error(result.error || 'Er ging iets fout bij het verzenden.');
-        }
-      } catch (err) {
-        console.error('Submit error:', err);
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const submitBtn = form.querySelector('button[type="submit"]');
         if (submitBtn) {
-          submitBtn.disabled = false;
-          submitBtn.textContent = 'Verzend Aanvraag';
+          submitBtn.disabled = true;
+          submitBtn.textContent = 'Verzenden...';
         }
         if (errorDiv) {
-          errorDiv.classList.remove('hidden');
-          errorDiv.textContent = err.message || 'Kon formulier niet verzenden. Probeer het later opnieuw.';
+          errorDiv.classList.add('hidden');
+          errorDiv.textContent = '';
         }
-      }
-    });
-  });
+
+        const formData = new FormData(form);
+        const data = {
+          name: formData.get('name'),
+          phone: formData.get('phone'),
+          email: formData.get('email'),
+          'service-type': formData.get('service-type'),
+          message: formData.get('message')
+        };
+
+        const endpoints = ['/api/contact.php', '/api/contact', '/contact.php'];
+        let success = false;
+        let lastError = null;
+
+        for (const url of endpoints) {
+          try {
+            const response = await fetch(url, {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+              },
+              body: JSON.stringify(data)
+            });
+
+            if (response.ok) {
+              const text = await response.text();
+              let result;
+              try {
+                result = JSON.parse(text);
+              } catch (parseErr) {
+                // If text response from valid server, treat as success if status 200
+                result = { success: true };
+              }
+
+              if (result.success !== false) {
+                wrapper.classList.add('hidden');
+                successDiv.classList.remove('hidden');
+                success = true;
+                break;
+              } else {
+                throw new Error(result.error || 'Er ging iets fout bij het verzenden.');
+              }
+            } else if (response.status === 404) {
+              // Try next endpoint in list
+              continue;
+            } else {
+              const text = await response.text();
+              let msg = 'Er ging iets fout bij het verwerken.';
+              try { msg = JSON.parse(text).error || msg; } catch(e) {}
+              throw new Error(msg);
+            }
+          } catch (err) {
+            lastError = err;
+          }
+        }
+
+        if (!success) {
+          console.error('Submit error:', lastError);
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Verzend Aanvraag';
+          }
+          if (errorDiv) {
+            errorDiv.classList.remove('hidden');
+            errorDiv.textContent = (lastError && lastError.message) || 'Kon formulier niet verzenden. Probeer het later opnieuw of bel ons direct op 079 - 593 12 41.';
+          }
+        }
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initForm);
+    } else {
+      initForm();
+    }
+  })();
 </script>

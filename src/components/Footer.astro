@@ -4,9 +4,9 @@ import { COMPANY_DATA } from '../data/company';
 const currentYear = new Date().getFullYear();
 ---
 
-<footer class="bg-[#153b68] pt-16 pb-8 relative overflow-hidden text-slate-350 border-t border-white/5">
+<footer class="bg-[#153b68] pt-16 pb-8 relative overflow-hidden text-slate-200 border-t border-white/10">
   <!-- Subtle large outline clover logo watermark -->
-  <div class="absolute right-[-5%] bottom-[-5%] w-[320px] sm:w-[420px] h-auto pointer-events-none select-none z-0 opacity-[0.05]" style="color: #ffce76;">
+  <div class="absolute right-[-5%] bottom-[-5%] w-[320px] sm:w-[420px] h-auto pointer-events-none select-none z-0 opacity-[0.06]" style="color: #ffce76;">
     <svg viewBox="0 0 80.08 83.08" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
       <path d="M40.04,83.08c-10.9,0-19.76-8.87-19.76-19.76,0-.17,0-.35.01-.53-.18,0-.36.01-.53.01C8.86,62.8,0,53.93,0,43.04s8.86-19.76,19.76-19.76c.17,0,.35,0,.53.01,0-.18-.01-.36-.01-.53,0-8.08,10.41-17.07,16.61-21.7,1.88-1.41,4.42-1.41,6.3,0,6.2,4.64,16.61,13.62,16.61,21.7,0,.17,0,.35-.01.53.18,0,.36-.01.53-.01,10.9,0,19.76,8.86,19.76,19.76s-8.86,19.76-19.76,19.76c-.17,0-.35,0-.53-.01,0,.18.01.36.01.53,0,10.9-8.86,19.76-19.76,19.76ZM21.62,61.45l-.07.74c-.04.38-.06.76-.06,1.13,0,10.23,8.32,18.55,18.55,18.55s18.55-8.32,18.55-18.55c0-.36-.02-.74-.06-1.13l-.07-.73.73.07c.38.04.76.06,1.13.06,10.23,0,18.55-8.32,18.55-18.55s-8.32-18.55-18.55-18.55c-.36,0-.74.02-1.13.06l-.73.07.07-.73c.04-.39.06-.77.06-1.13,0-7.84-11.28-17.11-16.12-20.73-1.45-1.08-3.4-1.08-4.84,0-4.85,3.62-16.12,12.89-16.12,20.73,0,.36.02.74.06,1.12l.07.73-.73-.07c-.39-.04-.77-.06-1.13-.06-10.23,0-18.55,8.32-18.55,18.55s8.32,18.55,18.55,18.55c.36,0,.74-.02,1.13-.06l.74-.07Z"/>
     </svg>
@@ -14,11 +14,11 @@ const currentYear = new Date().getFullYear();
 
   <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 relative z-10">
     
-    <!-- 5-Column Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-8 pb-12 border-b border-white/10">
+    <!-- Asymmetric 2-Section Grid (40% Company/Contact + 60% 3 Spacious Navigation Columns) -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 pb-12 border-b border-white/10">
       
-      <!-- Kolom 1: Bedrijf, E-E-A-T & Contact (3.5 cols) -->
-      <div class="lg:col-span-3 space-y-5">
+      <!-- Linkerkolom: Bedrijf, E-E-A-T & Contact (5 cols / ~42%) -->
+      <div class="lg:col-span-5 space-y-6">
         <a href="/" class="inline-block">
           <img 
             src="/Logo/Middel 9 wit.svg" 
@@ -26,125 +26,120 @@ const currentYear = new Date().getFullYear();
             class="h-10 sm:h-12 w-auto object-contain"
           />
         </a>
-        <p class="text-slate-350 text-xs leading-relaxed font-sans">
-          <strong>Martin van der Spek</strong> is al meer dan 20 jaar het vertrouwde, onafhankelijke gezicht voor hypotheken en verzekeringen in Moerkapelle en omstreken.
+        <p class="text-slate-200 text-xs sm:text-sm leading-relaxed font-sans max-w-md">
+          <strong class="text-white font-semibold">Martin van der Spek</strong> is al meer dan 20 jaar het vertrouwde, onafhankelijke gezicht voor hypotheken en verzekeringen in Moerkapelle en omstreken.
         </p>
 
-        <div class="space-y-2 text-xs text-slate-300 font-sans">
+        <div class="space-y-2.5 text-xs sm:text-sm text-slate-200 font-sans">
           <div class="flex items-start space-x-2.5">
             <span class="text-brand-accent mt-0.5">📍</span>
             <span>{COMPANY_DATA.address.formatted}</span>
           </div>
           <div class="flex items-center space-x-2.5">
             <span class="text-brand-accent">📞</span>
-            <a href={`tel:${COMPANY_DATA.contact.phoneRaw}`} class="hover:text-brand-accent transition-colors font-medium">
+            <a href={`tel:${COMPANY_DATA.contact.phoneRaw}`} class="text-slate-200 hover:text-brand-accent transition-colors font-medium">
               {COMPANY_DATA.contact.phoneDisplay}
             </a>
           </div>
           <div class="flex items-center space-x-2.5">
             <span class="text-brand-accent">✉️</span>
-            <a href={`mailto:${COMPANY_DATA.contact.email}`} class="hover:text-brand-accent transition-colors">
+            <a href={`mailto:${COMPANY_DATA.contact.email}`} class="text-slate-200 hover:text-brand-accent transition-colors">
               {COMPANY_DATA.contact.email}
             </a>
           </div>
         </div>
 
-        <div class="pt-2 border-t border-white/5 space-y-1 text-[11px] text-slate-400 font-sans">
-          <div><span class="text-slate-500">Openingstijden:</span> Ma - Vr 09:00 - 17:30</div>
-          <div><span class="text-slate-500">Avondgesprek:</span> Mogelijk op afspraak</div>
-          <div class="pt-1 text-slate-400">
-            <span class="text-brand-accent font-semibold">AFM:</span> {COMPANY_DATA.accreditations.afm} | <span class="text-brand-accent font-semibold">KvK:</span> {COMPANY_DATA.accreditations.kvk}
+        <div class="pt-3 border-t border-white/10 space-y-1.5 text-xs text-slate-300 font-sans max-w-md">
+          <div><span class="text-slate-400 font-medium">Openingstijden:</span> Ma - Vr 09:00 - 17:30</div>
+          <div><span class="text-slate-400 font-medium">Avondgesprek:</span> Mogelijk op afspraak</div>
+          <div class="pt-1 text-slate-300">
+            <span class="text-brand-accent font-semibold">AFM:</span> {COMPANY_DATA.accreditations.afm} &nbsp;|&nbsp; <span class="text-brand-accent font-semibold">KvK:</span> {COMPANY_DATA.accreditations.kvk}
           </div>
         </div>
       </div>
 
-      <!-- Kolom 2: Hypotheken Sub-Silo's (2.2 cols) -->
-      <div class="lg:col-span-2 space-y-3">
-        <h3 class="text-xs font-bold text-white uppercase tracking-wider font-sans border-b border-white/10 pb-2">Hypotheken</h3>
-        <ul class="space-y-2 text-slate-350 text-xs font-sans">
-          <li><a href="/diensten/startershypotheek" class="hover:text-brand-accent transition-colors block">Startershypotheek</a></li>
-          <li><a href="/diensten/doorstromers-overbrugging" class="hover:text-brand-accent transition-colors block">Doorstromers & Overbrugging</a></li>
-          <li><a href="/diensten/hypotheek-oversluiten" class="hover:text-brand-accent transition-colors block">Hypotheek Oversluiten</a></li>
-          <li><a href="/diensten/overwaarde-verzilveren" class="hover:text-brand-accent transition-colors block">Overwaarde & Senioren</a></li>
-          <li><a href="/diensten/zzp-ondernemers-hypotheek" class="hover:text-brand-accent transition-colors block">ZZP & Ondernemers</a></li>
-          <li><a href="/diensten/nieuwbouw-hypotheek" class="hover:text-brand-accent transition-colors block">Nieuwbouwhypotheek</a></li>
-          <li><a href="/diensten/hypotheek-verduurzamen" class="hover:text-brand-accent transition-colors block">Verduurzaming & Energie</a></li>
-          <li><a href="/diensten/hypotheek-bij-scheiding" class="hover:text-brand-accent transition-colors block">Hypotheek bij Scheiden</a></li>
-          <li class="pt-1">
-            <a href="/hypotheken" class="text-brand-accent hover:text-white font-semibold text-[11px] uppercase tracking-wider block">
-              Alle hypotheken ➔
-            </a>
-          </li>
-        </ul>
-      </div>
+      <!-- Rechterkolom: 3 Brede Navigatiekolommen (7 cols / ~58%) -->
+      <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-6 lg:gap-8">
+        
+        <!-- Subkolom 1: Hypotheken -->
+        <div class="space-y-3">
+          <h3 class="!font-sans text-sm font-semibold text-white tracking-normal mb-3 keep-words">Hypotheken</h3>
+          <ul class="space-y-2 text-slate-300 text-xs font-sans">
+            <li><a href="/diensten/startershypotheek" class="hover:text-brand-accent transition-colors block">Startershypotheek</a></li>
+            <li><a href="/diensten/doorstromers-overbrugging" class="hover:text-brand-accent transition-colors block">Doorstromers & Overbrugging</a></li>
+            <li><a href="/diensten/hypotheek-oversluiten" class="hover:text-brand-accent transition-colors block">Hypotheek Oversluiten</a></li>
+            <li><a href="/diensten/overwaarde-verzilveren" class="hover:text-brand-accent transition-colors block">Overwaarde & Senioren</a></li>
+            <li><a href="/diensten/zzp-ondernemers-hypotheek" class="hover:text-brand-accent transition-colors block">ZZP & Ondernemers</a></li>
+            <li><a href="/diensten/nieuwbouw-hypotheek" class="hover:text-brand-accent transition-colors block">Nieuwbouwhypotheek</a></li>
+            <li><a href="/diensten/hypotheek-verduurzamen" class="hover:text-brand-accent transition-colors block">Verduurzaming & Energie</a></li>
+            <li><a href="/diensten/hypotheek-bij-scheiding" class="hover:text-brand-accent transition-colors block">Hypotheek bij Scheiden</a></li>
+            <li class="pt-1">
+              <a href="/hypotheken" class="text-brand-accent hover:text-white font-semibold text-xs tracking-wide block">
+                Alle hypotheken ➔
+              </a>
+            </li>
+          </ul>
+        </div>
 
-      <!-- Kolom 3: Verzekeringen & Vermogen (2.1 cols) -->
-      <div class="lg:col-span-2 space-y-3">
-        <h3 class="text-xs font-bold text-white uppercase tracking-wider font-sans border-b border-white/10 pb-2">Verzekeringen</h3>
-        <ul class="space-y-2 text-slate-350 text-xs font-sans">
-          <li><a href="/diensten/aov-zzp-verzekering" class="hover:text-brand-accent transition-colors block">AOV voor Ondernemers</a></li>
-          <li><a href="/diensten/woonverzekeringen" class="hover:text-brand-accent transition-colors block">Opstal & Inboedel</a></li>
-          <li><a href="/diensten/overlijdensrisicoverzekering" class="hover:text-brand-accent transition-colors block">Overlijdensrisico (ORV)</a></li>
-          <li><a href="/diensten/zakelijke-verzekeringen" class="hover:text-brand-accent transition-colors block">Zakelijke Verzekeringen</a></li>
-          <li><a href="/diensten/vermogensbeheer" class="hover:text-brand-accent transition-colors block">Vermogen & Pensioen</a></li>
-          <li><a href="/aangiften" class="hover:text-brand-accent transition-colors block">Belastingaangifte</a></li>
-          <li class="pt-1">
-            <a href="/verzekeringen" class="text-brand-accent hover:text-white font-semibold text-[11px] uppercase tracking-wider block">
-              Alle verzekeringen ➔
-            </a>
-          </li>
-        </ul>
-      </div>
+        <!-- Subkolom 2: Verzekeringen -->
+        <div class="space-y-3">
+          <h3 class="!font-sans text-sm font-semibold text-white tracking-normal mb-3 keep-words">Verzekeringen</h3>
+          <ul class="space-y-2 text-slate-300 text-xs font-sans">
+            <li><a href="/diensten/aov-zzp-verzekering" class="hover:text-brand-accent transition-colors block">AOV voor Ondernemers</a></li>
+            <li><a href="/diensten/woonverzekeringen" class="hover:text-brand-accent transition-colors block">Opstal & Inboedel</a></li>
+            <li><a href="/diensten/overlijdensrisicoverzekering" class="hover:text-brand-accent transition-colors block">Overlijdensrisico (ORV)</a></li>
+            <li><a href="/diensten/zakelijke-verzekeringen" class="hover:text-brand-accent transition-colors block">Zakelijke Verzekeringen</a></li>
+            <li><a href="/diensten/vermogensbeheer" class="hover:text-brand-accent transition-colors block">Vermogen & Pensioen</a></li>
+            <li><a href="/aangiften" class="hover:text-brand-accent transition-colors block">Belastingaangifte</a></li>
+            <li class="pt-1">
+              <a href="/verzekeringen" class="text-brand-accent hover:text-white font-semibold text-xs tracking-wide block">
+                Alle verzekeringen ➔
+              </a>
+            </li>
+          </ul>
+        </div>
 
-      <!-- Kolom 4: Werkgebied Regio (2.2 cols) -->
-      <div class="lg:col-span-2 space-y-3">
-        <h3 class="text-xs font-bold text-white uppercase tracking-wider font-sans border-b border-white/10 pb-2">Werkgebied</h3>
-        <ul class="space-y-2 text-slate-350 text-xs font-sans">
-          <li><a href="/hypotheekadviseur-in/moerkapelle" class="hover:text-brand-accent transition-colors block font-medium text-white">Moerkapelle <span class="text-brand-accent text-[10px]">(Kantoor)</span></a></li>
-          <li><a href="/hypotheekadviseur-in/zevenhuizen" class="hover:text-brand-accent transition-colors block">Zevenhuizen</a></li>
-          <li><a href="/hypotheekadviseur-in/waddinxveen" class="hover:text-brand-accent transition-colors block">Waddinxveen</a></li>
-          <li><a href="/hypotheekadviseur-in/gouda" class="hover:text-brand-accent transition-colors block">Gouda</a></li>
-          <li><a href="/hypotheekadviseur-in/zoetermeer" class="hover:text-brand-accent transition-colors block">Zoetermeer</a></li>
-          <li><a href="/hypotheekadviseur-in/nieuwerkerk-ad-ijssel" class="hover:text-brand-accent transition-colors block">Nieuwerkerk a/d IJssel</a></li>
-          <li><a href="/hypotheekadviseur-in/moordrecht" class="hover:text-brand-accent transition-colors block">Moordrecht</a></li>
-          <li><a href="/hypotheekadviseur-in/lansingerland" class="hover:text-brand-accent transition-colors block">Lansingerland</a></li>
-          <li class="pt-1">
-            <a href="/locaties" class="text-brand-accent hover:text-white font-semibold text-[11px] uppercase tracking-wider block">
-              Alle locaties ➔
-            </a>
-          </li>
-        </ul>
-      </div>
+        <!-- Subkolom 3: Werkgebied & Kennisbank -->
+        <div class="space-y-3">
+          <h3 class="!font-sans text-sm font-semibold text-white tracking-normal mb-3 keep-words">Werkgebied</h3>
+          <ul class="space-y-2 text-slate-300 text-xs font-sans">
+            <li><a href="/hypotheekadviseur-in/moerkapelle" class="hover:text-brand-accent transition-colors block font-medium text-white">Moerkapelle <span class="text-brand-accent text-[11px] font-semibold">(Kantoor)</span></a></li>
+            <li><a href="/hypotheekadviseur-in/zevenhuizen" class="hover:text-brand-accent transition-colors block">Zevenhuizen</a></li>
+            <li><a href="/hypotheekadviseur-in/waddinxveen" class="hover:text-brand-accent transition-colors block">Waddinxveen</a></li>
+            <li><a href="/hypotheekadviseur-in/gouda" class="hover:text-brand-accent transition-colors block">Gouda</a></li>
+            <li><a href="/hypotheekadviseur-in/zoetermeer" class="hover:text-brand-accent transition-colors block">Zoetermeer</a></li>
+            <li><a href="/hypotheekadviseur-in/nieuwerkerk-ad-ijssel" class="hover:text-brand-accent transition-colors block">Nieuwerkerk a/d IJssel</a></li>
+            <li><a href="/hypotheekadviseur-in/moordrecht" class="hover:text-brand-accent transition-colors block">Moordrecht</a></li>
+            <li><a href="/hypotheekadviseur-in/lansingerland" class="hover:text-brand-accent transition-colors block">Lansingerland</a></li>
+            <li class="pt-1">
+              <a href="/locaties" class="text-brand-accent hover:text-white font-semibold text-xs tracking-wide block">
+                Alle locaties ➔
+              </a>
+            </li>
+          </ul>
 
-      <!-- Kolom 5: Kennis & Gidsen (2.5 cols) -->
-      <div class="lg:col-span-3 space-y-3">
-        <h3 class="text-xs font-bold text-white uppercase tracking-wider font-sans border-b border-white/10 pb-2">Kennis & Advies</h3>
-        <ul class="space-y-2 text-slate-350 text-xs font-sans">
-          <li><a href="/kennisbank/hoe-werkt-overbruggingshypotheek" class="hover:text-brand-accent transition-colors block">Overbruggingshypotheek uitleg</a></li>
-          <li><a href="/kennisbank/boeterente-oversluiten-berekenen" class="hover:text-brand-accent transition-colors block">Boeterente & Kosten oversluiten</a></li>
-          <li><a href="/kennisbank/starterslening-gemeente-aanvragen" class="hover:text-brand-accent transition-colors block">Starterslening per gemeente</a></li>
-          <li><a href="/kennisbank/opeethypotheek-senioren-voorwaarden" class="hover:text-brand-accent transition-colors block">Opeethypotheek voor senioren</a></li>
-          <li><a href="/kennisbank/hypotheek-als-zzper-jaarcijfers" class="hover:text-brand-accent transition-colors block">Hypotheek als ZZP'er</a></li>
-          <li><a href="/kennisbank/energiebespaarbudget-hypotheek" class="hover:text-brand-accent transition-colors block">Energiebespaarbudget (EBB)</a></li>
-          <li class="pt-1">
-            <a href="/kennisbank" class="text-brand-accent hover:text-white font-semibold text-[11px] uppercase tracking-wider block">
-              Naar de Kennisbank ➔
+          <div class="pt-3 border-t border-white/10 mt-3">
+            <a href="/kennisbank" class="text-brand-accent hover:text-white font-semibold text-xs tracking-wide flex items-center space-x-1 transition-colors">
+              <span>Kennisbank & Gidsen</span>
+              <span>➔</span>
             </a>
-          </li>
-        </ul>
+          </div>
+        </div>
+
       </div>
 
     </div>
 
     <!-- Sub-footer & Legal -->
-    <div class="pt-8 flex flex-col sm:flex-row justify-between items-center text-[11px] text-slate-400 gap-4 font-sans text-center sm:text-left">
-      <p>© {currentYear} Spekadvies • Herenweg 42, 2751 DB Moerkapelle. 100% Onafhankelijk bemiddelaar.</p>
+    <div class="pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-300 gap-4 font-sans text-center sm:text-left">
+      <p class="text-slate-300">© {currentYear} Spekadvies • Herenweg 42, 2751 DB Moerkapelle. 100% Onafhankelijk bemiddelaar.</p>
       <div class="flex flex-wrap justify-center sm:justify-start gap-4 sm:space-x-6 sm:gap-0">
-        <a href="/docs/Vergelijkingskaart.pdf" target="_blank" rel="noopener noreferrer" class="hover:text-brand-accent transition-colors">
+        <a href="/docs/Vergelijkingskaart.pdf" target="_blank" rel="noopener noreferrer" class="text-slate-300 hover:text-white transition-colors">
           Dienstverleningsdocument / Vergelijkingskaart (PDF)
         </a>
-        <a href="/klantenservice" class="hover:text-brand-accent transition-colors">Klantenservice</a>
-        <a href="/over-ons" class="hover:text-brand-accent transition-colors">Over ons</a>
+        <a href="/kennisbank" class="text-slate-300 hover:text-white transition-colors">Kennisbank</a>
+        <a href="/klantenservice" class="text-slate-300 hover:text-white transition-colors">Klantenservice</a>
+        <a href="/over-ons" class="text-slate-300 hover:text-white transition-colors">Over ons</a>
       </div>
     </div>
 
