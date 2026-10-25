@@ -34,35 +34,35 @@ const features = [
 import SectionDivider from './SectionDivider.astro';
 ---
 
-<section class="w-full bg-[#0b1a2f] border-t border-white/10 relative z-30 -mt-4 sm:-mt-6 pb-20 sm:pb-24 lg:pb-28">
+<section class="w-full bg-[#f8fafc] border-t border-slate-200/80 relative z-30 pb-20 sm:pb-24 lg:pb-28">
   
-  <!-- Decorative background glow -->
-  <div class="absolute -right-24 -top-24 w-96 h-96 rounded-full bg-brand-accent/5 blur-3xl pointer-events-none"></div>
+  <!-- Subtle decorative ambient glow -->
+  <div class="absolute -right-24 -top-24 w-96 h-96 rounded-full bg-amber-500/5 blur-3xl pointer-events-none"></div>
 
   <!-- Tab positioning relative to the max-w container -->
   <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative h-0">
-    <!-- 30K Customers Overlapping Tab (Offset to the right on desktop, centered on mobile) -->
-    <div class="absolute -top-[53px] left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:right-[26%] lg:right-[28%] h-[54px] bg-[#0b1a2f] rounded-t-[24px] border-t border-l border-r border-white/10 flex items-center justify-center px-6 z-25 flex-shrink-0">
+    <!-- 20+ Jaar Ervaring Overlapping Tab -->
+    <div class="absolute -top-[53px] left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:right-[26%] lg:right-[28%] h-[54px] bg-[#f8fafc] rounded-t-[24px] border-t border-l border-r border-slate-200/80 flex items-center justify-center px-6 z-25 flex-shrink-0 shadow-xs">
       
       <!-- Left Concave Curve SVG -->
       <svg class="absolute bottom-0 right-full w-6 h-6 pointer-events-none" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M24 24V0C24 13.2548 13.2548 24 0 24H24Z" fill="#0b1a2f"/>
-        <path d="M0 24C13.2548 24 24 13.2548 24 0" stroke="rgba(255,255,255,0.1)" stroke-width="1.2"/>
+        <path d="M24 24V0C24 13.2548 13.2548 24 0 24H24Z" fill="#f8fafc"/>
+        <path d="M0 24C13.2548 24 24 13.2548 24 0" stroke="rgba(226,232,240,0.9)" stroke-width="1.2"/>
       </svg>
 
       <!-- Right Concave Curve SVG -->
       <svg class="absolute bottom-0 left-full w-6 h-6 pointer-events-none" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0 24V0C0 13.2548 10.7452 24 24 24H0Z" fill="#0b1a2f"/>
-        <path d="M24 24C10.7452 24 0 13.2548 0 0" stroke="rgba(255,255,255,0.1)" stroke-width="1.2"/>
+        <path d="M0 24V0C0 13.2548 10.7452 24 24 24H0Z" fill="#f8fafc"/>
+        <path d="M24 24C10.7452 24 0 13.2548 0 0" stroke="rgba(226,232,240,0.9)" stroke-width="1.2"/>
       </svg>
 
       <!-- Tab Content (Using premium experience badge icon) -->
       <div class="flex items-center space-x-2">
-        <svg class="h-[20px] w-[20px] text-brand-accent flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <svg class="h-[20px] w-[20px] text-amber-500 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
         </svg>
-        <span class="text-[9px] sm:text-[10px] font-semibold tracking-widest uppercase text-white font-display whitespace-nowrap">
-          20+ Jaar Ervaring
+        <span class="text-[9px] sm:text-[10px] font-semibold tracking-widest uppercase text-slate-800 font-display whitespace-nowrap">
+          20+ Jaar Ervaring in de Regio
         </span>
       </div>
     </div>
@@ -74,7 +74,7 @@ import SectionDivider from './SectionDivider.astro';
     <!-- 3 Stepped Cards Grid -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
       {features.map((feat, index) => (
-        <div class="feature-card relative w-full max-w-[360px] mx-auto min-h-[330px] transition-all duration-300 hover:-translate-y-3 group filter drop-shadow-[0_10px_20px_rgba(0,0,0,0.3)]">
+        <div class="feature-card relative w-full max-w-[360px] mx-auto min-h-[330px] transition-all duration-300 hover:-translate-y-3 group filter drop-shadow-[0_10px_25px_rgba(21,59,104,0.06)]">
           
           <!-- Outer Card Container -->
           <div class="relative w-full h-[330px]">
@@ -88,6 +88,11 @@ import SectionDivider from './SectionDivider.astro';
               <!-- Content wrapper -->
               <div class="relative z-10 flex flex-col justify-between h-full p-8 pt-12 pb-8">
                 <div>
+                  <!-- Badge -->
+                  <span class="text-[10px] font-bold tracking-widest uppercase text-amber-600 font-sans mb-1.5 block">
+                    {feat.badge}
+                  </span>
+
                   <!-- Title -->
                   <h3 class="feature-card__title" set:html={feat.title}></h3>
                   
@@ -105,7 +110,7 @@ import SectionDivider from './SectionDivider.astro';
 
                   <a 
                     href={feat.link}
-                    class="feature-card__link cursor-pointer w-full text-left bg-transparent border-none focus:outline-none flex items-center justify-between p-0"
+                    class="feature-card__link cursor-pointer w-full text-left bg-transparent border-none focus:outline-none flex items-center justify-between p-0 font-semibold text-slate-800 hover:text-brand-dark transition-colors"
                   >
                     <span>{feat.linkText}</span>
                     <span class="inline-block ml-2 group-hover:translate-x-1.5 transition-transform duration-200">→</span>
@@ -119,12 +124,12 @@ import SectionDivider from './SectionDivider.astro';
               <!-- Backing circle to fill the circular card mask cutout -->
               <div class="badge-cutout-fill absolute inset-0 rounded-full"></div>
               
-              <!-- Outer border logo shape (Middel 6.svg path literally) -->
-              <svg class="absolute w-[72px] h-[74.7px] text-[#0b1a2f]" viewBox="0 0 80.08 83.08" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <!-- Outer border logo shape (Matches section background #f8fafc) -->
+              <svg class="absolute w-[72px] h-[74.7px] text-[#f8fafc]" viewBox="0 0 80.08 83.08" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <path d="M40.04,83.08c-10.9,0-19.76-8.87-19.76-19.76,0-.17,0-.35.01-.53-.18,0-.36.01-.53.01C8.86,62.8,0,53.93,0,43.04s8.86-19.76,19.76-19.76c.17,0,.35,0,.53.01,0-.18-.01-.36-.01-.53,0-8.08,10.41-17.07,16.61-21.7,1.88-1.41,4.42-1.41,6.3,0,6.2,4.64,16.61,13.62,16.61,21.7,0,.17,0,.35-.01.53.18,0,.36-.01.53-.01,10.9,0,19.76,8.86,19.76,19.76s-8.86,19.76-19.76,19.76c-.17,0-.35,0-.53-.01,0,.18.01.36.01.53,0,10.9-8.86,19.76-19.76,19.76ZM21.62,61.45l-.07.74c-.04.38-.06.76-.06,1.13,0,10.23,8.32,18.55,18.55,18.55s18.55-8.32,18.55-18.55c0-.36-.02-.74-.06-1.13l-.07-.73.73.07c.38.04.76.06,1.13.06,10.23,0,18.55-8.32,18.55-18.55s-8.32-18.55-18.55-18.55c-.36,0-.74.02-1.13.06l-.73.07.07-.73c.04-.39.06-.77.06-1.13,0-7.84-11.28-17.11-16.12-20.73-1.45-1.08-3.4-1.08-4.84,0-4.85,3.62-16.12,12.89-16.12,20.73,0,.36.02.74.06,1.12l.07.73-.73-.07c-.39-.04-.77-.06-1.13-.06-10.23,0-18.55,8.32-18.55,18.55s8.32,18.55,18.55,18.55c.36,0,.74-.02,1.13-.06l.74-.07Z"/>
               </svg>
  
-              <!-- Inner solid logo shape (Middel 7.svg path literally) -->
+              <!-- Inner solid logo shape -->
               <svg class="badge-bg absolute w-[72px] h-[74.7px]" viewBox="0 0 80.08 83.08" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <path d="M80.08,43.04c0,10.89-8.87,19.76-19.76,19.76-.18,0-.35-.01-.53-.02,0,.18.01.36.01.53,0,10.9-8.87,19.77-19.76,19.77s-19.76-8.87-19.76-19.77c0-.17,0-.35.01-.53-.18,0-.36.02-.53.02C8.86,62.8,0,53.93,0,43.04s8.86-19.76,19.76-19.76c.17,0,.35,0,.53,0-.01-.18-.01-.36-.01-.53,0-8.09,10.4-17.07,16.61-21.71,1.88-1.4,4.41-1.4,6.3,0,6.2,4.64,16.61,13.62,16.61,21.71,0,.17-.01.35-.01.53.18,0,.35,0,.53,0,10.89,0,19.76,8.86,19.76,19.76Z"/>
               </svg>
@@ -142,27 +147,27 @@ import SectionDivider from './SectionDivider.astro';
     </div>
 
     <!-- Dedicated Quick Service Bar for Existing Clients (Schade melden & FinSave) -->
-    <div class="mt-12 p-4 sm:p-5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md flex flex-col md:flex-row items-center justify-between gap-4 max-w-4xl mx-auto text-center md:text-left">
+    <div class="mt-12 p-4 sm:p-5 rounded-2xl bg-white border border-slate-200/90 shadow-sm flex flex-col md:flex-row items-center justify-between gap-4 max-w-4xl mx-auto text-center md:text-left">
       <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-brand-accent flex-shrink-0">
+        <div class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center text-slate-700 flex-shrink-0">
           <i class="fa-solid fa-headset text-base"></i>
         </div>
         <div>
-          <span class="text-xs sm:text-sm font-semibold text-white font-sans block">Al klant bij Spekadvies?</span>
-          <span class="text-[11px] sm:text-xs text-slate-300 font-sans">Meld direct schade of bekijk je lopende dossier en polissen in FinSave.</span>
+          <span class="text-xs sm:text-sm font-semibold text-slate-900 font-sans block">Al klant bij Spekadvies?</span>
+          <span class="text-[11px] sm:text-xs text-slate-500 font-sans">Meld direct schade of bekijk je lopende dossier en documenten online in FinSave.</span>
         </div>
       </div>
       <div class="flex items-center gap-2.5 flex-wrap justify-center flex-shrink-0">
         <button 
           data-modal-trigger="schade" 
-          class="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white text-xs font-semibold font-sans transition-colors cursor-pointer border border-white/15 inline-flex items-center gap-1.5"
+          class="px-4 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold font-sans transition-colors cursor-pointer border border-slate-200 inline-flex items-center gap-1.5"
         >
-          <i class="fa-solid fa-triangle-exclamation text-amber-400"></i>
+          <i class="fa-solid fa-triangle-exclamation text-amber-600"></i>
           <span>Schade melden</span>
         </button>
         <button 
           data-modal-trigger="inloggen" 
-          class="px-4 py-2 rounded-xl bg-brand-primary hover:bg-brand-primary-hover text-brand-dark text-xs font-bold font-sans transition-colors cursor-pointer inline-flex items-center gap-1.5"
+          class="px-4 py-2 rounded-xl bg-slate-900 hover:bg-brand-dark text-white text-xs font-semibold font-sans transition-colors cursor-pointer inline-flex items-center gap-1.5 shadow-sm"
         >
           <i class="fa-solid fa-user-lock"></i>
           <span>FinSave inloggen</span>
@@ -170,60 +175,60 @@ import SectionDivider from './SectionDivider.astro';
       </div>
     </div>
 
-    <!-- Trusted Partners Banner (Authentic Vector Logos & Trust Badges) -->
-    <div class="mt-14 pt-10 border-t border-white/10 flex flex-col lg:flex-row items-center justify-between gap-8">
-      <div class="flex-shrink-0 text-white/60 font-display text-[9px] sm:text-[10px] font-semibold tracking-widest uppercase leading-tight text-center lg:text-left">
-        SAMENWERKING MET<br><span class="text-brand-accent font-bold">40+ GELDVERSTREKKERS</span>
+    <!-- Trusted Partners Banner (Light Theme - Crisp Vector Logos & Trust Badges) -->
+    <div class="mt-14 pt-10 border-t border-slate-200/80 flex flex-col lg:flex-row items-center justify-between gap-8">
+      <div class="flex-shrink-0 text-slate-500 font-display text-[9px] sm:text-[10px] font-semibold tracking-widest uppercase leading-tight text-center lg:text-left">
+        SAMENWERKING MET<br><span class="text-slate-900 font-bold">40+ GELDVERSTREKKERS</span>
       </div>
 
-      <!-- Vector Partner Logos Row -->
-      <div class="w-full lg:w-auto flex flex-wrap items-center justify-center lg:justify-end gap-x-8 sm:gap-x-10 gap-y-5 text-white/50 select-none">
+      <!-- Vector Partner Logos Row (Dark/Monochrome on Light Background) -->
+      <div class="w-full lg:w-auto flex flex-wrap items-center justify-center lg:justify-end gap-x-8 sm:gap-x-10 gap-y-5 text-slate-500 select-none">
         
         <!-- Rabobank -->
-        <div class="flex items-center gap-2 hover:text-white transition-colors duration-300 cursor-default">
-          <svg class="w-5 h-5 fill-current text-amber-400" viewBox="0 0 24 24">
+        <div class="flex items-center gap-2 hover:text-slate-900 transition-colors duration-300 cursor-default">
+          <svg class="w-5 h-5 fill-current text-amber-600" viewBox="0 0 24 24">
             <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
             <circle cx="12" cy="12" r="4" fill="currentColor"/>
           </svg>
-          <span class="font-sans font-bold text-base tracking-tight">Rabobank</span>
+          <span class="font-sans font-bold text-base tracking-tight text-slate-800">Rabobank</span>
         </div>
 
         <!-- ING -->
-        <div class="flex items-center gap-1.5 hover:text-white transition-colors duration-300 cursor-default">
-          <svg class="w-5 h-5 fill-current text-orange-400" viewBox="0 0 24 24">
+        <div class="flex items-center gap-1.5 hover:text-slate-900 transition-colors duration-300 cursor-default">
+          <svg class="w-5 h-5 fill-current text-orange-500" viewBox="0 0 24 24">
             <path d="M4 18c2-4 5-8 10-8 2 0 4 1 6 3-1-3-3-6-7-7-5-1-9 3-11 8 0 1 1 3 2 4z"/>
           </svg>
-          <span class="font-sans font-extrabold text-lg tracking-tight">ING</span>
+          <span class="font-sans font-extrabold text-lg tracking-tight text-slate-800">ING</span>
         </div>
 
         <!-- ABN AMRO -->
-        <div class="flex items-center gap-2 hover:text-white transition-colors duration-300 cursor-default">
-          <svg class="w-4 h-5 fill-current text-emerald-400" viewBox="0 0 20 24">
+        <div class="flex items-center gap-2 hover:text-slate-900 transition-colors duration-300 cursor-default">
+          <svg class="w-4 h-5 fill-current text-emerald-600" viewBox="0 0 20 24">
             <polygon points="10,0 20,8 16,24 4,24 0,8"/>
           </svg>
-          <span class="font-sans font-bold text-sm tracking-wider">ABN AMRO</span>
+          <span class="font-sans font-bold text-sm tracking-wider text-slate-800">ABN AMRO</span>
         </div>
 
         <!-- Florius -->
-        <div class="flex items-center gap-1.5 hover:text-white transition-colors duration-300 cursor-default">
-          <svg class="w-5 h-5 fill-current text-pink-400" viewBox="0 0 24 24">
+        <div class="flex items-center gap-1.5 hover:text-slate-900 transition-colors duration-300 cursor-default">
+          <svg class="w-5 h-5 fill-current text-pink-600" viewBox="0 0 24 24">
             <circle cx="8" cy="8" r="4"/>
             <circle cx="16" cy="8" r="4"/>
             <circle cx="8" cy="16" r="4"/>
             <circle cx="16" cy="16" r="4"/>
           </svg>
-          <span class="font-sans font-semibold text-base tracking-tight">Florius</span>
+          <span class="font-sans font-semibold text-base tracking-tight text-slate-800">Florius</span>
         </div>
 
         <!-- a.s.r. -->
-        <div class="flex items-center gap-1.5 hover:text-white transition-colors duration-300 cursor-default">
-          <span class="font-sans font-bold text-base tracking-normal">a.s.r.</span>
+        <div class="flex items-center gap-1.5 hover:text-slate-900 transition-colors duration-300 cursor-default">
+          <span class="font-sans font-bold text-base tracking-normal text-slate-800">a.s.r.</span>
         </div>
 
         <!-- AFM & Erkend Keurmerk Badge -->
-        <div class="hidden sm:flex items-center gap-2 pl-4 border-l border-white/15 text-xs text-slate-300">
-          <i class="fa-solid fa-shield-halved text-brand-accent text-sm"></i>
-          <span class="font-medium text-[11px] leading-tight text-left">AFM Vergunning<br><span class="text-white/50 text-[10px]">Erkend Adviseur</span></span>
+        <div class="hidden sm:flex items-center gap-2 pl-4 border-l border-slate-200 text-xs text-slate-600">
+          <i class="fa-solid fa-shield-halved text-amber-600 text-sm"></i>
+          <span class="font-medium text-[11px] leading-tight text-left text-slate-700">AFM Vergunning<br><span class="text-slate-400 text-[10px]">Erkend Adviseur</span></span>
         </div>
 
       </div>

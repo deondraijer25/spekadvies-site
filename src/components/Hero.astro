@@ -1,82 +1,118 @@
 ---
 ---
-<section class="relative pt-16 pb-20 sm:pt-24 sm:pb-32 lg:pt-32 lg:pb-36 overflow-hidden bg-[#0b1a2f] flex items-center justify-center min-h-[580px] sm:min-h-[640px] lg:min-h-[680px]">
-  <!-- Luminous background blur glows -->
-  <div class="absolute left-1/4 top-1/4 w-[450px] h-[450px] rounded-full bg-brand-primary/10 blur-[130px] pointer-events-none"></div>
-  <div class="absolute right-1/4 bottom-1/4 w-[350px] h-[350px] rounded-full bg-brand-dark/30 blur-[100px] pointer-events-none"></div>
+<section class="relative pt-8 pb-16 sm:pt-12 sm:pb-20 lg:pt-16 lg:pb-24 overflow-hidden bg-white">
+  <!-- Subtle soft ambient background accents -->
+  <div class="absolute top-0 right-1/4 w-[500px] h-[500px] rounded-full bg-sky-50/80 blur-[120px] pointer-events-none -z-10"></div>
+  <div class="absolute bottom-0 left-10 w-[400px] h-[400px] rounded-full bg-amber-50/60 blur-[100px] pointer-events-none -z-10"></div>
 
-  <!-- Full-screen Desktop/Mobile Background Hero Video -->
-  <div class="absolute inset-0 w-full h-full z-0 select-none overflow-hidden">
-    <!-- Balanced dark navy gradient overlay ensuring high legibility and calm atmosphere -->
-    <div class="absolute inset-0 bg-gradient-to-b from-[#0b1a2f]/90 via-[#0b1a2f]/75 to-[#0b1a2f] z-10"></div>
-    <video 
-      autoplay 
-      loop 
-      muted 
-      playsinline 
-      class="w-full h-full object-cover object-center scale-105 opacity-40"
-      poster="/assets/spekadvies-hero.png"
-    >
-      <source src="/videos/hero-video.mp4" type="video/mp4" />
-    </video>
-  </div>
-
-  <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 relative z-10 flex flex-col items-center justify-center text-center">
-    <div class="max-w-3xl flex flex-col items-center space-y-6 sm:space-y-7 animate-fade-in-up relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 relative z-10">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 xl:gap-16 items-center">
       
-      <!-- Eyebrow Pill Badge -->
-      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-primary/15 border border-brand-primary/30 text-brand-primary text-xs sm:text-sm font-sans font-semibold tracking-wide backdrop-blur-md">
-        <i class="fa-solid fa-star text-[11px] text-brand-primary"></i>
-        <span>Onafhankelijk Hypotheekadvies • Moerkapelle & Regio</span>
+      <!-- Left Column: Typography, Value Proposition & Actions -->
+      <div class="lg:col-span-7 flex flex-col justify-center space-y-6 sm:space-y-7 text-left">
+        
+        <!-- Eyebrow Sub-tag -->
+        <div class="inline-flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+          <span class="text-xs sm:text-[13px] font-semibold uppercase tracking-widest text-slate-500 font-sans">
+            Onafhankelijk Hypotheekadvies in jouw regio
+          </span>
+        </div>
+
+        <!-- Main Headline (Crisp, semi-bold, AdeptMort style) -->
+        <h1 class="text-3xl sm:text-5xl lg:text-[54px] font-semibold text-slate-900 tracking-tight leading-[1.12] font-display">
+          BETROUWBAAR, ONAFHANKELIJK <span class="text-brand-dark underline decoration-brand-accent decoration-4 underline-offset-8">HYPOTHEEK</span> ADVIES.
+        </h1>
+
+        <!-- Subheading Paragraph -->
+        <p class="text-slate-600 text-base sm:text-lg leading-relaxed max-w-xl font-sans font-normal">
+          Deskundig en persoonlijk advies voor jouw eerste koopwoning, doorstroming of oversluiting. Wij vergelijken meer dan 40 aanbieders voor de beste voorwaarden en laagste maandlasten.
+        </p>
+
+        <!-- CTA Pill Buttons -->
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 pt-2">
+          <!-- Primary Dark Navy Pill Button -->
+          <button 
+            class="open-contact-drawer group inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-slate-900 hover:bg-brand-dark text-white font-semibold font-sans text-sm sm:text-base shadow-lg shadow-slate-900/10 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 cursor-pointer"
+          >
+            <span>Plan gratis kennismaking</span>
+            <span class="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center text-xs group-hover:translate-x-1 transition-transform">
+              →
+            </span>
+          </button>
+
+          <!-- Secondary Light Outline Pill Button -->
+          <a 
+            href="tel:+31795931241" 
+            class="inline-flex items-center justify-center gap-2.5 px-6 py-4 rounded-full bg-slate-100 hover:bg-slate-200/80 text-slate-800 font-semibold font-sans text-sm sm:text-base border border-slate-200/80 transition-all duration-300"
+          >
+            <i class="fa-solid fa-phone text-slate-500 text-xs"></i>
+            <span>079 593 1241</span>
+          </a>
+        </div>
+
+        <!-- Metric Stats Row (Matching AdeptMort 3-stat format) -->
+        <div class="pt-8 sm:pt-10 border-t border-slate-200/80 grid grid-cols-3 gap-4 max-w-lg">
+          <div>
+            <div class="text-2xl sm:text-3xl font-semibold text-slate-900 font-display">150+</div>
+            <div class="text-[11px] sm:text-xs text-slate-500 font-sans mt-0.5 leading-snug">Tevreden kopers</div>
+          </div>
+          <div>
+            <div class="text-2xl sm:text-3xl font-semibold text-slate-900 font-display">40+</div>
+            <div class="text-[11px] sm:text-xs text-slate-500 font-sans mt-0.5 leading-snug">Banken vergeleken</div>
+          </div>
+          <div>
+            <div class="text-2xl sm:text-3xl font-semibold text-slate-900 font-display flex items-baseline gap-1">
+              <span>9.4</span>
+              <span class="text-amber-500 text-sm font-normal">★★★★★</span>
+            </div>
+            <div class="text-[11px] sm:text-xs text-slate-500 font-sans mt-0.5 leading-snug">Klantbeoordeling</div>
+          </div>
+        </div>
+
       </div>
 
-      <!-- Main Headline (Max Semi-Bold 600) -->
-      <h1 class="text-3xl sm:text-5xl lg:text-[52px] font-semibold text-white tracking-tight leading-[1.2] font-display max-w-3xl">
-        Jouw droomhuis & toekomst perfect geregeld.
-      </h1>
-      
-      <!-- Subheading (Clear Value Proposition) -->
-      <p class="text-slate-200 text-sm sm:text-lg leading-relaxed max-w-2xl font-sans font-normal px-2">
-        Eerlijk, deskundig en 100% onafhankelijk advies met échte persoonlijke aandacht. Wij vergelijken meer dan 40 aanbieders voor de laagste rente en beste voorwaarden.
-      </p>
+      <!-- Right Column: The Folder Card with Natural Crisp Video -->
+      <div class="lg:col-span-5 relative flex items-center justify-center">
+        
+        <!-- Soft Organic Pastel Backdrop Shape -->
+        <div class="absolute -inset-3 sm:-inset-6 bg-[#e0f2fe]/80 rounded-[44px] sm:rounded-[56px] -rotate-1 pointer-events-none"></div>
+        <div class="absolute -inset-1 sm:-inset-3 bg-[#fef3c7]/60 rounded-[40px] sm:rounded-[52px] rotate-2 pointer-events-none"></div>
 
-      <!-- Conversion CTA Buttons (Primary & Secondary) -->
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4 w-full pt-2">
-        <!-- Primary Gold CTA -->
-        <button 
-          class="open-contact-drawer group w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-brand-primary hover:bg-brand-primary-hover text-brand-dark font-bold font-sans text-sm sm:text-base shadow-[0_10px_25px_rgba(255,206,118,0.35)] hover:shadow-[0_15px_30px_rgba(255,206,118,0.45)] hover:-translate-y-0.5 transition-all duration-300 cursor-pointer"
-        >
-          <span>Plan gratis kennismaking</span>
-          <i class="fa-solid fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
-        </button>
+        <!-- Main Folder Card Container (Asymmetrical top-right folder tab) -->
+        <div class="relative w-full aspect-[4/4.8] sm:aspect-[4/4.6] max-h-[540px] rounded-[36px] sm:rounded-[48px] rounded-tr-[76px] sm:rounded-tr-[100px] border-4 sm:border-8 border-white shadow-2xl overflow-hidden bg-slate-900 z-10 group">
+          
+          <!-- Natural, Crisp Full-Color Video (No heavy dark overlays!) -->
+          <video 
+            autoplay 
+            loop 
+            muted 
+            playsinline 
+            class="w-full h-full object-cover object-center scale-105 group-hover:scale-100 transition-transform duration-700"
+            poster="/assets/spekadvies-hero.png"
+          >
+            <source src="/videos/hero-video.mp4" type="video/mp4" />
+          </video>
 
-        <!-- Secondary Phone CTA -->
-        <a 
-          href="tel:+31795931241" 
-          class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-full bg-white/10 hover:bg-white/15 text-white font-semibold font-sans text-sm sm:text-base border border-white/20 hover:border-white/35 backdrop-blur-md transition-all duration-300 shadow-sm"
-        >
-          <i class="fa-solid fa-phone text-brand-primary text-xs"></i>
-          <span>079 593 1241</span>
-        </a>
-      </div>
+          <!-- Floating Glass Badge: Erkend Hypotheekadvies (Top Left) -->
+          <div class="absolute top-4 left-4 sm:top-6 sm:left-6 px-3.5 py-1.5 rounded-full bg-white/90 backdrop-blur-md shadow-md text-xs font-semibold text-slate-800 flex items-center gap-2 z-20">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span>Erkend Financieel Adviseur</span>
+          </div>
 
-      <!-- Trust stats / Social Proof Row -->
-      <div class="pt-4 flex flex-wrap items-center justify-center gap-x-5 gap-y-2.5 text-xs sm:text-sm text-slate-300 font-sans">
-        <div class="flex items-center space-x-1.5">
-          <span class="text-amber-400 font-bold text-xs tracking-wider">★★★★★</span>
-          <span class="font-bold text-white">9.4</span>
-          <span class="text-slate-300">Klantbeoordeling</span>
+          <!-- Floating Circular Action Button (Bottom Right) -->
+          <button 
+            class="open-contact-drawer absolute bottom-4 right-4 sm:bottom-6 sm:right-6 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-slate-900 hover:bg-brand-dark text-white flex items-center justify-center shadow-xl backdrop-blur-md hover:scale-110 transition-transform duration-300 cursor-pointer z-20 group/btn"
+            aria-label="Plan afspraak"
+            title="Plan gratis adviesgesprek"
+          >
+            <span class="text-base sm:text-lg group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform">
+              ↗
+            </span>
+          </button>
+
         </div>
-        <div class="w-1.5 h-1.5 rounded-full bg-white/25 hidden sm:block"></div>
-        <div class="flex items-center space-x-1.5">
-          <i class="fa-solid fa-check text-brand-primary text-xs"></i>
-          <span>100% Onafhankelijk (40+ banken)</span>
-        </div>
-        <div class="w-1.5 h-1.5 rounded-full bg-white/25 hidden sm:block"></div>
-        <div class="flex items-center space-x-1.5">
-          <i class="fa-solid fa-check text-brand-primary text-xs"></i>
-          <span>Eerste gesprek altijd gratis</span>
-        </div>
+
       </div>
 
     </div>
