@@ -4,8 +4,8 @@ const features = [
     id: 1,
     title: "Eerste huis<br />kopen",
     badge: "Starters",
-    description: "Maximale zekerheid over je leencapaciteit, startersleningen en scherpe actuele hypotheekrente.",
-    linkText: "Startershypotheek",
+    description: "Direct zekerheid over je maximale hypotheek, starterslening en de laagste maandlasten.",
+    linkText: "Bekijk startershypotheek",
     link: "/diensten/startershypotheek",
     icon: "fa-solid fa-house-chimney",
     isGradient: false
@@ -14,7 +14,7 @@ const features = [
     id: 2,
     title: "Doorstromen &<br />oversluiten",
     badge: "Bestaande woning",
-    description: "Verhuis soepel, verzilver je overwaarde of verlaag je maandlasten met de scherpste marktvoorwaarden.",
+    description: "Verhuis soepel naar je volgende woning, benut je overwaarde of verlaag je maandlasten.",
     linkText: "Bereken je voordeel",
     link: "/diensten/doorstromers-overbrugging",
     icon: "fa-solid fa-arrow-trend-up",
@@ -22,10 +22,10 @@ const features = [
   },
   {
     id: 3,
-    title: "ZZP & Ondernemers<br />hypotheek",
-    badge: "Ondernemers",
-    description: "Snel inzicht in jouw zakelijke leencapaciteit. Wij berekenen je toetsinkomen al vanaf 1 jaar cijfers.",
-    linkText: "Ondernemers hypotheek",
+    title: "Hypotheek voor<br />ondernemers",
+    badge: "ZZP & Ondernemers",
+    description: "Snel duidelijkheid over je zakelijke leencapaciteit, al mogelijk vanaf 1 jaar cijfers.",
+    linkText: "Bekijk zakelijke opties",
     link: "/diensten/zzp-ondernemers-hypotheek",
     icon: "fa-solid fa-briefcase",
     isGradient: false
@@ -34,50 +34,66 @@ const features = [
 import SectionDivider from './SectionDivider.astro';
 ---
 
-<section class="w-full bg-[#f8fafc] border-t border-slate-200/80 relative z-30 pb-20 sm:pb-24 lg:pb-28">
+<section id="features-section" class="w-full bg-white relative z-30 pb-20 sm:pb-24 lg:pb-28 overflow-hidden">
   
-  <!-- Subtle decorative ambient glow -->
-  <div class="absolute -right-24 -top-24 w-96 h-96 rounded-full bg-amber-500/5 blur-3xl pointer-events-none"></div>
+  <!-- Subtle baseline faint dot grid continuing seamlessly from Hero -->
+  <div 
+    id="features-dot-grid"
+    class="pointer-events-none absolute inset-0 z-0 opacity-25" 
+    aria-hidden="true"
+    style="background-image: radial-gradient(circle, rgba(148, 163, 184, 0.45) 1px, transparent 1px); background-size: 24px 24px; background-position: 0 var(--dot-offset-y, 0px);"
+  ></div>
 
-  <!-- Tab positioning relative to the max-w container -->
-  <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative h-0">
-    <!-- 20+ Jaar Ervaring Overlapping Tab -->
-    <div class="absolute -top-[53px] left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:right-[26%] lg:right-[28%] h-[54px] bg-[#f8fafc] rounded-t-[24px] border-t border-l border-r border-slate-200/80 flex items-center justify-center px-6 z-25 flex-shrink-0 shadow-xs">
-      
-      <!-- Left Concave Curve SVG -->
-      <svg class="absolute bottom-0 right-full w-6 h-6 pointer-events-none" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M24 24V0C24 13.2548 13.2548 24 0 24H24Z" fill="#f8fafc"/>
-        <path d="M0 24C13.2548 24 24 13.2548 24 0" stroke="rgba(226,232,240,0.9)" stroke-width="1.2"/>
-      </svg>
+  <!-- Interactive Mouse-Following Subtle Orange Glow Gradient & Glowing Stippels -->
+  <div 
+    id="features-mouse-glow" 
+    class="pointer-events-none absolute inset-0 z-0 transition-opacity duration-500 opacity-0 overflow-hidden"
+    aria-hidden="true"
+  >
+    <!-- Soft warm ambient radial gradient following mouse -->
+    <div 
+      class="absolute inset-0"
+      style="background: radial-gradient(550px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(251, 146, 60, 0.14), rgba(255, 206, 118, 0.07) 38%, transparent 75%);"
+    ></div>
 
-      <!-- Right Concave Curve SVG -->
-      <svg class="absolute bottom-0 left-full w-6 h-6 pointer-events-none" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0 24V0C0 13.2548 10.7452 24 24 24H0Z" fill="#f8fafc"/>
-        <path d="M24 24C10.7452 24 0 13.2548 0 0" stroke="rgba(226,232,240,0.9)" stroke-width="1.2"/>
-      </svg>
-
-      <!-- Tab Content (Using premium experience badge icon) -->
-      <div class="flex items-center space-x-2">
-        <svg class="h-[20px] w-[20px] text-amber-500 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-        </svg>
-        <span class="text-[9px] sm:text-[10px] font-semibold tracking-widest uppercase text-slate-800 font-display whitespace-nowrap">
-          20+ Jaar Ervaring in de Regio
-        </span>
-      </div>
-    </div>
+    <!-- Very light stippels (dot matrix) illuminated by the mouse with warm gradient -->
+    <div 
+      class="absolute inset-0"
+      style="
+        background-image: radial-gradient(circle, rgba(234, 88, 12, 0.65) 1.25px, transparent 1.25px);
+        background-size: 24px 24px;
+        background-position: 0 var(--dot-offset-y, 0px);
+        -webkit-mask-image: radial-gradient(420px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), black 10%, rgba(0,0,0,0.5) 45%, transparent 75%);
+        mask-image: radial-gradient(420px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), black 10%, rgba(0,0,0,0.5) 45%, transparent 75%);
+      "
+    ></div>
   </div>
 
   <!-- Centered Content Container -->
-  <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 pt-16 sm:pt-20 lg:pt-24 relative z-10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 pt-10 sm:pt-14 lg:pt-16 relative z-10">
     
+    <!-- Clear Section Header -->
+    <div class="mb-10 sm:mb-12">
+      <div class="space-y-2 max-w-2xl">
+        <span class="text-xs font-semibold tracking-widest uppercase text-amber-700 font-sans block">
+          Hypotheek op maat
+        </span>
+        <h2 class="text-2xl sm:text-3xl font-semibold text-brand-dark tracking-tight font-display">
+          Welke situatie past bij jou?
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base font-sans font-normal">
+          Kies jouw situatie en bekijk direct hoe wij je helpen aan de scherpste rente en voorwaarden.
+        </p>
+      </div>
+    </div>
+
     <!-- 3 Stepped Cards Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      {features.map((feat, index) => (
-        <div class="feature-card relative w-full max-w-[360px] mx-auto min-h-[330px] transition-all duration-300 hover:-translate-y-3 group filter drop-shadow-[0_10px_25px_rgba(21,59,104,0.06)]">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+      {features.map((feat) => (
+        <div class="feature-card relative w-full transition-all duration-300 hover:-translate-y-2 group filter drop-shadow-[0_2px_6px_rgba(21,59,104,0.04)] drop-shadow-[0_14px_34px_rgba(21,59,104,0.09)]">
           
           <!-- Outer Card Container -->
-          <div class="relative w-full h-[330px]">
+          <div class="relative w-full h-[350px]">
             
             <!-- Masked Card Background & Content -->
             <div class={`feature-card__content absolute inset-0 w-full h-full ${feat.isGradient ? 'gradient-card' : ''}`}>
@@ -85,37 +101,40 @@ import SectionDivider from './SectionDivider.astro';
               <!-- Expanding Circle Hover Background -->
               <div class="feature-card__hover-bg"></div>
 
-              <!-- Content wrapper -->
-              <div class="relative z-10 flex flex-col justify-between h-full p-8 pt-12 pb-8">
-                <div>
-                  <!-- Badge -->
-                  <span class="text-[10px] font-semibold tracking-widest uppercase text-amber-600 font-sans mb-1.5 block">
+              <!-- Content wrapper with strict equal-height alignment -->
+              <div class="relative z-10 flex flex-col h-full p-8 sm:p-9 pt-10 pb-8">
+                
+                <!-- Top Block: Badge + 2-Line Title -->
+                <div class="pr-16">
+                  <span class="feature-card__badge text-[10px] font-semibold tracking-widest uppercase font-sans mb-2 block">
                     {feat.badge}
                   </span>
 
-                  <!-- Title -->
                   <h3 class="feature-card__title" set:html={feat.title}></h3>
-                  
-                  <!-- Upper Thin Divider Line -->
-                  <div class="feature-card__divider"></div>
+                </div>
+                
+                <!-- Upper Thin Divider Line -->
+                <div class="feature-card__divider"></div>
 
+                <!-- Middle Block: Description (flex-1 keeps lower divider on exact same baseline) -->
+                <div class="flex-1 flex items-center">
                   <p class="feature-card__desc">
                     {feat.description}
                   </p>
                 </div>
                 
-                <div>
-                  <!-- Lower Thin Divider Line -->
-                  <div class="feature-card__divider"></div>
+                <!-- Lower Thin Divider Line -->
+                <div class="feature-card__divider"></div>
 
-                  <a 
-                    href={feat.link}
-                    class="feature-card__link cursor-pointer w-full text-left bg-transparent border-none focus:outline-none flex items-center justify-between p-0 font-semibold text-slate-800 hover:text-brand-dark transition-colors"
-                  >
-                    <span>{feat.linkText}</span>
-                    <span class="inline-block ml-2 group-hover:translate-x-1.5 transition-transform duration-200">→</span>
-                  </a>
-                </div>
+                <!-- Bottom Block: CTA Link -->
+                <a 
+                  href={feat.link}
+                  class="feature-card__link cursor-pointer w-full text-left bg-transparent border-none focus:outline-none flex items-center justify-between p-0 font-semibold transition-colors"
+                >
+                  <span>{feat.linkText}</span>
+                  <span class="inline-block ml-2 group-hover:translate-x-1.5 transition-transform duration-200">→</span>
+                </a>
+
               </div>
             </div>
 
@@ -124,8 +143,8 @@ import SectionDivider from './SectionDivider.astro';
               <!-- Backing circle to fill the circular card mask cutout -->
               <div class="badge-cutout-fill absolute inset-0 rounded-full"></div>
               
-              <!-- Outer border logo shape (Matches section background #f8fafc) -->
-              <svg class="absolute w-[72px] h-[74.7px] text-[#f8fafc]" viewBox="0 0 80.08 83.08" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <!-- Outer border logo shape (Matches white section background) -->
+              <svg class="absolute w-[72px] h-[74.7px] text-white" viewBox="0 0 80.08 83.08" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <path d="M40.04,83.08c-10.9,0-19.76-8.87-19.76-19.76,0-.17,0-.35.01-.53-.18,0-.36.01-.53.01C8.86,62.8,0,53.93,0,43.04s8.86-19.76,19.76-19.76c.17,0,.35,0,.53.01,0-.18-.01-.36-.01-.53,0-8.08,10.41-17.07,16.61-21.7,1.88-1.41,4.42-1.41,6.3,0,6.2,4.64,16.61,13.62,16.61,21.7,0,.17,0,.35-.01.53.18,0,.36-.01.53-.01,10.9,0,19.76,8.86,19.76,19.76s-8.86,19.76-19.76,19.76c-.17,0-.35,0-.53-.01,0,.18.01.36.01.53,0,10.9-8.86,19.76-19.76,19.76ZM21.62,61.45l-.07.74c-.04.38-.06.76-.06,1.13,0,10.23,8.32,18.55,18.55,18.55s18.55-8.32,18.55-18.55c0-.36-.02-.74-.06-1.13l-.07-.73.73.07c.38.04.76.06,1.13.06,10.23,0,18.55-8.32,18.55-18.55s-8.32-18.55-18.55-18.55c-.36,0-.74.02-1.13.06l-.73.07.07-.73c.04-.39.06-.77.06-1.13,0-7.84-11.28-17.11-16.12-20.73-1.45-1.08-3.4-1.08-4.84,0-4.85,3.62-16.12,12.89-16.12,20.73,0,.36.02.74.06,1.12l.07.73-.73-.07c-.39-.04-.77-.06-1.13-.06-10.23,0-18.55,8.32-18.55,18.55s8.32,18.55,18.55,18.55c.36,0,.74-.02,1.13-.06l.74-.07Z"/>
               </svg>
  
@@ -146,96 +165,105 @@ import SectionDivider from './SectionDivider.astro';
       ))}
     </div>
 
-    <!-- Dedicated Quick Service Bar for Existing Clients (Schade melden & FinSave) -->
-    <div class="mt-12 p-4 sm:p-5 rounded-2xl bg-white border border-slate-200/90 shadow-sm flex flex-col md:flex-row items-center justify-between gap-4 max-w-4xl mx-auto text-center md:text-left">
-      <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center text-slate-700 flex-shrink-0">
-          <i class="fa-solid fa-headset text-base"></i>
-        </div>
-        <div>
-          <span class="text-xs sm:text-sm font-semibold text-slate-900 font-sans block">Al klant bij Spekadvies?</span>
-          <span class="text-[11px] sm:text-xs text-slate-500 font-sans">Meld direct schade of bekijk je lopende dossier en documenten online in FinSave.</span>
-        </div>
-      </div>
-      <div class="flex items-center gap-2.5 flex-wrap justify-center flex-shrink-0">
-        <button 
-          data-modal-trigger="schade" 
-          class="px-4 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold font-sans transition-colors cursor-pointer border border-slate-200 inline-flex items-center gap-1.5"
-        >
-          <i class="fa-solid fa-triangle-exclamation text-amber-600"></i>
-          <span>Schade melden</span>
-        </button>
-        <button 
-          data-modal-trigger="inloggen" 
-          class="px-4 py-2 rounded-xl bg-slate-900 hover:bg-brand-dark text-white text-xs font-semibold font-sans transition-colors cursor-pointer inline-flex items-center gap-1.5 shadow-sm"
-        >
-          <i class="fa-solid fa-user-lock"></i>
-          <span>FinSave inloggen</span>
-        </button>
-      </div>
-    </div>
-
-    <!-- Trusted Partners Banner (Light Theme - Crisp Vector Logos & Trust Badges) -->
-    <div class="mt-14 pt-10 border-t border-slate-200/80 flex flex-col lg:flex-row items-center justify-between gap-8">
-      <div class="flex-shrink-0 text-slate-500 font-display text-[9px] sm:text-[10px] font-semibold tracking-widest uppercase leading-tight text-center lg:text-left">
-        SAMENWERKING MET<br><span class="text-slate-900 font-semibold">40+ GELDVERSTREKKERS</span>
-      </div>
-
-      <!-- Vector Partner Logos Row (Dark/Monochrome on Light Background) -->
-      <div class="w-full lg:w-auto flex flex-wrap items-center justify-center lg:justify-end gap-x-8 sm:gap-x-10 gap-y-5 text-slate-500 select-none">
+    <!-- Full-Width Horizontal Stepped Card: Verzekeringen & Schade melden (Spekadvies Blue) -->
+    <div class="feature-card feature-card--wide feature-card--blue relative w-full mt-6 lg:mt-8 transition-all duration-300 hover:-translate-y-1 group filter drop-shadow-[0_14px_32px_rgba(21,59,104,0.16)]">
+      <div class="relative w-full">
         
-        <!-- Rabobank -->
-        <div class="flex items-center gap-2 hover:text-slate-900 transition-colors duration-300 cursor-default">
-          <svg class="w-5 h-5 fill-current text-amber-600" viewBox="0 0 24 24">
-            <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
-            <circle cx="12" cy="12" r="4" fill="currentColor"/>
+        <!-- Masked Wide Card Background & Content -->
+        <div class="feature-card__content feature-card__content--wide blue-card w-full">
+
+          <!-- Wide Card Inner Layout (Same vertical rhythm as the 3 cards above) -->
+          <div class="relative z-10 flex flex-col p-8 sm:p-9 pt-9 pb-8">
+            
+            <!-- Top Block: Badge + Title (Left-aligned at the top, pr-24 clears the top-right clover notch) -->
+            <div class="pr-20 sm:pr-28">
+              <span class="feature-card__badge text-[10px] font-semibold tracking-widest uppercase font-sans mb-2 block">
+                Verzekeringen &amp; Schadeservice
+              </span>
+              <h3 class="feature-card__title feature-card__title--wide">
+                Ook voor al je verzekeringen &amp; directe hulp bij schade
+              </h3>
+            </div>
+
+            <!-- Upper Thin Divider Line -->
+            <div class="feature-card__divider"></div>
+
+            <!-- Middle Block: 2 Calm, Spacious Columns (Verzekeringen & Schade melden) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-12">
+              
+              <!-- Column 1: Particuliere Verzekeringen -->
+              <div class="space-y-1.5 pr-4">
+                <div class="flex items-center gap-2 text-white font-semibold text-sm font-display">
+                  <i class="fa-solid fa-house-lock text-[#ffce76] text-xs"></i>
+                  <span>Wonen, Gezin &amp; Auto</span>
+                </div>
+                <p class="feature-card__desc">
+                  Van woonhuis-, inboedel- en aansprakelijkheidsverzekering tot je autoverzekering: één overzichtelijk pakket tegen de scherpste premie.
+                </p>
+              </div>
+
+              <!-- Column 2: Direct Schade Melden -->
+              <div class="space-y-1.5 md:border-l md:border-white/10 md:pl-8 lg:pl-12 pr-4">
+                <div class="flex items-center gap-2 text-white font-semibold text-sm font-display">
+                  <i class="fa-solid fa-triangle-exclamation text-[#ffce76] text-xs"></i>
+                  <span>Direct persoonlijk bij schade</span>
+                </div>
+                <p class="feature-card__desc">
+                  Onverhoopt schade aan je woning, inboedel of auto? Meld het direct — wij nemen de volledige afhandeling persoonlijk uit handen.
+                </p>
+              </div>
+
+            </div>
+
+            <!-- Lower Thin Divider Line -->
+            <div class="feature-card__divider"></div>
+
+            <!-- Bottom Block: 2 Aligned Action Links -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 lg:gap-12">
+              
+              <a 
+                href="/verzekeringen"
+                class="feature-card__link cursor-pointer w-full text-left bg-transparent border-none focus:outline-none flex items-center justify-between p-0 pr-4 font-semibold transition-colors group/link1"
+              >
+                <span>Bekijk alle verzekeringen</span>
+                <span class="inline-block ml-2 text-[#ffce76] group-hover/link1:translate-x-1.5 transition-transform duration-200">→</span>
+              </a>
+
+              <button 
+                type="button"
+                data-modal-trigger="schade"
+                class="feature-card__link cursor-pointer w-full text-left bg-transparent border-none focus:outline-none flex items-center justify-between p-0 md:pl-8 lg:pl-12 pr-4 font-semibold transition-colors group/link3"
+              >
+                <span>Direct online schade melden</span>
+                <span class="inline-block ml-2 text-[#ffce76] group-hover/link3:translate-x-1.5 transition-transform duration-200">→</span>
+              </button>
+
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Floating Logo Shape Badge (Exact same top-right notch badge as the 3 cards above) -->
+        <div class="feature-card__icon-badge">
+          <div class="badge-cutout-fill absolute inset-0 rounded-full"></div>
+          
+          <svg class="absolute w-[72px] h-[74.7px] text-white" viewBox="0 0 80.08 83.08" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M40.04,83.08c-10.9,0-19.76-8.87-19.76-19.76,0-.17,0-.35.01-.53-.18,0-.36.01-.53.01C8.86,62.8,0,53.93,0,43.04s8.86-19.76,19.76-19.76c.17,0,.35,0,.53.01,0-.18-.01-.36-.01-.53,0-8.08,10.41-17.07,16.61-21.7,1.88-1.41,4.42-1.41,6.3,0,6.2,4.64,16.61,13.62,16.61,21.7,0,.17,0,.35-.01.53.18,0,.36-.01.53-.01,10.9,0,19.76,8.86,19.76,19.76s-8.86,19.76-19.76,19.76c-.17,0-.35,0-.53-.01,0,.18.01.36.01.53,0,10.9-8.86,19.76-19.76,19.76ZM21.62,61.45l-.07.74c-.04.38-.06.76-.06,1.13,0,10.23,8.32,18.55,18.55,18.55s18.55-8.32,18.55-18.55c0-.36-.02-.74-.06-1.13l-.07-.73.73.07c.38.04.76.06,1.13.06,10.23,0,18.55-8.32,18.55-18.55s-8.32-18.55-18.55-18.55c-.36,0-.74.02-1.13.06l-.73.07.07-.73c.04-.39.06-.77.06-1.13,0-7.84-11.28-17.11-16.12-20.73-1.45-1.08-3.4-1.08-4.84,0-4.85,3.62-16.12,12.89-16.12,20.73,0,.36.02.74.06,1.12l.07.73-.73-.07c-.39-.04-.77-.06-1.13-.06-10.23,0-18.55,8.32-18.55,18.55s8.32,18.55,18.55,18.55c.36,0,.74-.02,1.13-.06l.74-.07Z"/>
           </svg>
-          <span class="font-sans font-semibold text-base tracking-tight text-slate-800">Rabobank</span>
-        </div>
 
-        <!-- ING -->
-        <div class="flex items-center gap-1.5 hover:text-slate-900 transition-colors duration-300 cursor-default">
-          <svg class="w-5 h-5 fill-current text-orange-500" viewBox="0 0 24 24">
-            <path d="M4 18c2-4 5-8 10-8 2 0 4 1 6 3-1-3-3-6-7-7-5-1-9 3-11 8 0 1 1 3 2 4z"/>
+          <svg class="badge-bg absolute w-[72px] h-[74.7px]" viewBox="0 0 80.08 83.08" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M80.08,43.04c0,10.89-8.87,19.76-19.76,19.76-.18,0-.35-.01-.53-.02,0,.18.01.36.01.53,0,10.9-8.87,19.77-19.76,19.77s-19.76-8.87-19.76-19.77c0-.17,0-.35.01-.53-.18,0-.36.02-.53.02C8.86,62.8,0,53.93,0,43.04s8.86-19.76,19.76-19.76c.17,0,.35,0,.53,0-.01-.18-.01-.36-.01-.53,0-8.09,10.4-17.07,16.61-21.71,1.88-1.4,4.41-1.4,6.3,0,6.2,4.64,16.61,13.62,16.61,21.71,0,.17-.01.35-.01.53.18,0,.35,0,.53,0,10.89,0,19.76,8.86,19.76,19.76Z"/>
           </svg>
-          <span class="font-sans font-semibold text-lg tracking-tight text-slate-800">ING</span>
-        </div>
-
-        <!-- ABN AMRO -->
-        <div class="flex items-center gap-2 hover:text-slate-900 transition-colors duration-300 cursor-default">
-          <svg class="w-4 h-5 fill-current text-emerald-600" viewBox="0 0 20 24">
-            <polygon points="10,0 20,8 16,24 4,24 0,8"/>
-          </svg>
-          <span class="font-sans font-semibold text-sm tracking-wider text-slate-800">ABN AMRO</span>
-        </div>
-
-        <!-- Florius -->
-        <div class="flex items-center gap-1.5 hover:text-slate-900 transition-colors duration-300 cursor-default">
-          <svg class="w-5 h-5 fill-current text-pink-600" viewBox="0 0 24 24">
-            <circle cx="8" cy="8" r="4"/>
-            <circle cx="16" cy="8" r="4"/>
-            <circle cx="8" cy="16" r="4"/>
-            <circle cx="16" cy="16" r="4"/>
-          </svg>
-          <span class="font-sans font-semibold text-base tracking-tight text-slate-800">Florius</span>
-        </div>
-
-        <!-- a.s.r. -->
-        <div class="flex items-center gap-1.5 hover:text-slate-900 transition-colors duration-300 cursor-default">
-          <span class="font-sans font-semibold text-base tracking-normal text-slate-800">a.s.r.</span>
-        </div>
-
-        <!-- AFM & Erkend Keurmerk Badge -->
-        <div class="hidden sm:flex items-center gap-2 pl-4 border-l border-slate-200 text-xs text-slate-600">
-          <i class="fa-solid fa-shield-halved text-amber-600 text-sm"></i>
-          <span class="font-medium text-[11px] leading-tight text-left text-slate-700">AFM Vergunning<br><span class="text-slate-400 text-[10px]">Erkend Adviseur</span></span>
+          
+          <div class="badge-icon relative z-10 flex items-center justify-center w-7 h-7">
+            <i class="fa-solid fa-shield-halved text-lg"></i>
+          </div>
         </div>
 
       </div>
     </div>
 
   </div>
-  <SectionDivider fillColor="#ffffff" direction="left-low" />
 </section>
 
 <!-- ========================================== -->
@@ -543,6 +571,73 @@ import SectionDivider from './SectionDivider.astro';
         }
       }
     });
+
+    // Smooth Mouse-Following Glow & Stippels for FeatureCards (seamless with Hero)
+    const featuresSection = document.getElementById('features-section');
+    const featuresGlow = document.getElementById('features-mouse-glow');
+    const heroSection = document.getElementById('hero-section');
+    if (featuresSection && featuresGlow) {
+      const syncDotOffset = () => {
+        if (heroSection) {
+          const offset = -(heroSection.offsetHeight % 24);
+          featuresSection.style.setProperty('--dot-offset-y', `${offset}px`);
+        }
+      };
+      syncDotOffset();
+      window.addEventListener('resize', syncDotOffset, { passive: true });
+
+      let rafId = null;
+      let targetX = 0;
+      let targetY = 0;
+      let currentX = 0;
+      let currentY = 0;
+      let isActive = false;
+
+      const updateFeaturesGlow = () => {
+        const dx = targetX - currentX;
+        const dy = targetY - currentY;
+
+        if (Math.abs(dx) > 0.25 || Math.abs(dy) > 0.25) {
+          currentX += dx * 0.16;
+          currentY += dy * 0.16;
+          featuresGlow.style.setProperty('--mouse-x', `${currentX.toFixed(1)}px`);
+          featuresGlow.style.setProperty('--mouse-y', `${currentY.toFixed(1)}px`);
+          rafId = requestAnimationFrame(updateFeaturesGlow);
+        } else {
+          rafId = null;
+        }
+      };
+
+      window.addEventListener('mousemove', (e) => {
+        const rect = featuresSection.getBoundingClientRect();
+        // Keep glow active when mouse is within 450px of the section (so it crosses seamlessly from Hero)
+        const inRange = e.clientY >= rect.top - 450 && e.clientY <= rect.bottom + 450;
+        if (inRange) {
+          targetX = e.clientX - rect.left;
+          targetY = e.clientY - rect.top;
+          if (!isActive) {
+            isActive = true;
+            currentX = targetX;
+            currentY = targetY;
+            featuresGlow.style.setProperty('--mouse-x', `${currentX.toFixed(1)}px`);
+            featuresGlow.style.setProperty('--mouse-y', `${currentY.toFixed(1)}px`);
+            featuresGlow.classList.remove('opacity-0');
+            featuresGlow.classList.add('opacity-100');
+          }
+          if (!rafId) {
+            rafId = requestAnimationFrame(updateFeaturesGlow);
+          }
+        } else if (isActive) {
+          isActive = false;
+          featuresGlow.classList.remove('opacity-100');
+          featuresGlow.classList.add('opacity-0');
+          if (rafId) {
+            cancelAnimationFrame(rafId);
+            rafId = null;
+          }
+        }
+      }, { passive: true });
+    }
   });
 </script>
 
@@ -557,7 +652,7 @@ import SectionDivider from './SectionDivider.astro';
     -webkit-mask-repeat: no-repeat;
     mask-position: top left;
     mask-repeat: no-repeat;
-    background: linear-gradient(135deg, #f3f7fb 0%, #ffffff 100%);
+    background: #ffffff;
     position: relative;
     z-index: 9;
     overflow: hidden;
@@ -581,13 +676,13 @@ import SectionDivider from './SectionDivider.astro';
     background-color: #0b1a2f;
     transform: scale(0);
     transform-origin: center center;
-    transition: transform 0.6s ease-out;
+    transition: transform 0.65s ease-out;
     z-index: 1;
     pointer-events: none;
   }
 
-  /* White cards hover expanding bg (turns gold/orange instead of dark blue) */
-  .feature-card:not(.gradient-card) .feature-card__hover-bg {
+  /* White cards hover expanding bg (turns gold/orange) */
+  .feature-card:not(:has(.gradient-card)) .feature-card__hover-bg {
     background-color: #ffce76;
   }
 
@@ -597,16 +692,34 @@ import SectionDivider from './SectionDivider.astro';
   }
 
   .feature-card:hover .feature-card__hover-bg {
-    transform: scale(18);
+    transform: scale(32);
   }
 
   /* Text color changes on card hover to contrast with the background */
-  .feature-card:not(.gradient-card):hover .feature-card__content {
-    color: #0b1a2f; /* Dark blue text on gold/orange hover background */
+  .feature-card:not(:has(.gradient-card)):hover .feature-card__content {
+    color: #0b1a2f;
   }
 
   .feature-card:has(.gradient-card):hover .feature-card__content {
-    color: #ffffff; /* White text on dark blue hover background */
+    color: #ffffff;
+  }
+
+  /* Badge color states */
+  .feature-card__badge {
+    color: #b45309;
+    transition: color 0.5s ease;
+  }
+
+  .feature-card:has(.gradient-card) .feature-card__badge {
+    color: rgba(11, 26, 47, 0.75);
+  }
+
+  .feature-card:not(:has(.gradient-card)):hover .feature-card__badge {
+    color: rgba(11, 26, 47, 0.8);
+  }
+
+  .feature-card:has(.gradient-card):hover .feature-card__badge {
+    color: #ffce76;
   }
 
   /* Floating Logo Shape Badge styling */
@@ -621,7 +734,7 @@ import SectionDivider from './SectionDivider.astro';
     justify-content: center;
     z-index: 20;
     transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.15));
+    filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.12));
   }
 
   /* Target background shape color */
@@ -640,29 +753,29 @@ import SectionDivider from './SectionDivider.astro';
   }
 
   /* Default state: white cards (index 0, 2) */
-  .feature-card:not(.gradient-card) .feature-card__icon-badge svg.badge-bg {
-    color: #ffce76; /* Gold container */
+  .feature-card:not(:has(.gradient-card)) .feature-card__icon-badge svg.badge-bg {
+    color: #ffce76;
     opacity: 1;
     transform: scale(1);
   }
-  .feature-card:not(.gradient-card) .feature-card__icon-badge .badge-icon {
-    color: #0b1a2f; /* Deep blue icon */
+  .feature-card:not(:has(.gradient-card)) .feature-card__icon-badge .badge-icon {
+    color: #0b1a2f;
   }
-  .feature-card:not(.gradient-card) .feature-card__icon-badge .badge-cutout-fill {
-    fill: #ffffff; /* White fill to merge with white card body */
+  .feature-card:not(:has(.gradient-card)) .feature-card__icon-badge .badge-cutout-fill {
+    fill: #ffffff;
   }
 
   /* Default state: gradient gold card (index 1) */
   .feature-card:has(.gradient-card) .feature-card__icon-badge svg.badge-bg {
-    color: #ffffff; /* White container */
+    color: #ffffff;
     opacity: 1;
     transform: scale(1);
   }
   .feature-card:has(.gradient-card) .feature-card__icon-badge .badge-icon {
-    color: #ffce76; /* Gold icon */
+    color: #d97706;
   }
   .feature-card:has(.gradient-card) .feature-card__icon-badge .badge-cutout-fill {
-    fill: #ffce76; /* Gold fill to merge with gold card body */
+    fill: #ffce76;
   }
 
   /* Hover trigger state: icon badge */
@@ -671,35 +784,34 @@ import SectionDivider from './SectionDivider.astro';
   }
 
   /* Hover state: white cards (index 0, 2) */
-  .feature-card:not(.gradient-card):hover .feature-card__icon-badge svg.badge-bg {
-    color: #ffffff; /* Turns white on hover */
+  .feature-card:not(:has(.gradient-card)):hover .feature-card__icon-badge svg.badge-bg {
+    color: #ffffff;
   }
-  .feature-card:not(.gradient-card):hover .feature-card__icon-badge .badge-icon {
-    color: #ffce76; /* Turns gold on hover */
+  .feature-card:not(:has(.gradient-card)):hover .feature-card__icon-badge .badge-icon {
+    color: #d97706;
   }
-  .feature-card:not(.gradient-card):hover .feature-card__icon-badge .badge-cutout-fill {
-    fill: #ffce76; /* Turns gold/orange to match expanding background */
+  .feature-card:not(:has(.gradient-card)):hover .feature-card__icon-badge .badge-cutout-fill {
+    fill: #ffce76;
   }
 
   /* Hover state: gradient gold card (index 1) */
   .feature-card:has(.gradient-card):hover .feature-card__icon-badge svg.badge-bg {
-    color: #ffce76; /* Turns gold on hover */
+    color: #ffce76;
   }
   .feature-card:has(.gradient-card):hover .feature-card__icon-badge .badge-icon {
-    color: #0b1a2f; /* Turns deep blue on hover */
+    color: #0b1a2f;
   }
   .feature-card:has(.gradient-card):hover .feature-card__icon-badge .badge-cutout-fill {
-    fill: #0b1a2f; /* Turns dark blue to match expanding background */
+    fill: #0b1a2f;
   }
 
   /* Title styling */
   .feature-card__title {
-    font-size: 20px;
+    font-size: 21px;
     font-weight: 600;
-    margin-bottom: 4px;
+    margin: 0;
     font-family: var(--font-display, sans-serif);
-    max-width: 220px; /* Increased to allow 2 lines without wrapping third */
-    height: 56px; /* Slightly taller for perfect 2-line spacing */
+    min-height: 52px;
     line-height: 1.25;
     transition: color 0.5s ease;
     color: #153b68;
@@ -710,7 +822,7 @@ import SectionDivider from './SectionDivider.astro';
   }
 
   /* Title hover styling */
-  .feature-card:not(.gradient-card):hover .feature-card__title {
+  .feature-card:not(:has(.gradient-card)):hover .feature-card__title {
     color: #0b1a2f;
   }
 
@@ -722,33 +834,33 @@ import SectionDivider from './SectionDivider.astro';
   .feature-card__divider {
     width: 100%;
     height: 1px;
-    margin: 20px 0; /* Increased margin for better padding/spacing */
-    background: rgba(0, 0, 0, 0.08);
+    margin: 18px 0;
+    background: rgba(15, 23, 42, 0.08);
     transition: background-color 0.5s ease;
+    flex-shrink: 0;
   }
 
   .feature-card:has(.gradient-card) .feature-card__divider {
-    background: rgba(11, 26, 47, 0.1);
-  }
-
-  /* Divider hover styling */
-  .feature-card:not(.gradient-card):hover .feature-card__divider {
     background: rgba(11, 26, 47, 0.12);
   }
 
+  /* Divider hover styling */
+  .feature-card:not(:has(.gradient-card)):hover .feature-card__divider {
+    background: rgba(11, 26, 47, 0.14);
+  }
+
   .feature-card:has(.gradient-card):hover .feature-card__divider {
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.16);
   }
 
   /* Description styling */
   .feature-card__desc {
-    font-size: 13.5px;
-    line-height: 24px;
-    padding-right: 8px;
+    font-size: 14px;
+    line-height: 1.6;
     font-weight: 400;
-    height: 72px; /* Fixed height for 3 lines */
+    margin: 0;
     transition: color 0.5s ease;
-    color: #64748b;
+    color: #475569;
   }
 
   .feature-card:has(.gradient-card) .feature-card__desc {
@@ -756,7 +868,7 @@ import SectionDivider from './SectionDivider.astro';
   }
 
   /* Description hover styling */
-  .feature-card:not(.gradient-card):hover .feature-card__desc {
+  .feature-card:not(:has(.gradient-card)):hover .feature-card__desc {
     color: rgba(11, 26, 47, 0.85);
   }
 
@@ -766,8 +878,8 @@ import SectionDivider from './SectionDivider.astro';
 
   /* Button/Link styling */
   .feature-card__link {
-    font-size: 13.5px;
-    font-weight: 700;
+    font-size: 14px;
+    font-weight: 600;
     display: flex;
     align-items: center;
     transition: color 0.5s ease;
@@ -779,11 +891,97 @@ import SectionDivider from './SectionDivider.astro';
   }
 
   /* Link hover styling */
-  .feature-card:not(.gradient-card):hover .feature-card__link {
+  .feature-card:not(:has(.gradient-card)):hover .feature-card__link {
     color: #0b1a2f;
   }
 
   .feature-card:has(.gradient-card):hover .feature-card__link {
     color: #ffffff;
+  }
+
+  /* Wide Full-Width Card Variant (preserves exact 1:1 top-right stepped notch cutout) */
+  .feature-card__content--wide {
+    border-radius: 24px;
+    -webkit-mask-image:
+      url('/insonis template/insonis/assets/images/iconbox-mask-3.png'),
+      linear-gradient(#000, #000),
+      linear-gradient(#000, #000);
+    mask-image:
+      url('/insonis template/insonis/assets/images/iconbox-mask-3.png'),
+      linear-gradient(#000, #000),
+      linear-gradient(#000, #000);
+    -webkit-mask-size:
+      368px 350px,
+      calc(100% - 200px) 100%,
+      368px calc(100% - 140px);
+    mask-size:
+      368px 350px,
+      calc(100% - 200px) 100%,
+      368px calc(100% - 140px);
+    -webkit-mask-position:
+      top right,
+      top left,
+      bottom right;
+    mask-position:
+      top right,
+      top left,
+      bottom right;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+  }
+
+  .feature-card__title--wide {
+    min-height: auto;
+  }
+
+  /* Spekadvies Blue Wide Card Variant (#153b68) */
+  .feature-card__content.blue-card {
+    background: linear-gradient(135deg, #153b68 0%, #0f2c4f 100%);
+    color: #ffffff;
+  }
+
+  .feature-card--blue .feature-card__badge,
+  .feature-card--blue:hover .feature-card__badge {
+    color: #ffce76 !important;
+  }
+
+  .feature-card--blue .feature-card__title,
+  .feature-card--blue:hover .feature-card__title {
+    color: #ffffff !important;
+  }
+
+  .feature-card--blue .feature-card__divider,
+  .feature-card--blue:hover .feature-card__divider {
+    background: rgba(255, 255, 255, 0.12) !important;
+  }
+
+  .feature-card--blue .feature-card__desc,
+  .feature-card--blue:hover .feature-card__desc {
+    color: rgba(255, 255, 255, 0.82) !important;
+  }
+
+  .feature-card--blue .feature-card__link,
+  .feature-card--blue:hover .feature-card__link {
+    color: #ffffff !important;
+  }
+
+  .feature-card--blue .feature-card__link:hover {
+    color: #ffce76 !important;
+  }
+
+  /* Floating clover badge on the blue banner: Spekadvies orange/gold (#ffce76) with dark-blue shield icon */
+  .feature-card--blue .feature-card__icon-badge svg.badge-bg,
+  .feature-card--blue:hover .feature-card__icon-badge svg.badge-bg {
+    color: #ffce76 !important;
+  }
+
+  .feature-card--blue .feature-card__icon-badge .badge-icon,
+  .feature-card--blue:hover .feature-card__icon-badge .badge-icon {
+    color: #153b68 !important;
+  }
+
+  .feature-card--blue .feature-card__icon-badge .badge-cutout-fill,
+  .feature-card--blue:hover .feature-card__icon-badge .badge-cutout-fill {
+    fill: #153b68 !important;
   }
 </style>

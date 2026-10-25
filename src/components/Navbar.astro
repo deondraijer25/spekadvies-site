@@ -47,22 +47,8 @@ const cleanPath = pathname.replace(/\/$/, "");
   <!-- Main Header Bar -->
   <div class="w-full h-[72px] sm:h-20 md:h-24 relative border-b border-slate-100/50">
     
-    <!-- Background Divider (Stretches full bleed to screen edges behind the content on md+) -->
-    <div class="absolute inset-0 w-full h-full -z-10 hidden md:flex pointer-events-none">
-      <!-- White area (left) -->
-      <div class="w-[75%] lg:w-[84%] bg-white h-full transition-all"></div>
-      
-      <!-- Slanted Curved Divider (SVG in Sky Blue/Gold - S-Curve going from bottom-left to top-right) -->
-      <svg class="h-full w-24 text-brand-accent fill-current -ml-1 -mr-1" viewBox="0 0 100 100" preserveAspectRatio="none">
-        <path d="M 100 0 L 100 100 L 0 100 C 40 100, 60 0, 100 0 Z" />
-      </svg>
-      
-      <!-- Gold/Accent area (right) -->
-      <div class="flex-grow bg-brand-accent h-full"></div>
-    </div>
-
-    <!-- Solid white background on mobile (< md) for maximum contrast and zero clipping -->
-    <div class="absolute inset-0 w-full h-full -z-10 bg-white md:hidden"></div>
+    <!-- Clean pure white background for crisp, high-end look -->
+    <div class="absolute inset-0 w-full h-full -z-10 bg-white"></div>
 
     <!-- Header Contents (Constrained to centered page grid) -->
     <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 w-full h-full flex justify-between items-center relative z-20">
@@ -144,10 +130,6 @@ const cleanPath = pathname.replace(/\/$/, "");
             Over ons
           </a>
           
-          <!-- Contact Knop (Drawer trigger) -->
-          <button class="open-contact-drawer hover:text-amber-700 transition-colors py-2 cursor-pointer font-sans font-semibold text-[14px] text-slate-700">
-            Contact
-          </button>
         </nav>
 
         <!-- Right Side: Phone & Action Buttons -->
@@ -179,11 +161,40 @@ const cleanPath = pathname.replace(/\/$/, "");
             <span class="font-sans font-semibold text-xs text-brand-dark hidden sm:inline group-hover:text-brand-dark transition-colors">Polski</span>
           </a>
 
-          <!-- Action Button (Visible on sm+) -->
+          <!-- Action Button (Visible on sm+) with Animated Rolling Text & Sliding SVG Arrow -->
           <button 
-            class="open-contact-drawer hidden sm:flex bg-brand-primary hover:bg-brand-primary-hover text-brand-dark font-semibold text-xs px-5 py-3 rounded-full uppercase tracking-wider transition-all duration-300 items-center justify-center space-x-1.5 font-sans shadow-[0_4px_16px_rgba(255,206,118,0.3)] hover:-translate-y-0.5 whitespace-nowrap flex-shrink-0 cursor-pointer"
+            class="open-contact-drawer group hidden sm:flex bg-brand-dark hover:bg-slate-900 text-white font-semibold text-xs px-5 py-3 rounded-full uppercase tracking-wider transition-all duration-300 items-center justify-center gap-2 font-sans shadow-md shadow-brand-dark/20 hover:shadow-lg hover:shadow-brand-dark/30 hover:-translate-y-0.5 whitespace-nowrap flex-shrink-0 cursor-pointer overflow-hidden"
           >
-            <span>Plan Gesprek ➔</span>
+            <!-- Animated Rolling Text -->
+            <span class="relative inline-flex flex-col h-[1.35em] overflow-hidden leading-tight font-semibold">
+              <span class="inline-block transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:-translate-y-full text-white">
+                Plan Gesprek
+              </span>
+              <span class="inline-block absolute top-0 left-0 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] translate-y-full group-hover:translate-y-0 text-amber-300" aria-hidden="true">
+                Plan Gesprek
+              </span>
+            </span>
+
+            <!-- Modern Animated SVG Arrow -->
+            <span class="relative w-3.5 h-3.5 overflow-hidden inline-flex items-center justify-center shrink-0 text-white group-hover:text-amber-300 transition-colors">
+              <svg 
+                class="w-3.5 h-3.5 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:translate-x-4" 
+                viewBox="0 0 16 16" 
+                fill="none" 
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M2.5 8H13.5M13.5 8L9 3.5M13.5 8L9 12.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <svg 
+                class="w-3.5 h-3.5 absolute transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] -translate-x-4 group-hover:translate-x-0" 
+                viewBox="0 0 16 16" 
+                fill="none" 
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path d="M2.5 8H13.5M13.5 8L9 3.5M13.5 8L9 12.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
           </button>
 
           <!-- Mobile Menu Trigger Button (Always visible on mobile/tablet) -->

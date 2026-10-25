@@ -3,13 +3,6 @@
 
 @font-face {
   font-family: 'Unbounded';
-  src: url('/Font/Unbounded-Light.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Unbounded';
   src: url('/Font/Unbounded-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
@@ -26,20 +19,6 @@
   font-family: 'Unbounded';
   src: url('/Font/Unbounded-SemiBold.ttf') format('truetype');
   font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Unbounded';
-  src: url('/Font/Unbounded-Bold.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Unbounded';
-  src: url('/Font/Unbounded-Black.ttf') format('truetype');
-  font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
@@ -172,37 +151,37 @@ button[class*="border-"] {
 
 /* Global Uniform Typography Scale (Optimized for Dutch words & Samsung S24 / Z Flip) */
 h1, .h1 {
-  font-size: clamp(1.65rem, 5vw, 3.25rem) !important; /* Mobile: ~26px, Desktop: 52px */
-  line-height: 1.2 !important;
+  font-size: clamp(1.5rem, 3.5vw, 2.35rem);
+  line-height: 1.22;
   font-weight: 600 !important; /* Maximaal semi-bold */
-  letter-spacing: -0.025em !important;
-  overflow-wrap: break-word !important;
-  hyphens: manual !important;
+  letter-spacing: -0.025em;
+  overflow-wrap: break-word;
+  hyphens: manual;
 }
 
 h2, .h2 {
-  font-size: clamp(1.35rem, 3.5vw, 2.25rem) !important; /* Mobile: ~21.6px, Desktop: 36px */
-  line-height: 1.25 !important;
+  font-size: clamp(1.35rem, 3.5vw, 2.1rem);
+  line-height: 1.25;
   font-weight: 600 !important; /* Maximaal semi-bold */
-  letter-spacing: -0.02em !important;
-  overflow-wrap: break-word !important;
-  hyphens: manual !important;
+  letter-spacing: -0.02em;
+  overflow-wrap: break-word;
+  hyphens: manual;
 }
 
 h3, .h3 {
-  font-size: clamp(1.15rem, 2.8vw, 1.5rem) !important; /* Mobile: ~18.4px, Desktop: 24px */
-  line-height: 1.3 !important;
+  font-size: clamp(1.15rem, 2.8vw, 1.45rem);
+  line-height: 1.3;
   font-weight: 600 !important; /* Maximaal semi-bold */
-  letter-spacing: -0.015em !important;
-  overflow-wrap: break-word !important;
+  letter-spacing: -0.015em;
+  overflow-wrap: break-word;
 }
 
 h4, .h4 {
-  font-size: clamp(1rem, 2vw, 1.15rem) !important; /* Mobile: 16px, Desktop: 18.4px */
-  line-height: 1.35 !important;
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  line-height: 1.35;
   font-weight: 600 !important; /* Maximaal semi-bold */
-  letter-spacing: -0.01em !important;
-  overflow-wrap: break-word !important;
+  letter-spacing: -0.01em;
+  overflow-wrap: break-word;
 }
 
 /* Consistent body paragraphs, leaving small helper texts/labels intact */

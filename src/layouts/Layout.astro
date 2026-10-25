@@ -98,23 +98,27 @@ const schemaGraph = {
     <!-- JSON-LD Entity Graph (FinancialService + Person Martin van der Spek) for Google & GEO AI Engines -->
     <script type="application/ld+json" is:inline set:html={JSON.stringify(schemaGraph)} />
     
-    <!-- Preconnect to Google Fonts -->
+    <!-- Preconnect to Google Fonts & CDNJS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+    <!-- Preload critical display font (Unbounded SemiBold 600) -->
+    <link rel="preload" href="/Font/Unbounded-SemiBold.ttf" as="font" type="font/ttf" crossorigin>
     
     <!-- Async Google Font Loader for 100/100 PageSpeed Performance (Poppins) -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
-      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     </noscript>
 
-    <!-- FontAwesome Free Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Non-blocking FontAwesome Free Icons -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </noscript>
   </head>
   <body class="text-slate-700 font-sans antialiased overflow-x-clip min-h-screen flex flex-col bg-brand-base">
-    
-    <!-- Premium background mesh overlay -->
-    <div class="fixed inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_top,_var(--color-brand-basetint)_0%,_var(--color-brand-base)_70%,_var(--color-brand-base)_100%)] z-0"></div>
 
     <div class="relative z-10 flex flex-col min-h-screen pb-16 md:pb-0">
       <!-- Slot for page contents (e.g. Navbar, Main, Footer) -->

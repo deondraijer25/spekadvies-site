@@ -83,6 +83,8 @@ import SectionDivider from './SectionDivider.astro';
             <img 
               src={svc.image} 
               alt={svc.title} 
+              loading="lazy"
+              decoding="async"
               class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 z-0" 
             />
             
