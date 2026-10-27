@@ -133,33 +133,31 @@ import { COMPANY_DATA } from '../data/company';
                STAP 1: ONDERWERP KIEZEN
                ========================================== -->
           <div class="funnel-step" data-step="1">
-            <div class="space-y-2.5 mb-7 sm:mb-8">
-              <h1 class="ty-h1 text-brand-dark">Waarmee kunnen we je helpen?</h1>
-              <p class="ty-lead text-slate-600">
-                Kies het onderwerp waar je vragen over hebt. We stellen je 4 korte vragen zodat we ons direct goed op jouw afspraak kunnen voorbereiden.
+            <div class="space-y-1.5 mb-6 sm:mb-7">
+              <h1 class="ty-h2 text-brand-dark">Waarmee kunnen we je helpen?</h1>
+              <p class="ty-body text-slate-500">
+                Kies een onderwerp om te starten.
               </p>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
               <!-- Optie 1: Hypotheken -->
               <button 
                 type="button"
                 data-select-topic="hypotheken"
-                data-topic-label="Hypotheek & Wonen"
-                class="topic-card group text-left p-5 sm:p-6 rounded-2xl border-2 border-slate-200/80 hover:border-brand-dark bg-white hover:bg-[#153b68]/[0.02] transition-all duration-200 flex items-start gap-4 cursor-pointer shadow-xs hover:shadow-md"
+                data-topic-label="Hypotheken"
+                class="topic-card group text-left p-4 sm:p-5 rounded-2xl border-2 border-slate-200/80 hover:border-brand-dark bg-white hover:bg-[#153b68]/[0.02] transition-all duration-200 flex items-center justify-between gap-3.5 cursor-pointer shadow-xs hover:shadow-md"
               >
-                <div class="w-12 h-12 rounded-2xl bg-[#ffce76]/35 border border-[#ffce76] group-hover:bg-brand-dark group-hover:border-brand-dark text-brand-dark group-hover:text-[#ffce76] flex items-center justify-center shrink-0 transition-colors">
-                  <i class="fa-solid fa-house-chimney text-lg"></i>
-                </div>
-                <div class="space-y-1 flex-1">
-                  <div class="flex items-center justify-between">
-                    <h3 class="ty-h4 text-brand-dark">Hypotheek &amp; Wonen</h3>
-                    <span class="text-slate-300 group-hover:text-brand-dark group-hover:translate-x-1 transition-all">→</span>
+                <div class="flex items-center gap-3.5 min-w-0">
+                  <div class="w-11 h-11 rounded-xl bg-[#ffce76]/35 border border-[#ffce76] group-hover:bg-brand-dark group-hover:border-brand-dark text-brand-dark group-hover:text-[#ffce76] flex items-center justify-center shrink-0 transition-colors">
+                    <i class="fa-solid fa-house-chimney text-base"></i>
                   </div>
-                  <p class="ty-body text-slate-600">
-                    Eerste woning kopen, verhuizen, oversluiten of overwaarde benutten.
-                  </p>
+                  <div class="min-w-0">
+                    <div class="text-[15px] font-semibold text-brand-dark font-sans leading-snug">Hypotheken</div>
+                    <div class="text-[13px] text-slate-500 font-sans leading-snug mt-0.5">Kopen, verhuizen of oversluiten</div>
+                  </div>
                 </div>
+                <span class="text-slate-300 group-hover:text-brand-dark group-hover:translate-x-1 transition-all shrink-0">→</span>
               </button>
 
               <!-- Optie 2: Verzekeringen -->
@@ -167,20 +165,18 @@ import { COMPANY_DATA } from '../data/company';
                 type="button"
                 data-select-topic="verzekeringen"
                 data-topic-label="Verzekeringen"
-                class="topic-card group text-left p-5 sm:p-6 rounded-2xl border-2 border-slate-200/80 hover:border-brand-dark bg-white hover:bg-[#153b68]/[0.02] transition-all duration-200 flex items-start gap-4 cursor-pointer shadow-xs hover:shadow-md"
+                class="topic-card group text-left p-4 sm:p-5 rounded-2xl border-2 border-slate-200/80 hover:border-brand-dark bg-white hover:bg-[#153b68]/[0.02] transition-all duration-200 flex items-center justify-between gap-3.5 cursor-pointer shadow-xs hover:shadow-md"
               >
-                <div class="w-12 h-12 rounded-2xl bg-[#ffce76]/35 border border-[#ffce76] group-hover:bg-brand-dark group-hover:border-brand-dark text-brand-dark group-hover:text-[#ffce76] flex items-center justify-center shrink-0 transition-colors">
-                  <i class="fa-solid fa-shield-halved text-lg"></i>
-                </div>
-                <div class="space-y-1 flex-1">
-                  <div class="flex items-center justify-between">
-                    <h3 class="ty-h4 text-brand-dark">Verzekeringen</h3>
-                    <span class="text-slate-300 group-hover:text-brand-dark group-hover:translate-x-1 transition-all">→</span>
+                <div class="flex items-center gap-3.5 min-w-0">
+                  <div class="w-11 h-11 rounded-xl bg-[#ffce76]/35 border border-[#ffce76] group-hover:bg-brand-dark group-hover:border-brand-dark text-brand-dark group-hover:text-[#ffce76] flex items-center justify-center shrink-0 transition-colors">
+                    <i class="fa-solid fa-shield-halved text-base"></i>
                   </div>
-                  <p class="ty-body text-slate-600">
-                    Wonen, gezin, auto, AOV of een vrijblijvende bespaarcheck op je pakket.
-                  </p>
+                  <div class="min-w-0">
+                    <div class="text-[15px] font-semibold text-brand-dark font-sans leading-snug">Verzekeringen</div>
+                    <div class="text-[13px] text-slate-500 font-sans leading-snug mt-0.5">Wonen, gezin, auto of zakelijk</div>
+                  </div>
                 </div>
+                <span class="text-slate-300 group-hover:text-brand-dark group-hover:translate-x-1 transition-all shrink-0">→</span>
               </button>
 
               <!-- Optie 3: Belastingaangifte -->
@@ -188,20 +184,18 @@ import { COMPANY_DATA } from '../data/company';
                 type="button"
                 data-select-topic="belastingaangifte"
                 data-topic-label="Belastingaangifte"
-                class="topic-card group text-left p-5 sm:p-6 rounded-2xl border-2 border-slate-200/80 hover:border-brand-dark bg-white hover:bg-[#153b68]/[0.02] transition-all duration-200 flex items-start gap-4 cursor-pointer shadow-xs hover:shadow-md"
+                class="topic-card group text-left p-4 sm:p-5 rounded-2xl border-2 border-slate-200/80 hover:border-brand-dark bg-white hover:bg-[#153b68]/[0.02] transition-all duration-200 flex items-center justify-between gap-3.5 cursor-pointer shadow-xs hover:shadow-md"
               >
-                <div class="w-12 h-12 rounded-2xl bg-[#ffce76]/35 border border-[#ffce76] group-hover:bg-brand-dark group-hover:border-brand-dark text-brand-dark group-hover:text-[#ffce76] flex items-center justify-center shrink-0 transition-colors">
-                  <i class="fa-solid fa-file-invoice-dollar text-lg"></i>
-                </div>
-                <div class="space-y-1 flex-1">
-                  <div class="flex items-center justify-between">
-                    <h3 class="ty-h4 text-brand-dark">Belastingaangifte</h3>
-                    <span class="text-slate-300 group-hover:text-brand-dark group-hover:translate-x-1 transition-all">→</span>
+                <div class="flex items-center gap-3.5 min-w-0">
+                  <div class="w-11 h-11 rounded-xl bg-[#ffce76]/35 border border-[#ffce76] group-hover:bg-brand-dark group-hover:border-brand-dark text-brand-dark group-hover:text-[#ffce76] flex items-center justify-center shrink-0 transition-colors">
+                    <i class="fa-solid fa-file-invoice-dollar text-base"></i>
                   </div>
-                  <p class="ty-body text-slate-600">
-                    Inkomstenbelasting, voorlopige aanslag, toeslagen of ondernemersaangifte.
-                  </p>
+                  <div class="min-w-0">
+                    <div class="text-[15px] font-semibold text-brand-dark font-sans leading-snug">Belastingaangifte</div>
+                    <div class="text-[13px] text-slate-500 font-sans leading-snug mt-0.5">Voor particulieren en ondernemers</div>
+                  </div>
                 </div>
+                <span class="text-slate-300 group-hover:text-brand-dark group-hover:translate-x-1 transition-all shrink-0">→</span>
               </button>
 
               <!-- Optie 4: Vermogen & Pensioen -->
@@ -209,20 +203,18 @@ import { COMPANY_DATA } from '../data/company';
                 type="button"
                 data-select-topic="vermogen"
                 data-topic-label="Vermogen & Pensioen"
-                class="topic-card group text-left p-5 sm:p-6 rounded-2xl border-2 border-slate-200/80 hover:border-brand-dark bg-white hover:bg-[#153b68]/[0.02] transition-all duration-200 flex items-start gap-4 cursor-pointer shadow-xs hover:shadow-md"
+                class="topic-card group text-left p-4 sm:p-5 rounded-2xl border-2 border-slate-200/80 hover:border-brand-dark bg-white hover:bg-[#153b68]/[0.02] transition-all duration-200 flex items-center justify-between gap-3.5 cursor-pointer shadow-xs hover:shadow-md"
               >
-                <div class="w-12 h-12 rounded-2xl bg-[#ffce76]/35 border border-[#ffce76] group-hover:bg-brand-dark group-hover:border-brand-dark text-brand-dark group-hover:text-[#ffce76] flex items-center justify-center shrink-0 transition-colors">
-                  <i class="fa-solid fa-chart-line text-lg"></i>
-                </div>
-                <div class="space-y-1 flex-1">
-                  <div class="flex items-center justify-between">
-                    <h3 class="ty-h4 text-brand-dark">Vermogen &amp; Pensioen</h3>
-                    <span class="text-slate-300 group-hover:text-brand-dark group-hover:translate-x-1 transition-all">→</span>
+                <div class="flex items-center gap-3.5 min-w-0">
+                  <div class="w-11 h-11 rounded-xl bg-[#ffce76]/35 border border-[#ffce76] group-hover:bg-brand-dark group-hover:border-brand-dark text-brand-dark group-hover:text-[#ffce76] flex items-center justify-center shrink-0 transition-colors">
+                    <i class="fa-solid fa-chart-line text-base"></i>
                   </div>
-                  <p class="ty-body text-slate-600">
-                    Vermogen opbouwen, pensioen aanvullen, lijfrente of financiële planning.
-                  </p>
+                  <div class="min-w-0">
+                    <div class="text-[15px] font-semibold text-brand-dark font-sans leading-snug">Vermogen &amp; Pensioen</div>
+                    <div class="text-[13px] text-slate-500 font-sans leading-snug mt-0.5">Opbouwen, beleggen of aanvullen</div>
+                  </div>
                 </div>
+                <span class="text-slate-300 group-hover:text-brand-dark group-hover:translate-x-1 transition-all shrink-0">→</span>
               </button>
             </div>
           </div>
@@ -231,10 +223,10 @@ import { COMPANY_DATA } from '../data/company';
                STAP 2: SPECIFIEKE SITUATIE (DYNAMISCH)
                ========================================== -->
           <div class="funnel-step hidden" data-step="2">
-            <div class="space-y-2.5 mb-7 sm:mb-8">
-              <h2 class="ty-h2 text-brand-dark">Wat past het beste bij jouw situatie?</h2>
-              <p class="ty-lead text-slate-600">
-                Selecteer de optie die het beste aansluit op jouw vraag.
+            <div class="space-y-1.5 mb-6 sm:mb-7">
+              <h2 class="ty-h2 text-brand-dark">Wat is jouw situatie?</h2>
+              <p class="ty-body text-slate-500">
+                Kies de optie die het beste bij je past.
               </p>
             </div>
 
@@ -247,26 +239,26 @@ import { COMPANY_DATA } from '../data/company';
                STAP 3: GEWENSTE TERMIJN
                ========================================== -->
           <div class="funnel-step hidden" data-step="3">
-            <div class="space-y-2.5 mb-7 sm:mb-8">
-              <h2 class="ty-h2 text-brand-dark">Op welke termijn speelt dit voor jou?</h2>
-              <p class="ty-lead text-slate-600">
-                Zo weten we of er haast bij is (bijvoorbeeld bij een bod op een woning of een lopende deadline).
+            <div class="space-y-1.5 mb-6 sm:mb-7">
+              <h2 class="ty-h2 text-brand-dark">Wanneer speelt dit?</h2>
+              <p class="ty-body text-slate-500">
+                Zo weten we of er haast bij is.
               </p>
             </div>
 
-            <div class="space-y-3.5">
+            <div class="space-y-3">
               <button 
                 type="button"
                 data-select-timeline="Zo snel mogelijk (concrete actie of woning)"
-                class="timeline-card group w-full text-left p-5 rounded-2xl border-2 border-slate-200/80 hover:border-brand-dark bg-white hover:bg-[#153b68]/[0.02] transition-all duration-200 flex items-center justify-between gap-4 cursor-pointer shadow-xs"
+                class="timeline-card group w-full text-left p-4 sm:p-5 rounded-2xl border-2 border-slate-200/80 hover:border-brand-dark bg-white hover:bg-[#153b68]/[0.02] transition-all duration-200 flex items-center justify-between gap-4 cursor-pointer shadow-xs"
               >
-                <div class="flex items-center gap-4">
-                  <div class="w-11 h-11 rounded-2xl bg-[#ffce76]/35 border border-[#ffce76] group-hover:bg-brand-dark group-hover:border-brand-dark text-brand-dark group-hover:text-[#ffce76] flex items-center justify-center shrink-0 transition-colors">
+                <div class="flex items-center gap-3.5">
+                  <div class="w-11 h-11 rounded-xl bg-[#ffce76]/35 border border-[#ffce76] group-hover:bg-brand-dark group-hover:border-brand-dark text-brand-dark group-hover:text-[#ffce76] flex items-center justify-center shrink-0 transition-colors">
                     <i class="fa-solid fa-bolt text-base"></i>
                   </div>
                   <div>
-                    <h4 class="ty-h4 text-brand-dark">Zo snel mogelijk</h4>
-                    <p class="ty-body text-slate-600">Ik heb al een concrete woning, deadline of vraag op het oog</p>
+                    <div class="text-[15px] font-semibold text-brand-dark font-sans leading-snug">Zo snel mogelijk</div>
+                    <div class="text-[13px] text-slate-500 font-sans leading-snug mt-0.5">Ik heb al een woning of deadline op het oog</div>
                   </div>
                 </div>
                 <span class="text-slate-300 group-hover:text-brand-dark group-hover:translate-x-1 transition-all font-semibold">→</span>
@@ -275,15 +267,15 @@ import { COMPANY_DATA } from '../data/company';
               <button 
                 type="button"
                 data-select-timeline="Binnen 1 tot 3 maanden"
-                class="timeline-card group w-full text-left p-5 rounded-2xl border-2 border-slate-200/80 hover:border-brand-dark bg-white hover:bg-[#153b68]/[0.02] transition-all duration-200 flex items-center justify-between gap-4 cursor-pointer shadow-xs"
+                class="timeline-card group w-full text-left p-4 sm:p-5 rounded-2xl border-2 border-slate-200/80 hover:border-brand-dark bg-white hover:bg-[#153b68]/[0.02] transition-all duration-200 flex items-center justify-between gap-4 cursor-pointer shadow-xs"
               >
-                <div class="flex items-center gap-4">
-                  <div class="w-11 h-11 rounded-2xl bg-[#ffce76]/35 border border-[#ffce76] group-hover:bg-brand-dark group-hover:border-brand-dark text-brand-dark group-hover:text-[#ffce76] flex items-center justify-center shrink-0 transition-colors">
+                <div class="flex items-center gap-3.5">
+                  <div class="w-11 h-11 rounded-xl bg-[#ffce76]/35 border border-[#ffce76] group-hover:bg-brand-dark group-hover:border-brand-dark text-brand-dark group-hover:text-[#ffce76] flex items-center justify-center shrink-0 transition-colors">
                     <i class="fa-regular fa-calendar-check text-base"></i>
                   </div>
                   <div>
-                    <h4 class="ty-h4 text-brand-dark">Binnen 1 tot 3 maanden</h4>
-                    <p class="ty-body text-slate-600">Ik wil binnenkort stappen zetten en goed voorbereid zijn</p>
+                    <div class="text-[15px] font-semibold text-brand-dark font-sans leading-snug">Binnen 1 tot 3 maanden</div>
+                    <div class="text-[13px] text-slate-500 font-sans leading-snug mt-0.5">Ik wil binnenkort goed voorbereid zijn</div>
                   </div>
                 </div>
                 <span class="text-slate-300 group-hover:text-brand-dark group-hover:translate-x-1 transition-all font-semibold">→</span>
@@ -292,15 +284,15 @@ import { COMPANY_DATA } from '../data/company';
               <button 
                 type="button"
                 data-select-timeline="Oriënterend (eerst inzicht in mogelijkheden)"
-                class="timeline-card group w-full text-left p-5 rounded-2xl border-2 border-slate-200/80 hover:border-brand-dark bg-white hover:bg-[#153b68]/[0.02] transition-all duration-200 flex items-center justify-between gap-4 cursor-pointer shadow-xs"
+                class="timeline-card group w-full text-left p-4 sm:p-5 rounded-2xl border-2 border-slate-200/80 hover:border-brand-dark bg-white hover:bg-[#153b68]/[0.02] transition-all duration-200 flex items-center justify-between gap-4 cursor-pointer shadow-xs"
               >
-                <div class="flex items-center gap-4">
-                  <div class="w-11 h-11 rounded-2xl bg-[#ffce76]/35 border border-[#ffce76] group-hover:bg-brand-dark group-hover:border-brand-dark text-brand-dark group-hover:text-[#ffce76] flex items-center justify-center shrink-0 transition-colors">
+                <div class="flex items-center gap-3.5">
+                  <div class="w-11 h-11 rounded-xl bg-[#ffce76]/35 border border-[#ffce76] group-hover:bg-brand-dark group-hover:border-brand-dark text-brand-dark group-hover:text-[#ffce76] flex items-center justify-center shrink-0 transition-colors">
                     <i class="fa-regular fa-compass text-base"></i>
                   </div>
                   <div>
-                    <h4 class="ty-h4 text-brand-dark">Ik oriënteer me rustig</h4>
-                    <p class="ty-body text-slate-600">Ik wil eerst vrijblijvend weten wat mijn financiële mogelijkheden zijn</p>
+                    <div class="text-[15px] font-semibold text-brand-dark font-sans leading-snug">Ik oriënteer me rustig</div>
+                    <div class="text-[13px] text-slate-500 font-sans leading-snug mt-0.5">Eerst vrijblijvend mijn mogelijkheden weten</div>
                   </div>
                 </div>
                 <span class="text-slate-300 group-hover:text-brand-dark group-hover:translate-x-1 transition-all font-semibold">→</span>
@@ -312,26 +304,26 @@ import { COMPANY_DATA } from '../data/company';
                STAP 4: VOORKEUR KENNISMAKING / AFSPRAAK
                ========================================== -->
           <div class="funnel-step hidden" data-step="4">
-            <div class="space-y-2.5 mb-7 sm:mb-8">
-              <h2 class="ty-h2 text-brand-dark">Hoe wil je het liefst afspreken?</h2>
-              <p class="ty-lead text-slate-600">
-                Ons eerste oriëntatiegesprek is altijd gratis en 100% vrijblijvend. Kies wat jij het prettigst vindt.
+            <div class="space-y-1.5 mb-6 sm:mb-7">
+              <h2 class="ty-h2 text-brand-dark">Hoe wil je afspreken?</h2>
+              <p class="ty-body text-slate-500">
+                Het eerste gesprek is altijd gratis en vrijblijvend.
               </p>
             </div>
 
-            <div class="space-y-3.5">
+            <div class="space-y-3">
               <button 
                 type="button"
                 data-select-preference="Op kantoor in Moerkapelle (Herenweg 42)"
-                class="preference-card group w-full text-left p-5 rounded-2xl border-2 border-slate-200/80 hover:border-brand-dark bg-white hover:bg-[#153b68]/[0.02] transition-all duration-200 flex items-center justify-between gap-4 cursor-pointer shadow-xs"
+                class="preference-card group w-full text-left p-4 sm:p-5 rounded-2xl border-2 border-slate-200/80 hover:border-brand-dark bg-white hover:bg-[#153b68]/[0.02] transition-all duration-200 flex items-center justify-between gap-4 cursor-pointer shadow-xs"
               >
-                <div class="flex items-center gap-4">
-                  <div class="w-11 h-11 rounded-2xl bg-[#ffce76]/35 border border-[#ffce76] group-hover:bg-brand-dark group-hover:border-brand-dark text-brand-dark group-hover:text-[#ffce76] flex items-center justify-center shrink-0 transition-colors">
+                <div class="flex items-center gap-3.5">
+                  <div class="w-11 h-11 rounded-xl bg-[#ffce76]/35 border border-[#ffce76] group-hover:bg-brand-dark group-hover:border-brand-dark text-brand-dark group-hover:text-[#ffce76] flex items-center justify-center shrink-0 transition-colors">
                     <i class="fa-solid fa-mug-hot text-base"></i>
                   </div>
                   <div>
-                    <h4 class="ty-h4 text-brand-dark">Op kantoor in Moerkapelle</h4>
-                    <p class="ty-body text-slate-600">Aan de Herenweg 42 onder het genot van een goede kop koffie (ook 's avonds mogelijk)</p>
+                    <div class="text-[15px] font-semibold text-brand-dark font-sans leading-snug">Op kantoor in Moerkapelle</div>
+                    <div class="text-[13px] text-slate-500 font-sans leading-snug mt-0.5">Herenweg 42 (ook 's avonds mogelijk)</div>
                   </div>
                 </div>
                 <span class="text-slate-300 group-hover:text-brand-dark group-hover:translate-x-1 transition-all font-semibold">→</span>
@@ -340,15 +332,15 @@ import { COMPANY_DATA } from '../data/company';
               <button 
                 type="button"
                 data-select-preference="Persoonlijk bij mij thuis"
-                class="preference-card group w-full text-left p-5 rounded-2xl border-2 border-slate-200/80 hover:border-brand-dark bg-white hover:bg-[#153b68]/[0.02] transition-all duration-200 flex items-center justify-between gap-4 cursor-pointer shadow-xs"
+                class="preference-card group w-full text-left p-4 sm:p-5 rounded-2xl border-2 border-slate-200/80 hover:border-brand-dark bg-white hover:bg-[#153b68]/[0.02] transition-all duration-200 flex items-center justify-between gap-4 cursor-pointer shadow-xs"
               >
-                <div class="flex items-center gap-4">
-                  <div class="w-11 h-11 rounded-2xl bg-[#ffce76]/35 border border-[#ffce76] group-hover:bg-brand-dark group-hover:border-brand-dark text-brand-dark group-hover:text-[#ffce76] flex items-center justify-center shrink-0 transition-colors">
+                <div class="flex items-center gap-3.5">
+                  <div class="w-11 h-11 rounded-xl bg-[#ffce76]/35 border border-[#ffce76] group-hover:bg-brand-dark group-hover:border-brand-dark text-brand-dark group-hover:text-[#ffce76] flex items-center justify-center shrink-0 transition-colors">
                     <i class="fa-solid fa-house-user text-base"></i>
                   </div>
                   <div>
-                    <h4 class="ty-h4 text-brand-dark">Persoonlijk bij mij thuis</h4>
-                    <p class="ty-body text-slate-600">Gewoon bij jou aan de keukentafel in Moerkapelle en omliggende gemeenten</p>
+                    <div class="text-[15px] font-semibold text-brand-dark font-sans leading-snug">Bij mij thuis</div>
+                    <div class="text-[13px] text-slate-500 font-sans leading-snug mt-0.5">Persoonlijk bij jou aan de keukentafel</div>
                   </div>
                 </div>
                 <span class="text-slate-300 group-hover:text-brand-dark group-hover:translate-x-1 transition-all font-semibold">→</span>
@@ -357,15 +349,15 @@ import { COMPANY_DATA } from '../data/company';
               <button 
                 type="button"
                 data-select-preference="Eerst kort telefonisch of digitaal sparren (15 min)"
-                class="preference-card group w-full text-left p-5 rounded-2xl border-2 border-slate-200/80 hover:border-brand-dark bg-white hover:bg-[#153b68]/[0.02] transition-all duration-200 flex items-center justify-between gap-4 cursor-pointer shadow-xs"
+                class="preference-card group w-full text-left p-4 sm:p-5 rounded-2xl border-2 border-slate-200/80 hover:border-brand-dark bg-white hover:bg-[#153b68]/[0.02] transition-all duration-200 flex items-center justify-between gap-4 cursor-pointer shadow-xs"
               >
-                <div class="flex items-center gap-4">
-                  <div class="w-11 h-11 rounded-2xl bg-[#ffce76]/35 border border-[#ffce76] group-hover:bg-brand-dark group-hover:border-brand-dark text-brand-dark group-hover:text-[#ffce76] flex items-center justify-center shrink-0 transition-colors">
+                <div class="flex items-center gap-3.5">
+                  <div class="w-11 h-11 rounded-xl bg-[#ffce76]/35 border border-[#ffce76] group-hover:bg-brand-dark group-hover:border-brand-dark text-brand-dark group-hover:text-[#ffce76] flex items-center justify-center shrink-0 transition-colors">
                     <i class="fa-solid fa-phone-volume text-base"></i>
                   </div>
                   <div>
-                    <h4 class="ty-h4 text-brand-dark">Eerst kort telefonisch sparren</h4>
-                    <p class="ty-body text-slate-600">Even 15 minuten bellen met Martin om snel je vragen en cijfers door te nemen</p>
+                    <div class="text-[15px] font-semibold text-brand-dark font-sans leading-snug">Telefonisch sparren (15 min)</div>
+                    <div class="text-[13px] text-slate-500 font-sans leading-snug mt-0.5">Kort bellen om je vragen te bespreken</div>
                   </div>
                 </div>
                 <span class="text-slate-300 group-hover:text-brand-dark group-hover:translate-x-1 transition-all font-semibold">→</span>
@@ -377,10 +369,10 @@ import { COMPANY_DATA } from '../data/company';
                STAP 5: CONTACTGEGEVENS & VERZENDEN
                ========================================== -->
           <div class="funnel-step hidden" data-step="5">
-            <div class="space-y-2.5 mb-6">
-              <h2 class="ty-h2 text-brand-dark">Hoe kunnen we je bereiken?</h2>
-              <p class="ty-lead text-slate-600">
-                Vul je gegevens in, dan neemt Martin van der Spek binnen 24 uur persoonlijk contact met je op om de afspraak te bevestigen.
+            <div class="space-y-1.5 mb-6">
+              <h2 class="ty-h2 text-brand-dark">Waar mogen we je bereiken?</h2>
+              <p class="ty-body text-slate-500">
+                Martin neemt binnen 24 uur persoonlijk contact met je op.
               </p>
             </div>
 
@@ -556,35 +548,35 @@ import { COMPANY_DATA } from '../data/company';
   document.addEventListener('DOMContentLoaded', () => {
     const situationsByTopic = {
       hypotheken: [
-        { label: 'Eerste woning kopen (Starter)', desc: 'Bereken je maximale hypotheek & starterslening', icon: 'fa-solid fa-key' },
-        { label: 'Verhuizen naar een volgende woning', desc: 'Doorstromen, overbrugging & verhuisregeling', icon: 'fa-solid fa-truck-fast' },
-        { label: 'Bestaande hypotheek oversluiten', desc: 'Lagere maandlasten of betere voorwaarden', icon: 'fa-solid fa-arrows-rotate' },
-        { label: 'Verbouwen, verduurzamen of overwaarde', desc: 'Financiering voor uitbouw, verduurzaming of opname', icon: 'fa-solid fa-hammer' },
-        { label: 'Hypotheek als ZZP\'er / ondernemer', desc: 'Zakelijk inkomen optimaal meenemen vanaf 1 jaar', icon: 'fa-solid fa-briefcase' },
-        { label: 'Uit elkaar gaan & woning behouden', desc: 'Hoofdelijke ontslag & uitkoop berekenen', icon: 'fa-solid fa-scale-balanced' }
+        { label: 'Eerste woning kopen', desc: 'Maximale hypotheek berekenen', icon: 'fa-solid fa-key' },
+        { label: 'Verhuizen', desc: 'Volgende woning & overbrugging', icon: 'fa-solid fa-truck-fast' },
+        { label: 'Hypotheek oversluiten', desc: 'Lagere maandlasten of rente', icon: 'fa-solid fa-arrows-rotate' },
+        { label: 'Verbouwen of verduurzamen', desc: 'Extra ruimte of overwaarde benutten', icon: 'fa-solid fa-hammer' },
+        { label: 'Ondernemer / ZZP', desc: 'Zakelijk inkomen meenemen', icon: 'fa-solid fa-briefcase' },
+        { label: 'Scheiding & woning', desc: 'Woning overnemen of uitkopen', icon: 'fa-solid fa-scale-balanced' }
       ],
       verzekeringen: [
-        { label: 'Pakketcheck op bestaande verzekeringen', desc: 'Kijk of je kunt besparen met betere dekking', icon: 'fa-solid fa-magnifying-glass-dollar' },
-        { label: 'Woon-, gezins- of autoverzekering', desc: 'Opstal, inboedel, aansprakelijkheid of auto', icon: 'fa-solid fa-house-lock' },
-        { label: 'AOV of zakelijke verzekeringen', desc: 'Arbeidsongeschiktheid en bedrijfsrisico\'s voor ZZP/MKB', icon: 'fa-solid fa-briefcase-medical' },
-        { label: 'Overlijdensrisico- of woonlastenverzekering', desc: 'Financiële zekerheid voor je partner en gezin', icon: 'fa-solid fa-heart-shield' }
+        { label: 'Pakketcheck & besparen', desc: 'Bestaande verzekeringen vergelijken', icon: 'fa-solid fa-magnifying-glass-dollar' },
+        { label: 'Wonen, gezin of auto', desc: 'Opstal, inboedel of autoverzekering', icon: 'fa-solid fa-house-lock' },
+        { label: 'Zakelijk & AOV', desc: 'Voor ZZP\'ers en ondernemers', icon: 'fa-solid fa-briefcase-medical' },
+        { label: 'Overlijdensrisico', desc: 'Zekerheid voor partner en gezin', icon: 'fa-solid fa-heart-shield' }
       ],
       belastingaangifte: [
-        { label: 'Particuliere aangifte inkomstenbelasting', desc: 'Individueel of samen met je fiscaal partner', icon: 'fa-solid fa-user-check' },
-        { label: 'Aangifte in jaar van huisaankoop / verbouwing', desc: 'Haal het maximale uit je hypotheekrenteaftrek', icon: 'fa-solid fa-house-circle-check' },
-        { label: 'Voorlopige aanslag of toeslagen wijzigen', desc: 'Direct maandelijks terugkrijgen of bijstellen', icon: 'fa-solid fa-sliders' },
-        { label: 'Fiscale aangifte voor ZZP / ondernemer', desc: 'Inkomstenbelasting en aftrekposten voor ondernemers', icon: 'fa-solid fa-building' }
+        { label: 'Inkomstenbelasting', desc: 'Alleen of samen met je partner', icon: 'fa-solid fa-user-check' },
+        { label: 'Huis gekocht of verbouwd', desc: 'Maximale hypotheekrenteaftrek', icon: 'fa-solid fa-house-circle-check' },
+        { label: 'Voorlopige aanslag of toeslagen', desc: 'Maandelijkse teruggave wijzigen', icon: 'fa-solid fa-sliders' },
+        { label: 'Aangifte voor ondernemers', desc: 'Zakelijke aangifte en aftrekposten', icon: 'fa-solid fa-building' }
       ],
       vermogen: [
-        { label: 'Verstandig vermogen opbouwen', desc: 'Sparen en beleggen voor later met persoonlijk plan', icon: 'fa-solid fa-seedling' },
-        { label: 'Pensioen aanvullen of lijfrente regelen', desc: 'Fiscaal voordelig extra inkomen voor later opbouwen', icon: 'fa-solid fa-umbrella-beach' },
-        { label: 'Overwaarde benutten voor extra inkomen', desc: 'Verzilver de waarde van je woning zorgeloos', icon: 'fa-solid fa-coins' },
-        { label: 'Financiële planning of schenken', desc: 'Helder overzicht voor je toekomst of je kinderen', icon: 'fa-solid fa-sitemap' }
+        { label: 'Vermogen opbouwen', desc: 'Sparen of beleggen voor later', icon: 'fa-solid fa-seedling' },
+        { label: 'Pensioen aanvullen', desc: 'Extra inkomen voor later regelen', icon: 'fa-solid fa-umbrella-beach' },
+        { label: 'Overwaarde benutten', desc: 'Waarde uit je woning vrijmaken', icon: 'fa-solid fa-coins' },
+        { label: 'Financiële planning', desc: 'Inzicht voor toekomst of schenken', icon: 'fa-solid fa-sitemap' }
       ]
     };
 
     const topicLabels = {
-      hypotheken: 'Hypotheek & Wonen',
+      hypotheken: 'Hypotheken',
       verzekeringen: 'Verzekeringen',
       belastingaangifte: 'Belastingaangifte',
       vermogen: 'Vermogen & Pensioen'
@@ -593,7 +585,7 @@ import { COMPANY_DATA } from '../data/company';
     const state = {
       step: 1,
       serviceType: 'hypotheken',
-      topicLabel: 'Hypotheek & Wonen',
+      topicLabel: 'Hypotheken',
       situation: '',
       timeline: '',
       preference: ''
@@ -621,18 +613,18 @@ import { COMPANY_DATA } from '../data/company';
         <button 
           type="button"
           data-select-situation="${item.label.replace(/"/g, '&quot;')}"
-          class="situation-card group text-left p-4 sm:p-5 rounded-2xl border-2 border-slate-200/80 hover:border-brand-dark bg-white hover:bg-[#153b68]/[0.02] transition-all duration-200 flex items-start gap-3.5 cursor-pointer shadow-xs hover:shadow-md"
+          class="situation-card group text-left p-4 sm:p-5 rounded-2xl border-2 border-slate-200/80 hover:border-brand-dark bg-white hover:bg-[#153b68]/[0.02] transition-all duration-200 flex items-center justify-between gap-3.5 cursor-pointer shadow-xs hover:shadow-md"
         >
-          <div class="w-10 h-10 rounded-xl bg-[#ffce76]/35 border border-[#ffce76] group-hover:bg-brand-dark group-hover:border-brand-dark text-brand-dark group-hover:text-[#ffce76] flex items-center justify-center shrink-0 transition-colors mt-0.5">
-            <i class="${item.icon} text-sm"></i>
-          </div>
-          <div class="space-y-0.5 flex-1">
-            <div class="flex items-center justify-between gap-2">
-              <h4 class="ty-h4 text-brand-dark">${item.label}</h4>
-              <span class="text-slate-300 group-hover:text-brand-dark group-hover:translate-x-1 transition-all shrink-0">→</span>
+          <div class="flex items-center gap-3.5 min-w-0">
+            <div class="w-11 h-11 rounded-xl bg-[#ffce76]/35 border border-[#ffce76] group-hover:bg-brand-dark group-hover:border-brand-dark text-brand-dark group-hover:text-[#ffce76] flex items-center justify-center shrink-0 transition-colors">
+              <i class="${item.icon} text-sm"></i>
             </div>
-            <p class="ty-body text-slate-600">${item.desc}</p>
+            <div class="min-w-0">
+              <div class="text-[15px] font-semibold text-brand-dark font-sans leading-snug">${item.label}</div>
+              <div class="text-[13px] text-slate-500 font-sans leading-snug mt-0.5">${item.desc}</div>
+            </div>
           </div>
+          <span class="text-slate-300 group-hover:text-brand-dark group-hover:translate-x-1 transition-all shrink-0">→</span>
         </button>
       `).join('');
 
