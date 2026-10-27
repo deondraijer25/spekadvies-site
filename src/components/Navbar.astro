@@ -12,21 +12,21 @@ const cleanPath = pathname.replace(/\/$/, "");
   <!-- Top Utility Bar (Notification Bar - Right Aligned Contact Info & Polish Link) -->
   <div class="w-full bg-brand-dark border-b border-white/5 relative z-50 hidden lg:block">
     <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-2.5 flex justify-between items-center text-[11px] text-slate-300">
-      <!-- Polish Expats Info Link -->
+      <!-- Polish Expats Flag Link -->
       <a 
         href="https://www.ubezpieczenieholandii.nl/" 
         target="_blank" 
         rel="noopener noreferrer"
-        class="flex items-center space-x-2 text-slate-300 hover:text-brand-accent transition-colors font-sans group"
-        title="Van der Spek & Partners - Ubezpieczenia w Holandii (ubezpieczeniaholandia.nl)"
+        class="flex items-center hover:opacity-85 transition-opacity"
+        title="Polski: Ubezpieczenia w Holandii (Van der Spek & Partners)"
+        aria-label="Polski - Ubezpieczenia w Holandii (Van der Spek & Partners)"
       >
-        <span class="w-4 h-2.5 rounded-[2px] overflow-hidden shadow-[0_0_0_1px_rgba(255,255,255,0.25)] shrink-0 inline-block">
+        <span class="w-4 h-[11px] rounded-[2px] overflow-hidden shadow-[0_0_0_1px_rgba(255,255,255,0.25)] shrink-0 inline-block">
           <svg viewBox="0 0 16 11" class="w-full h-full block" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="16" height="5.5" fill="#FFFFFF" />
             <rect y="5.5" width="16" height="5.5" fill="#DC143C" />
           </svg>
         </span>
-        <span class="font-medium">Polski: Ubezpieczenia w Holandii (Van der Spek & Partners) ↗</span>
       </a>
 
       <!-- Contact Info (Right) -->
@@ -141,24 +141,6 @@ const cleanPath = pathname.replace(/\/$/, "");
             aria-label="Bel Spekadvies"
           >
             <i class="fa-solid fa-phone"></i>
-          </a>
-
-          <!-- Polish Website Button with Flag -->
-          <a 
-            href="https://www.ubezpieczenieholandii.nl/" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            title="Van der Spek & Partners - Ubezpieczenia w Holandii (ubezpieczeniaholandia.nl)"
-            aria-label="Polski - Ubezpieczenia w Holandii (Van der Spek & Partners)"
-            class="btn-nav h-9 w-9 sm:h-11 sm:w-auto px-0 sm:px-4 rounded-xl sm:rounded-full bg-white hover:bg-slate-50 text-brand-dark border border-slate-200/90 shadow-xs hover:shadow-md transition-all duration-300 flex items-center justify-center space-x-2 cursor-pointer flex-shrink-0 group"
-          >
-            <span class="w-5 h-3.5 rounded-[2px] overflow-hidden shadow-[0_0_0_1px_rgba(0,0,0,0.15)] shrink-0 inline-block">
-              <svg viewBox="0 0 16 11" class="w-full h-full block" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="16" height="5.5" fill="#FFFFFF" />
-                <rect y="5.5" width="16" height="5.5" fill="#DC143C" />
-              </svg>
-            </span>
-            <span class="text-brand-dark hidden sm:inline group-hover:text-brand-dark transition-colors">Polski</span>
           </a>
 
           <!-- Action Button (Visible on sm+) with Animated Rolling Text & Sliding SVG Arrow -->

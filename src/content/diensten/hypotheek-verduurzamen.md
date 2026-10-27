@@ -8,9 +8,9 @@ ctaText: "Bereken jouw verduurzamingsbudget"
 category: "hypotheken"
 
 statsBento:
-  - stat: "Tot € 20.000"
+  - stat: "Extra Ruimte"
     label: "Extra Bovenop Inkomen"
-    detail: "Voor energiebesparende voorzieningen mag je tot wel € 20.000 extra lenen buiten je standaard inkomenstoets."
+    detail: "Voor energiebesparende voorzieningen mag je een ruim bedrag extra lenen buiten je standaard inkomenstoets."
   - stat: "106% LTV"
     label: "Tot 106% van Woningwaarde"
     detail: "Normaal geldt een leenlimiet van 100% van de marktwaarde; bij een Energiebespaarbudget mag je lenen tot 106%."
@@ -60,7 +60,7 @@ reviewQuote:
 
 faqItems:
   - question: "Wat is het Energiebespaarbudget (EBB)?"
-    answer: "Het Energiebespaarbudget is een extra leningdeel binnen je hypotheek waarmee je tot 106% van de woningwaarde (maximaal € 20.000 extra) kunt lenen voor energiebesparende maatregelen, zónder dat je vooraf exact hoeft te specificeren welke maatregelen je gaat uitvoeren."
+    answer: "Het Energiebespaarbudget is een extra leningdeel binnen je hypotheek waarmee je tot 106% van de woningwaarde (en met extra ruimte bovenop je reguliere inkomenstoets) kunt lenen voor energiebesparende maatregelen, zónder dat je vooraf exact hoeft te specificeren welke maatregelen je gaat uitvoeren."
   - question: "Welke verduurzamingsmaatregelen mag ik meefinancieren?"
     answer: "Vrijwel alle nagelvaste energiebesparende voorzieningen komen in aanmerking: zonnepanelen, hybride of all-electric warmtepompen, spouwmuur-, vloer- en dakisolatie, HR++ of triple glas en ventilatiesystemen met warmteterugwinning."
   - question: "Krijg ik rentekorting als mijn huis een groen energielabel krijgt?"
@@ -73,7 +73,7 @@ De energielasten vormen een steeds groter onderdeel van de totale maandelijkse w
 
 ### Slim financieren via je hypotheek
 Waar veel huiseigenaren denken dat verduurzamen alleen met eigen spaargeld kan, bieden de huidige hypotheekregels enorme kansen:
-- **Extra leenruimte op inkomen:** De overheid stimuleert verduurzaming door tot € 20.000 extra leencapaciteit toe te staan bovenop de standaard inkomenstoets.
+- **Extra leenruimte op inkomen:** De overheid stimuleert verduurzaming door extra leencapaciteit toe te staan bovenop de standaard inkomenstoets, afhankelijk van het huidige energielabel van de woning.
 - **Lenen tot 106% van de woningwaarde:** Je bent niet gebonden aan de reguliere 100% LTV-grens.
 - **Renteaftrek in box 1:** Omdat het geld wordt geïnvesteerd in de verbetering van je hoofdverblijf, is de rente over het verduurzamingsdeel fiscaal aftrekbaar.
 

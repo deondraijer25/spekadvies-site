@@ -58,7 +58,7 @@ reviewQuote:
 
 faqItems:
   - question: "Is een overlijdensrisicoverzekering verplicht bij een hypotheek?"
-    answer: "Sinds 2018 is een ORV niet meer wettelijk verplicht voor een NHG-hypotheek. Sommige banken eisen wel een ORV als de lening meer dan 80% van de woningwaarde bedraagt. Zelfs als het niet verplicht is, blijft het om redenen van inkomensbescherming van harte aan te bevelen."
+    answer: "Voor een NHG-hypotheek is een ORV niet wettelijk verplicht. Sommige banken eisen bij een hypotheek zonder NHG wel een ORV als de lening meer dan 80% van de woningwaarde bedraagt. Zelfs als het niet verplicht is, blijft het om redenen van inkomensbescherming van harte aan te bevelen."
   - question: "Hoe werkt kruislingse premiebetaling en waarom is dit belangrijk?"
     answer: "Bij kruislingse premiebetaling verzekert partner A het leven van partner B en betaalt partner A ook de premie. Komt partner B te overlijden, dan keert de verzekering uit aan partner A. Omdat partner A zelf de premie heeft voldaan, wordt de uitkering niet gezien als erfenis en is deze 100% vrij van erfbelasting."
   - question: "Wat is het verschil tussen een gelijkblijvende en een dalende ORV?"

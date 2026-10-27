@@ -8,9 +8,9 @@ ctaText: "Bereken jouw nieuwbouwhypotheek"
 category: "hypotheken"
 
 statsBento:
-  - stat: "Tot € 50.000"
-    label: "Extra Leencapaciteit A+++"
-    detail: "Dankzij het energielabel A++++ van moderne nieuwbouw mag je aanzienlijk meer lenen dan bij bestaande bouw."
+  - stat: "Label A++++"
+    label: "Ruime Extra Leencapaciteit"
+    detail: "Dankzij het hoogste energielabel van moderne nieuwbouw mag je aanzienlijk meer lenen dan bij bestaande bouw."
   - stat: "0,15% - 0,30%"
     label: "Duurzaamheidskorting"
     detail: "Veel geldverstrekkers belonen nieuwbouw met een permanente rentekorting over de gehele rentevastperiode."
@@ -35,7 +35,7 @@ comparisonTable:
     - ["Financieringsstructuur", "Gefaseerde betaling in termijnen via een Bouwdepot", "Volledige aankoopsom in één keer bij levering notaris"]
     - ["Dubbele lasten tijdens bouw", "Ja: hypotheektermijnen stijgen terwijl je huidige woonlasten doorlopen", "Kortstondig: alleen tot overdracht oude woning"]
     - ["Duurzaamheid & energielabel", "Standaard A+++ of A++++ (maximaal energiezuinig, warmtepomp)", "Variërend van energielabel G tot A+"]
-    - ["Extra leenruimte energielabel", "Maximaal € 40.000 tot € 50.000 extra leencapaciteit", "€ 0 (label E/F/G) tot maximaal € 20.000 (label A/B)"]
+    - ["Extra leenruimte energielabel", "Maximale wettelijke extra leencapaciteit voor A+++/A++++", "Afhankelijk van actueel energielabel (oplopend vanaf label D t/m A++)"]
 
 expertTips:
   - title: "Let op de geldigheid van je hypotheekofferte"
@@ -64,7 +64,7 @@ faqItems:
   - question: "Wat is renteverlies tijdens de bouw?"
     answer: "Naarmate de aannemer meer bouwtermijnen declareert, raakt het bouwdepot leger. Daardoor daalt je rentevergoeding en stijgen je netto hypotheeklasten, terwijl je huidige woonlasten ook nog doorlopen. Dit verschil noemen we renteverlies tijdens de bouw, wat je desgewenst kunt meefinancieren in de hypotheek."
   - question: "Hoeveel extra mag ik lenen voor een energiezuinige nieuwbouwwoning?"
-    answer: "Voor een nieuwbouwwoning met energielabel A++++ (vaak met energieprestatiegarantie) mag je in 2024/2025 tot wel € 40.000 à € 50.000 extra lenen bovenop je standaard leencapaciteit, omdat je energielasten nihil zijn."
+    answer: "Voor een nieuwbouwwoning met energielabel A+++ of A++++ (vaak met energieprestatiegarantie) mag je volgens de wettelijke leennormen tienduizenden euro's extra lenen bovenop je standaard leencapaciteit, omdat je maandelijkse energielasten vrijwel nihil zijn."
   - question: "Wat gebeurt er als de bouw van het nieuwbouwproject vertraagt?"
     answer: "Bij vertraging is het van cruciaal belang dat de rentevaste offerte van de bank kan worden verlengd. Spekadvies kiest bewust voor geldverstrekkers die kosteloos verlengen, zodat je niet wordt geconfronteerd met dure verlengingskosten (bereidstellingsprovisie)."
 ---

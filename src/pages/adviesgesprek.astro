@@ -761,7 +761,7 @@ import { COMPANY_DATA } from '../data/company';
           message: userMessage
         };
 
-        const endpoints = ['/api/contact.php', '/api/contact', '/contact.php'];
+        const endpoints = ['/api/contact', '/api/contact.php', '/contact.php'];
         let success = false;
 
         for (const url of endpoints) {
@@ -776,17 +776,18 @@ import { COMPANY_DATA } from '../data/company';
             });
 
             if (response.ok) {
-              success = true;
-              break;
+              const data = await response.json();
+              if (data && data.success === true) {
+                success = true;
+                break;
+              }
             }
           } catch (err) {
-            // Try next endpoint
+            // Try next endpoint (e.g. if static server returned raw PHP text instead of JSON)
           }
         }
 
-        // Show success state (also in local dev where PHP isn't running)
-        const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
-        if (success || isLocalhost) {
+        if (success) {
           steps.forEach((el) => el.classList.add('hidden'));
           if (progressWrapper) progressWrapper.classList.add('hidden');
           if (progressBar) progressBar.style.width = '100%';

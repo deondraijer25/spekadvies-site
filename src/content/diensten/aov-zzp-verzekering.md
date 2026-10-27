@@ -61,7 +61,7 @@ faqItems:
   - question: "Is een AOV verplicht voor zelfstandigen en ZZP'ers?"
     answer: "Op dit moment is een AOV nog niet wettelijk verplicht voor ZZP'ers. Wel werkt de overheid aan de Wet Basisverzekering Arbeidsongeschiktheid Zelfstandigen (BAZ). Wie nu al een private AOV heeft afgesloten, kan te zijner tijd waarschijnlijk gebruikmaken van een opt-out regeling."
   - question: "Is de premie van een AOV fiscaal aftrekbaar?"
-    answer: "Ja, de premie die je betaalt voor een individuele AOV is volledig aftrekbaar als uitgave voor inkomensvoorziening in box 1 van de inkomstenbelasting. Hierdoor betaalt de fiscus tot wel 36,97% of 49,50% van je premie mee."
+    answer: "Ja, de premie die je betaalt voor een individuele AOV is volledig aftrekbaar als uitgave voor inkomensvoorziening in box 1 van de inkomstenbelasting. Hierdoor betaalt de fiscus tegen het voor jou geldende belastingtarief een aanzienlijk deel van je premie mee."
   - question: "Wat is het verschil tussen een AOV en een broodfonds?"
     answer: "Een broodfonds is een vereniging van ondernemers die elkaar bij ziekte maximaal twee jaar financieel ondersteunen. Een AOV via een verzekeraar keert desgewenst uit tot je AOW-leeftijd (bijvoorbeeld 67 jaar). Vaak is een combinatie (broodfonds voor de eerste 2 jaar + AOV vanaf het 3e jaar) een zeer voordelige opzet."
   - question: "Kan ik een AOV afsluiten als ik al een medisch verleden heb?"

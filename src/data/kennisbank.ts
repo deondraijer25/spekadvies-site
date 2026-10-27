@@ -78,7 +78,7 @@ Sinds de richtlijn van de Autoriteit Financiële Markten (AFM) mag een bank niet
 4. **Contant maken naar de huidige waarde:** De bank rekent uit wat dat renteverlies vandaag waard is.
 
 ### Boeterente is eenmalig fiscaal aftrekbaar
-Het grote voordeel van de boeterente is dat je dit bedrag in het jaar van betaling volledig mag aftrekken in box 1 van je inkomstenbelasting. Hierdoor betaalt de fiscus tot wel 36,97% of 49,50% van de boete terug.
+Het grote voordeel van de boeterente is dat je dit bedrag in het jaar van betaling volledig mag aftrekken in box 1 van je inkomstenbelasting. Hierdoor betaalt de fiscus tegen het voor jou geldende belastingtarief een aanzienlijk deel van de boete terug.
     `,
     faqs: [
       {
@@ -214,12 +214,12 @@ Voor een snelle hypotheekaanvraag laten wij een Inkomensverklaring Ondernemer op
     category: 'Hypotheken',
     readTime: '4 min leestijd',
     publishedDate: '2026-03-10',
-    directAnswer: 'Het Energiebespaarbudget (EBB) is een financieel potje binnen je hypotheek waarmee je tot maximaal 106% van de marktwaarde van je woning (en tot € 20.000 buiten je standaard inkomenstoets) mag lenen voor energiebesparende voorzieningen. Je hoeft vooraf nog niet exact gespecificeerd te hebben welke maatregelen je treft.',
+    directAnswer: 'Het Energiebespaarbudget (EBB) is een financieel potje binnen je hypotheek waarmee je tot maximaal 106% van de marktwaarde van je woning (en met extra leenruimte buiten je standaard inkomenstoets) mag lenen voor energiebesparende voorzieningen. Je hoeft vooraf nog niet exact gespecificeerd te hebben welke maatregelen je treft.',
     content: `
 ### Extra leenruimte voor een groen huis
 De overheid wil dat Nederlandse koopwoningen snel verduurzamen. Daarom gelden er soepelere leennormen voor investeringen in energiebesparing:
 1. **Lenen tot 106% van de woningwaarde:** Terwijl je voor de woning zelf maximaal 100% mag lenen, mag je voor verduurzaming tot 106% lenen.
-2. **Tot € 20.000 buiten inkomen:** Voor erkende maatregelen mag je extra lenen zonder dat dit op je standaard inkomen drukt, mits je bruto gezinsinkomen minimaal € 35.000 bedraagt.
+2. **Extra leenruimte buiten inkomen:** Voor erkende energiebesparende maatregelen mag je afhankelijk van het energielabel een ruim bedrag extra lenen zonder dat dit op je standaard inkomenstoets drukt.
 
 ### Het gemak van een EBB ten opzichte van een EBV
 Bij een reguliere Energiebesparende Voorziening (EBV) moet je al vóór het passeren van de hypotheek gedetailleerde offertes van installateurs overleggen. Bij een Energiebespaarbudget (EBB) reserveer je het bedrag op basis van een schatting en heb je tot wel 24 maanden de tijd om te beslissen welke maatregelen je daadwerkelijk uitvoert.

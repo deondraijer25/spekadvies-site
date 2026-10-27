@@ -44,7 +44,7 @@ expertTips:
   - title: "Let op de startersvrijstelling overdrachtsbelasting"
     tip: "Koop je samen en is één van jullie 35 jaar of ouder? Dan betaalt de partner van 35+ alsnog 2% over zijn of haar eigendomsdeel, terwijl de jongere partner van de vrijstelling profiteert. Wij berekenen de exacte uitsplitsing vooraf."
   - title: "Studieschuld verzwijgen is riskant én achterhaald"
-    tip: "Sinds 2024 kijken banken naar de actuele studieschuld in plaats van de oorspronkelijke studieschuld als je extra hebt afgelost. Geef dit altijd eerlijk door; banken controleren dit via DUO bij finale toetsing."
+    tip: "Banken kijken bij de toetsing naar de actuele stand en werkelijke maandlast van je studieschuld in plaats van alleen de oorspronkelijke hoofdsom als je tussentijds extra hebt afgelost. Geef dit altijd eerlijk door; banken controleren dit via DUO bij finale toetsing."
 
 problemsTitle: "Belangrijke aandachtspunten voor starters"
 problems:
@@ -53,7 +53,7 @@ problems:
   - title: "Eigen geld voor de kosten koper"
     description: "Je kunt maximaal 100% van de woningwaarde lenen. Voor de bijkomende aankoopkosten (notaris, taxatie, advies) is circa 3% tot 5% eigen inbreng nodig — eventueel aangevuld met een schenking of de SVn Starterslening."
   - title: "Studieschuld of flexibel contract"
-    description: "Een studieschuld (DUO) of flexcontract (zoals een intentieverklaring of perspectiefverklaring) sluit een hypotheek geenszins uit. Sinds 2024 telt de werkelijke maandlast, waardoor je leencapaciteit vaak ruimer uitvalt."
+    description: "Een studieschuld (DUO) of flexcontract (zoals een intentieverklaring of perspectiefverklaring) sluit een hypotheek geenszins uit. Doordat er getoetst wordt op de werkelijke maandlast, valt je leencapaciteit vaak ruimer uit."
 
 reviewQuote:
   quote: "Als starters wisten we totaal niet waar we moesten beginnen. Martin heeft ons stap voor stap begeleid en voor ons een prachtige startershypotheek geregeld met NHG. Zonder zijn advies hadden we dit huis nooit kunnen kopen!"
@@ -69,7 +69,7 @@ faqItems:
   - question: "Heb ik recht op de startersvrijstelling voor overdrachtsbelasting?"
     answer: "Ja, als je tussen de 18 en 35 jaar oud bent, de woning als hoofdverblijf gaat gebruiken en de koopsom onder de wettelijke drempel blijft, betaal je eenmalig 0% overdrachtsbelasting in plaats van 2%."
   - question: "Kan ik als starter een hypotheek krijgen met een studieschuld?"
-    answer: "Zeker. Sinds 2024 wordt gerekend met de werkelijke maandlast van je DUO-lening in plaats van een vast percentage over de oorspronkelijke schuld. Dit vergroot je leencapaciteit aanzienlijk als je al deels hebt afgelost."
+    answer: "Zeker. Banken rekenen met de werkelijke maandlast van je DUO-lening in plaats van een vast percentage over de oorspronkelijke schuld. Dit vergroot je leencapaciteit aanzienlijk, zeker als je al deels hebt afgelost."
 ---
 
 Het kopen van je allereerste woning is een van de meest ingrijpende financiële beslissingen van je leven. In Moerkapelle en omliggende dorpen zoals Zevenhuizen, Waddinxveen en Gouda is de woningmarkt dynamisch en gewild. Juist daarom is een deskundig, onafhankelijk klankbord onmisbaar.
