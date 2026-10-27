@@ -78,39 +78,39 @@ import SectionDivider from './SectionDivider.astro';
         </div>
       </div>
 
-      <!-- Right Column: Graphical Illustration & Layers -->
+      <!-- Right Column: Hypotheek Consultant & Spekadvies Trust Badges -->
       <div class="lg:col-span-6 relative flex items-center justify-center">
-        <div class="relative max-w-[500px] w-full aspect-[778/872]">
+        <div class="relative max-w-[460px] w-full aspect-[3/4] flex items-end justify-center">
           
-          <!-- Main Illustration image-09.png -->
+          <!-- Main Consultant Cutout -->
           <img 
-            src="/insonis template/insonis-themer/sample/uploads/2026/05/image-09.png" 
-            alt="Faq Illustratie" 
-            class="w-full h-full object-contain relative z-10"
+            src="/images/hypotheek-consultant.png" 
+            alt="Erkend Hypotheekadviseur Spekadvies" 
+            class="w-full h-full object-contain object-bottom relative z-10 drop-shadow-[0_18px_35px_rgba(21,59,104,0.10)]"
             loading="lazy"
             decoding="async"
           />
 
-          <!-- Layer 4: Floating Shield/Coin Shape -->
-          <div class="absolute left-[-10px] sm:left-[-20px] top-[10%] w-[90px] h-[90px] sm:w-[130px] sm:h-[130px] z-20 animate-float-slow">
-            <img 
-              src="/insonis template/insonis-themer/sample/uploads/2026/05/layer-4.png" 
-              alt="Decoration Shield" 
-              class="w-full h-full object-contain"
-              loading="lazy"
-              decoding="async"
-            />
+          <!-- Floating Top-Left Badge: FontAwesome Shield Icon in Spekadvies Brand Styling -->
+          <div class="absolute left-0 sm:left-[-12px] top-[14%] z-20 animate-float-slow bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-2xl px-4 py-3 shadow-[0_15px_35px_-5px_rgba(21,59,104,0.14)] flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-brand-dark text-[#ffce76] flex items-center justify-center text-base shrink-0">
+              <i class="fa-solid fa-user-tie"></i>
+            </div>
+            <div class="text-left">
+              <div class="text-xs font-semibold text-brand-dark font-display leading-tight">Erkend Adviseur</div>
+              <div class="text-[11px] text-slate-500 font-sans">100% onafhankelijk</div>
+            </div>
           </div>
 
-          <!-- Layer 5: Small Floating Element -->
-          <div class="absolute right-[10%] bottom-[15%] w-[40px] h-[40px] sm:w-[53px] sm:h-[53px] z-20 animate-float-fast">
-            <img 
-              src="/insonis template/insonis-themer/sample/uploads/2026/04/layer-5.png" 
-              alt="Decoration Element" 
-              class="w-full h-full object-contain"
-              loading="lazy"
-              decoding="async"
-            />
+          <!-- Floating Bottom-Right Badge: FontAwesome Check / 40+ Banken -->
+          <div class="absolute right-0 sm:right-[-8px] bottom-[12%] z-20 animate-float-fast bg-brand-dark text-white border border-white/10 rounded-2xl px-4 py-3 shadow-[0_15px_35px_-5px_rgba(21,59,104,0.25)] flex items-center gap-3">
+            <div class="w-9 h-9 rounded-xl bg-[#ffce76] text-brand-dark flex items-center justify-center text-sm shrink-0">
+              <i class="fa-solid fa-building-columns"></i>
+            </div>
+            <div class="text-left">
+              <div class="text-xs font-semibold text-[#ffce76] font-display leading-tight">40+ Aanbieders</div>
+              <div class="text-[11px] text-slate-300 font-sans">Scherpste rente</div>
+            </div>
           </div>
 
         </div>
