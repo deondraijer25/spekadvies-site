@@ -1,0 +1,3 @@
+* text=auto eol=lf
+.htaccess text eol=lf
+public/.htaccess text eol=lf
