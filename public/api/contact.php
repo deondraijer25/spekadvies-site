@@ -189,6 +189,15 @@ try {
         // -------------------------------------------------------------
         // STAP 3: Slimme Tags toevoegen (incl. 'website-lead')
         // -------------------------------------------------------------
+        if (isset($upsertRes['body']['contact']['tags']) && is_array($upsertRes['body']['contact']['tags']) && in_array('website-lead', $upsertRes['body']['contact']['tags'])) {
+            ghlApiRequest(
+                "https://services.leadconnectorhq.com/contacts/{$contactId}/tags",
+                'DELETE',
+                ['tags' => ['website-lead']],
+                $apiKey
+            );
+        }
+
         $tagsToApply = ['website-lead', $tag];
 
         if (!empty($preference)) {

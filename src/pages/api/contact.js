@@ -152,6 +152,15 @@ export async function POST({ request }) {
     // ==========================================
     // STAP 3: Slimme Tags toevoegen (incl. 'website-lead' trigger tag)
     // ==========================================
+    // Als het contact 'website-lead' al had (bijv. bij herhaald testen), verwijder deze eerst zodat de 'Tag Added' trigger opnieuw afgaat
+    if (Array.isArray(upsertData.contact?.tags) && upsertData.contact.tags.includes('website-lead')) {
+      await fetch(`https://services.leadconnectorhq.com/contacts/${contactId}/tags`, {
+        method: 'DELETE',
+        headers: ghlHeaders,
+        body: JSON.stringify({ tags: ['website-lead'] })
+      });
+    }
+
     const tagsToApply = ['website-lead', tag];
 
     if (preference) {
