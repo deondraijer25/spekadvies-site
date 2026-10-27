@@ -230,7 +230,7 @@ try {
         );
 
         // -------------------------------------------------------------
-        // STAP 4: Opportunity in Pijplijn aanmaken (incl. gekozen Situatie)
+        // STAP 4: Opportunity in Pijplijn aanmaken of updaten (incl. gekozen Situatie)
         // -------------------------------------------------------------
         $oppTitle = !empty($situation)
             ? "{$name} — {$serviceLabel}: {$situation}"
@@ -246,9 +246,19 @@ try {
         ];
 
         ghlApiRequest(
-            'https://services.leadconnectorhq.com/opportunities/',
+            'https://services.leadconnectorhq.com/opportunities/upsert',
             'POST',
             $oppPayload,
+            $apiKey
+        );
+
+        // -------------------------------------------------------------
+        // STAP 5: Directe Workflow Trigger ("Nieuwe website lead")
+        // -------------------------------------------------------------
+        ghlApiRequest(
+            "https://services.leadconnectorhq.com/contacts/{$contactId}/workflow/4487dcf1-e769-4a58-bf73-07bb80455f89",
+            'POST',
+            new stdClass(),
             $apiKey
         );
     }

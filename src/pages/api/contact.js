@@ -199,13 +199,13 @@ export async function POST({ request }) {
     }
 
     // ==========================================
-    // STAP 4: Opportunity aanmaken in de pijplijn (incl. gekozen Situatie)
+    // STAP 4: Opportunity aanmaken of updaten in de pijplijn (incl. gekozen Situatie)
     // ==========================================
     const oppTitle = situation && situation.trim()
       ? `${name.trim()} — ${serviceLabel}: ${situation.trim()}`
       : `${name.trim()} — Website Lead (${serviceLabel})`;
 
-    const opportunityResponse = await fetch('https://services.leadconnectorhq.com/opportunities/', {
+    const opportunityResponse = await fetch('https://services.leadconnectorhq.com/opportunities/upsert', {
       method: 'POST',
       headers: ghlHeaders,
       body: JSON.stringify({
@@ -222,6 +222,15 @@ export async function POST({ request }) {
       const errorText = await opportunityResponse.text();
       console.warn('GHL Step 4 Opportunity Warning:', errorText);
     }
+
+    // ==========================================
+    // STAP 5: Directe Workflow Trigger (Fallback zodat SMS/E-mail altijd afgaat)
+    // ==========================================
+    await fetch(`https://services.leadconnectorhq.com/contacts/${contactId}/workflow/4487dcf1-e769-4a58-bf73-07bb80455f89`, {
+      method: 'POST',
+      headers: ghlHeaders,
+      body: JSON.stringify({})
+    }).catch(() => {});
 
     // Return success to the client
     return new Response(
