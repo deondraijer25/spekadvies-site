@@ -1,0 +1,99 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout 
+  title="Pagina niet gevonden (404) | Spekadvies Moerkapelle"
+  description="De opgevraagde pagina bestaat niet meer of is verhuisd. Ga terug naar de homepagina of plan direct een vrijblijvend adviesgesprek met Martin van der Spek."
+>
+  <Navbar />
+
+  <main class="relative z-10 flex-grow bg-[#f8fafc] py-16 sm:py-24 lg:py-28 overflow-hidden flex items-center">
+    <div class="max-w-4xl mx-auto px-4 sm:px-8 lg:px-12 w-full relative z-10">
+      <div class="bg-white rounded-[28px] sm:rounded-[36px] border border-slate-200/90 p-8 sm:p-12 lg:p-16 shadow-[0_20px_60px_-15px_rgba(21,59,104,0.08)] text-center relative overflow-hidden">
+        
+        <!-- Subtle Decorative Spekadvies Clover Watermark -->
+        <div class="pointer-events-none select-none absolute -right-16 -bottom-16 w-64 h-64 text-brand-dark/[0.03] rotate-12" aria-hidden="true">
+          <svg viewBox="0 0 80.08 83.08" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M80.08,43.04c0,10.89-8.87,19.76-19.76,19.76-.18,0-.35-.01-.53-.02,0,.18.01.36.01.53,0,10.9-8.87,19.77-19.76,19.77s-19.76-8.87-19.76-19.77c0-.17,0-.35.01-.53-.18,0-.36.02-.53.02C8.86,62.8,0,53.93,0,43.04s8.86-19.76,19.76-19.76c.17,0,.35,0,.53,0-.01-.18-.01-.36-.01-.53,0-8.09,10.4-17.07,16.61-21.71,1.88-1.4,4.41-1.4,6.3,0,6.2,4.64,16.61,13.62,16.61,21.71,0,.17-.01.35-.01.53.18,0,.35,0,.53,0,10.89,0,19.76,8.86,19.76,19.76Z"/>
+          </svg>
+        </div>
+
+        <div class="w-16 h-16 rounded-2xl bg-amber-50 border border-amber-200/70 text-brand-dark flex items-center justify-center text-2xl mx-auto mb-6 shadow-xs">
+          <i class="fa-solid fa-compass text-amber-700"></i>
+        </div>
+
+        <h1 class="ty-h1 text-brand-dark mb-4">
+          Deze pagina is verhuisd of bestaat niet meer
+        </h1>
+
+        <p class="ty-lead text-slate-600 max-w-xl mx-auto mb-8">
+          Onze website is onlangs vernieuwd. De link die je hebt aangeklikt verwijst waarschijnlijk naar een oude pagina. Hieronder helpen we je direct naar de juiste plek.
+        </p>
+
+        <!-- Primary & Secondary CTAs -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4 mb-10">
+          <a 
+            href="/adviesgesprek" 
+            class="btn-primary-gold group inline-flex items-center justify-center gap-3.5 px-7 py-3.5 rounded-full bg-[#ffce76] hover:bg-[#f5be58] text-brand-dark shadow-[0_8px_25px_-4px_rgba(255,206,118,0.55)] hover:-translate-y-0.5 transition-all duration-300 w-full sm:w-auto"
+          >
+            <span>Plan een afspraak / Contact</span>
+            <span class="w-7 h-7 rounded-full bg-brand-dark text-[#ffce76] flex items-center justify-center transition-all duration-300 shrink-0 text-xs">
+              <i class="fa-solid fa-arrow-right"></i>
+            </span>
+          </a>
+
+          <a 
+            href="/" 
+            class="btn-secondary inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-full bg-slate-100 hover:bg-slate-200/80 text-brand-dark border border-slate-200/80 transition-all duration-300 w-full sm:w-auto"
+          >
+            <i class="fa-solid fa-house text-xs"></i>
+            <span>Terug naar de homepagina</span>
+          </a>
+        </div>
+
+        <!-- Quick Navigation Links -->
+        <div class="pt-8 border-t border-slate-100">
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-left">
+            <a href="/hypotheken" class="p-3.5 rounded-2xl bg-slate-50 hover:bg-amber-50/60 border border-slate-200/60 hover:border-amber-300 transition-all group">
+              <div class="flex items-center justify-between text-brand-dark mb-1">
+                <i class="fa-solid fa-house-chimney text-amber-700 text-xs"></i>
+                <i class="fa-solid fa-arrow-right text-[10px] text-slate-400 group-hover:translate-x-0.5 transition-transform"></i>
+              </div>
+              <div class="ty-h4 text-brand-dark text-sm">Hypotheken</div>
+            </a>
+
+            <a href="/verzekeringen" class="p-3.5 rounded-2xl bg-slate-50 hover:bg-amber-50/60 border border-slate-200/60 hover:border-amber-300 transition-all group">
+              <div class="flex items-center justify-between text-brand-dark mb-1">
+                <i class="fa-solid fa-shield-halved text-amber-700 text-xs"></i>
+                <i class="fa-solid fa-arrow-right text-[10px] text-slate-400 group-hover:translate-x-0.5 transition-transform"></i>
+              </div>
+              <div class="ty-h4 text-brand-dark text-sm">Verzekeringen</div>
+            </a>
+
+            <a href="/aangiften" class="p-3.5 rounded-2xl bg-slate-50 hover:bg-amber-50/60 border border-slate-200/60 hover:border-amber-300 transition-all group">
+              <div class="flex items-center justify-between text-brand-dark mb-1">
+                <i class="fa-solid fa-file-invoice text-amber-700 text-xs"></i>
+                <i class="fa-solid fa-arrow-right text-[10px] text-slate-400 group-hover:translate-x-0.5 transition-transform"></i>
+              </div>
+              <div class="ty-h4 text-brand-dark text-sm">Belastingaangifte</div>
+            </a>
+
+            <a href="/over-ons" class="p-3.5 rounded-2xl bg-slate-50 hover:bg-amber-50/60 border border-slate-200/60 hover:border-amber-300 transition-all group">
+              <div class="flex items-center justify-between text-brand-dark mb-1">
+                <i class="fa-solid fa-users text-amber-700 text-xs"></i>
+                <i class="fa-solid fa-arrow-right text-[10px] text-slate-400 group-hover:translate-x-0.5 transition-transform"></i>
+              </div>
+              <div class="ty-h4 text-brand-dark text-sm">Over ons</div>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>

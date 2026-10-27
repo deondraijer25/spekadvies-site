@@ -23,16 +23,11 @@ import Footer from '../components/Footer.astro';
       style="background-image: linear-gradient(rgba(21, 59, 104, 0.82), rgba(11, 26, 47, 0.94)), url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=1800&q=80');"
     >
       <div class="max-w-4xl mx-auto px-4 sm:px-8 text-center relative z-10">
-        <!-- Badge -->
-        <span class="inline-block bg-white/10 text-brand-accent border border-white/10 text-[10px] font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full mb-6 font-sans">
-          Klantenservice
-        </span>
-        
-        <h1 class="text-3xl sm:text-5xl lg:text-6.5xl font-semibold text-white tracking-tight leading-tight font-display mb-6">
+        <h1 class="ty-h1 text-white mb-6">
           Klantenservice en downloads
         </h1>
         
-        <p  class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto font-sans font-normal">
+        <p class="ty-lead text-slate-300 max-w-2xl mx-auto">
           Alles op één plek. Download formulieren, lever documenten veilig bij ons aan of neem direct contact op.
         </p>
       </div>
@@ -44,21 +39,21 @@ import Footer from '../components/Footer.astro';
         <div class="flex space-x-3 sm:space-x-8 overflow-x-auto hide-scrollbar py-1">
           <button 
             id="tab-btn-verzekeringen" 
-            class="tab-btn active border-b-2 border-brand-accent px-3 sm:px-4 py-3 sm:py-4 text-xs font-semibold uppercase tracking-wider font-sans text-brand-dark cursor-pointer transition-all duration-200 whitespace-nowrap flex items-center space-x-2"
+            class="tab-btn active border-b-2 border-brand-accent px-3 sm:px-4 py-3 sm:py-4 text-sm font-semibold font-sans text-brand-dark cursor-pointer transition-all duration-200 whitespace-nowrap flex items-center space-x-2"
             data-tab="verzekeringen"
           >
             <span>Verzekeringen</span>
           </button>
           <button 
             id="tab-btn-hypotheken" 
-            class="tab-btn border-b-2 border-transparent px-3 sm:px-4 py-3 sm:py-4 text-xs font-semibold uppercase tracking-wider font-sans text-slate-400 hover:text-brand-dark cursor-pointer transition-all duration-200 whitespace-nowrap flex items-center space-x-2"
+            class="tab-btn border-b-2 border-transparent px-3 sm:px-4 py-3 sm:py-4 text-sm font-semibold font-sans text-slate-400 hover:text-brand-dark cursor-pointer transition-all duration-200 whitespace-nowrap flex items-center space-x-2"
             data-tab="hypotheken"
           >
             <span>Hypotheken</span>
           </button>
           <button 
             id="tab-btn-klantenservice" 
-            class="tab-btn border-b-2 border-transparent px-3 sm:px-4 py-3 sm:py-4 text-xs font-semibold uppercase tracking-wider font-sans text-slate-400 hover:text-brand-dark cursor-pointer transition-all duration-200 whitespace-nowrap flex items-center space-x-2"
+            class="tab-btn border-b-2 border-transparent px-3 sm:px-4 py-3 sm:py-4 text-sm font-semibold font-sans text-slate-400 hover:text-brand-dark cursor-pointer transition-all duration-200 whitespace-nowrap flex items-center space-x-2"
             data-tab="klantenservice"
           >
             <span>Klantenservice</span>
@@ -79,8 +74,8 @@ import Footer from '../components/Footer.astro';
               <i class="fa-solid fa-umbrella"></i>
             </div>
             <div>
-              <h2 class="text-xl sm:text-2xl font-semibold font-sans text-brand-primary">Verzekeringsdocumenten</h2>
-              <p  class="text-slate-300 text-sm sm:text-base mt-2 font-sans font-normal max-w-2xl leading-relaxed">
+              <h2 class="ty-h2 text-brand-primary">Verzekeringsdocumenten</h2>
+              <p class="ty-lead text-slate-300 mt-2 max-w-2xl">
                 Download schadeformulieren, voorwaarden en officiële documenten voor al je verzekeringszaken. Vul ze digitaal of handmatig in.
               </p>
             </div>

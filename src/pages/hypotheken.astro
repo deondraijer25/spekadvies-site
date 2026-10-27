@@ -23,29 +23,25 @@ import Footer from '../components/Footer.astro';
       style="background-image: linear-gradient(rgba(21, 59, 104, 0.82), rgba(11, 26, 47, 0.94)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=80');"
     >
       <div class="max-w-4xl mx-auto px-4 sm:px-8 text-center relative z-10">
-        <!-- Badge -->
-        <span class="inline-block bg-white/10 text-brand-accent border border-white/10 text-[10px] font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full mb-6 font-sans">
-          Hypotheekadvies op maat
-        </span>
-        
-        <h1 id="hero-title" class="text-3xl sm:text-5xl lg:text-6.5xl font-semibold text-white tracking-tight leading-tight font-display mb-6">
+        <h1 id="hero-title" class="ty-h1 text-white mb-6">
           De eerste stap naar jouw eigen plek
         </h1>
         
-        <p  class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto mb-10 font-sans font-normal">
+        <p class="ty-lead text-slate-300 max-w-2xl mx-auto mb-10">
           De zoektocht naar een woning is spannend, zeker in de huidige markt. Wij vergelijken meer dan 40 geldverstrekkers voor de beste rente en voorwaarden.
         </p>
         
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <button 
-            class="open-contact-drawer w-full sm:w-auto bg-brand-accent hover:bg-brand-accent/90 text-brand-dark font-semibold px-8 py-4 rounded-full shadow-lg transition-all duration-300 text-xs tracking-wider uppercase font-sans cursor-pointer"
+          <a 
+            href="/adviesgesprek?onderwerp=hypotheken"
+            class="open-contact-drawer btn-primary-gold w-full sm:w-auto bg-brand-accent hover:bg-brand-accent/90 text-brand-dark px-7 py-3.5 rounded-full shadow-lg transition-all duration-300 cursor-pointer"
           >
-            Plan gratis adviesgesprek
-          </button>
+            Plan een afspraak
+          </a>
           <a 
             href="https://start.finsave.nl/app/public/maximale-hypotheek" 
             target="_blank"
-            class="w-full sm:w-auto bg-transparent border-2 border-white/20 hover:border-white text-white font-semibold px-8 py-4 rounded-full shadow-sm hover:shadow-md transition-all duration-300 text-xs tracking-wider uppercase font-sans cursor-pointer"
+            class="btn-secondary w-full sm:w-auto bg-transparent border-2 border-white/20 hover:border-white text-white px-7 py-3.5 rounded-full shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer"
           >
             Maximale hypotheek berekenen ↗
           </a>
@@ -105,8 +101,7 @@ import Footer from '../components/Footer.astro';
     <section class="py-20 bg-brand-base overflow-hidden">
       <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
         <div class="text-center max-w-2xl mx-auto mb-12">
-          <span class="text-xs font-semibold tracking-widest uppercase text-brand-dark/50 block font-display">Je situatie</span>
-          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-semibold text-brand-dark font-display mt-2">Heb je al een koopwoning?</h2>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-semibold text-brand-dark font-display">Heb je al een koopwoning?</h2>
           <p   class="text-slate-600 text-sm sm:text-base font-sans font-normal mt-3">Selecteer hieronder jouw situatie en ontdek wat wij voor jou betekenen.</p>
         </div>
 
@@ -133,7 +128,6 @@ import Footer from '../components/Footer.astro';
         <!-- Tab 1 content: Doorstromers -->
         <div id="journey-panel-doorstromers" class="journey-panel grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div class="lg:col-span-7 space-y-6">
-            <span class="inline-block bg-brand-primary/10 text-brand-dark text-[10px] font-semibold tracking-widest uppercase px-3 py-1 rounded-full font-sans">Volgende woning</span>
             <h3 class="text-xl sm:text-2xl font-semibold text-brand-dark font-display">Verhuizen naar een volgende woning</h3>
             <p   class="text-slate-600 text-xs sm:text-sm leading-relaxed font-sans font-normal">
               Als je al een koopwoning bezit, komt er bij een verhuizing meer kijken. Je hebt te maken met de verkoop van je huidige huis, de mogelijke overwaarde en de timing van de overdracht. Wij zorgen dat de financiële puzzel precies in elkaar valt.
@@ -171,7 +165,7 @@ import Footer from '../components/Footer.astro';
           </div>
           
           <div class="lg:col-span-5 bg-brand-basetint rounded-2xl sm:rounded-3xl p-5 sm:p-8 border border-slate-200/50 flex flex-col justify-center text-center space-y-6">
-            <div class="text-5xl">🗝️</div>
+            <div class="w-16 h-16 rounded-2xl bg-brand-primary/15 text-brand-dark flex items-center justify-center text-3xl mx-auto"><i class="fa-solid fa-key"></i></div>
             <h4 class="text-base font-semibold text-brand-dark font-display uppercase tracking-wider">Naadloze overdracht</h4>
             <p   class="text-sm text-slate-600 font-sans font-normal leading-relaxed max-w-sm mx-auto">
               Wij stemmen de datums van de verkoop en aankoop exact op elkaar af, zodat je niet onnodig dubbele lasten draagt of zonder woning komt te zitten.
@@ -183,7 +177,6 @@ import Footer from '../components/Footer.astro';
         <!-- Tab 2 content: Verduurzamen -->
         <div id="journey-panel-verduurzamen" class="journey-panel hidden grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div class="lg:col-span-7 space-y-6">
-            <span class="inline-block bg-brand-primary/10 text-brand-dark text-[10px] font-semibold tracking-widest uppercase px-3 py-1 rounded-full font-sans">Aanpassen</span>
             <h3 class="text-xl sm:text-2xl font-semibold text-brand-dark font-display">Hypotheek oversluiten of verduurzamen</h3>
             <p   class="text-slate-600 text-xs sm:text-sm leading-relaxed font-sans font-normal">
               Een hypotheek sluit je vaak af voor 30 jaar, maar jouw leven staat niet stil. Misschien droom je van een uitbouw, loopt je rentevastperiode af of wil je je woning energiezuiniger maken. Wij checken of je maandlasten omlaag kunnen.
@@ -221,7 +214,7 @@ import Footer from '../components/Footer.astro';
           </div>
           
           <div class="lg:col-span-5 bg-brand-basetint rounded-2xl sm:rounded-3xl p-5 sm:p-8 border border-slate-200/50 flex flex-col justify-center text-center space-y-6">
-            <div class="text-5xl text-emerald-600">⚡</div>
+            <div class="w-16 h-16 rounded-2xl bg-emerald-500/15 text-emerald-600 flex items-center justify-center text-3xl mx-auto"><i class="fa-solid fa-bolt"></i></div>
             <h4 class="text-base font-semibold text-brand-dark font-display uppercase tracking-wider">Bespaar op energielasten</h4>
             <p   class="text-sm text-slate-600 font-sans font-normal leading-relaxed max-w-sm mx-auto">
               Door zonnepanelen, warmtepompen of isolatie mee te financieren in je hypotheek, dalen je maandelijkse energierekeningen direct.
@@ -237,8 +230,7 @@ import Footer from '../components/Footer.astro';
     <section class="py-20 bg-white border-y border-slate-100">
       <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
         <div class="text-center max-w-2xl mx-auto mb-16">
-          <span class="text-xs font-semibold tracking-widest uppercase text-brand-accent block font-sans">Specialistische Dienstverlening</span>
-          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-semibold text-brand-dark font-display mt-2">
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-semibold text-brand-dark font-display">
             Onze 8 Hypotheekoplossingen op Maat
           </h2>
           <p class="text-slate-600 text-sm sm:text-base font-sans mt-3">
@@ -250,7 +242,7 @@ import Footer from '../components/Footer.astro';
           
           <a href="/diensten/startershypotheek" class="bg-[#f8fafc] border border-slate-200/80 p-6 rounded-3xl hover:border-brand-accent hover:shadow-lg transition-all group flex flex-col justify-between">
             <div>
-              <div class="w-10 h-10 rounded-xl bg-white text-brand-accent flex items-center justify-center font-semibold mb-4 shadow-xs">✦</div>
+              <div class="w-10 h-10 rounded-xl bg-white text-brand-accent flex items-center justify-center text-base mb-4 shadow-xs"><i class="fa-solid fa-key"></i></div>
               <h3 class="text-base font-semibold text-brand-dark font-display mb-2 group-hover:text-brand-accent transition-colors">Startershypotheek</h3>
               <p class="text-xs text-slate-600 leading-relaxed font-sans">Maximale leenruimte, SVn Starterslening en startersvrijstelling voor jouw eerste koophuis.</p>
             </div>
@@ -259,7 +251,7 @@ import Footer from '../components/Footer.astro';
 
           <a href="/diensten/doorstromers-overbrugging" class="bg-[#f8fafc] border border-slate-200/80 p-6 rounded-3xl hover:border-brand-accent hover:shadow-lg transition-all group flex flex-col justify-between">
             <div>
-              <div class="w-10 h-10 rounded-xl bg-white text-brand-accent flex items-center justify-center font-semibold mb-4 shadow-xs">✦</div>
+              <div class="w-10 h-10 rounded-xl bg-white text-brand-accent flex items-center justify-center text-base mb-4 shadow-xs"><i class="fa-solid fa-route"></i></div>
               <h3 class="text-base font-semibold text-brand-dark font-display mb-2 group-hover:text-brand-accent transition-colors">Doorstromers & Overbrugging</h3>
               <p class="text-xs text-slate-600 leading-relaxed font-sans">Overwaarde voorfinancieren, dubbele maandlasten overbruggen en lage rente meenemen.</p>
             </div>
@@ -268,7 +260,7 @@ import Footer from '../components/Footer.astro';
 
           <a href="/diensten/hypotheek-oversluiten" class="bg-[#f8fafc] border border-slate-200/80 p-6 rounded-3xl hover:border-brand-accent hover:shadow-lg transition-all group flex flex-col justify-between">
             <div>
-              <div class="w-10 h-10 rounded-xl bg-white text-brand-accent flex items-center justify-center font-semibold mb-4 shadow-xs">✦</div>
+              <div class="w-10 h-10 rounded-xl bg-white text-brand-accent flex items-center justify-center text-base mb-4 shadow-xs"><i class="fa-solid fa-rotate"></i></div>
               <h3 class="text-base font-semibold text-brand-dark font-display mb-2 group-hover:text-brand-accent transition-colors">Hypotheek Oversluiten</h3>
               <p class="text-xs text-slate-600 leading-relaxed font-sans">Boeterente nauwkeurig berekenen, rentevaste periode aanpassen en structureel besparen.</p>
             </div>
@@ -277,7 +269,7 @@ import Footer from '../components/Footer.astro';
 
           <a href="/diensten/overwaarde-verzilveren" class="bg-[#f8fafc] border border-slate-200/80 p-6 rounded-3xl hover:border-brand-accent hover:shadow-lg transition-all group flex flex-col justify-between">
             <div>
-              <div class="w-10 h-10 rounded-xl bg-white text-brand-accent flex items-center justify-center font-semibold mb-4 shadow-xs">✦</div>
+              <div class="w-10 h-10 rounded-xl bg-white text-brand-accent flex items-center justify-center text-base mb-4 shadow-xs"><i class="fa-solid fa-coins"></i></div>
               <h3 class="text-base font-semibold text-brand-dark font-display mb-2 group-hover:text-brand-accent transition-colors">Overwaarde & Senioren</h3>
               <p class="text-xs text-slate-600 leading-relaxed font-sans">Opeethypotheek, rente bijschrijven en vermogen uit de stenen halen voor extra leefruimte.</p>
             </div>
@@ -286,7 +278,7 @@ import Footer from '../components/Footer.astro';
 
           <a href="/diensten/zzp-ondernemers-hypotheek" class="bg-[#f8fafc] border border-slate-200/80 p-6 rounded-3xl hover:border-brand-accent hover:shadow-lg transition-all group flex flex-col justify-between">
             <div>
-              <div class="w-10 h-10 rounded-xl bg-white text-brand-accent flex items-center justify-center font-semibold mb-4 shadow-xs">✦</div>
+              <div class="w-10 h-10 rounded-xl bg-white text-brand-accent flex items-center justify-center text-base mb-4 shadow-xs"><i class="fa-solid fa-briefcase"></i></div>
               <h3 class="text-base font-semibold text-brand-dark font-display mb-2 group-hover:text-brand-accent transition-colors">ZZP & Ondernemers</h3>
               <p class="text-xs text-slate-600 leading-relaxed font-sans">Hypotheektoetsing uit jaarcijfers al vanaf 1 jaar zelfstandig via de Inkomensverklaring.</p>
             </div>
@@ -295,7 +287,7 @@ import Footer from '../components/Footer.astro';
 
           <a href="/diensten/nieuwbouw-hypotheek" class="bg-[#f8fafc] border border-slate-200/80 p-6 rounded-3xl hover:border-brand-accent hover:shadow-lg transition-all group flex flex-col justify-between">
             <div>
-              <div class="w-10 h-10 rounded-xl bg-white text-brand-accent flex items-center justify-center font-semibold mb-4 shadow-xs">✦</div>
+              <div class="w-10 h-10 rounded-xl bg-white text-brand-accent flex items-center justify-center text-base mb-4 shadow-xs"><i class="fa-solid fa-trowel-bricks"></i></div>
               <h3 class="text-base font-semibold text-brand-dark font-display mb-2 group-hover:text-brand-accent transition-colors">Nieuwbouw Hypotheek</h3>
               <p class="text-xs text-slate-600 leading-relaxed font-sans">Bouwdepot, renteverlies tijdens de bouw en extra A++++ leencapaciteit voor nieuwbouw.</p>
             </div>
@@ -304,7 +296,7 @@ import Footer from '../components/Footer.astro';
 
           <a href="/diensten/hypotheek-verduurzamen" class="bg-[#f8fafc] border border-slate-200/80 p-6 rounded-3xl hover:border-brand-accent hover:shadow-lg transition-all group flex flex-col justify-between">
             <div>
-              <div class="w-10 h-10 rounded-xl bg-white text-brand-accent flex items-center justify-center font-semibold mb-4 shadow-xs">✦</div>
+              <div class="w-10 h-10 rounded-xl bg-white text-brand-accent flex items-center justify-center text-base mb-4 shadow-xs"><i class="fa-solid fa-leaf"></i></div>
               <h3 class="text-base font-semibold text-brand-dark font-display mb-2 group-hover:text-brand-accent transition-colors">Hypotheek Verduurzamen</h3>
               <p class="text-xs text-slate-600 leading-relaxed font-sans">Energiebespaarbudget (EBB) tot 106% van de woningwaarde en rentekortingen.</p>
             </div>
@@ -313,7 +305,7 @@ import Footer from '../components/Footer.astro';
 
           <a href="/diensten/hypotheek-bij-scheiding" class="bg-[#f8fafc] border border-slate-200/80 p-6 rounded-3xl hover:border-brand-accent hover:shadow-lg transition-all group flex flex-col justify-between">
             <div>
-              <div class="w-10 h-10 rounded-xl bg-white text-brand-accent flex items-center justify-center font-semibold mb-4 shadow-xs">✦</div>
+              <div class="w-10 h-10 rounded-xl bg-white text-brand-accent flex items-center justify-center text-base mb-4 shadow-xs"><i class="fa-solid fa-scale-balanced"></i></div>
               <h3 class="text-base font-semibold text-brand-dark font-display mb-2 group-hover:text-brand-accent transition-colors">Hypotheek bij Scheiding</h3>
               <p class="text-xs text-slate-600 leading-relaxed font-sans">Woning behouden via de bancaire beheertoets, partner uitkopen en ontslag hoofdelijkheid.</p>
             </div>
@@ -328,8 +320,7 @@ import Footer from '../components/Footer.astro';
     <section class="py-20 bg-brand-basetint/30 relative">
       <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
         <div class="text-center max-w-2xl mx-auto mb-16">
-          <span class="text-xs font-semibold tracking-widest uppercase text-brand-dark/50 block font-display">Voorbereiding</span>
-          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-semibold text-brand-dark font-display mt-2">Welke documenten hebben we nodig?</h2>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-semibold text-brand-dark font-display">Welke documenten hebben we nodig?</h2>
           <p   class="text-slate-600 text-sm sm:text-base font-sans font-normal mt-3">Om jouw aanvraag soepel te laten verlopen, verzamelen we in de intakefase een aantal documenten.</p>
         </div>
 
@@ -385,8 +376,7 @@ import Footer from '../components/Footer.astro';
     <section class="py-20 bg-brand-base overflow-hidden">
       <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
         <div class="text-center max-w-2xl mx-auto mb-16">
-          <span class="text-xs font-semibold tracking-widest uppercase text-brand-dark/50 block font-display">Stappenplan</span>
-          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-semibold text-brand-dark font-display mt-2">Hoe verloopt een hypotheekaanvraag?</h2>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-semibold text-brand-dark font-display">Hoe verloopt een hypotheekaanvraag?</h2>
           <p   class="text-slate-600 text-sm sm:text-base font-sans font-normal mt-3">Van de eerste kennismaking tot de notaris: wij begeleiden je stap voor stap.</p>
         </div>
 
@@ -546,7 +536,6 @@ import Footer from '../components/Footer.astro';
           
           <!-- FAQs Headers -->
           <div class="lg:col-span-4 space-y-4">
-            <span class="text-xs font-semibold tracking-widest uppercase text-brand-dark/50 block font-display">Antwoorden</span>
             <h2 class="text-2xl sm:text-3xl font-semibold text-brand-dark font-display">Veelgestelde vragen over hypotheken</h2>
             <p   class="text-sm text-slate-600 font-sans font-normal leading-relaxed">
               Heb je een andere specifieke vraag? Onze adviseurs leggen alles helder uit en vinden samen de beste oplossing voor jouw situatie.
@@ -623,7 +612,6 @@ import Footer from '../components/Footer.astro';
       <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] rounded-full bg-brand-primary/10 blur-[150px] pointer-events-none"></div>
 
       <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 relative z-10 text-center">
-        <span class="text-xs font-semibold tracking-widest uppercase text-brand-accent block font-display mb-3">Zelf Berekenen</span>
         <h2 class="text-3xl sm:text-4xl font-semibold font-display text-white">Slimme Rekentools</h2>
         <p  class="text-slate-300 text-xs sm:text-sm font-sans font-normal max-w-lg mx-auto mt-4 leading-relaxed">
           Gebruik onze tools voor een eerste indicatie van jouw budget en de huidige markt.
@@ -682,7 +670,6 @@ import Footer from '../components/Footer.astro';
       <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-16">
           <div class="lg:col-span-6 space-y-3">
-            <span class="text-xs font-semibold tracking-widest uppercase text-brand-dark/50 block font-display">Nieuws & Updates</span>
             <h2 class="text-3xl sm:text-4xl font-semibold text-brand-dark font-display leading-tight">Informatieve artikelen over rente en financiering</h2>
           </div>
           <div class="lg:col-span-6 lg:pl-10 space-y-4">

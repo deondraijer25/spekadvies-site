@@ -23,28 +23,24 @@ import Footer from '../components/Footer.astro';
       style="background-image: linear-gradient(rgba(21, 59, 104, 0.82), rgba(11, 26, 47, 0.94)), url('https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=1800&q=80');"
     >
       <div class="max-w-4xl mx-auto px-4 sm:px-8 text-center relative z-10">
-        <!-- Badge -->
-        <span class="inline-block bg-white/10 text-brand-accent border border-white/10 text-[10px] font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full mb-6 font-sans">
-          Verzekeringen op maat
-        </span>
-        
-        <h1 class="text-3xl sm:text-5xl lg:text-6.5xl font-semibold text-white tracking-tight leading-tight font-display mb-6">
+        <h1 class="ty-h1 text-white mb-6">
           Zorgeloos verzekerd, onafhankelijk en persoonlijk
         </h1>
         
-        <p  class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto mb-10 font-sans font-normal">
+        <p class="ty-lead text-slate-300 max-w-2xl mx-auto mb-10">
           Of het nu gaat om je auto, je woning of je bedrijf: Spekadvies vergelijkt tientallen aanbieders en regelt het goed. Wij zijn jouw adviseur die verder kijkt dan de kleine lettertjes.
         </p>
         
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <button 
-            class="open-contact-drawer w-full sm:w-auto bg-brand-accent hover:bg-brand-accent/90 text-brand-dark font-semibold px-8 py-4 rounded-full shadow-lg transition-all duration-300 text-xs tracking-wider uppercase font-sans cursor-pointer"
+          <a 
+            href="/adviesgesprek?onderwerp=verzekeringen"
+            class="open-contact-drawer btn-primary-gold w-full sm:w-auto bg-brand-accent hover:bg-brand-accent/90 text-brand-dark px-7 py-3.5 rounded-full shadow-lg transition-all duration-300 cursor-pointer"
           >
-            Plan gratis verzekeringscheck
-          </button>
+            Plan een afspraak
+          </a>
           <a 
             href="/klantenservice" 
-            class="w-full sm:w-auto bg-transparent border-2 border-white/20 hover:border-white text-white font-semibold px-8 py-4 rounded-full shadow-sm hover:shadow-md transition-all duration-300 text-xs tracking-wider uppercase font-sans cursor-pointer"
+            class="btn-secondary w-full sm:w-auto bg-transparent border-2 border-white/20 hover:border-white text-white px-7 py-3.5 rounded-full shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer"
           >
             Schade direct melden
           </a>
@@ -55,14 +51,11 @@ import Footer from '../components/Footer.astro';
     <!-- Onze Verzekeringsspecialismen (Silo Hub Grid) -->
     <section class="py-16 bg-white border-b border-slate-100">
       <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
-        <div class="text-center max-w-2xl mx-auto mb-12">
-          <span class="inline-block bg-amber-50 text-amber-800 border border-amber-200/80 text-[10px] font-semibold uppercase tracking-wider px-3 py-1 rounded-full mb-2 font-sans">
-            Specialistische Dekkingen
-          </span>
-          <h2 class="text-2xl sm:text-3.5xl font-semibold text-brand-dark font-display mt-1">
-            Onze Kernverzekeringen op Maat
+        <div class="text-center max-w-2xl mx-auto mb-12 space-y-2.5">
+          <h2 class="ty-h2 text-brand-dark">
+            Onze kernverzekeringen op maat
           </h2>
-          <p class="text-slate-600 text-sm sm:text-base font-sans mt-2">
+          <p class="ty-lead text-slate-600">
             Bekijk onze gespecialiseerde adviespagina's voor diepgaande voorwaarden, scherpe premies en onafhankelijke vergelijkingen.
           </p>
         </div>
@@ -70,7 +63,7 @@ import Footer from '../components/Footer.astro';
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           <a href="/diensten/aov-zzp-verzekering" class="bento-card p-6 flex flex-col justify-between group">
             <div>
-              <div class="w-11 h-11 rounded-2xl bg-amber-50 border border-amber-200/60 text-xl flex items-center justify-center font-semibold mb-4 shadow-xs">🛡️</div>
+              <div class="w-11 h-11 rounded-2xl bg-amber-50 border border-amber-200/60 text-amber-800 text-lg flex items-center justify-center mb-4 shadow-xs"><i class="fa-solid fa-shield-halved"></i></div>
               <h3 class="text-base font-semibold text-brand-dark font-display mb-2 group-hover:text-amber-800 transition-colors">AOV voor Ondernemers</h3>
               <p class="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-sans">Inkomenszekerheid bij ziekte en ongeval voor ZZP'ers en DGA's. Volledig fiscaal aftrekbaar.</p>
             </div>
@@ -82,7 +75,7 @@ import Footer from '../components/Footer.astro';
 
           <a href="/diensten/woonverzekeringen" class="bento-card p-6 flex flex-col justify-between group">
             <div>
-              <div class="w-11 h-11 rounded-2xl bg-amber-50 border border-amber-200/60 text-xl flex items-center justify-center font-semibold mb-4 shadow-xs">🏡</div>
+              <div class="w-11 h-11 rounded-2xl bg-amber-50 border border-amber-200/60 text-amber-800 text-lg flex items-center justify-center mb-4 shadow-xs"><i class="fa-solid fa-house-chimney"></i></div>
               <h3 class="text-base font-semibold text-brand-dark font-display mb-2 group-hover:text-amber-800 transition-colors">Woonverzekeringen</h3>
               <p class="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-sans">Opstal en inboedel mét garantie tegen onderverzekering, inclusief zonnepanelen en Allrisk.</p>
             </div>
@@ -94,7 +87,7 @@ import Footer from '../components/Footer.astro';
 
           <a href="/diensten/overlijdensrisicoverzekering" class="bento-card p-6 flex flex-col justify-between group">
             <div>
-              <div class="w-11 h-11 rounded-2xl bg-amber-50 border border-amber-200/60 text-xl flex items-center justify-center font-semibold mb-4 shadow-xs">🤝</div>
+              <div class="w-11 h-11 rounded-2xl bg-amber-50 border border-amber-200/60 text-amber-800 text-lg flex items-center justify-center mb-4 shadow-xs"><i class="fa-solid fa-hand-holding-heart"></i></div>
               <h3 class="text-base font-semibold text-brand-dark font-display mb-2 group-hover:text-amber-800 transition-colors">Overlijdensrisico (ORV)</h3>
               <p class="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-sans">Financiële rust voor je nabestaanden. Fiscaal optimaal met kruislingse premiebetaling.</p>
             </div>
@@ -106,7 +99,7 @@ import Footer from '../components/Footer.astro';
 
           <a href="/diensten/zakelijke-verzekeringen" class="bento-card p-6 flex flex-col justify-between group">
             <div>
-              <div class="w-11 h-11 rounded-2xl bg-amber-50 border border-amber-200/60 text-xl flex items-center justify-center font-semibold mb-4 shadow-xs">💼</div>
+              <div class="w-11 h-11 rounded-2xl bg-amber-50 border border-amber-200/60 text-amber-800 text-lg flex items-center justify-center mb-4 shadow-xs"><i class="fa-solid fa-briefcase"></i></div>
               <h3 class="text-base font-semibold text-brand-dark font-display mb-2 group-hover:text-amber-800 transition-colors">Zakelijke Verzekeringen</h3>
               <p class="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-sans">Bedrijfsaansprakelijkheid (AVB), beroepsaansprakelijkheid, inventaris en rechtsbijstand.</p>
             </div>
@@ -416,8 +409,7 @@ import Footer from '../components/Footer.astro';
     <section class="py-20 bg-brand-base">
       <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
         <div class="text-center max-w-2xl mx-auto mb-16">
-          <span class="text-xs font-semibold tracking-widest uppercase text-brand-dark/50 block font-display">Onze werkwijze</span>
-          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-semibold text-brand-dark font-display mt-2">Van inventarisatie tot optimale zekerheid</h2>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-semibold text-brand-dark font-display">Van inventarisatie tot optimale zekerheid</h2>
           <p   class="text-slate-600 text-sm sm:text-base font-sans font-normal mt-3">Persoonlijke en onafhankelijke service bij elke stap.</p>
         </div>
 
@@ -459,7 +451,6 @@ import Footer from '../components/Footer.astro';
           
           <!-- FAQs Headers -->
           <div class="lg:col-span-4 space-y-4">
-            <span class="text-xs font-semibold tracking-widest uppercase text-brand-dark/50 block font-display">Veelgestelde vragen</span>
             <h2 class="text-2xl sm:text-3xl font-semibold text-brand-dark font-display">Vragen over onze service</h2>
             <p   class="text-sm text-slate-600 font-sans font-normal leading-relaxed">
               Heb je een vraag over schademeldingen of onafhankelijk advies? Onze specialisten staan altijd voor je klaar.

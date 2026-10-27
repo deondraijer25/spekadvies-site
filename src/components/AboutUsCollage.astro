@@ -48,46 +48,43 @@ import SectionDivider from './SectionDivider.astro';
 
       <!-- Right Column: Content & Bullet Points -->
       <div class="lg:col-span-6 space-y-7 text-left">
-        <div class="space-y-3">
-          <span class="inline-block bg-amber-50 text-amber-800 border border-amber-200/80 px-3.5 py-1.5 rounded-full text-[11px] font-semibold tracking-widest uppercase font-sans">
-            Over Spekadvies
-          </span>
-          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-semibold text-brand-dark tracking-tight leading-tight font-display">
+        <div class="space-y-2.5">
+          <h2 class="ty-h2 text-brand-dark">
             Het beste advies & begeleiding voor jouw financiën
           </h2>
-          <p  class="text-slate-600 text-sm sm:text-base leading-relaxed font-sans font-normal">
+          <p class="ty-lead text-slate-600">
             Een hypotheek of verzekering moet passen bij jouw manier van leven. Onze onafhankelijke aanpak zorgt ervoor dat we meer dan 40 geldverstrekkers vergelijken om voor jou de scherpste deal en beste voorwaarden te vinden.
           </p>
         </div>
 
-        <!-- Bullet List (Premium elements matching Home 01) -->
-        <div class="space-y-6 pt-2">
+        <!-- Bullet List -->
+        <div class="space-y-5 pt-1">
           
-          <!-- Bullet 1: Easy Financial Planning -->
+          <!-- Bullet 1 -->
           <div class="flex items-start space-x-4">
-            <div class="w-12 h-12 rounded-2xl bg-amber-50 border border-amber-200/70 flex items-center justify-center flex-shrink-0 shadow-xs text-amber-800">
-              <i class="fa-solid fa-chart-line text-lg"></i>
+            <div class="w-11 h-11 rounded-2xl bg-amber-50 border border-amber-200/70 flex items-center justify-center flex-shrink-0 shadow-xs text-amber-800">
+              <i class="fa-solid fa-chart-line text-base"></i>
             </div>
             <div class="space-y-1">
-              <h3 class="text-base sm:text-lg font-semibold text-brand-dark font-display">
-                Eenvoudige Financiële Planning
-              </h3>
-              <p  class="text-slate-600 text-sm leading-relaxed font-sans font-normal">
+              <h4 class="ty-h4 text-brand-dark">
+                Eenvoudige financiële planning
+              </h4>
+              <p class="ty-body text-slate-600">
                 Wij vertalen ingewikkelde wet- en regelgeving naar heldere keuzes en duidelijke rekensommen die je begrijpt.
               </p>
             </div>
           </div>
 
-          <!-- Bullet 2: Compare our Offers -->
+          <!-- Bullet 2 -->
           <div class="flex items-start space-x-4">
-            <div class="w-12 h-12 rounded-2xl bg-amber-50 border border-amber-200/70 flex items-center justify-center flex-shrink-0 shadow-xs text-amber-800">
-              <i class="fa-solid fa-scale-balanced text-lg"></i>
+            <div class="w-11 h-11 rounded-2xl bg-amber-50 border border-amber-200/70 flex items-center justify-center flex-shrink-0 shadow-xs text-amber-800">
+              <i class="fa-solid fa-scale-balanced text-base"></i>
             </div>
             <div class="space-y-1">
-              <h3 class="text-base sm:text-lg font-semibold text-brand-dark font-display">
-                Vergelijk Alle Aanbieders
-              </h3>
-              <p  class="text-slate-600 text-sm leading-relaxed font-sans font-normal">
+              <h4 class="ty-h4 text-brand-dark">
+                Vergelijk alle aanbieders
+              </h4>
+              <p class="ty-body text-slate-600">
                 Doordat we onafhankelijk zijn, kijken we naar de gehele markt en staan we 100% aan jouw kant, niet aan die van de bank.
               </p>
             </div>
@@ -95,19 +92,27 @@ import SectionDivider from './SectionDivider.astro';
 
         </div>
 
-        <!-- CTA Button -->
-        <div class="pt-4">
-          <button 
-            class="open-contact-drawer inline-block bg-brand-primary hover:bg-brand-primary-hover text-brand-dark font-semibold px-8 py-4 rounded-full shadow-[0_10px_25px_rgba(255,206,118,0.25)] hover:shadow-[0_14px_32px_rgba(255,206,118,0.35)] transition-all transform hover:-translate-y-0.5 text-xs tracking-wider uppercase font-sans cursor-pointer"
+        <!-- CTA Button (Unified 15px Primary Button) -->
+        <div class="pt-2">
+          <a 
+            href="/adviesgesprek"
+            class="open-contact-drawer btn-primary group inline-flex items-center justify-center gap-3.5 px-7 py-3.5 rounded-full bg-brand-dark hover:bg-slate-900 text-white shadow-lg shadow-brand-dark/15 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 cursor-pointer"
           >
-            Plan gratis adviesgesprek ➔
-          </button>
+            <span>Plan een afspraak</span>
+            <span class="w-7 h-7 rounded-full bg-white/15 group-hover:bg-[#ffce76] group-hover:text-brand-dark flex items-center justify-center transition-all duration-300 shrink-0">
+              <svg class="w-3.5 h-3.5" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </a>
         </div>
       </div>
 
     </div>
   </div>
 
+  <!-- Branded Stepped Divider to ServicesGrid (#f8fafc) -->
+  <SectionDivider fillColor="#f8fafc" direction="left-high" />
 </section>
 
 <style>

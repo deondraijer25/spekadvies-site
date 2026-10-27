@@ -1,266 +1,86 @@
 ---
 import SectionDivider from './SectionDivider.astro';
 ---
-<section id="contact" class="py-20 lg:py-28 relative scroll-mt-20">
-  <div class="absolute left-0 bottom-0 w-[400px] h-[400px] rounded-full bg-brand-primary/5 blur-[120px] pointer-events-none"></div>
+<section id="contact" class="py-16 lg:py-24 relative scroll-mt-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
+    <div class="bg-brand-dark border border-white/10 rounded-[28px] sm:rounded-[36px] p-6 sm:p-10 lg:p-12 shadow-2xl relative overflow-hidden">
+      
+      <!-- Subtle Spekadvies Clover Watermark in Background -->
+      <svg 
+        class="pointer-events-none select-none absolute -right-12 -top-12 w-72 h-72 text-[#ffce76]/[0.06] rotate-12" 
+        viewBox="0 0 80.08 83.08" 
+        fill="currentColor"
+        aria-hidden="true"
+      >
+        <path d="M80.08,43.04c0,10.89-8.87,19.76-19.76,19.76-.18,0-.35-.01-.53-.02,0,.18.01.36.01.53,0,10.9-8.87,19.77-19.76,19.77s-19.76-8.87-19.76-19.77c0-.17,0-.35.01-.53-.18,0-.36.02-.53.02C8.86,62.8,0,53.93,0,43.04s8.86-19.76,19.76-19.76c.17,0,.35,0,.53,0-.01-.18-.01-.36-.01-.53,0-8.09,10.4-17.07,16.61-21.71,1.88-1.4,4.41-1.4,6.3,0,6.2,4.64,16.61,13.62,16.61,21.71,0,.17-.01.35-.01.53.18,0,.35,0,.53,0,10.89,0,19.76,8.86,19.76,19.76Z"/>
+      </svg>
 
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="bg-brand-dark border border-white/10 rounded-[28px] sm:rounded-[40px] p-5 sm:p-10 lg:p-16 shadow-2xl relative overflow-hidden">
-      <!-- Background subtle patterns -->
-      <div class="absolute -right-24 -bottom-24 w-96 h-96 rounded-full bg-brand-primary/5 blur-3xl pointer-events-none"></div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start relative z-10">
-        
-        <!-- Contact details (Left Column) -->
-        <div class="lg:col-span-5 space-y-6 sm:space-y-8">
-          <div class="space-y-3 sm:space-y-4">
-            <span class="text-brand-primary text-xs font-semibold tracking-widest uppercase block font-sans">Persoonlijk contact</span>
-            <h2 class="text-2xl sm:text-4xl lg:text-5xl font-semibold text-white tracking-tight font-display">
-              Laat van je horen.
-            </h2>
-            <p  class="text-slate-300 text-xs sm:text-base leading-relaxed font-sans font-normal">
-              Heb je een specifieke vraag, wil je een berekening laten maken of wil je gewoon even sparren? Vul het formulier in of neem direct contact op met Spekadvies.
-            </p>
-          </div>
-
-          <div class="space-y-4 sm:space-y-6">
-            <div class="flex items-start space-x-3.5 sm:space-x-4">
-              <div class="w-10 h-10 sm:w-12 sm:h-12 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center flex-shrink-0 text-white text-sm sm:text-base">
-                <i class="fa-solid fa-phone"></i>
-              </div>
-              <div>
-                <h4 class="text-[10px] text-slate-400 font-semibold uppercase tracking-wider font-sans">Telefoon</h4>
-                <a href="tel:+31795931241" class="text-white hover:text-brand-primary font-semibold text-sm sm:text-base transition-colors font-sans">079 593 1241</a>
-              </div>
-            </div>
-
-            <div class="flex items-start space-x-3.5 sm:space-x-4">
-              <div class="w-10 h-10 sm:w-12 sm:h-12 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center flex-shrink-0 text-white text-sm sm:text-base">
-                <i class="fa-solid fa-envelope"></i>
-              </div>
-              <div>
-                <h4 class="text-[10px] text-slate-400 font-semibold uppercase tracking-wider font-sans">E-mailadres</h4>
-                <a href="mailto:info@spekadvies.nl" class="text-white hover:text-brand-primary font-semibold text-sm sm:text-base transition-colors font-sans break-all">info@spekadvies.nl</a>
-              </div>
-            </div>
-
-            <div class="flex items-start space-x-3.5 sm:space-x-4">
-              <div class="w-10 h-10 sm:w-12 sm:h-12 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center flex-shrink-0 text-white text-sm sm:text-base">
-                <i class="fa-solid fa-location-dot"></i>
-              </div>
-              <div>
-                <h4 class="text-[10px] text-slate-400 font-semibold uppercase tracking-wider font-sans">Kantoor</h4>
-                <p class="text-white font-semibold text-sm sm:text-base font-sans">Herenweg 42, 2751 DB Moerkapelle</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="pt-4 sm:pt-6 border-t border-white/10 flex flex-wrap gap-3 sm:gap-4 items-center">
-            <div class="text-brand-primary font-semibold text-[11px] sm:text-xs uppercase tracking-widest font-sans">✓ KVK: 29051405</div>
-            <div class="w-1.5 h-1.5 rounded-full bg-slate-600 hidden sm:block"></div>
-            <div class="text-brand-primary font-semibold text-[11px] sm:text-xs uppercase tracking-widest font-sans">✓ AFM: 12009127</div>
-          </div>
+      <!-- Top Row: Headline + Primary CTA Button -->
+      <div class="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6 lg:gap-12 pb-8 sm:pb-10 border-b border-white/10">
+        <div class="space-y-2.5 max-w-2xl">
+          <h2 class="ty-h2 text-white">
+            Klaar voor helder financieel inzicht?
+          </h2>
+          <p class="ty-lead text-slate-300">
+            Beantwoord 4 korte vragen over jouw situatie en plan direct een gratis en vrijblijvende afspraak met Martin van der Spek — op kantoor in Moerkapelle, bij jou thuis of telefonisch.
+          </p>
         </div>
 
-        <!-- Form (Right Column) -->
-        <div class="lg:col-span-7 bg-brand-base/5 border border-white/10 p-5 sm:p-8 lg:p-10 rounded-2xl sm:rounded-3xl shadow-xl relative w-full">
-          
-          <!-- Success State -->
-          <div id="main-contact-success" class="hidden text-center py-12 space-y-4">
-            <div class="w-16 h-16 rounded-full bg-brand-accent/10 border border-brand-accent/20 flex items-center justify-center text-brand-accent text-3xl mx-auto">
-              <i class="fa-solid fa-check"></i>
-            </div>
-            <h4 class="text-lg font-semibold text-white font-display uppercase tracking-wider">Bedankt voor je aanvraag!</h4>
-            <p  class="text-slate-300 text-xs sm:text-sm font-sans font-normal max-w-sm mx-auto leading-relaxed">
-              We hebben je gegevens ontvangen en nemen binnen 24 uur persoonlijk contact met je op.
-            </p>
+        <div class="flex flex-col sm:items-start lg:items-end shrink-0 gap-2.5">
+          <a 
+            href="/adviesgesprek" 
+            class="open-contact-drawer btn-primary-gold w-full sm:w-auto bg-brand-primary hover:bg-brand-primary-hover text-brand-dark py-4 px-8 rounded-full shadow-lg transition-all duration-300 hover:-translate-y-0.5 inline-flex items-center justify-center gap-3 cursor-pointer whitespace-nowrap"
+          >
+            <span>Plan een afspraak</span>
+            <span class="w-7 h-7 rounded-full bg-brand-dark/10 flex items-center justify-center shrink-0">
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </span>
+          </a>
+          <span class="ty-small text-slate-400 text-center sm:text-left lg:text-right">
+            ✓ Binnen 1 minuut geregeld • 100% vrijblijvend
+          </span>
+        </div>
+      </div>
+
+      <!-- Bottom Row: Direct Contact Details (Phone, Email, Office Address) -->
+      <div class="relative z-10 pt-7 sm:pt-8 grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
+        
+        <!-- Telefoon -->
+        <a href="tel:+31795931241" class="group flex items-center gap-4 p-3.5 rounded-2xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 transition-colors">
+          <div class="w-11 h-11 bg-[#ffce76]/15 border border-[#ffce76]/30 rounded-xl flex items-center justify-center shrink-0 text-[#ffce76] group-hover:bg-[#ffce76] group-hover:text-brand-dark transition-colors">
+            <i class="fa-solid fa-phone text-sm"></i>
           </div>
+          <div>
+            <div class="ty-small text-slate-400 font-medium">Direct bellen</div>
+            <div class="ty-h4 text-white group-hover:text-[#ffce76] transition-colors">079 593 1241</div>
+          </div>
+        </a>
 
-          <div id="main-contact-form-wrapper">
-            <h3 class="text-xl font-semibold text-white mb-6 font-display">Gratis adviesgesprek inplannen</h3>
-            
-            <form id="main-contact-form" class="space-y-6">
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div>
-                <label  for="name" class="block text-xs font-semibold text-slate-300 uppercase tracking-widest mb-2 font-sans">Volledige Naam</label>
-                <input 
-                  type="text" 
-                  id="name" 
-                  name="name" 
-                  placeholder="Bijv. Jan de Vries" 
-                  class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-brand-primary transition-colors font-sans" 
-                  required 
-                />
-              </div>
-              <div>
-                <label  for="phone" class="block text-xs font-semibold text-slate-300 uppercase tracking-widest mb-2 font-sans">Telefoonnummer</label>
-                <input 
-                  type="tel" 
-                  id="phone" 
-                  name="phone" 
-                  placeholder="06 - 12345678" 
-                  class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-brand-primary transition-colors font-sans" 
-                  required 
-                />
-              </div>
-            </div>
+        <!-- E-mailadres -->
+        <a href="mailto:info@spekadvies.nl" class="group flex items-center gap-4 p-3.5 rounded-2xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 transition-colors">
+          <div class="w-11 h-11 bg-[#ffce76]/15 border border-[#ffce76]/30 rounded-xl flex items-center justify-center shrink-0 text-[#ffce76] group-hover:bg-[#ffce76] group-hover:text-brand-dark transition-colors">
+            <i class="fa-solid fa-envelope text-sm"></i>
+          </div>
+          <div class="min-w-0">
+            <div class="ty-small text-slate-400 font-medium">E-mailadres</div>
+            <div class="ty-h4 text-white group-hover:text-[#ffce76] transition-colors truncate">info@spekadvies.nl</div>
+          </div>
+        </a>
 
-            <div>
-              <label  for="email" class="block text-xs font-semibold text-slate-300 uppercase tracking-widest mb-2 font-sans">E-mailadres</label>
-              <input 
-                type="email" 
-                id="email" 
-                name="email" 
-                placeholder="naam@voorbeeld.nl" 
-                class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-brand-primary transition-colors font-sans" 
-                required 
-              />
-            </div>
-
-            <div>
-              <label  for="service-type" class="block text-xs font-semibold text-slate-300 uppercase tracking-widest mb-2 font-sans">Waarmee kunnen we helpen?</label>
-              <select 
-                id="service-type" 
-                name="service-type" 
-                class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-sm text-white focus:outline-none focus:border-brand-primary transition-colors font-sans [&_option]:text-brand-dark"
-                required
-              >
-                <option value="hypotheken">Hypotheken</option>
-                <option value="verzekeringen">Verzekeringen</option>
-                <option value="aangifte">Aangifte</option>
-                <option value="vermogen">Vermogen</option>
-                <option value="overig">Overig</option>
-              </select>
-            </div>
-
-            <div>
-              <label  for="message" class="block text-xs font-semibold text-slate-300 uppercase tracking-widest mb-2 font-sans">Bericht of toelichting (Optioneel)</label>
-              <textarea 
-                id="message" 
-                name="message" 
-                rows="4" 
-                placeholder="Vertel ons kort wat je wensen of vragen zijn..." 
-                class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-brand-primary transition-colors font-sans resize-none"
-              ></textarea>
-            </div>
-
-            <button 
-              type="submit" 
-              class="w-full bg-brand-primary hover:bg-brand-primary-hover text-brand-dark font-semibold py-4 rounded-full shadow-lg transition-colors duration-300 text-sm tracking-wider uppercase font-sans cursor-pointer"
-            >
-              Verzend Aanvraag
-            </button>
-          </form>
-          
-          <div id="main-contact-error" class="hidden mt-4 text-xs font-semibold text-red-400 font-sans text-center"></div>
+        <!-- Kantooradres -->
+        <div class="flex items-center gap-4 p-3.5 rounded-2xl bg-white/[0.04] border border-white/10">
+          <div class="w-11 h-11 bg-[#ffce76]/15 border border-[#ffce76]/30 rounded-xl flex items-center justify-center shrink-0 text-[#ffce76]">
+            <i class="fa-solid fa-location-dot text-sm"></i>
+          </div>
+          <div>
+            <div class="ty-small text-slate-400 font-medium">Kantoor Moerkapelle</div>
+            <div class="ty-h4 text-white">Herenweg 42, 2751 DB Moerkapelle</div>
           </div>
         </div>
 
       </div>
+
     </div>
   </div>
   <SectionDivider fillColor="#153b68" direction="left-high" />
 </section>
-
-<script is:inline>
-  (function() {
-    function initForm() {
-      const form = document.getElementById('main-contact-form');
-      const wrapper = document.getElementById('main-contact-form-wrapper');
-      const successDiv = document.getElementById('main-contact-success');
-      const errorDiv = document.getElementById('main-contact-error');
-
-      if (!form || !wrapper || !successDiv) return;
-      if (form.dataset.initialized === 'true') return;
-      form.dataset.initialized = 'true';
-
-      form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        
-        const submitBtn = form.querySelector('button[type="submit"]');
-        if (submitBtn) {
-          submitBtn.disabled = true;
-          submitBtn.textContent = 'Verzenden...';
-        }
-        if (errorDiv) {
-          errorDiv.classList.add('hidden');
-          errorDiv.textContent = '';
-        }
-
-        const formData = new FormData(form);
-        const data = {
-          name: formData.get('name'),
-          phone: formData.get('phone'),
-          email: formData.get('email'),
-          'service-type': formData.get('service-type'),
-          message: formData.get('message')
-        };
-
-        const endpoints = ['/api/contact.php', '/api/contact', '/contact.php'];
-        let success = false;
-        let lastError = null;
-
-        for (const url of endpoints) {
-          try {
-            const response = await fetch(url, {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-              },
-              body: JSON.stringify(data)
-            });
-
-            if (response.ok) {
-              const text = await response.text();
-              let result;
-              try {
-                result = JSON.parse(text);
-              } catch (parseErr) {
-                // If text response from valid server, treat as success if status 200
-                result = { success: true };
-              }
-
-              if (result.success !== false) {
-                wrapper.classList.add('hidden');
-                successDiv.classList.remove('hidden');
-                success = true;
-                break;
-              } else {
-                throw new Error(result.error || 'Er ging iets fout bij het verzenden.');
-              }
-            } else if (response.status === 404) {
-              // Try next endpoint in list
-              continue;
-            } else {
-              const text = await response.text();
-              let msg = 'Er ging iets fout bij het verwerken.';
-              try { msg = JSON.parse(text).error || msg; } catch(e) {}
-              throw new Error(msg);
-            }
-          } catch (err) {
-            lastError = err;
-          }
-        }
-
-        if (!success) {
-          console.error('Submit error:', lastError);
-          if (submitBtn) {
-            submitBtn.disabled = false;
-            submitBtn.textContent = 'Verzend Aanvraag';
-          }
-          if (errorDiv) {
-            errorDiv.classList.remove('hidden');
-            errorDiv.textContent = (lastError && lastError.message) || 'Kon formulier niet verzenden. Probeer het later opnieuw of bel ons direct op 079 - 593 12 41.';
-          }
-        }
-      });
-    }
-
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', initForm);
-    } else {
-      initForm();
-    }
-  })();
-</script>

@@ -15,7 +15,7 @@ const features = [
     title: "Doorstromen &<br />oversluiten",
     badge: "Bestaande woning",
     description: "Verhuis soepel naar je volgende woning, benut je overwaarde of verlaag je maandlasten.",
-    linkText: "Bereken je voordeel",
+    linkText: "Bekijk mogelijkheden",
     link: "/diensten/doorstromers-overbrugging",
     icon: "fa-solid fa-arrow-trend-up",
     isGradient: true
@@ -75,13 +75,10 @@ import SectionDivider from './SectionDivider.astro';
     <!-- Clear Section Header -->
     <div class="mb-10 sm:mb-12">
       <div class="space-y-2 max-w-2xl">
-        <span class="text-xs font-semibold tracking-widest uppercase text-amber-700 font-sans block">
-          Hypotheek op maat
-        </span>
-        <h2 class="text-2xl sm:text-3xl font-semibold text-brand-dark tracking-tight font-display">
+        <h2 class="ty-h2 text-brand-dark">
           Welke situatie past bij jou?
         </h2>
-        <p class="text-slate-600 text-sm sm:text-base font-sans font-normal">
+        <p class="ty-lead text-slate-600">
           Kies jouw situatie en bekijk direct hoe wij je helpen aan de scherpste rente en voorwaarden.
         </p>
       </div>
@@ -106,11 +103,11 @@ import SectionDivider from './SectionDivider.astro';
                 
                 <!-- Top Block: Badge + 2-Line Title -->
                 <div class="pr-16">
-                  <span class="feature-card__badge text-[10px] font-semibold tracking-widest uppercase font-sans mb-2 block">
+                  <span class="feature-card__badge ty-eyebrow mb-2">
                     {feat.badge}
                   </span>
 
-                  <h3 class="feature-card__title" set:html={feat.title}></h3>
+                  <h3 class="feature-card__title ty-h3" set:html={feat.title}></h3>
                 </div>
                 
                 <!-- Upper Thin Divider Line -->
@@ -118,7 +115,7 @@ import SectionDivider from './SectionDivider.astro';
 
                 <!-- Middle Block: Description (flex-1 keeps lower divider on exact same baseline) -->
                 <div class="flex-1 flex items-center">
-                  <p class="feature-card__desc">
+                  <p class="feature-card__desc ty-body">
                     {feat.description}
                   </p>
                 </div>
@@ -129,7 +126,7 @@ import SectionDivider from './SectionDivider.astro';
                 <!-- Bottom Block: CTA Link -->
                 <a 
                   href={feat.link}
-                  class="feature-card__link cursor-pointer w-full text-left bg-transparent border-none focus:outline-none flex items-center justify-between p-0 font-semibold transition-colors"
+                  class="feature-card__link link-action cursor-pointer w-full text-left bg-transparent border-none focus:outline-none flex items-center justify-between p-0 transition-colors"
                 >
                   <span>{feat.linkText}</span>
                   <span class="inline-block ml-2 group-hover:translate-x-1.5 transition-transform duration-200">→</span>
@@ -177,10 +174,10 @@ import SectionDivider from './SectionDivider.astro';
             
             <!-- Top Block: Badge + Title (Left-aligned at the top, pr-24 clears the top-right clover notch) -->
             <div class="pr-20 sm:pr-28">
-              <span class="feature-card__badge text-[10px] font-semibold tracking-widest uppercase font-sans mb-2 block">
+              <span class="feature-card__badge ty-eyebrow mb-2">
                 Verzekeringen &amp; Schadeservice
               </span>
-              <h3 class="feature-card__title feature-card__title--wide">
+              <h3 class="feature-card__title feature-card__title--wide ty-h3">
                 Ook voor al je verzekeringen &amp; directe hulp bij schade
               </h3>
             </div>
@@ -193,22 +190,22 @@ import SectionDivider from './SectionDivider.astro';
               
               <!-- Column 1: Particuliere Verzekeringen -->
               <div class="space-y-1.5 pr-4">
-                <div class="flex items-center gap-2 text-white font-semibold text-sm font-display">
+                <h4 class="ty-h4 flex items-center gap-2 text-white">
                   <i class="fa-solid fa-house-lock text-[#ffce76] text-xs"></i>
                   <span>Wonen, Gezin &amp; Auto</span>
-                </div>
-                <p class="feature-card__desc">
+                </h4>
+                <p class="feature-card__desc ty-body">
                   Van woonhuis-, inboedel- en aansprakelijkheidsverzekering tot je autoverzekering: één overzichtelijk pakket tegen de scherpste premie.
                 </p>
               </div>
 
               <!-- Column 2: Direct Schade Melden -->
               <div class="space-y-1.5 md:border-l md:border-white/10 md:pl-8 lg:pl-12 pr-4">
-                <div class="flex items-center gap-2 text-white font-semibold text-sm font-display">
+                <h4 class="ty-h4 flex items-center gap-2 text-white">
                   <i class="fa-solid fa-triangle-exclamation text-[#ffce76] text-xs"></i>
                   <span>Direct persoonlijk bij schade</span>
-                </div>
-                <p class="feature-card__desc">
+                </h4>
+                <p class="feature-card__desc ty-body">
                   Onverhoopt schade aan je woning, inboedel of auto? Meld het direct — wij nemen de volledige afhandeling persoonlijk uit handen.
                 </p>
               </div>
@@ -223,7 +220,7 @@ import SectionDivider from './SectionDivider.astro';
               
               <a 
                 href="/verzekeringen"
-                class="feature-card__link cursor-pointer w-full text-left bg-transparent border-none focus:outline-none flex items-center justify-between p-0 pr-4 font-semibold transition-colors group/link1"
+                class="feature-card__link link-action cursor-pointer w-full text-left bg-transparent border-none focus:outline-none flex items-center justify-between p-0 pr-4 transition-colors group/link1"
               >
                 <span>Bekijk alle verzekeringen</span>
                 <span class="inline-block ml-2 text-[#ffce76] group-hover/link1:translate-x-1.5 transition-transform duration-200">→</span>
@@ -232,7 +229,7 @@ import SectionDivider from './SectionDivider.astro';
               <button 
                 type="button"
                 data-modal-trigger="schade"
-                class="feature-card__link cursor-pointer w-full text-left bg-transparent border-none focus:outline-none flex items-center justify-between p-0 md:pl-8 lg:pl-12 pr-4 font-semibold transition-colors group/link3"
+                class="feature-card__link link-action cursor-pointer w-full text-left bg-transparent border-none focus:outline-none flex items-center justify-between p-0 md:pl-8 lg:pl-12 pr-4 transition-colors group/link3"
               >
                 <span>Direct online schade melden</span>
                 <span class="inline-block ml-2 text-[#ffce76] group-hover/link3:translate-x-1.5 transition-transform duration-200">→</span>

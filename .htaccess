@@ -1,0 +1,21 @@
+ErrorDocument 404 /404.html
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^contact/?$ /adviesgesprek [R=301,L]
+  RewriteRule ^van-der-spek/contact/?$ /adviesgesprek [R=301,L]
+  RewriteRule ^van-der-spek/medewerkers/?$ /over-ons [R=301,L]
+  RewriteRule ^van-der-spek/?$ /over-ons [R=301,L]
+  RewriteRule ^particulieren/verzekeringen/?$ /verzekeringen [R=301,L]
+  RewriteRule ^particulieren/hypotheken/?$ /hypotheken [R=301,L]
+  RewriteRule ^particulieren/belastingen/?$ /aangiften [R=301,L]
+  RewriteRule ^particulieren/?$ /hypotheken [R=301,L]
+  RewriteRule ^bedrijven/?.*$ /diensten/zakelijke-verzekeringen [R=301,L]
+  RewriteRule ^zakelijk/?.*$ /diensten/zakelijke-verzekeringen [R=301,L]
+  RewriteRule ^diensten-van-der-spek/?.*$ / [R=301,L]
+  RewriteRule ^hypotheekadvies/?.*$ /hypotheken [R=301,L]
+  RewriteRule ^pensioenadvies/?.*$ /diensten/vermogensbeheer [R=301,L]
+  RewriteRule ^vermogensbeheer/?$ /diensten/vermogensbeheer [R=301,L]
+  RewriteRule ^schade/?.*$ /klantenservice [R=301,L]
+  RewriteRule ^downloads/?.*$ /klantenservice [R=301,L]
+</IfModule>

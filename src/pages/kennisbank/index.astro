@@ -24,23 +24,19 @@ const description = "Onafhankelijke uitleg, rekenregels en antwoorden op al jouw
       <div class="absolute left-1/2 -top-20 -translate-x-1/2 w-[600px] h-[300px] bg-brand-primary/10 blur-[120px] pointer-events-none rounded-full"></div>
 
       <div class="max-w-4xl mx-auto px-4 sm:px-8 text-center relative z-10">
-        <span class="inline-block bg-white/10 text-brand-primary border border-white/20 text-[11px] font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full mb-6 font-sans backdrop-blur-md shadow-xs">
-          Financiële Kennis & Adviesgidsen
-        </span>
-        
-        <h1 class="text-3xl sm:text-5xl lg:text-5.5xl font-semibold text-white tracking-tight leading-[1.18] font-display mb-6">
-          Kennisbank: Duidelijke Antwoorden op Complexe Financiële Vragen
+        <h1 class="ty-h1 text-white mb-6">
+          Kennisbank: duidelijke antwoorden op complexe financiële vragen
         </h1>
         
-        <p class="text-slate-200 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto mb-8 font-sans font-normal">
+        <p class="ty-lead text-slate-200 max-w-2xl mx-auto mb-8">
           Geen onbegrijpelijk bancair jargon, maar heldere uitleg van erkend adviseur <strong>Martin van der Spek</strong> over overbruggingshypotheken, boeterente, startersleningen en ondernemershypotheken.
         </p>
 
         <!-- Quick Search / Stats Pill -->
-        <div class="inline-flex items-center gap-3 bg-white/5 border border-white/15 backdrop-blur-md px-5 py-2 rounded-full text-xs text-slate-300 font-sans">
-          <span>📚 {KENNISBANK_ARTIKELEN.length} Diepgaande Gidsen</span>
+        <div class="inline-flex items-center gap-3 bg-white/5 border border-white/15 backdrop-blur-md px-5 py-2 rounded-full ty-small text-slate-300">
+          <span><i class="fa-solid fa-book-open text-brand-primary mr-1.5"></i> {KENNISBANK_ARTIKELEN.length} Diepgaande Gidsen</span>
           <span class="text-white/30">•</span>
-          <span>📍 100% Onafhankelijk Moerkapelle</span>
+          <span><i class="fa-solid fa-location-dot text-brand-primary mr-1.5"></i> 100% Onafhankelijk Moerkapelle</span>
         </div>
       </div>
     </section>
@@ -49,11 +45,11 @@ const description = "Onafhankelijke uitleg, rekenregels en antwoorden op al jouw
     <section class="py-16 sm:py-24 bg-slate-50/50">
       <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
         
-        <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
-          <h2 class="text-2xl sm:text-3.5xl font-semibold text-brand-dark font-display mb-3">
-            Populaire Gidsen & Artikelen
+        <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16 space-y-2.5">
+          <h2 class="ty-h2 text-brand-dark">
+            Populaire gidsen & artikelen
           </h2>
-          <p class="text-slate-600 text-sm sm:text-base font-sans">
+          <p class="ty-lead text-slate-600">
             Klik op een artikel voor een direct en volledig antwoord op jouw financiële vraagstuk.
           </p>
         </div>
@@ -70,7 +66,7 @@ const description = "Onafhankelijke uitleg, rekenregels en antwoorden op al jouw
                     {artikel.category}
                   </span>
                   <span class="text-[11px] font-medium text-slate-400 font-sans">
-                    ⏱ {artikel.readTime}
+                    <i class="fa-regular fa-clock mr-1"></i> {artikel.readTime}
                   </span>
                 </div>
                 

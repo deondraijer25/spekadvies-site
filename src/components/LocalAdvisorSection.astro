@@ -11,32 +11,26 @@ import SectionDivider from './SectionDivider.astro';
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
       
       <!-- Left Column: Text Block -->
-      <div class="lg:col-span-6 space-y-8 order-2 lg:order-1 text-left">
-        <div class="space-y-3">
-          <span class="inline-block bg-amber-50 text-amber-800 border border-amber-200/80 px-3.5 py-1.5 rounded-full text-[11px] font-semibold tracking-widest uppercase font-sans">
-            Lokale adviseur, landelijke kennis
-          </span>
-          <h2 class="text-3xl sm:text-4xl font-semibold text-brand-dark tracking-tight leading-tight font-display">
+      <div class="lg:col-span-6 space-y-7 order-2 lg:order-1 text-left">
+        <div class="space-y-2.5">
+          <h2 class="ty-h2 text-brand-dark">
             Persoonlijk & dichtbij, met de kracht van de hele markt
           </h2>
-          <p class="text-slate-650 text-sm sm:text-base leading-relaxed font-sans font-normal">
+          <p class="ty-lead text-slate-600">
             Als jouw lokale adviseur in Moerkapelle ken ik de regio door en door. Ik spreek je taal, weet wat er speelt in de buurt en ben flexibel bereikbaar – ook in de avonduren. Tegelijkertijd profiteer je bij Spekadvies van de professionaliteit en vergelijkingskracht van een grote landelijke speler.
           </p>
         </div>
 
         <!-- Custom USP list -->
-        <div class="space-y-5">
+        <div class="space-y-5 pt-1">
           <!-- USP 1 -->
           <div class="flex items-start space-x-4">
-            <div class="flex-shrink-0 w-11 h-11 rounded-2xl bg-amber-50 border border-amber-200/70 flex items-center justify-center text-amber-800 shadow-xs">
-              <!-- Shield Icon -->
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-              </svg>
+            <div class="flex-shrink-0 w-11 h-11 rounded-2xl bg-amber-50 border border-amber-200/70 flex items-center justify-center text-amber-800 shadow-xs text-lg">
+              <i class="fa-solid fa-shield-halved"></i>
             </div>
-            <div>
-              <h4 class="text-base font-semibold text-brand-dark font-display">Persoonlijk aanspreekpunt</h4>
-              <p class="text-xs sm:text-sm text-slate-500 font-sans font-medium mt-1 leading-relaxed">
+            <div class="space-y-1">
+              <h4 class="ty-h4 text-brand-dark">Persoonlijk aanspreekpunt</h4>
+              <p class="ty-body text-slate-600">
                 Geen wachttijden of callcenters. Je hebt altijd direct contact met Martin van der Spek voor al je vragen.
               </p>
             </div>
@@ -44,15 +38,12 @@ import SectionDivider from './SectionDivider.astro';
 
           <!-- USP 2 -->
           <div class="flex items-start space-x-4">
-            <div class="flex-shrink-0 w-11 h-11 rounded-2xl bg-amber-50 border border-amber-200/70 flex items-center justify-center text-amber-800 shadow-xs">
-              <!-- Globe Icon -->
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-.778.099-1.533.284-2.253"></path>
-              </svg>
+            <div class="flex-shrink-0 w-11 h-11 rounded-2xl bg-amber-50 border border-amber-200/70 flex items-center justify-center text-amber-800 shadow-xs text-lg">
+              <i class="fa-solid fa-scale-balanced"></i>
             </div>
-            <div>
-              <h4 class="text-base font-semibold text-brand-dark font-display">Landelijke vergelijkingskracht</h4>
-              <p class="text-xs sm:text-sm text-slate-500 font-sans font-medium mt-1 leading-relaxed">
+            <div class="space-y-1">
+              <h4 class="ty-h4 text-brand-dark">Landelijke vergelijkingskracht</h4>
+              <p class="ty-body text-slate-600">
                 Wij vergelijken meer dan 40 aanbieders op rente en voorwaarden. Zo garanderen we de beste deal van Nederland.
               </p>
             </div>
@@ -60,9 +51,14 @@ import SectionDivider from './SectionDivider.astro';
         </div>
 
         <div class="pt-2">
-          <button class="open-contact-drawer inline-block bg-brand-primary hover:bg-brand-primary-hover text-brand-dark font-semibold px-8 py-4.5 rounded-full shadow-[0_10px_25px_rgba(255,206,118,0.25)] hover:shadow-[0_14px_32px_rgba(255,206,118,0.35)] transition-all transform hover:-translate-y-0.5 text-xs tracking-wider uppercase font-sans cursor-pointer">
-            Plan gratis adviesgesprek ➔
-          </button>
+          <a href="/adviesgesprek" class="open-contact-drawer btn-primary group inline-flex items-center justify-center gap-3.5 px-7 py-3.5 rounded-full bg-brand-dark hover:bg-slate-900 text-white shadow-lg shadow-brand-dark/15 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 cursor-pointer">
+            <span>Plan een afspraak</span>
+            <span class="w-7 h-7 rounded-full bg-white/15 group-hover:bg-[#ffce76] group-hover:text-brand-dark flex items-center justify-center transition-all duration-300 shrink-0">
+              <svg class="w-3.5 h-3.5" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </a>
         </div>
       </div>
 
@@ -95,9 +91,6 @@ import SectionDivider from './SectionDivider.astro';
 
     </div>
   </div>
-
-  <!-- Branded Stepped Divider to ServicesGrid (#f8fafc) -->
-  <SectionDivider fillColor="#f8fafc" direction="left-high" />
 </section>
 
 <style>

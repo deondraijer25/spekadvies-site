@@ -35,6 +35,10 @@ if (!$data || !is_array($data)) {
 $name = isset($data['name']) ? trim($data['name']) : '';
 $phone = isset($data['phone']) ? trim($data['phone']) : '';
 $email = isset($data['email']) ? trim($data['email']) : '';
+$city = isset($data['city']) ? trim($data['city']) : '';
+$situation = isset($data['situation']) ? trim($data['situation']) : '';
+$timeline = isset($data['timeline']) ? trim($data['timeline']) : '';
+$preference = isset($data['preference']) ? trim($data['preference']) : '';
 $serviceType = isset($data['service-type']) ? trim($data['service-type']) : (isset($data['serviceType']) ? trim($data['serviceType']) : 'overig');
 $message = isset($data['message']) ? trim($data['message']) : '';
 
@@ -119,15 +123,19 @@ $contactId = null;
 
 try {
     // -------------------------------------------------------------
-    // STAP 1: Contact Upsert
+    // STAP 1: Contact Upsert (incl. Woonplaats & Bron)
     // -------------------------------------------------------------
     $upsertPayload = [
         'firstName'  => $firstName,
         'lastName'   => $lastName,
         'phone'      => $phone,
         'email'      => $email,
-        'locationId' => $locationId
+        'locationId' => $locationId,
+        'source'     => 'Website Keuzehulp (spekadvies.nl)'
     ];
+    if (!empty($city)) {
+        $upsertPayload['city'] = $city;
+    }
 
     $upsertRes = ghlApiRequest(
         'https://services.leadconnectorhq.com/contacts/upsert',
@@ -141,21 +149,51 @@ try {
         $ghlSuccess = true;
 
         // -------------------------------------------------------------
-        // STAP 2: Tag toevoegen
+        // STAP 2: Slimme Tags toevoegen op basis van de gekozen stappen
         // -------------------------------------------------------------
+        $tagsToApply = [$tag];
+
+        // Tag op basis van Stap 4 (Voorkeur afspraak)
+        if (!empty($preference)) {
+            $prefLower = strtolower($preference);
+            if (strpos($prefLower, 'kantoor') !== false) {
+                $tagsToApply[] = 'afspraak-kantoor';
+            } elseif (strpos($prefLower, 'thuis') !== false) {
+                $tagsToApply[] = 'afspraak-thuis';
+            } elseif (strpos($prefLower, 'telefonisch') !== false) {
+                $tagsToApply[] = 'afspraak-telefonisch';
+            }
+        }
+
+        // Tag op basis van Stap 3 (Termijn / Urgentie)
+        if (!empty($timeline)) {
+            $timeLower = strtolower($timeline);
+            if (strpos($timeLower, 'snel') !== false) {
+                $tagsToApply[] = 'termijn-zsm';
+            } elseif (strpos($timeLower, 'maanden') !== false) {
+                $tagsToApply[] = 'termijn-1-3-maanden';
+            } elseif (strpos($timeLower, 'ori') !== false) {
+                $tagsToApply[] = 'termijn-orienterend';
+            }
+        }
+
         ghlApiRequest(
             "https://services.leadconnectorhq.com/contacts/{$contactId}/tags",
             'POST',
-            ['tags' => [$tag]],
+            ['tags' => array_values(array_unique($tagsToApply))],
             $apiKey
         );
 
         // -------------------------------------------------------------
-        // STAP 3: Opportunity in Pijplijn aanmaken
+        // STAP 3: Opportunity in Pijplijn aanmaken (incl. gekozen Situatie)
         // -------------------------------------------------------------
+        $oppTitle = !empty($situation)
+            ? "{$name} — {$serviceLabel}: {$situation}"
+            : "{$name} — Website Lead ({$serviceLabel})";
+
         $oppPayload = [
             'locationId'      => $locationId,
-            'name'            => "{$name} — Website Lead ({$serviceLabel})",
+            'name'            => $oppTitle,
             'pipelineId'      => $pipelineId,
             'pipelineStageId' => $pipelineStageId,
             'contactId'       => $contactId,
@@ -170,16 +208,23 @@ try {
         );
 
         // -------------------------------------------------------------
-        // STAP 4: Notitie toevoegen
+        // STAP 4: Gestructureerde 5-Staps Notitie toevoegen in GHL
         // -------------------------------------------------------------
-        $noteBody = "Nieuwe aanvraag via spekadvies.nl:\n\n" .
-                    "Naam: {$name}\n" .
-                    "Telefoon: {$phone}\n" .
-                    "E-mail: {$email}\n" .
-                    "Hulpvraag: {$serviceLabel}\n" .
-                    "Datum: " . date('d-m-Y H:i:s') . "\n\n" .
-                    "Toelichting van bezoeker:\n" .
-                    (!empty($message) ? $message : 'Geen toelichting ingevuld.');
+        $noteBody = "📋 NIEUWE AFSPRAAK-AANVRAAG VIA SPEKADVIES.NL\n" .
+                    "==================================================\n" .
+                    "1. Onderwerp:         {$serviceLabel}\n" .
+                    "2. Gekozen situatie:  " . (!empty($situation) ? $situation : 'Niet opgegeven') . "\n" .
+                    "3. Gewenste termijn:  " . (!empty($timeline) ? $timeline : 'Niet opgegeven') . "\n" .
+                    "4. Voorkeur afspraak: " . (!empty($preference) ? $preference : 'Niet opgegeven') . "\n" .
+                    "==================================================\n" .
+                    "CONTACTGEGEVENS:\n" .
+                    "• Naam:       {$name}\n" .
+                    "• Telefoon:   {$phone}\n" .
+                    "• E-mail:     {$email}\n" .
+                    "• Woonplaats: " . (!empty($city) ? $city : 'Niet ingevuld') . "\n" .
+                    "• Datum/tijd: " . date('d-m-Y H:i:s') . "\n\n" .
+                    "EXTRA TOELICHTING VAN BEZOEKER:\n" .
+                    (!empty($message) ? $message : 'Geen extra toelichting ingevuld.');
 
         ghlApiRequest(
             "https://services.leadconnectorhq.com/contacts/{$contactId}/notes",
@@ -196,24 +241,32 @@ try {
 // E-MAIL BACKUP (Gegarandeerde levering naar Martin / Spekadvies)
 // -----------------------------------------------------------------
 $to = 'info@spekadvies.nl';
-$subject = "Nieuwe aanvraag via website: {$name} ({$serviceLabel})";
+$subject = "Nieuwe afspraak-aanvraag: {$name} ({$serviceLabel}" . (!empty($situation) ? " - {$situation}" : "") . ")";
 $emailHeaders = "From: Spekadvies Website <noreply@spekadvies.nl>\r\n" .
                 "Reply-To: {$name} <{$email}>\r\n" .
                 "X-Mailer: PHP/" . phpversion() . "\r\n" .
                 "Content-Type: text/plain; charset=UTF-8\r\n";
 
-$emailBody = "Er is een nieuwe aanvraag binnengekomen via het contactformulier op www.spekadvies.nl:\n\n" .
-             "--------------------------------------------------\n" .
+$emailBody = "Er is een nieuwe afspraak-aanvraag binnengekomen via de interactieve keuzehulp op www.spekadvies.nl:\n\n" .
+             "==================================================\n" .
+             "GEKOZEN STAPPEN IN DE KEUZEHULP:\n" .
+             "==================================================\n" .
+             "1. Onderwerp:         {$serviceLabel}\n" .
+             "2. Situatie:          " . (!empty($situation) ? $situation : 'Niet opgegeven') . "\n" .
+             "3. Gewenste termijn:  " . (!empty($timeline) ? $timeline : 'Niet opgegeven') . "\n" .
+             "4. Voorkeur afspraak: " . (!empty($preference) ? $preference : 'Niet opgegeven') . "\n\n" .
+             "==================================================\n" .
+             "CONTACTGEGEVENS:\n" .
+             "==================================================\n" .
              "Naam:        {$name}\n" .
              "Telefoon:    {$phone}\n" .
              "E-mail:      {$email}\n" .
-             "Dienst:      {$serviceLabel}\n" .
-             "Tijdstip:    " . date('d-m-Y H:i') . "\n" .
-             "--------------------------------------------------\n\n" .
-             "Bericht / Wensen:\n" .
-             (!empty($message) ? $message : 'Geen bericht ingevuld.') . "\n\n" .
+             "Woonplaats:  " . (!empty($city) ? $city : 'Niet ingevuld') . "\n" .
+             "Tijdstip:    " . date('d-m-Y H:i') . "\n\n" .
+             "Extra toelichting:\n" .
+             (!empty($message) ? $message : 'Geen extra toelichting ingevuld.') . "\n\n" .
              "--------------------------------------------------\n" .
-             "GHL Status:  " . ($ghlSuccess ? "Succesvol geregistreerd in GoHighLevel (ID: {$contactId})" : "Let op: GHL registratie mislukt of vertraagd") . "\n";
+             "GHL Status:  " . ($ghlSuccess ? "Succesvol geregistreerd in GoHighLevel (Contact ID: {$contactId})" : "Let op: GHL registratie mislukt of vertraagd") . "\n";
 
 @mail($to, $subject, $emailBody, $emailHeaders);
 

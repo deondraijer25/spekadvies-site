@@ -1,207 +1,208 @@
 ---
 import SectionDivider from './SectionDivider.astro';
+
+const reviews = [
+  {
+    name: "Mark & Chantal",
+    initials: "MC",
+    city: "Moerkapelle",
+    service: "Startershypotheek",
+    quote: "Geweldige service! Martin nam alle tijd om onze eerste hypotheek en starterslening stap voor stap uit te leggen. Binnen no-time was alles rond."
+  },
+  {
+    name: "Hanneke S.",
+    initials: "HS",
+    city: "Zoetermeer",
+    service: "Hypotheek Oversluiten",
+    quote: "Spekadvies heeft onze bestaande hypotheek overgesloten en onze overwaarde benut voor verduurzaming. Scheelt ons maandelijks flink in de lasten!"
+  },
+  {
+    name: "Daan Vermeulen",
+    initials: "DV",
+    city: "Zevenhuizen",
+    service: "AOV & Zakelijk",
+    quote: "Als ZZP'er ontzettend goed geholpen met zowel mijn zakelijke verzekeringen als mijn AOV. Helder verhaal zonder kleine lettertjes."
+  },
+  {
+    name: "Fam. De Graaf",
+    initials: "FG",
+    city: "Waddinxveen",
+    service: "Woonverzekeringen",
+    quote: "Al onze schade- en woonverzekeringen hier in één overzichtelijk pakket ondergebracht. Scherpe premie en altijd direct persoonlijk contact."
+  },
+  {
+    name: "Jeroen & Sanne",
+    initials: "JS",
+    city: "Gouda",
+    service: "Belastingaangifte",
+    quote: "Na de aankoop van onze nieuwe woning heeft Spekadvies onze belastingaangifte en voorlopige aanslag verzorgd. Geen enkele aftrekpost gemist!"
+  },
+  {
+    name: "Peter van Dijk",
+    initials: "PD",
+    city: "Bleiswijk",
+    service: "Vermogen & Pensioen",
+    quote: "Eindelijk volledig overzicht in mijn pensioenopbouw en vermogen voor later. Rustig, onafhankelijk en deskundig advies aan de keukentafel."
+  }
+];
 ---
-<section class="py-20 lg:py-24 relative overflow-hidden bg-[#eef2f6]">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<section class="py-20 lg:py-28 relative overflow-hidden bg-[#eef2f6]">
+  
+  <!-- Header & Score Summary (Aligned to 1280px grid) -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 relative z-10 mb-12 sm:mb-14">
+    <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-8">
       
-      <!-- Ratings Block (Left) -->
-      <div class="lg:col-span-6 space-y-6">
-        <span class="inline-block bg-amber-50 text-amber-800 border border-amber-200/80 px-3.5 py-1.5 rounded-full text-[11px] font-semibold tracking-widest uppercase font-sans">
-          Tevreden Klanten
-        </span>
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-semibold text-brand-dark tracking-tight font-display">
-          Wij inspireren & helpen onze klanten elke dag.
+      <!-- Left: Section Heading -->
+      <div class="space-y-2.5 max-w-2xl">
+        <h2 class="ty-h2 text-brand-dark">
+          Wat klanten over Spekadvies zeggen
         </h2>
-        <p class="text-slate-650 text-sm sm:text-base leading-relaxed font-sans font-normal">
-          Financiële rust begint met het juiste advies. Wij zorgen voor een waterdicht vangnet en de beste hypotheek, zodat jij je kunt richten op wat echt belangrijk is.
+        <p class="ty-lead text-slate-600">
+          Financiële rust begint met persoonlijk en onafhankelijk advies. Ontdek hoe wij klanten in Moerkapelle en de regio dagelijks helpen.
         </p>
-
-        <!-- Rating Card -->
-        <div class="flex items-center space-x-4 sm:space-x-6 bg-white border border-slate-200/90 p-4 sm:p-6 rounded-2xl max-w-md shadow-md">
-          <div class="text-3xl sm:text-4xl font-semibold text-brand-dark font-display flex-shrink-0 flex items-baseline">
-            <span>4.9</span>
-            <span class="text-amber-600 text-base font-semibold ml-0.5">/5</span>
-          </div>
-          <div>
-            <div class="text-brand-dark font-semibold text-xs sm:text-sm">Uitstekende Beoordelingen</div>
-            <div class="text-amber-400 text-xs sm:text-sm mt-0.5">★★★★★</div>
-            <div class="text-slate-500 text-[10px] uppercase font-semibold tracking-wider mt-1 font-sans">Gebaseerd op 250+ reviews</div>
-          </div>
-        </div>
       </div>
 
-      <!-- Review Cards Block (Right) -->
-      <div class="lg:col-span-6 relative h-[420px] overflow-hidden rounded-3xl border border-slate-200/60 bg-white/40 shadow-sm">
-        <!-- Fade overlays for seamless scrolling visual effect -->
-        <div class="absolute top-0 inset-x-0 h-16 bg-gradient-to-b from-[#eef2f6] to-transparent z-20 pointer-events-none"></div>
-        <div class="absolute bottom-0 inset-x-0 h-16 bg-gradient-to-t from-[#eef2f6] to-transparent z-20 pointer-events-none"></div>
-        
-        <!-- Scroller container -->
-        <div class="flex flex-col space-y-4 p-4 animate-scroll-y">
-          <!-- Slide 1 -->
-          <div class="bg-white border border-slate-200/80 p-6 rounded-2xl shadow-sm transition-all hover:border-amber-300">
-            <div class="flex justify-between items-center mb-2">
-              <div class="text-amber-400 text-sm">★★★★★</div>
-              <span class="text-[10px] text-slate-400 font-semibold uppercase tracking-wider font-sans">Startershypotheek</span>
-            </div>
-            <p class="text-slate-650 text-sm sm:text-base font-sans font-normal mb-3 leading-relaxed">
-              "Geweldige service! Duidelijk advies voor onze startershypotheek. Zeer aan te bevelen."
-            </p>
-            <div class="flex justify-between items-center text-[10px] text-slate-500 font-semibold uppercase tracking-wider font-sans">
-              <span>Mark & Chantal</span>
-              <span class="text-amber-800 font-semibold">Moerkapelle</span>
-            </div>
+      <!-- Right: Rating Summary Badge -->
+      <div class="flex items-center gap-5 bg-white border border-slate-200/90 px-6 py-4 rounded-2xl shadow-sm shrink-0 self-start lg:self-auto">
+        <div class="ty-stat text-brand-dark flex items-baseline">
+          <span>4.9</span>
+          <span class="text-slate-400 text-base font-semibold ml-0.5">/5</span>
+        </div>
+        <div class="h-10 w-px bg-slate-200"></div>
+        <div>
+          <div class="flex items-center gap-1.5">
+            <span class="text-amber-400 text-sm tracking-tight">★★★★★</span>
+            <span class="ty-small font-semibold text-brand-dark">Uitstekend</span>
           </div>
-          
-          <!-- Slide 2 -->
-          <div class="bg-white border border-slate-200/80 p-6 rounded-2xl shadow-sm transition-all hover:border-amber-300">
-            <div class="flex justify-between items-center mb-2">
-              <div class="text-amber-400 text-sm">★★★★★</div>
-              <span class="text-[10px] text-slate-400 font-semibold uppercase tracking-wider font-sans">AOV Verzekering</span>
-            </div>
-            <p class="text-slate-650 text-sm sm:text-base font-sans font-normal mb-3 leading-relaxed">
-              "Ontzettend goed geholpen met onze AOV. Neemt echt de tijd en legde alles in begrijpelijke taal uit."
-            </p>
-            <div class="flex justify-between items-center text-[10px] text-slate-500 font-semibold uppercase tracking-wider font-sans">
-              <span>Daan V.</span>
-              <span class="text-amber-800 font-semibold">Zevenhuizen</span>
-            </div>
-          </div>
-          
-          <!-- Slide 3 -->
-          <div class="bg-white border border-slate-200/80 p-6 rounded-2xl shadow-sm transition-all hover:border-amber-300">
-            <div class="flex justify-between items-center mb-2">
-              <div class="text-amber-400 text-sm">★★★★★</div>
-              <span class="text-[10px] text-slate-400 font-semibold uppercase tracking-wider font-sans">Hypotheek Oversluiten</span>
-            </div>
-            <p class="text-slate-650 text-sm sm:text-base font-sans font-normal mb-3 leading-relaxed">
-              "Spekadvies heeft onze hypotheek overgesloten. Scheelt ons honderden euro's per maand! Heel betrouwbaar."
-            </p>
-            <div class="flex justify-between items-center text-[10px] text-slate-500 font-semibold uppercase tracking-wider font-sans">
-              <span>Hanneke S.</span>
-              <span class="text-amber-800 font-semibold">Zoetermeer</span>
-            </div>
-          </div>
-          
-          <!-- Slide 4 -->
-          <div class="bg-white border border-slate-200/80 p-6 rounded-2xl shadow-sm transition-all hover:border-amber-300">
-            <div class="flex justify-between items-center mb-2">
-              <div class="text-amber-400 text-sm">★★★★★</div>
-              <span class="text-[10px] text-slate-400 font-semibold uppercase tracking-wider font-sans">Woonverzekering</span>
-            </div>
-            <p class="text-slate-650 text-sm sm:text-base font-sans font-normal mb-3 leading-relaxed">
-              "Al onze schadeverzekeringen hier ondergebracht. Snel geregeld, goede dekking en één vast aanspreekpunt."
-            </p>
-            <div class="flex justify-between items-center text-[10px] text-slate-500 font-semibold uppercase tracking-wider font-sans">
-              <span>Fam. De Graaf</span>
-              <span class="text-amber-800 font-semibold">Waddinxveen</span>
-            </div>
-          </div>
-          
-          <!-- DUPLICATE SLIDES FOR SEAMLESS LOOP -->
-          
-          <!-- Slide 1 Duplicate -->
-          <div class="bg-white border border-slate-200/80 p-6 rounded-2xl shadow-sm transition-all hover:border-amber-300">
-            <div class="flex justify-between items-center mb-2">
-              <div class="text-amber-400 text-sm">★★★★★</div>
-              <span class="text-[10px] text-slate-400 font-semibold uppercase tracking-wider font-sans">Startershypotheek</span>
-            </div>
-            <p class="text-slate-650 text-sm sm:text-base font-sans font-normal mb-3 leading-relaxed">
-              "Geweldige service! Duidelijk advies voor onze startershypotheek. Zeer aan te bevelen."
-            </p>
-            <div class="flex justify-between items-center text-[10px] text-slate-500 font-semibold uppercase tracking-wider font-sans">
-              <span>Mark & Chantal</span>
-              <span class="text-amber-800 font-semibold">Moerkapelle</span>
-            </div>
-          </div>
-          
-          <!-- Slide 2 Duplicate -->
-          <div class="bg-white border border-slate-200/80 p-6 rounded-2xl shadow-sm transition-all hover:border-amber-300">
-            <div class="flex justify-between items-center mb-2">
-              <div class="text-amber-400 text-sm">★★★★★</div>
-              <span class="text-[10px] text-slate-400 font-semibold uppercase tracking-wider font-sans">AOV Verzekering</span>
-            </div>
-            <p class="text-slate-650 text-sm sm:text-base font-sans font-normal mb-3 leading-relaxed">
-              "Ontzettend goed geholpen met onze AOV. Neemt echt de tijd en legde alles in begrijpelijke taal uit."
-            </p>
-            <div class="flex justify-between items-center text-[10px] text-slate-500 font-semibold uppercase tracking-wider font-sans">
-              <span>Daan V.</span>
-              <span class="text-amber-800 font-semibold">Zevenhuizen</span>
-            </div>
-          </div>
-          
-          <!-- Slide 3 Duplicate -->
-          <div class="bg-white border border-slate-200/80 p-6 rounded-2xl shadow-sm transition-all hover:border-amber-300">
-            <div class="flex justify-between items-center mb-2">
-              <div class="text-amber-400 text-sm">★★★★★</div>
-              <span class="text-[10px] text-slate-400 font-semibold uppercase tracking-wider font-sans">Hypotheek Oversluiten</span>
-            </div>
-            <p class="text-slate-650 text-sm sm:text-base font-sans font-normal mb-3 leading-relaxed">
-              "Spekadvies heeft onze hypotheek overgesloten. Scheelt ons honderden euro's per maand! Heel betrouwbaar."
-            </p>
-            <div class="flex justify-between items-center text-[10px] text-slate-500 font-semibold uppercase tracking-wider font-sans">
-              <span>Hanneke S.</span>
-              <span class="text-amber-800 font-semibold">Zoetermeer</span>
-            </div>
-          </div>
-          
-          <!-- Slide 4 Duplicate -->
-          <div class="bg-white border border-slate-200/80 p-6 rounded-2xl shadow-sm transition-all hover:border-amber-300">
-            <div class="flex justify-between items-center mb-2">
-              <div class="text-amber-400 text-sm">★★★★★</div>
-              <span class="text-[10px] text-slate-400 font-semibold uppercase tracking-wider font-sans">Woonverzekering</span>
-            </div>
-            <p class="text-slate-650 text-sm sm:text-base font-sans font-normal mb-3 leading-relaxed">
-              "Al onze schadeverzekeringen hier ondergebracht. Snel geregeld, goede dekking en één vast aanspreekpunt."
-            </p>
-            <div class="flex justify-between items-center text-[10px] text-slate-500 font-semibold uppercase tracking-wider font-sans">
-              <span>Fam. De Graaf</span>
-              <span class="text-amber-800 font-semibold">Waddinxveen</span>
-            </div>
-          </div>
+          <div class="ty-small text-slate-500 mt-0.5">Gebaseerd op 250+ klantbeoordelingen</div>
         </div>
       </div>
 
     </div>
-
-    <!-- Stats Counters Row (Insonis Style - Responsive 2x2 on Mobile) -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 mt-12 sm:mt-16 pt-8 sm:pt-12 border-t border-slate-200/50">
-      <div class="text-center space-y-1.5 animate-fade-in p-2">
-        <div class="text-3xl sm:text-5xl font-semibold text-brand-dark font-display">750+</div>
-        <div class="text-[9px] sm:text-xs font-semibold text-slate-500 uppercase tracking-wider">Gezinnen Geholpen</div>
-      </div>
-      <div class="text-center space-y-1.5 animate-fade-in p-2">
-        <div class="text-3xl sm:text-5xl font-semibold text-brand-dark font-display">1200+</div>
-        <div class="text-[9px] sm:text-xs font-semibold text-slate-500 uppercase tracking-wider">Succesvolle Dossiers</div>
-      </div>
-      <div class="text-center space-y-1.5 animate-fade-in p-2">
-        <div class="text-3xl sm:text-5xl font-semibold text-brand-dark font-display">20+</div>
-        <div class="text-[9px] sm:text-xs font-semibold text-slate-500 uppercase tracking-wider">Jaar Ervaring</div>
-      </div>
-      <div class="text-center space-y-1.5 animate-fade-in p-2">
-        <div class="text-3xl sm:text-5xl font-semibold text-brand-dark font-display">98%</div>
-        <div class="text-[9px] sm:text-xs font-semibold text-slate-500 uppercase tracking-wider">Tevreden Klanten</div>
-      </div>
-    </div>
-
   </div>
+
+  <!-- Horizontal Infinite Moving Review Marquee -->
+  <div 
+    class="reviews-marquee-viewport relative w-full overflow-hidden py-3 select-none z-10"
+    style="-webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent); mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);"
+  >
+    <div id="reviews-marquee-track" class="reviews-marquee-track flex items-stretch gap-6 w-max">
+      {[0, 1].map(() => (
+        <div class="reviews-marquee-group flex items-stretch gap-6 shrink-0 pr-6">
+          {reviews.map((rev) => (
+            <article class="review-card w-[320px] sm:w-[380px] bg-white border border-slate-200/90 hover:border-brand-dark/30 rounded-3xl p-6 sm:p-7 shadow-[0_8px_30px_rgba(21,59,104,0.05)] hover:shadow-[0_14px_36px_rgba(21,59,104,0.10)] transition-shadow duration-300 flex flex-col justify-between shrink-0">
+              
+              <div>
+                <!-- Top Row: 5 Stars + Service Pill -->
+                <div class="flex items-center justify-between gap-2 mb-4">
+                  <div class="text-amber-400 text-sm tracking-tight" aria-label="5 van 5 sterren">★★★★★</div>
+                  <span class="ty-small font-semibold px-3 py-1 rounded-full bg-[#ffce76]/35 border border-[#ffce76] text-brand-dark">
+                    {rev.service}
+                  </span>
+                </div>
+
+                <!-- Quote Text -->
+                <p class="ty-body text-slate-600 mb-6">
+                  "{rev.quote}"
+                </p>
+              </div>
+
+              <!-- Reviewer Footer -->
+              <div class="pt-4 border-t border-slate-100 flex items-center justify-between gap-3">
+                <div class="flex items-center gap-3">
+                  <div class="w-9 h-9 rounded-full bg-brand-dark text-[#ffce76] ty-small font-semibold flex items-center justify-center shrink-0">
+                    {rev.initials}
+                  </div>
+                  <div>
+                    <div class="ty-h4 text-brand-dark leading-tight">{rev.name}</div>
+                    <div class="ty-small text-slate-500">{rev.city}</div>
+                  </div>
+                </div>
+                <span class="ty-small text-emerald-700 font-semibold flex items-center gap-1">
+                  <i class="fa-solid fa-circle-check text-[11px]"></i>
+                  <span>Geverifieerd</span>
+                </span>
+              </div>
+
+            </article>
+          ))}
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <!-- Stats Counters Row -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 relative z-10">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 mt-12 sm:mt-14 pt-8 sm:pt-10 border-t border-slate-200/70">
+      <div class="text-center space-y-1 p-2">
+        <div class="ty-stat text-brand-dark">750+</div>
+        <div class="ty-small text-slate-500">Gezinnen geholpen</div>
+      </div>
+      <div class="text-center space-y-1 p-2">
+        <div class="ty-stat text-brand-dark">1.200+</div>
+        <div class="ty-small text-slate-500">Succesvolle dossiers</div>
+      </div>
+      <div class="text-center space-y-1 p-2">
+        <div class="ty-stat text-brand-dark">20+</div>
+        <div class="ty-small text-slate-500">Jaar ervaring</div>
+      </div>
+      <div class="text-center space-y-1 p-2">
+        <div class="ty-stat text-brand-dark">98%</div>
+        <div class="ty-small text-slate-500">Tevreden klanten</div>
+      </div>
+    </div>
+  </div>
+
   <SectionDivider fillColor="#ffffff" direction="left-high" />
 </section>
 
-<style>
-  @keyframes scroll-y {
-    0% {
-      transform: translateY(0);
+<script is:inline>
+  (function() {
+    function initReviewsMarquee() {
+      const tracks = document.querySelectorAll('.reviews-marquee-track');
+      tracks.forEach((track) => {
+        if (track.dataset.marqueeInitialized === 'true') return;
+        track.dataset.marqueeInitialized = 'true';
+
+        const firstGroup = track.querySelector('.reviews-marquee-group');
+        if (!firstGroup) return;
+
+        let offset = 0;
+        let isHovered = false;
+        let lastTime = performance.now();
+        const normalSpeed = 60; // Smooth, clearly visible horizontal movement (px/sec)
+        const hoverSpeed = 22;  // Gentle slow-down on hover so it never looks frozen
+
+        track.querySelectorAll('.review-card').forEach((card) => {
+          card.addEventListener('mouseenter', () => { isHovered = true; });
+          card.addEventListener('mouseleave', () => { isHovered = false; });
+        });
+
+        function step(now) {
+          const dt = Math.min((now - lastTime) / 1000, 0.1);
+          lastTime = now;
+
+          const singleWidth = firstGroup.offsetWidth;
+          if (singleWidth > 0) {
+            const currentSpeed = isHovered ? hoverSpeed : normalSpeed;
+            offset -= currentSpeed * dt;
+            if (Math.abs(offset) >= singleWidth) {
+              offset += singleWidth;
+            }
+            track.style.transform = `translate3d(${offset.toFixed(2)}px, 0, 0)`;
+          }
+          requestAnimationFrame(step);
+        }
+
+        requestAnimationFrame(step);
+      });
     }
-    100% {
-      transform: translateY(-50%);
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initReviewsMarquee);
+    } else {
+      initReviewsMarquee();
     }
-  }
-  .animate-scroll-y {
-    animation: scroll-y 25s linear infinite;
-  }
-  .animate-scroll-y:hover {
-    animation-play-state: paused;
-  }
-</style>
+    document.addEventListener('astro:page-load', initReviewsMarquee);
+  })();
+</script>
