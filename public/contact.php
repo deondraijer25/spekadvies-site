@@ -41,6 +41,20 @@ $timeline = isset($data['timeline']) ? trim($data['timeline']) : '';
 $preference = isset($data['preference']) ? trim($data['preference']) : '';
 $serviceType = isset($data['service-type']) ? trim($data['service-type']) : (isset($data['serviceType']) ? trim($data['serviceType']) : 'overig');
 $message = isset($data['message']) ? trim($data['message']) : '';
+$utmSource = isset($data['utm_source']) ? trim($data['utm_source']) : '';
+$utmMedium = isset($data['utm_medium']) ? trim($data['utm_medium']) : '';
+$utmCampaign = isset($data['utm_campaign']) ? trim($data['utm_campaign']) : '';
+$referrer = isset($data['referrer']) ? trim($data['referrer']) : '';
+$landingPage = isset($data['landing_page']) ? trim($data['landing_page']) : '';
+
+$isGbp = (stripos($utmCampaign, 'gbp') !== false) || (strtolower($utmSource) === 'gbp');
+if ($isGbp) {
+    $leadSource = 'Google Bedrijfsprofiel (spekadvies.nl)';
+} elseif (!empty($utmSource)) {
+    $leadSource = 'Website (' . $utmSource . (!empty($utmMedium) ? ' / ' . $utmMedium : '') . ')';
+} else {
+    $leadSource = 'Website Keuzehulp (spekadvies.nl)';
+}
 
 // Validation
 if (empty($name) || empty($phone) || empty($email)) {
@@ -136,7 +150,7 @@ try {
         'phone'        => $phone,
         'email'        => $email,
         'locationId'   => $locationId,
-        'source'       => 'Website Keuzehulp (spekadvies.nl)',
+        'source'       => $leadSource,
         'customFields' => [
             ['id' => 'JUxucX44sWJqWD4BhkX0', 'field_value' => $serviceLabel],
             ['id' => 'lxVrsr6WZXDuIBVsprNk', 'field_value' => $cleanSituation],
@@ -175,7 +189,10 @@ try {
                     "• Telefoon:   {$phone}\n" .
                     "• E-mail:     {$email}\n" .
                     "• Woonplaats: " . (!empty($city) ? $city : 'Niet ingevuld') . "\n" .
-                    "• Datum/tijd: " . date('d-m-Y H:i:s') . "\n\n" .
+                    "• Datum/tijd: " . date('d-m-Y H:i:s') . "\n" .
+                    "• Herkomst:   {$leadSource}" . (!empty($utmCampaign) ? " (campagne: {$utmCampaign})" : "") . "\n" .
+                    (!empty($landingPage) ? "• Instappagina: {$landingPage}\n" : "") .
+                    (!empty($referrer) ? "• Referrer:   {$referrer}\n" : "") . "\n" .
                     "EXTRA TOELICHTING VAN BEZOEKER:\n" .
                     $cleanMessage;
 
@@ -199,6 +216,9 @@ try {
         }
 
         $tagsToApply = ['website-lead', $tag];
+        if ($isGbp) {
+            $tagsToApply[] = 'google-bedrijfsprofiel';
+        }
 
         if (!empty($preference)) {
             $prefLower = strtolower($preference);
