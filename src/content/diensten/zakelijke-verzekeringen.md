@@ -1,7 +1,7 @@
 ---
 name: "Zakelijke Verzekeringen"
-seoTitle: "Zakelijke Verzekeringen Moerkapelle | Bedrijfsaansprakelijkheid ZZP | Spekadvies"
-seoDescription: "Zakelijke verzekeringen voor ZZP & MKB in Moerkapelle en regio? Spekadvies vergelijkt bedrijfsaansprakelijkheid (AVB), beroepsaansprakelijkheid (BAV) en inventaris."
+seoTitle: "Zakelijke Verzekeringen Moerkapelle | Spekadvies"
+seoDescription: "Zakelijke verzekeringen voor ZZP & MKB in Moerkapelle. Spekadvies vergelijkt bedrijfsaansprakelijkheid (AVB), BAV en inventaris voor optimale dekking."
 heroTitle: "Zakelijke Verzekeringen voor ZZP & MKB: Zorgeloos Ondernemen"
 heroSubtitle: "Bescherm jouw bedrijf tegen aansprakelijkheidsclaims, brandschade aan inventaris en juridische geschillen. Martin van der Spek stelt een naadloos zakelijk pakket samen op maat van jouw branche."
 ctaText: "Vraag een gratis zakelijke risicoscan aan"

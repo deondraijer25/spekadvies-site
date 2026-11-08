@@ -12,9 +12,22 @@ export async function POST({ request }) {
       situation = '',
       timeline = '',
       preference = '',
-      message = ''
+      message = '',
+      utm_source = '',
+      utm_medium = '',
+      utm_campaign = '',
+      gclid = '',
+      referrer = '',
+      landing_page = ''
     } = body;
     const serviceType = body['service-type'] || body.serviceType || 'overig';
+
+    const isGbp = utm_campaign.toLowerCase().includes('gbp') || utm_source.toLowerCase() === 'gbp';
+    const leadSource = isGbp
+      ? 'Google Bedrijfsprofiel (spekadvies.nl)'
+      : utm_source
+        ? `Website (${utm_source}${utm_medium ? ' / ' + utm_medium : ''})`
+        : 'Website Keuzehulp (spekadvies.nl)';
 
     // Validate required fields
     if (!name.trim() || !phone.trim() || !email.trim()) {
@@ -83,7 +96,7 @@ export async function POST({ request }) {
       phone: phone.trim(),
       email: email.trim(),
       locationId,
-      source: 'Website Keuzehulp (spekadvies.nl)',
+      source: leadSource,
       customFields: [
         { id: 'JUxucX44sWJqWD4BhkX0', field_value: serviceLabel },
         { id: 'lxVrsr6WZXDuIBVsprNk', field_value: cleanSituation },
@@ -132,8 +145,11 @@ export async function POST({ request }) {
       `• Telefoon:   ${phone.trim()}\n` +
       `• E-mail:     ${email.trim()}\n` +
       `• Woonplaats: ${city?.trim() || 'Niet ingevuld'}\n` +
-      `• Datum/tijd: ${nowStr}\n\n` +
-      `EXTRA TOELICHTING VAN BEZOEKER:\n` +
+      `• Datum/tijd: ${nowStr}\n` +
+      `• Herkomst:   ${leadSource}${utm_campaign ? ` (campagne: ${utm_campaign})` : ''}\n` +
+      (landing_page ? `• Instappagina: ${landing_page}\n` : '') +
+      (referrer ? `• Referrer:   ${referrer}\n` : '') +
+      `\nEXTRA TOELICHTING VAN BEZOEKER:\n` +
       `${cleanMessage}`;
 
     const noteResponse = await fetch(`https://services.leadconnectorhq.com/contacts/${contactId}/notes`, {
@@ -162,6 +178,9 @@ export async function POST({ request }) {
     }
 
     const tagsToApply = ['website-lead', tag];
+    if (isGbp) {
+      tagsToApply.push('google-bedrijfsprofiel');
+    }
 
     if (preference) {
       const prefLower = preference.toLowerCase();

@@ -10,7 +10,7 @@ import Footer from '../components/Footer.astro';
 ---
 
 <Layout 
-  title="Onafhankelijk Hypotheekadvies | Spekadvies, Jouw droomhuis perfect geregeld" 
+  title="Hypotheekadvies Moerkapelle | Onafhankelijk | Spekadvies" 
   description="Onafhankelijk hypotheekadvies voor starters, doorstromers en ondernemers in Moerkapelle. Wij vergelijken meer dan 40 geldverstrekkers voor de laagste rente."
 >
   <Navbar />
@@ -60,7 +60,7 @@ import Footer from '../components/Footer.astro';
               <div class="w-12 h-12 rounded-2xl bg-amber-50 border border-amber-200/60 flex items-center justify-center text-amber-800 text-xl mb-6 shadow-xs group-hover:scale-105 transition-transform">
                 <i class="fa-solid fa-piggy-bank"></i>
               </div>
-              <h3 class="text-base font-semibold text-brand-dark font-display mb-3">Slimme financiering</h3>
+              <div class="text-base font-semibold text-brand-dark font-display mb-3">Slimme financiering</div>
               <p class="text-sm text-slate-600 font-sans font-normal leading-relaxed">
                 Advies over belastingvoordelen, schenkingen, erfpacht en de Nationale Hypotheek Garantie (NHG) om jouw maandlasten te minimaliseren.
               </p>
@@ -73,7 +73,7 @@ import Footer from '../components/Footer.astro';
               <div class="w-12 h-12 rounded-2xl bg-amber-50 border border-amber-200/60 flex items-center justify-center text-amber-800 text-xl mb-6 shadow-xs group-hover:scale-105 transition-transform">
                 <i class="fa-solid fa-calculator"></i>
               </div>
-              <h3 class="text-base font-semibold text-brand-dark font-display mb-3">Maximale leencapaciteit</h3>
+              <div class="text-base font-semibold text-brand-dark font-display mb-3">Maximale leencapaciteit</div>
               <p class="text-sm text-slate-600 font-sans font-normal leading-relaxed">
                 Wat kun je verantwoord lenen op basis van jouw inkomen en eventuele schulden? Wij rekenen het exact en onafhankelijk voor je uit.
               </p>
@@ -86,7 +86,7 @@ import Footer from '../components/Footer.astro';
               <div class="w-12 h-12 rounded-2xl bg-amber-50 border border-amber-200/60 flex items-center justify-center text-amber-800 text-xl mb-6 shadow-xs group-hover:scale-105 transition-transform">
                 <i class="fa-solid fa-shield-halved"></i>
               </div>
-              <h3 class="text-base font-semibold text-brand-dark font-display mb-3">Risico's afgedekt</h3>
+              <div class="text-base font-semibold text-brand-dark font-display mb-3">Risico's afgedekt</div>
               <p class="text-sm text-slate-600 font-sans font-normal leading-relaxed">
                 Wij adviseren je over overlijdensrisico- en woonlastenverzekeringen, zodat je bij arbeidsongeschiktheid of tegenslag in je woning kunt blijven.
               </p>
@@ -686,6 +686,10 @@ import Footer from '../components/Footer.astro';
               <img 
                 src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=800&q=80" 
                 alt="Rente- en hypotheeknieuws" 
+                width="800"
+                height="533"
+                loading="lazy"
+                decoding="async"
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />
               <div class="absolute top-4 left-4 bg-brand-dark text-white text-[10px] font-semibold uppercase tracking-wider px-3.5 py-1.5 rounded-full font-sans">
@@ -713,6 +717,10 @@ import Footer from '../components/Footer.astro';
               <img 
                 src="https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=800&q=80" 
                 alt="Tips voor jouw hypotheekaanvraag" 
+                width="800"
+                height="533"
+                loading="lazy"
+                decoding="async"
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />
               <div class="absolute top-4 left-4 bg-brand-dark text-white text-[10px] font-semibold uppercase tracking-wider px-3.5 py-1.5 rounded-full font-sans">
@@ -741,6 +749,7 @@ import Footer from '../components/Footer.astro';
   <RatingsClaim />
   <FaqSection />
   <ContactForm />
+  </main>
   <Footer />
 </Layout>
 

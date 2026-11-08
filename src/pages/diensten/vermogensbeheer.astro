@@ -21,7 +21,23 @@ import Footer from '../../components/Footer.astro';
       style="background-image: linear-gradient(rgba(21, 59, 104, 0.82), rgba(11, 26, 47, 0.94)), url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1800&q=80');"
     >
       <div class="max-w-4xl mx-auto px-4 sm:px-8 text-center relative z-10">
-        <h1 class="text-3xl sm:text-5xl lg:text-6.5xl font-semibold text-white tracking-tight leading-tight font-display mb-6">
+        <!-- Eyebrow Badges: Pijler Badge & GEO Trust Badge -->
+        <div class="flex flex-wrap items-center justify-center gap-2.5 mb-6">
+          <a 
+            href="/diensten/#vermogen"
+            class="inline-flex items-center gap-2 bg-brand-primary/20 hover:bg-brand-primary/30 text-brand-primary border border-brand-primary/40 text-[11px] font-semibold tracking-wider uppercase px-4 py-1.5 rounded-full font-sans transition-all duration-200 shadow-xs group"
+            title="Bekijk alle diensten binnen de pijler Vermogen & Pensioen"
+          >
+            <i class="fa-solid fa-chart-line text-xs text-brand-primary group-hover:scale-110 transition-transform"></i>
+            <span>Pijler: Vermogen & Pensioen</span>
+          </a>
+          <span class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md text-slate-200 border border-white/20 text-[11px] font-semibold tracking-wider uppercase px-4 py-1.5 rounded-full font-sans shadow-xs">
+            <i class="fa-solid fa-location-dot text-xs text-brand-primary"></i>
+            <span>Moerkapelle & Regio • 100% Onafhankelijk</span>
+          </span>
+        </div>
+
+        <h1 class="ty-h1 text-white mb-6 max-w-4xl mx-auto">
           Bouw aan een gezonde financiële toekomst
         </h1>
         
@@ -55,7 +71,7 @@ import Footer from '../../components/Footer.astro';
             <div class="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center text-brand-dark text-xl mb-6">
               <i class="fa-solid fa-chart-line"></i>
             </div>
-            <h3 class="text-base font-semibold text-brand-dark font-display mb-3">Gecontroleerde Groei</h3>
+            <div class="text-base font-semibold text-brand-dark font-display mb-3">Gecontroleerde Groei</div>
             <p class="text-sm text-slate-600 font-sans font-normal leading-relaxed">
               Wij helpen je om je vermogen verstandig en binnen jouw risicoprofiel te laten groeien voor de lange termijn, met een strak en realistisch plan.
             </p>
@@ -66,7 +82,7 @@ import Footer from '../../components/Footer.astro';
             <div class="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center text-brand-dark text-xl mb-6">
               <i class="fa-solid fa-scale-balanced"></i>
             </div>
-            <h3 class="text-base font-semibold text-brand-dark font-display mb-3">Onafhankelijk Advies</h3>
+            <div class="text-base font-semibold text-brand-dark font-display mb-3">Onafhankelijk Advies</div>
             <p class="text-sm text-slate-600 font-sans font-normal leading-relaxed">
               Wij vergelijken vermogensbeheerders en beleggingsfondsen objectief en transparant. Geen verborgen commissies, puur gericht op jouw rendement.
             </p>
@@ -77,7 +93,7 @@ import Footer from '../../components/Footer.astro';
             <div class="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center text-brand-dark text-xl mb-6">
               <i class="fa-solid fa-peace"></i>
             </div>
-            <h3 class="text-base font-semibold text-brand-dark font-display mb-3">Financiële Rust</h3>
+            <div class="text-base font-semibold text-brand-dark font-display mb-3">Financiële Rust</div>
             <p class="text-sm text-slate-600 font-sans font-normal leading-relaxed">
               Je vermogen wordt professioneel begeleid en gemonitord, zodat jij met een gerust hart kunt focussen op wat echt belangrijk is in je leven.
             </p>
@@ -119,6 +135,10 @@ import Footer from '../../components/Footer.astro';
               <img 
                 src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&w=800&q=80" 
                 alt="Financiële grafiek en vermogensgroei" 
+                width="800"
+                height="533"
+                loading="lazy"
+                decoding="async"
                 class="w-full h-full object-cover"
               />
             </div>
@@ -133,6 +153,10 @@ import Footer from '../../components/Footer.astro';
               <img 
                 src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=800&q=80" 
                 alt="Plant groeiend uit munten" 
+                width="800"
+                height="533"
+                loading="lazy"
+                decoding="async"
                 class="w-full h-full object-cover"
               />
             </div>

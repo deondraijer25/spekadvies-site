@@ -1,0 +1,252 @@
+---
+/**
+ * CookieBanner.astro
+ * Spekadvies AVG / GDPR & ePrivacy Compliant Cookie Consent Banner
+ * 
+ * - Non-blocking bottom banner adhering to Spekadvies brand styling
+ * - Granular choice: Functioneel (strictly necessary), Analytisch, Marketing
+ * - Vanilla client-side JS storing state in localStorage ('spekadvies_cookie_consent')
+ * - Accessible ARIA landmark role="region" aria-label="Cookie voorkeuren"
+ * - Re-openable via custom window event 'spekadvies:open-cookie-banner'
+ */
+---
+
+<div 
+  id="spekadvies-cookie-banner" 
+  class="hidden fixed bottom-0 inset-x-0 z-50 p-3 sm:p-4 md:p-6 transition-all duration-300"
+  role="region" 
+  aria-label="Cookie voorkeuren"
+  aria-describedby="spekadvies-cookie-description"
+>
+  <div class="max-w-5xl mx-auto bg-white/95 backdrop-blur-md rounded-2xl md:rounded-3xl border border-slate-200/90 shadow-[0_-8px_35px_rgba(21,59,104,0.14)] p-4 sm:p-6 text-slate-700">
+    
+    <!-- Primary Banner Row -->
+    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+      
+      <!-- Text & Identity Info -->
+      <div class="flex items-start gap-3 sm:gap-4 flex-1">
+        <!-- Cookie SVG Icon -->
+        <div class="w-10 h-10 rounded-xl bg-amber-50 border border-amber-200/60 flex items-center justify-center text-amber-600 flex-shrink-0 mt-0.5">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 2a10 10 0 1 0 10 10 1 1 0 0 0-1-1 4 4 0 0 1-4-4 1 1 0 0 0-1-1 4 4 0 0 1-4-4 1 1 0 0 0-1-1 10 10 0 0 0 1-0zm-3 7a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm-2 5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm6 3a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm3-6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+          </svg>
+        </div>
+
+        <div class="space-y-1">
+          <p class="font-display font-semibold text-sm sm:text-base text-brand-dark">
+            Cookie-instellingen & privacy
+          </p>
+          <p id="spekadvies-cookie-description" class="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
+            Spekadvies gebruikt noodzakelijke functionele cookies voor de werking van de website en geanonimiseerde analytische cookies om onze adviesdienstverlening te verbeteren. Lees meer in ons <a href="/privacybeleid/" class="underline text-brand-dark hover:text-amber-700 font-medium transition-colors">privacybeleid</a>.
+          </p>
+        </div>
+      </div>
+
+      <!-- Main Action Buttons -->
+      <div class="flex flex-wrap items-center gap-2 sm:gap-3 flex-shrink-0 pt-2 md:pt-0">
+        <button
+          type="button"
+          id="cookie-accept-all"
+          class="bg-brand-primary hover:bg-brand-primary-hover text-brand-dark font-semibold px-5 py-2.5 rounded-full text-xs sm:text-sm transition-all shadow-sm active:scale-95 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary focus-visible:ring-offset-2"
+        >
+          Alles accepteren
+        </button>
+
+        <button
+          type="button"
+          id="cookie-decline"
+          class="bg-slate-100 hover:bg-slate-200 text-brand-dark font-semibold px-4 py-2.5 rounded-full text-xs sm:text-sm border border-slate-200/80 transition-all active:scale-95 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-300 focus-visible:ring-offset-2"
+        >
+          Alleen noodzakelijk
+        </button>
+
+        <button
+          type="button"
+          id="cookie-customize"
+          class="text-xs text-slate-500 hover:text-brand-dark underline font-medium px-2 py-1.5 transition-colors cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-dark rounded"
+          aria-expanded="false"
+          aria-controls="cookie-preferences-panel"
+        >
+          Voorkeuren instellen
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Expandable Detailed Preferences Panel -->
+    <div 
+      id="cookie-preferences-panel" 
+      class="hidden mt-4 pt-4 border-t border-slate-200 transition-all"
+    >
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-3 mb-4 text-xs font-sans">
+        
+        <!-- Category 1: Functional (Always active) -->
+        <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-1.5">
+              <span class="font-semibold text-brand-dark text-xs sm:text-sm">Functioneel</span>
+              <span class="text-[10px] uppercase font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full">Altijd actief</span>
+            </div>
+            <p class="text-slate-500 text-[11px] leading-relaxed">
+              Noodzakelijk voor de basiswerking van de website, formulierbeveiliging en het opslaan van je cookiekeuze.
+            </p>
+          </div>
+        </div>
+
+        <!-- Category 2: Analytical -->
+        <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-1.5">
+              <label for="cookie-pref-analytics" class="font-semibold text-brand-dark text-xs sm:text-sm cursor-pointer">
+                Analytisch
+              </label>
+              <label class="relative inline-flex items-center cursor-pointer">
+                <input type="checkbox" id="cookie-pref-analytics" checked class="sr-only peer">
+                <div class="w-8 h-4 bg-slate-300 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-3 after:w-3 after:transition-all peer-checked:bg-brand-dark"></div>
+              </label>
+            </div>
+            <p class="text-slate-500 text-[11px] leading-relaxed">
+              Geanonimiseerde websitestatistieken om het gebruiksgemak en de inhoud van de site continu te optimaliseren.
+            </p>
+          </div>
+        </div>
+
+        <!-- Category 3: Marketing -->
+        <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-1.5">
+              <label for="cookie-pref-marketing" class="font-semibold text-brand-dark text-xs sm:text-sm cursor-pointer">
+                Marketing
+              </label>
+              <label class="relative inline-flex items-center cursor-pointer">
+                <input type="checkbox" id="cookie-pref-marketing" class="sr-only peer">
+                <div class="w-8 h-4 bg-slate-300 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-3 after:w-3 after:transition-all peer-checked:bg-brand-dark"></div>
+              </label>
+            </div>
+            <p class="text-slate-500 text-[11px] leading-relaxed">
+              Optionele cookies voor het tonen van relevante berichten over hypotheken en verzekeringen via externe kanalen.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Save Customized Selection Button -->
+      <div class="flex justify-end gap-3 pt-1">
+        <button
+          type="button"
+          id="cookie-save-custom"
+          class="bg-brand-dark hover:bg-brand-navy text-white font-semibold px-5 py-2 rounded-full text-xs transition-all shadow-sm active:scale-95 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-dark focus-visible:ring-offset-2"
+        >
+          Voorkeuren opslaan
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<script is:inline>
+  (function() {
+    const STORAGE_KEY = 'spekadvies_cookie_consent';
+    const banner = document.getElementById('spekadvies-cookie-banner');
+    if (!banner) return;
+
+    const acceptAllBtn = document.getElementById('cookie-accept-all');
+    const declineBtn = document.getElementById('cookie-decline');
+    const customizeBtn = document.getElementById('cookie-customize');
+    const saveCustomBtn = document.getElementById('cookie-save-custom');
+    const preferencesPanel = document.getElementById('cookie-preferences-panel');
+    const analyticsCheckbox = document.getElementById('cookie-pref-analytics');
+    const marketingCheckbox = document.getElementById('cookie-pref-marketing');
+
+    function readConsent() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        return raw ? JSON.parse(raw) : null;
+      } catch (e) {
+        return null;
+      }
+    }
+
+    function dispatchConsentEvent(consentData) {
+      try {
+        window.dispatchEvent(new CustomEvent('spekadvies:consent-updated', {
+          detail: consentData
+        }));
+      } catch (e) {
+        // Safe fallback
+      }
+    }
+
+    function saveConsent(status, customPrefs) {
+      const payload = {
+        status: status,
+        necessary: true,
+        analytics: customPrefs ? Boolean(customPrefs.analytics) : (status === 'all'),
+        marketing: customPrefs ? Boolean(customPrefs.marketing) : (status === 'all'),
+        timestamp: new Date().toISOString(),
+        version: 1
+      };
+
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
+      } catch (e) {
+        // LocalStorage quota/incognito safety
+      }
+
+      banner.classList.add('hidden');
+      dispatchConsentEvent(payload);
+    }
+
+    // 1. Initial consent check on page load
+    const existingConsent = readConsent();
+    if (existingConsent && existingConsent.status) {
+      banner.classList.add('hidden');
+      dispatchConsentEvent(existingConsent);
+    } else {
+      banner.classList.remove('hidden');
+    }
+
+    // 2. Button Event Listeners
+    if (acceptAllBtn) {
+      acceptAllBtn.addEventListener('click', function() {
+        saveConsent('all');
+      });
+    }
+
+    if (declineBtn) {
+      declineBtn.addEventListener('click', function() {
+        saveConsent('necessary');
+      });
+    }
+
+    if (customizeBtn && preferencesPanel) {
+      customizeBtn.addEventListener('click', function() {
+        const isExpanded = customizeBtn.getAttribute('aria-expanded') === 'true';
+        customizeBtn.setAttribute('aria-expanded', String(!isExpanded));
+        preferencesPanel.classList.toggle('hidden');
+      });
+    }
+
+    if (saveCustomBtn) {
+      saveCustomBtn.addEventListener('click', function() {
+        saveConsent('custom', {
+          analytics: analyticsCheckbox ? analyticsCheckbox.checked : false,
+          marketing: marketingCheckbox ? marketingCheckbox.checked : false
+        });
+      });
+    }
+
+    // 3. Global listener to reopen banner (e.g. from footer link)
+    window.addEventListener('spekadvies:open-cookie-banner', function() {
+      banner.classList.remove('hidden');
+      if (preferencesPanel) {
+        preferencesPanel.classList.remove('hidden');
+        if (customizeBtn) customizeBtn.setAttribute('aria-expanded', 'true');
+      }
+      banner.scrollIntoView({ behavior: 'smooth', block: 'end' });
+    });
+  })();
+</script>

@@ -8,6 +8,7 @@ import RatingsClaim from '../../components/RatingsClaim.astro';
 import ContactForm from '../../components/ContactForm.astro';
 import Footer from '../../components/Footer.astro';
 import { COMPANY_DATA } from '../../data/company';
+import { getPillarById } from '../../data/services';
 
 // Generate static paths for all services
 export async function getStaticPaths() {
@@ -39,6 +40,7 @@ const {
 } = entry.data;
 
 const { Content } = await render(entry);
+const pillar = getPillarById(category);
 
 // Unified 3-card array under hero: exactly 1 section with 1 background and uniform sizing
 const featureCards = (usps && usps.length > 0)
@@ -76,10 +78,22 @@ const featureCards = (usps && usps.length > 0)
       <div class="absolute left-1/2 -top-20 -translate-x-1/2 w-[600px] h-[300px] bg-brand-primary/10 blur-[120px] pointer-events-none rounded-full"></div>
 
       <div class="max-w-5xl mx-auto px-4 sm:px-8 text-center relative z-10">
-        <!-- GEO Trust Badge -->
-        <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md text-brand-primary border border-white/20 text-[11px] font-semibold tracking-wider uppercase px-4 py-1.5 rounded-full mb-6 font-sans shadow-xs">
-          <i class="fa-solid fa-location-dot text-xs text-brand-primary"></i>
-          <span>Moerkapelle & Regio • 100% Onafhankelijk</span>
+        <!-- Eyebrow Badges: Pijler Badge (met teruglink naar /diensten) & GEO Trust Badge -->
+        <div class="flex flex-wrap items-center justify-center gap-2.5 mb-6">
+          {pillar && (
+            <a 
+              href={`/diensten/#${pillar.anchor}`}
+              class="inline-flex items-center gap-2 bg-brand-primary/20 hover:bg-brand-primary/30 text-brand-primary border border-brand-primary/40 text-[11px] font-semibold tracking-wider uppercase px-4 py-1.5 rounded-full font-sans transition-all duration-200 shadow-xs group"
+              title={`Bekijk alle diensten binnen de pijler ${pillar.title}`}
+            >
+              <i class={`${pillar.icon} text-xs text-brand-primary group-hover:scale-110 transition-transform`}></i>
+              <span>{pillar.badge}</span>
+            </a>
+          )}
+          <span class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md text-slate-200 border border-white/20 text-[11px] font-semibold tracking-wider uppercase px-4 py-1.5 rounded-full font-sans shadow-xs">
+            <i class="fa-solid fa-location-dot text-xs text-brand-primary"></i>
+            <span>Moerkapelle & Regio • 100% Onafhankelijk</span>
+          </span>
         </div>
         
         <h1 class="ty-h1 text-white mb-6 max-w-4xl mx-auto">
@@ -92,7 +106,7 @@ const featureCards = (usps && usps.length > 0)
         
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a 
-            href="/adviesgesprek"
+            href="/adviesgesprek/"
             class="open-contact-drawer btn-primary-gold inline-flex items-center justify-center gap-2.5 bg-brand-primary hover:bg-brand-primary-hover text-brand-dark px-7 py-3.5 rounded-full shadow-[0_10px_25px_rgba(255,206,118,0.25)] hover:shadow-[0_14px_32px_rgba(255,206,118,0.35)] hover:-translate-y-0.5 transition-all duration-300 cursor-pointer w-full sm:w-auto text-center"
           >
             <span>Plan een afspraak</span>
@@ -127,9 +141,9 @@ const featureCards = (usps && usps.length > 0)
                       </span>
                     )}
                   </div>
-                  <h3 class="text-base sm:text-lg font-semibold text-brand-dark !font-sans mb-2.5 leading-snug">
+                  <div class="text-base sm:text-lg font-semibold text-brand-dark !font-sans mb-2.5 leading-snug">
                     {card.title}
-                  </h3>
+                  </div>
                   <p class="text-xs sm:text-sm text-slate-600 font-sans font-normal leading-relaxed">
                     {card.description}
                   </p>
@@ -323,7 +337,7 @@ const featureCards = (usps && usps.length > 0)
               </div>
 
               <a 
-                href="/adviesgesprek"
+                href="/adviesgesprek/"
                 class="open-contact-drawer btn-primary w-full mt-5 bg-brand-dark hover:bg-slate-800 text-white py-3.5 px-4 rounded-full transition-colors cursor-pointer text-center inline-flex items-center justify-center gap-2"
               >
                 <span>Plan een afspraak</span>

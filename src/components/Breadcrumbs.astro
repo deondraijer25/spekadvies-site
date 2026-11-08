@@ -8,18 +8,31 @@ const items = [
 ];
 
 let currentPath = '';
-segments.forEach((segment, idx) => {
+segments.forEach((segment) => {
   currentPath += `/${segment}`;
   
   let name = segment;
+  let itemUrl = `${currentPath}/`;
+
   // Humanize names
   if (segment === 'hypotheken') name = 'Hypotheken';
   else if (segment === 'verzekeringen') name = 'Verzekeringen';
   else if (segment === 'aangiften') name = 'Belastingaangifte';
   else if (segment === 'over-ons') name = 'Over ons';
   else if (segment === 'klantenservice') name = 'Klantenservice';
-  else if (segment === 'diensten') name = 'Diensten';
-  else if (segment === 'hypotheekadviseur-in') name = 'Locaties';
+  else if (segment === 'diensten') {
+    name = 'Diensten';
+    itemUrl = '/diensten/';
+  }
+  else if (segment === 'hypotheekadviseur-in') {
+    name = 'Locaties';
+    itemUrl = '/locaties/';
+  }
+  else if (segment === 'locaties') name = 'Locaties';
+  else if (segment === 'kennisbank') name = 'Kennisbank';
+  else if (segment === 'privacybeleid') name = 'Privacybeleid';
+  else if (segment === 'algemene-voorwaarden') name = 'Algemene Voorwaarden';
+  else if (segment === 'adviesgesprek') name = 'Adviesgesprek';
   else {
     // For dynamic pages (startershypotheek, moerkapelle, etc.)
     name = segment
@@ -27,18 +40,23 @@ segments.forEach((segment, idx) => {
       .replace(/\b\w/g, c => c.toUpperCase());
     
     // Custom mappings
-    if (name.toLowerCase() === 'aov verzekering') name = 'AOV Verzekering';
-    else if (name.toLowerCase() === 'startershypotheek') name = 'Startershypotheek';
-    else if (name.toLowerCase() === 'hypotheek oversluiten') name = 'Hypotheek Oversluiten';
+    if (segment === 'nieuwerkerk-ad-ijssel') name = 'Nieuwerkerk a/d IJssel';
+    else if (segment === 'aov-zzp-verzekering') name = 'AOV Verzekering';
+    else if (segment === 'startershypotheek') name = 'Startershypotheek';
+    else if (segment === 'hypotheek-oversluiten') name = 'Hypotheek Oversluiten';
+    else if (segment === 'doorstromers-overbrugging') name = 'Doorstromers & Overbrugging';
+    else if (segment === 'hypotheek-bij-scheiding') name = 'Hypotheek bij Scheiding';
+    else if (segment === 'zzp-ondernemers-hypotheek') name = 'ZZP Hypotheek';
   }
 
   items.push({
     name,
-    url: currentPath
+    url: itemUrl
   });
 });
 
 // JSON-LD Breadcrumb Schema for expert SEO
+const siteOrigin = Astro.site ? Astro.site.origin : (Astro.url ? Astro.url.origin : 'https://www.spekadvies.nl');
 const schema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -46,7 +64,7 @@ const schema = {
     "@type": "ListItem",
     "position": index + 1,
     "name": item.name,
-    "item": new URL(item.url, Astro.url.origin).href
+    "item": new URL(item.url, siteOrigin).href
   }))
 };
 ---

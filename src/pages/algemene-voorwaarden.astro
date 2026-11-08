@@ -1,0 +1,204 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import Footer from '../components/Footer.astro';
+import { COMPANY_DATA } from '../data/company';
+
+const pageTitle = "Algemene Voorwaarden | Spekadvies Moerkapelle";
+const pageDescription = "Bekijk de algemene voorwaarden van Spekadvies (vd Spek Financiële Diensten B.V.). Duidelijke en transparante bepalingen over onze onafhankelijke Wft-dienstverlening.";
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <Navbar />
+  <Breadcrumbs />
+
+  <main class="relative z-10 flex-grow bg-brand-basetint/30">
+    <!-- Header Hero Section -->
+    <section class="relative py-16 sm:py-24 bg-[#153b68] overflow-hidden rounded-b-[40px] sm:rounded-b-[56px] shadow-lg">
+      <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 relative z-10 text-center">
+        <span class="ty-eyebrow text-brand-primary mb-3">Juridisch & Voorwaarden</span>
+        <h1 class="ty-h1 text-white mb-4">Algemene Voorwaarden</h1>
+        <p class="ty-lead text-slate-300 max-w-2xl mx-auto">
+          Duidelijke afspraken over onze onafhankelijke financiële advies- en bemiddelingsdiensten, Wft-vergunning bij de AFM en aansluiting bij Kifid.
+        </p>
+        <div class="mt-4 text-xs text-slate-300 font-sans">
+          <span>vd Spek Financiële Diensten B.V. • KvK {COMPANY_DATA.accreditations.kvk} • AFM {COMPANY_DATA.accreditations.afm}</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content Grid -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-12 sm:py-16">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+        
+        <!-- Sidebar Navigation (Sticky on Desktop) -->
+        <aside class="lg:col-span-4 order-2 lg:order-1 space-y-6">
+          <div class="bg-white rounded-2xl border border-slate-200/80 p-6 shadow-sm sticky top-24">
+            <h2 class="text-sm font-semibold font-sans uppercase tracking-wider text-brand-dark mb-4 pb-2 border-b border-slate-100">
+              Artikelenoverzicht
+            </h2>
+            <nav aria-label="Inhoudsopgave algemene voorwaarden">
+              <ul class="space-y-2 text-xs font-sans text-slate-600">
+                <li><a href="#art1" class="hover:text-brand-accent-dark transition-colors block py-0.5">Art. 1 – Definities</a></li>
+                <li><a href="#art2" class="hover:text-brand-accent-dark transition-colors block py-0.5">Art. 2 – Toepasselijkheid</a></li>
+                <li><a href="#art3" class="hover:text-brand-accent-dark transition-colors block py-0.5">Art. 3 – AFM Vergunning & Onafhankelijkheid</a></li>
+                <li><a href="#art4" class="hover:text-brand-accent-dark transition-colors block py-0.5">Art. 4 – Opdracht & Inspanningsverplichting</a></li>
+                <li><a href="#art5" class="hover:text-brand-accent-dark transition-colors block py-0.5">Art. 5 – Verplichtingen Opdrachtgever</a></li>
+                <li><a href="#art6" class="hover:text-brand-accent-dark transition-colors block py-0.5">Art. 6 – Tarieven, Beloning & Betaling</a></li>
+                <li><a href="#art7" class="hover:text-brand-accent-dark transition-colors block py-0.5">Art. 7 – Aansprakelijkheid & BAV</a></li>
+                <li><a href="#art8" class="hover:text-brand-accent-dark transition-colors block py-0.5">Art. 8 – Overmacht</a></li>
+                <li><a href="#art9" class="hover:text-brand-accent-dark transition-colors block py-0.5">Art. 9 – Geheimhouding & AVG</a></li>
+                <li><a href="#art10" class="hover:text-brand-accent-dark transition-colors block py-0.5">Art. 10 – Klachtenprocedure & Kifid</a></li>
+                <li><a href="#art11" class="hover:text-brand-accent-dark transition-colors block py-0.5">Art. 11 – Toepasselijk recht</a></li>
+              </ul>
+            </nav>
+
+            <!-- Vergelijkingskaart Download Link -->
+            <div class="mt-6 pt-6 border-t border-slate-100 text-xs font-sans space-y-3 bg-slate-50 -mx-6 -mb-6 p-6 rounded-b-2xl">
+              <p class="font-semibold text-brand-dark">Dienstverleningsdocument</p>
+              <p class="text-slate-600 text-xs">
+                Bekijk ook onze officiële AFM Vergelijkingskaart voor hypotheken en risico's.
+              </p>
+              <a 
+                href="/docs/Vergelijkingskaart.pdf" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="inline-flex items-center space-x-1.5 text-brand-dark font-semibold hover:text-brand-accent-dark transition-colors"
+              >
+                <i class="fa-regular fa-file-pdf text-red-500"></i>
+                <span>Vergelijkingskaart (PDF)</span>
+              </a>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Document Body -->
+        <article class="lg:col-span-8 order-1 lg:order-2 space-y-8 font-sans">
+          
+          <!-- Artikel 1: Definities -->
+          <section id="art1" class="bg-white rounded-2xl border border-slate-200/80 p-6 sm:p-8 shadow-sm scroll-mt-28">
+            <h2 class="ty-h2 text-brand-dark mb-4">Artikel 1 – Definities</h2>
+            <div class="space-y-3 text-sm text-slate-600">
+              <p>In deze algemene voorwaarden wordt verstaan onder:</p>
+              <p><strong>1.1 Opdrachtnemer:</strong> vd Spek Financiële Diensten B.V., statutair gevestigd te Moerkapelle en ingeschreven in het Handelsregister van de Kamer van Koophandel onder nummer 29051405, handelend onder de handelsnaam Spekadvies en/of Van der Spek Advies.</p>
+              <p><strong>1.2 Opdrachtgever:</strong> De natuurlijke persoon (consument) of rechtspersoon (ondernemer/bedrijf) die aan Spekadvies opdracht heeft verstrekt tot het verrichten van financiële advies-, bemiddelings- of administratieve diensten.</p>
+              <p><strong>1.3 Financiële Dienst:</strong> Alle werkzaamheden op het gebied van advisering en bemiddeling met betrekking tot hypothecair krediet, particuliere en zakelijke verzekeringen, vermogensbeheer, pensioen en het verzorgen van belastingaangiften.</p>
+              <p><strong>1.4 Financiële Instelling:</strong> De bank, geldverstrekker, verzekeringsmaatschappij of pensioeninstelling bij wie het financiële product wordt aangevraagd of afgesloten.</p>
+            </div>
+          </section>
+
+          <!-- Artikel 2: Toepasselijkheid -->
+          <section id="art2" class="bg-white rounded-2xl border border-slate-200/80 p-6 sm:p-8 shadow-sm scroll-mt-28">
+            <h2 class="ty-h2 text-brand-dark mb-4">Artikel 2 – Toepasselijkheid</h2>
+            <div class="space-y-3 text-sm text-slate-600">
+              <p><strong>2.1</strong> Deze algemene voorwaarden zijn van toepassing op alle aanbiedingen, offertes, adviesgesprekken en overeenkomsten van opdracht tussen Spekadvies en Opdrachtgever.</p>
+              <p><strong>2.2</strong> Afwijkingen van deze algemene voorwaarden zijn slechts geldig indien deze uitdrukkelijk en schriftelijk tussen partijen zijn overeengekomen.</p>
+              <p><strong>2.3</strong> Eventuele algemene of inkoopvoorwaarden van de Opdrachtgever worden uitdrukkelijk van de hand gewezen.</p>
+            </div>
+          </section>
+
+          <!-- Artikel 3: AFM Vergunning & Onafhankelijkheid -->
+          <section id="art3" class="bg-white rounded-2xl border border-slate-200/80 p-6 sm:p-8 shadow-sm scroll-mt-28">
+            <h2 class="ty-h2 text-brand-dark mb-4">Artikel 3 – AFM Vergunning & 100% Onafhankelijkheid</h2>
+            <div class="space-y-3 text-sm text-slate-600">
+              <p><strong>3.1</strong> Spekadvies beschikt over een vergunning van de Autoriteit Financiële Markten (AFM) ingevolge de Wet op het financieel toezicht (Wft) onder vergunningnummer <strong>12009127</strong> voor bemiddeling en advisering in hypothecair krediet, schadeverzekeringen, levensverzekeringen en consumptief krediet.</p>
+              <p><strong>3.2</strong> Spekadvies treedt op als <strong>100% onafhankelijk adviseur en bemiddelaar</strong>. Wij hebben geen enkele contractuele verplichting om financiële producten bij specifieke banken of verzekeraars onder te brengen en vergelijken een breed panel van meer dan 40 erkende geldverstrekkers en maatschappijen.</p>
+              <p><strong>3.3</strong> Voorafgaand aan de dienstverlening verstrekt Spekadvies aan Opdrachtgever het wettelijk verplichte Dienstverleningsdocument (de Vergelijkingskaart), waarin onze werkwijze, onafhankelijkheid en indicatieve tarieven transparant zijn opgenomen.</p>
+            </div>
+          </section>
+
+          <!-- Artikel 4: Opdracht & Inspanningsverplichting -->
+          <section id="art4" class="bg-white rounded-2xl border border-slate-200/80 p-6 sm:p-8 shadow-sm scroll-mt-28">
+            <h2 class="ty-h2 text-brand-dark mb-4">Artikel 4 – Totstandkoming van de Opdracht & Inspanningsverplichting</h2>
+            <div class="space-y-3 text-sm text-slate-600">
+              <p><strong>4.1</strong> Een overeenkomst van opdracht komt tot stand zodra de Opdracht tot Dienstverlening door Opdrachtgever is ondertekend, dan wel op het moment dat Spekadvies met instemming van Opdrachtgever feitelijk is aangevangen met de werkzaamheden.</p>
+              <p><strong>4.2</strong> De verbintenissen van Spekadvies behelzen een <strong>inspanningsverplichting</strong> en nimmer een resultaatsverplichting. Spekadvies voert de werkzaamheden uit naar beste inzicht, deskundigheid en zorgvuldigheid, doch kan nimmer garanderen dat een aangevraagde hypotheek of verzekering door een Financiële Instelling te allen tijde wordt geaccepteerd of binnen een gewenste termijn bindend wordt verstrekt.</p>
+            </div>
+          </section>
+
+          <!-- Artikel 5: Verplichtingen Opdrachtgever -->
+          <section id="art5" class="bg-white rounded-2xl border border-slate-200/80 p-6 sm:p-8 shadow-sm scroll-mt-28">
+            <h2 class="ty-h2 text-brand-dark mb-4">Artikel 5 – Verplichtingen van de Opdrachtgever</h2>
+            <div class="space-y-3 text-sm text-slate-600">
+              <p><strong>5.1</strong> Opdrachtgever is gehouden om tijdig, volledig en naar waarheid alle gegevens, stukken en informatie aan Spekadvies te verstrekken die redelijkerwijs noodzakelijk zijn voor een zorgvuldige uitvoering van het advies of de bemiddeling.</p>
+              <p><strong>5.2</strong> Opdrachtgever stelt Spekadvies onverwijld schriftelijk op de hoogte van wijzigingen in zijn/haar persoonlijke of financiële situatie (zoals inkomenswijzigingen, baanverlies, beëindiging van een relatie, nieuwe leningen of BKR-registraties) die van invloed kunnen zijn op het advies of de aanvraag.</p>
+              <p><strong>5.3</strong> Schade of vertraging veroorzaakt doordat Opdrachtgever onjuiste of onvolledige informatie heeft verstrekt, komt geheel voor rekening en risico van Opdrachtgever.</p>
+            </div>
+          </section>
+
+          <!-- Artikel 6: Tarieven & Betaling -->
+          <section id="art6" class="bg-white rounded-2xl border border-slate-200/80 p-6 sm:p-8 shadow-sm scroll-mt-28">
+            <h2 class="ty-h2 text-brand-dark mb-4">Artikel 6 – Tarieven, Beloning & Betaling</h2>
+            <div class="space-y-3 text-sm text-slate-600">
+              <p><strong>6.1 Hypotheken en complexe producten:</strong> Ingevolge het wettelijk provisieverbod brengt Spekadvies voor hypotheekadvies en complexe producten een vooraf schriftelijk overeengekomen advies- en bemiddelingsvergoeding rechtstreeks bij Opdrachtgever in rekening.</p>
+              <p><strong>6.2 Schadeverzekeringen:</strong> De beloning voor advies en bemiddeling bij schadeverzekeringen kan bestaan uit een provisie die door de verzekeringsmaatschappij in de premie is verwerkt, dan wel uit een vooraf overeengekomen abonnementstarief.</p>
+              <p><strong>6.3 Betalingstermijn:</strong> Facturen dienen binnen 14 dagen na factuurdatum te worden voldaan, tenzij schriftelijk is overeengekomen dat het honorarium bij het passeren van de hypotheekakte via de notarisdeclaratie wordt verrekend. Bij niet-tijdige betaling is Opdrachtgever van rechtswege in verzuim en is Spekadvies gerechtigd de wettelijke rente en buitengerechtelijke incassokosten (WIK) in rekening te brengen.</p>
+            </div>
+          </section>
+
+          <!-- Artikel 7: Aansprakelijkheid & BAV -->
+          <section id="art7" class="bg-white rounded-2xl border border-slate-200/80 p-6 sm:p-8 shadow-sm scroll-mt-28">
+            <h2 class="ty-h2 text-brand-dark mb-4">Artikel 7 – Aansprakelijkheid & Beroepsaansprakelijkheidsverzekering</h2>
+            <div class="space-y-3 text-sm text-slate-600">
+              <p><strong>7.1</strong> Spekadvies beschikt over een conform de wettelijke Wft-eisen afgesloten Beroepsaansprakelijkheidsverzekering (BAV).</p>
+              <p><strong>7.2</strong> Iedere aansprakelijkheid van Spekadvies voor schade voortvloeiend uit of verband houdend met de uitvoering van een overeenkomst is beperkt tot het bedrag dat in het desbetreffende geval onder de beroepsaansprakelijkheidsverzekering wordt uitgekeerd, vermeerderd met het toepasselijke eigen risico.</p>
+              <p><strong>7.3</strong> Indien om welke reden dan ook geen uitkering krachtens voornoemde verzekering plaatsvindt, is de aansprakelijkheid van Spekadvies beperkt tot ten hoogste het voor de desbetreffende opdracht gefactureerde honorarium met een maximum van € 5.000,-.</p>
+              <p><strong>7.4</strong> Spekadvies is nimmer aansprakelijk voor indirecte schade, gevolgschade of gederfde winst. De in dit artikel opgenomen beperkingen gelden niet in geval van opzet of bewuste roekeloosheid van Spekadvies.</p>
+            </div>
+          </section>
+
+          <!-- Artikel 8: Overmacht -->
+          <section id="art8" class="bg-white rounded-2xl border border-slate-200/80 p-6 sm:p-8 shadow-sm scroll-mt-28">
+            <h2 class="ty-h2 text-brand-dark mb-4">Artikel 8 – Overmacht</h2>
+            <div class="space-y-3 text-sm text-slate-600">
+              <p>Spekadvies is niet gehouden tot het nakomen van enige verplichting indien zij daartoe gehinderd wordt als gevolg van overmacht, waaronder begrepen storingen in telecommunicatie- of internetnetwerken, stroomstoringen, cyberincidenten, overheidsmaatregelen of vertragingen bij externe Financiële Instellingen waarop Spekadvies redelijkerwijs geen invloed heeft.</p>
+            </div>
+          </section>
+
+          <!-- Artikel 9: Geheimhouding & AVG -->
+          <section id="art9" class="bg-white rounded-2xl border border-slate-200/80 p-6 sm:p-8 shadow-sm scroll-mt-28">
+            <h2 class="ty-h2 text-brand-dark mb-4">Artikel 9 – Geheimhouding & Privacy (AVG)</h2>
+            <div class="space-y-3 text-sm text-slate-600">
+              <p><strong>9.1</strong> Partijen zijn verplicht tot geheimhouding van alle vertrouwelijke informatie die zij in het kader van hun overeenkomst van elkaar hebben verkregen.</p>
+              <p><strong>9.2</strong> De verwerking van persoonsgegevens geschiedt strikt in overeenstemming met de Algemene Verordening Gegevensbescherming (AVG). Zie voor nadere details ons <a href="/privacybeleid/" class="text-brand-dark font-medium underline">Privacybeleid</a>.</p>
+            </div>
+          </section>
+
+          <!-- Artikel 10: Klachtenprocedure & Kifid -->
+          <section id="art10" class="bg-white rounded-2xl border border-slate-200/80 p-6 sm:p-8 shadow-sm scroll-mt-28">
+            <h2 class="ty-h2 text-brand-dark mb-4">Artikel 10 – Klachtenprocedure & Kifid</h2>
+            <div class="space-y-4 text-sm text-slate-600">
+              <p><strong>10.1 Interne klachtenprocedure:</strong> Wij hechten veel waarde aan een uitstekende relatie met onze cliënten. Ben je onverhoopt niet tevreden over onze dienstverlening of een factuur? Dan verzoeken wij je jouw klacht schriftelijk of per e-mail in te dienen bij de directie van Spekadvies via <a href={`mailto:${COMPANY_DATA.contact.email}`} class="text-brand-dark underline font-medium">{COMPANY_DATA.contact.email}</a>. Wij bevestigen de ontvangst van de klacht binnen 2 weken en reageren inhoudelijk binnen uiterlijk 6 weken.</p>
+              
+              <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 space-y-2 text-xs">
+                <p class="font-semibold text-brand-dark">10.2 Klachteninstituut Financiële Dienstverlening (Kifid)</p>
+                <p>Indien de klacht naar jouw mening niet naar tevredenheid door ons is opgelost, kun je (als consument) binnen 3 maanden na onze definitieve reactie het geschil voorleggen aan het onafhankelijke Klachteninstituut Financiële Dienstverlening (Kifid):</p>
+                <p class="pt-1">
+                  <strong>Klachteninstituut Financiële Dienstverlening (Kifid)</strong><br />
+                  Postbus 93257, 2509 AG Den Haag<br />
+                  Telefoon: 070 - 333 8 999<br />
+                  Website: <a href="https://www.kifid.nl" target="_blank" rel="noopener noreferrer" class="text-brand-dark underline font-medium">www.kifid.nl</a>
+                </p>
+                <p class="text-slate-500">Spekadvies is aangesloten bij Kifid conform de geldende Wft-richtlijnen. Het oordeel van de Geschillencommissie van Kifid is voor Spekadvies bindend.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Artikel 11: Toepasselijk recht -->
+          <section id="art11" class="bg-white rounded-2xl border border-slate-200/80 p-6 sm:p-8 shadow-sm scroll-mt-28">
+            <h2 class="ty-h2 text-brand-dark mb-4">Artikel 11 – Toepasselijk recht & Geschillen</h2>
+            <div class="space-y-3 text-sm text-slate-600">
+              <p><strong>11.1</strong> Op alle overeenkomsten tussen Spekadvies en Opdrachtgever is uitsluitend het Nederlands recht van toepassing.</p>
+              <p><strong>11.2</strong> Alle geschillen die niet via het Kifid worden beslecht, worden bij uitsluiting voorgelegd aan de bevoegde rechter in het arrondissement Den Haag.</p>
+            </div>
+          </section>
+
+        </article>
+
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>

@@ -6,11 +6,12 @@ import RatingsClaim from '../components/RatingsClaim.astro';
 import FaqSection from '../components/FaqSection.astro';
 import ContactForm from '../components/ContactForm.astro';
 import Footer from '../components/Footer.astro';
+import { COMPANY_DATA } from '../data/company';
 ---
 
 <Layout 
-  title="Over ons | Spekadvies, Persoonlijk & Onafhankelijk" 
-  description="Maak kennis met Spekadvies, jouw betrouwbare partner in hypotheken en verzekeringen. Ontdek ons verhaal, onze kernwaarden en waarom bij ons persoonlijk contact centraal staat."
+  title="Over Ons | Martin van der Spek Advies Moerkapelle" 
+  description="Maak kennis met Martin van der Spek: 25+ jaar erkend en onafhankelijk adviseur voor hypotheken en verzekeringen in Moerkapelle en Zuidplas."
 >
   <Navbar />
   <Breadcrumbs />
@@ -56,7 +57,7 @@ import Footer from '../components/Footer.astro';
             </div>
 
             <p class="ty-body text-slate-600">
-              Wat begon als een duidelijke visie op "hoe financieel advies beter en persoonlijker kan", is inmiddels uitgegroeid tot een vast en betrouwbaar begrip in Moerkapelle en de wijde omgeving. Hoewel wetgeving strenger is geworden en technologie ons helpt om sneller te werken, blijft ons DNA ongewijzigd: <strong>wij zijn er voor jou, met de deskundigheid van nu en de ouderwetse persoonlijke aandacht van toen.</strong>
+              Onder leiding van <strong>Martin van der Spek</strong> – Erkend Hypothecair Planner (EHP), Onafhankelijk Financieel Adviseur en Erfpachtspecialist – is Spekadvies in meer dan 25 jaar uitgegroeid tot hét vertrouwde gezicht voor financieel advies in Moerkapelle en heel Zuidplas. Hoewel wetgeving strenger is geworden en technologie ons helpt om sneller te werken, blijft onze kern ongewijzigd: <strong>wij zijn er voor jou, met de deskundigheid van nu en de ouderwetse persoonlijke aandacht van toen.</strong>
             </p>
             
             <div class="pt-2">
@@ -85,11 +86,11 @@ import Footer from '../components/Footer.astro';
               <!-- Stat 1 -->
               <div class="flex items-start space-x-4 sm:space-x-5">
                 <div class="w-12 h-12 bg-brand-primary/10 border border-brand-primary/20 rounded-xl flex items-center justify-center flex-shrink-0 text-brand-dark text-lg font-semibold">
-                  20+
+                  25+
                 </div>
                 <div>
                   <h4 class="text-xs font-semibold text-brand-dark font-display uppercase tracking-wider">Jaar ervaring</h4>
-                  <p   class="text-sm text-slate-600 font-sans font-normal mt-1">Diepgaande expertise in hypotheken, belastingen en verzekeringen.</p>
+                  <p class="text-sm text-slate-600 font-sans font-normal mt-1">Diepgaande expertise in hypotheken, verzekeringen, erfpacht en financiële planning in Moerkapelle en Zuidplas.</p>
                 </div>
               </div>
 
@@ -129,9 +130,113 @@ import Footer from '../components/Footer.astro';
       </div>
     </section>
 
+    <!-- Founder Spotlight Section: Martin van der Spek -->
+    <section class="py-16 sm:py-24 bg-white border-y border-slate-100 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          
+          <!-- Founder Image & Accreditations Badge -->
+          <div class="lg:col-span-5 flex flex-col items-center sm:items-start">
+            <div class="relative w-full max-w-md">
+              <!-- Ambient warm glow behind portrait -->
+              <div class="absolute -inset-4 bg-gradient-to-tr from-brand-primary/30 to-brand-dark/10 rounded-[36px] blur-xl opacity-70"></div>
+              
+              <div class="relative rounded-[32px] overflow-hidden border-4 border-white shadow-2xl bg-brand-dark aspect-[4/5] sm:aspect-square">
+                <img 
+                  src="/assets/martin-van-der-spek.jpg" 
+                  alt="Martin van der Spek - Erkend Hypothecair Planner en Onafhankelijk Financieel Adviseur Moerkapelle" 
+                  width="480" 
+                  height="480" 
+                  class="w-full h-full object-cover object-top"
+                  loading="lazy"
+                />
+              </div>
 
-  <RatingsClaim />
+              <!-- Trust Overlay Pill -->
+              <div class="absolute -bottom-5 left-1/2 -translate-x-1/2 sm:left-6 sm:translate-x-0 bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-2xl px-5 py-3 shadow-lg flex items-center gap-3.5 whitespace-nowrap">
+                <div class="w-10 h-10 rounded-xl bg-amber-50 text-amber-700 flex items-center justify-center font-bold text-sm">
+                  EHP
+                </div>
+                <div>
+                  <div class="text-xs font-bold text-brand-dark font-display">Gecertificeerd Planner</div>
+                  <div class="text-[11px] text-slate-500 font-sans">Erkend Hypothecair Planner</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Founder Bio & Philosophy -->
+          <div class="lg:col-span-7 space-y-6 pt-6 sm:pt-0">
+            <div class="inline-flex items-center gap-2 bg-amber-50 border border-amber-200/80 px-3.5 py-1.5 rounded-full text-xs font-semibold text-amber-900 font-sans">
+              <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+              <span>Oprichter & Senior Financieel Adviseur</span>
+            </div>
+
+            <h2 class="text-2xl sm:text-4xl font-bold font-display text-brand-dark leading-tight">
+              Martin van der Spek
+            </h2>
+
+            <p class="text-base sm:text-lg font-semibold text-amber-900 font-sans">
+              Erkend Hypothecair Planner (EHP), Onafhankelijk Financieel Adviseur & Erfpachtspecialist
+            </p>
+
+            <div class="space-y-4 text-slate-650 font-sans leading-relaxed text-sm sm:text-base">
+              <p>
+                Al meer dan 25 jaar ben ik het vaste, vertrouwde aanspreekpunt voor particulieren, doorstromers en ondernemers in Moerkapelle, Zevenhuizen, Waddinxveen en de omliggende gemeenten in Zuidplas. In een financiële wereld die steeds verder digitaliseert en verhardt, kies ik bewust voor oprechte aandacht aan de keukentafel of bij ons op kantoor aan de Herenweg 42.
+              </p>
+              <p>
+                Als <strong>Erkend Hypothecair Planner (EHP)</strong> kijk ik voorbij de standaard rekentool: ik stem je hypotheek, vermogensopbouw en risico's integraal af op jouw levensfasen. Daarnaast bezit ik specialistische deskundigheid in <strong>erfpachtconversies</strong>, complexe overbruggingen, scheidingstrajecten en maatwerkfinancieringen voor zelfstandig ondernemers.
+              </p>
+            </div>
+
+            <!-- Direct Quote -->
+            <blockquote class="bg-brand-primary/10 border-l-4 border-brand-accent p-4 sm:p-5 rounded-r-2xl my-4 text-brand-dark font-medium italic text-sm sm:text-base">
+              "Financieel advies gaat in de kern niet over cijfers of rentetarieven, maar over rust, woongeluk en zekerheid voor jouw gezin of onderneming."
+            </blockquote>
+
+            <!-- Accreditations & Badges Grid -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
+              <div class="bg-slate-50 border border-slate-200/70 rounded-xl p-3 text-center">
+                <div class="text-xs font-bold text-brand-dark font-display">25+ Jaar</div>
+                <div class="text-[11px] text-slate-500 font-sans">Ervaring in Zuidplas</div>
+              </div>
+              <div class="bg-slate-50 border border-slate-200/70 rounded-xl p-3 text-center">
+                <div class="text-xs font-bold text-brand-dark font-display">AFM 12009127</div>
+                <div class="text-[11px] text-slate-500 font-sans">Wft Vergunninghouder</div>
+              </div>
+              <div class="bg-slate-50 border border-slate-200/70 rounded-xl p-3 text-center col-span-2 sm:col-span-1">
+                <div class="text-xs font-bold text-brand-dark font-display">40+ Banken</div>
+                <div class="text-[11px] text-slate-500 font-sans">100% Onafhankelijk</div>
+              </div>
+            </div>
+
+            <!-- CTA Row -->
+            <div class="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+              <a 
+                href="/adviesgesprek" 
+                class="btn-primary group inline-flex items-center justify-center gap-3 px-6 py-3.5 rounded-full bg-brand-dark hover:bg-slate-900 text-white font-semibold text-xs tracking-wider uppercase transition-all shadow-md hover:-translate-y-0.5"
+              >
+                <span>Plan gesprek met Martin</span>
+                <span class="w-6 h-6 rounded-full bg-[#ffce76] text-brand-dark flex items-center justify-center text-xs">➔</span>
+              </a>
+              <a 
+                href={`tel:${COMPANY_DATA.contact.phoneRaw}`} 
+                class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-slate-100 hover:bg-slate-200 text-brand-dark font-semibold text-xs tracking-wider uppercase transition-all border border-slate-200"
+              >
+                <i class="fa-solid fa-phone text-xs text-amber-700 mr-1"></i>
+                <span>{COMPANY_DATA.contact.phoneDisplay}</span>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <RatingsClaim />
   <FaqSection />
   <ContactForm />
+  </main>
   <Footer />
 </Layout>

@@ -71,7 +71,7 @@ faqItems:
 Ondernemers en ZZP'ers in de regio Moerkapelle, Zevenhuizen, Gouda en Zoetermeer zijn de motor van onze lokale economie. Toch ervaren veel zelfstandigen het aanvragen van een hypotheek als een bureaucratisch doolhof. Waar een werknemer met een loonstrook snel klaar is, vraagt een ondernemersdossier om diepgaand financieel vakmanschap.
 
 ### Fiscale kennis gecombineerd met hypotheekexpertise
-Omdat **vd Spek Financiële Diensten / Spekadvies** tevens gespecialiseerd is in belastingaangiften en financiële planning, begrijpen wij jaarcijfers, balansen en winst-en-verliesrekeningen als geen ander. Wij zien direct welke afschrijvingen incidenteel zijn, hoe reserves in de holding kunnen worden meegewogen en welke bank het meest soepel omgaat met jouw specifieke branche.
+Omdat **Van der Spek Advies / Spekadvies** tevens gespecialiseerd is in belastingaangiften en financiële planning, begrijpen wij jaarcijfers, balansen en winst-en-verliesrekeningen als geen ander. Wij zien direct welke afschrijvingen incidenteel zijn, hoe reserves in de holding kunnen worden meegewogen en welke bank het meest soepel omgaat met jouw specifieke branche.
 
 ### Snel duidelijkheid voor ZZP en DGA
 Martin van der Spek begeleidt het gehele traject: van het opvragen van de jaarrekeningen bij je boekhouder tot het aanvragen van de Inkomensverklaring Ondernemer. Zo ga je goed beslagen ten ijs op de woningmarkt.

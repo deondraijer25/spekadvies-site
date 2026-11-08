@@ -3,84 +3,129 @@ import '../styles/global.css';
 import SeoHeader from '../components/SeoHeader.astro';
 import ContactDrawer from '../components/ContactDrawer.astro';
 import MobileStickyBar from '../components/MobileStickyBar.astro';
+import CookieBanner from '../components/CookieBanner.astro';
 import { COMPANY_DATA } from '../data/company';
 
 interface Props {
   title?: string;
   description?: string;
   image?: string;
+  noindex?: boolean;
 }
 
 const { 
   title = "Spekadvies | Hypotheek- & Verzekeringsadviseur Moerkapelle", 
-  description = "Spekadvies helpt je met onafhankelijk advies voor hypotheken en verzekeringen in Moerkapelle, Zoetermeer, Gouda en omgeving." 
+  description = "Spekadvies helpt je met onafhankelijk advies voor hypotheken en verzekeringen in Moerkapelle, Zoetermeer, Gouda en omgeving.",
+  image,
+  noindex = false
 } = Astro.props;
 
 const currentUrl = new URL(Astro.url.pathname, Astro.site || 'https://www.spekadvies.nl').toString();
+const isHomepage = Astro.url.pathname === '/' || Astro.url.pathname === '';
+const isReviewEligiblePage = isHomepage || Astro.url.pathname === '/over-ons/' || Astro.url.pathname === '/over-ons';
+
+// 1. FinancialService node
+const financialServiceNode: any = {
+  "@type": "FinancialService",
+  "@id": "https://www.spekadvies.nl/#organization",
+  "name": COMPANY_DATA.name,
+  "legalName": COMPANY_DATA.legalName,
+  "alternateName": COMPANY_DATA.alternateNames,
+  "url": "https://www.spekadvies.nl",
+  "hasMap": COMPANY_DATA.googleBusiness.hasMap,
+  "logo": "https://www.spekadvies.nl/Logo/Middel%209.svg",
+  "image": "https://www.spekadvies.nl/assets/spekadvies-share-image.jpg",
+  "description": `${COMPANY_DATA.accreditations.independent}. Gevestigd aan de Herenweg 42 te Moerkapelle.`,
+  "telephone": COMPANY_DATA.contact.phoneRaw,
+  "email": COMPANY_DATA.contact.email,
+  "priceRange": "€€",
+  "currenciesAccepted": "EUR",
+  "paymentAccepted": "Factuur, Bankoverschrijving, iDEAL",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": COMPANY_DATA.address.street,
+    "addressLocality": COMPANY_DATA.address.city,
+    "addressRegion": COMPANY_DATA.address.region,
+    "postalCode": COMPANY_DATA.address.postalCode,
+    "addressCountry": COMPANY_DATA.address.country
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": COMPANY_DATA.geo.latitude,
+    "longitude": COMPANY_DATA.geo.longitude
+  },
+  "areaServed": COMPANY_DATA.serviceAreas.map(area => ({
+    "@type": "AdministrativeArea",
+    "name": area.name
+  })),
+  "openingHoursSpecification": COMPANY_DATA.openingHours
+    .filter(h => !h.isClosed && h.opens && h.closes && h.opens !== h.closes)
+    .flatMap(h => 
+      h.schemaDays.map(day => ({
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": day,
+        "opens": h.opens,
+        "closes": h.closes
+      }))
+    ),
+  "founder": {
+    "@id": "https://www.spekadvies.nl/#founder"
+  }
+};
+
+// Conditionally append aggregateRating only on review-eligible pages (/ and /over-ons/)
+if (isReviewEligiblePage && COMPANY_DATA.googleReviews) {
+  financialServiceNode.aggregateRating = {
+    "@type": "AggregateRating",
+    "ratingValue": COMPANY_DATA.googleReviews.score,
+    "bestRating": COMPANY_DATA.googleReviews.maxScore,
+    "worstRating": COMPANY_DATA.googleReviews.worstScore || "1",
+    "reviewCount": COMPANY_DATA.googleReviews.count,
+    "itemReviewed": {
+      "@id": "https://www.spekadvies.nl/#organization"
+    }
+  };
+}
+
+// 2. Person node (Founder Martin van der Spek)
+const personNode: any = {
+  "@type": "Person",
+  "@id": "https://www.spekadvies.nl/#founder",
+  "name": COMPANY_DATA.founder.name,
+  "jobTitle": COMPANY_DATA.founder.role,
+  "description": COMPANY_DATA.founder.bio,
+  "image": COMPANY_DATA.founder.image,
+  "worksFor": {
+    "@id": "https://www.spekadvies.nl/#organization"
+  },
+  "sameAs": COMPANY_DATA.founder.sameAs
+};
+
+const graphNodes: any[] = [financialServiceNode, personNode];
+
+// 3. WebSite node (Homepage only)
+if (isHomepage) {
+  graphNodes.unshift({
+    "@type": "WebSite",
+    "@id": "https://www.spekadvies.nl/#website",
+    "url": "https://www.spekadvies.nl/",
+    "name": "Spekadvies | Van der Spek Financiële Diensten",
+    "alternateName": [
+      "Spekadvies",
+      "Van der Spek Advies",
+      "Van der Spek Financiële Diensten",
+      "Spek Advies B.V."
+    ],
+    "publisher": {
+      "@id": "https://www.spekadvies.nl/#organization"
+    },
+    "inLanguage": "nl-NL"
+  });
+}
 
 const schemaGraph = {
   "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "FinancialService",
-      "@id": "https://www.spekadvies.nl/#organization",
-      "name": COMPANY_DATA.name,
-      "legalName": COMPANY_DATA.legalName,
-      "url": "https://www.spekadvies.nl",
-      "logo": "https://www.spekadvies.nl/Logo/Middel%209.svg",
-      "image": "https://www.spekadvies.nl/Logo/Middel%209.svg",
-      "description": `${COMPANY_DATA.accreditations.independent}. Gevestigd aan de Herenweg 42 te Moerkapelle.`,
-      "telephone": COMPANY_DATA.contact.phoneRaw,
-      "email": COMPANY_DATA.contact.email,
-      "priceRange": "$$",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": COMPANY_DATA.address.street,
-        "addressLocality": COMPANY_DATA.address.city,
-        "addressRegion": COMPANY_DATA.address.region,
-        "postalCode": COMPANY_DATA.address.postalCode,
-        "addressCountry": COMPANY_DATA.address.country
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": COMPANY_DATA.geo.latitude,
-        "longitude": COMPANY_DATA.geo.longitude
-      },
-      "areaServed": COMPANY_DATA.serviceAreas.map(area => ({
-        "@type": "AdministrativeArea",
-        "name": area.name
-      })),
-      "openingHoursSpecification": COMPANY_DATA.openingHours.flatMap(h => 
-        h.schemaDays.map(day => ({
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": day,
-          "opens": h.opens,
-          "closes": h.closes
-        }))
-      ),
-      "founder": {
-        "@id": "https://www.spekadvies.nl/#founder"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": COMPANY_DATA.rating.score,
-        "bestRating": COMPANY_DATA.rating.maxScore,
-        "reviewCount": COMPANY_DATA.rating.reviewCount
-      }
-    },
-    {
-      "@type": "Person",
-      "@id": "https://www.spekadvies.nl/#founder",
-      "name": COMPANY_DATA.founder.name,
-      "jobTitle": COMPANY_DATA.founder.role,
-      "description": COMPANY_DATA.founder.bio,
-      "image": COMPANY_DATA.founder.image,
-      "worksFor": {
-        "@id": "https://www.spekadvies.nl/#organization"
-      },
-      "sameAs": COMPANY_DATA.founder.sameAs
-    }
-  ]
+  "@graph": graphNodes
 };
 ---
 
@@ -95,10 +140,39 @@ const schemaGraph = {
     <meta name="generator" content={Astro.generator} />
     
     <!-- Automatic SEO Header (Meta tags, Open Graph, Twitter, Canonical) -->
-    <SeoHeader title={title} description={description} />
+    <SeoHeader title={title} description={description} image={image} noindex={noindex} />
     
     <!-- JSON-LD Entity Graph (FinancialService + Person Martin van der Spek) for Google & GEO AI Engines -->
     <script type="application/ld+json" is:inline set:html={JSON.stringify(schemaGraph)} />
+
+    <!-- Google Analytics 4 (GA4 - Spekadvies: G-6KB968ESWK) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6KB968ESWK"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-6KB968ESWK');
+    </script>
+
+    <!-- First-Touch Attribution & UTM Persistence (Google Bedrijfsprofiel / Search / Direct -> Leadfabriek CRM) -->
+    <script is:inline>
+      (function() {
+        try {
+          var params = new URLSearchParams(window.location.search);
+          var utmKeys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gclid'];
+          utmKeys.forEach(function(key) {
+            var val = params.get(key);
+            if (val) sessionStorage.setItem('spek_' + key, val);
+          });
+          if (!sessionStorage.getItem('spek_landing_page')) {
+            sessionStorage.setItem('spek_landing_page', window.location.pathname + window.location.search);
+          }
+          if (document.referrer && !document.referrer.includes(window.location.hostname) && !sessionStorage.getItem('spek_referrer')) {
+            sessionStorage.setItem('spek_referrer', document.referrer);
+          }
+        } catch (e) {}
+      })();
+    </script>
     
     <!-- Preconnect to Google Fonts & CDNJS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -132,5 +206,8 @@ const schemaGraph = {
 
     <!-- Global sliding contact drawer -->
     <ContactDrawer />
+
+    <!-- Cookie Consent Banner (GDPR / AVG Compliant) -->
+    <CookieBanner />
   </body>
 </html>

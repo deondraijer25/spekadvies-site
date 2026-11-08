@@ -66,9 +66,9 @@ const { Content } = await render(entry);
                   <div class="w-10 h-10 rounded-2xl bg-amber-50 border border-amber-200/60 flex items-center justify-center text-amber-800 text-sm mb-4 shadow-xs">
                     <i class="fa-solid fa-check"></i>
                   </div>
-                  <h3 class="text-base font-semibold text-brand-dark mb-2 font-display">
+                  <div class="text-base font-semibold text-brand-dark mb-2 font-display">
                     {usp.title}
-                  </h3>
+                  </div>
                   <p class="text-slate-600 leading-relaxed text-xs sm:text-[13px] font-sans">{usp.description}</p>
                 </div>
               </div>
@@ -95,7 +95,7 @@ const { Content } = await render(entry);
                   !
                 </span>
                 <div class="space-y-1.5">
-                  <h4 class="text-sm font-semibold text-brand-dark font-display">{prob.title}</h4>
+                  <h3 class="ty-h4 font-semibold text-brand-dark font-display">{prob.title}</h3>
                   <p class="text-slate-600 text-xs sm:text-[13px] leading-relaxed font-sans">{prob.description}</p>
                 </div>
               </div>
@@ -230,6 +230,7 @@ const { Content } = await render(entry);
   <AboutSection />
   <RatingsClaim />
   <ContactForm />
+  </main>
   <Footer />
 </Layout>
 

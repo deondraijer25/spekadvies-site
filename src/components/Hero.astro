@@ -1,4 +1,7 @@
 ---
+import { COMPANY_DATA } from '../data/company';
+
+const { googleReviews, advieskeuzeReviews } = COMPANY_DATA;
 ---
 <section id="hero-section" class="relative pt-12 pb-20 sm:pt-14 sm:pb-24 lg:pt-16 lg:pb-44 xl:pb-48 min-h-[660px] lg:min-h-[860px] xl:min-h-[920px] flex items-center overflow-x-clip bg-white">
   <!-- Subtle soft ambient background accents -->
@@ -78,10 +81,13 @@
           muted 
           playsinline 
           preload="metadata"
+          poster="/images/hero-video-poster.webp"
           data-src="/videos/hero-video.mp4"
           class="w-full h-full object-cover pointer-events-none"
           style="transform: rotate(-19deg) scale(1.20); transform-origin: center center; object-position: center 38%;"
-        ></video>
+        >
+          <p class="sr-only">Video impressie van Spekadvies hypotheekadvies</p>
+        </video>
         <!-- Subtle brand navy tint so the video sits naturally inside the Spekadvies blue clover -->
         <div class="absolute inset-0 bg-[#153b68]/12 pointer-events-none"></div>
       </div>
@@ -176,23 +182,52 @@
           </a>
         </div>
 
-        <!-- Metric Stats Row -->
-        <div class="pt-3 sm:pt-4 grid grid-cols-3 gap-4 max-w-lg">
-          <div>
-            <div class="ty-stat text-brand-dark">150+</div>
-            <div class="ty-small text-slate-500 mt-1">Tevreden kopers</div>
+        <!-- Metric & Multi-Platform Review Row (Google 4.9/5 + Advieskeuze 9.4/10 + 40+ Banken) -->
+        <div class="pt-3 sm:pt-4 grid grid-cols-3 gap-3 sm:gap-6 max-w-xl">
+          <!-- Col 1: 40+ Geldverstrekkers -->
+          <div class="border-r border-slate-200/80 pr-2 sm:pr-4">
+            <div class="text-xl sm:text-2xl font-bold font-display text-brand-dark leading-none">40+</div>
+            <div class="text-[11px] sm:text-xs text-slate-500 mt-1 sm:mt-1.5 leading-snug">Banken vergeleken</div>
           </div>
-          <div>
-            <div class="ty-stat text-brand-dark">40+</div>
-            <div class="ty-small text-slate-500 mt-1">Banken vergeleken</div>
-          </div>
-          <div>
-            <div class="ty-stat text-brand-dark flex items-baseline gap-1">
-              <span>9.4</span>
-              <span class="text-amber-500 text-sm font-normal">★★★★★</span>
+
+          <!-- Col 2: Google Reviews (4.9 / 5 ★, 47 reviews) -->
+          <a 
+            href={googleReviews.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group border-r border-slate-200/80 pr-2 sm:pr-4 block hover:opacity-90 transition-opacity"
+            title="Bekijk onze Google Reviews (4.9 / 5 ★, 47 beoordelingen)"
+          >
+            <div class="text-xl sm:text-2xl font-bold font-display text-brand-dark flex items-baseline gap-0.5 leading-none">
+              <span>{googleReviews.score}</span>
+              <span class="text-slate-400 text-[10px] sm:text-xs font-semibold">/{googleReviews.maxScore}</span>
+              <span class="text-amber-400 text-[10px] sm:text-xs tracking-tight ml-0.5 hidden xs:inline" aria-label="5 sterren">★★★★★</span>
             </div>
-            <div class="ty-small text-slate-500 mt-1">Klantbeoordeling</div>
-          </div>
+            <div class="text-[11px] sm:text-xs text-slate-500 mt-1 sm:mt-1.5 leading-snug flex items-center gap-1 group-hover:text-brand-dark transition-colors">
+              <span class="font-medium text-slate-700">{googleReviews.label}</span>
+              <span class="text-slate-400 text-[10px] hidden sm:inline">({googleReviews.reviewCount})</span>
+            </div>
+          </a>
+
+          <!-- Col 3: Advieskeuze.nl (9.4 / 10 ★ met externe verificatielink) -->
+          <a 
+            href={advieskeuzeReviews.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group block hover:opacity-90 transition-opacity"
+            title="Verifieer onze score van 9.4 / 10 direct op Advieskeuze.nl"
+          >
+            <div class="text-xl sm:text-2xl font-bold font-display text-brand-dark flex items-baseline gap-0.5 leading-none">
+              <span>{advieskeuzeReviews.score}</span>
+              <span class="text-slate-400 text-[10px] sm:text-xs font-semibold">/{advieskeuzeReviews.maxScore}</span>
+              <span class="text-amber-500 text-[10px] sm:text-xs ml-0.5">★</span>
+            </div>
+            <div class="text-[11px] sm:text-xs text-slate-500 mt-1 sm:mt-1.5 leading-snug flex items-center gap-1 group-hover:text-brand-dark transition-colors">
+              <span class="font-medium text-slate-700">{advieskeuzeReviews.label}</span>
+              <span class="text-emerald-600 font-semibold text-[10px]">✓</span>
+              <span class="text-slate-400 text-[10px] group-hover:translate-x-0.5 transition-transform">↗</span>
+            </div>
+          </a>
         </div>
 
         <!-- Moving Partner Marquee Bar (Pushed further down to anchor the bottom of the Hero) -->
@@ -304,10 +339,13 @@
               muted 
               playsinline 
               preload="metadata"
+              poster="/images/hero-video-poster.webp"
               data-src="/videos/hero-video.mp4"
               class="w-full h-full object-cover pointer-events-none"
               style="transform: rotate(-19deg) scale(1.20); transform-origin: center center; object-position: center 38%;"
-            ></video>
+            >
+              <p class="sr-only">Video impressie van Spekadvies hypotheekadvies</p>
+            </video>
             <div class="absolute inset-0 bg-[#153b68]/12 pointer-events-none"></div>
           </div>
         </div>
@@ -344,84 +382,156 @@
   .partner-marquee-track:hover {
     animation-play-state: paused;
   }
+
+  @media (prefers-reduced-motion: reduce) {
+    .partner-marquee-track {
+      animation: none;
+    }
+  }
 </style>
 
 <script>
+  let heroAbortController: AbortController | null = null;
+
   function setupHeroVideoAndGlow() {
-    // 1. Only load & decode the single visible video (desktop vs mobile)
-    const isDesktop = window.matchMedia('(min-width: 1024px)').matches;
-    const activeVideo = document.getElementById(
-      isDesktop ? 'hero-video-desktop' : 'hero-video-mobile'
-    ) as HTMLVideoElement | null;
+    // Reset previous listeners across page loads or rapid re-executions
+    heroAbortController?.abort();
+    heroAbortController = new AbortController();
+    const { signal } = heroAbortController;
 
-    if (activeVideo && !activeVideo.src) {
-      const videoSrc = activeVideo.getAttribute('data-src');
-      if (videoSrc) {
-        activeVideo.src = videoSrc;
-        activeVideo.play().catch(() => {});
-      }
-    }
-
-    // 2. On-demand Mouse-Following Glow (0% CPU/GPU when mouse is stationary)
+    const desktopVideo = document.getElementById('hero-video-desktop') as HTMLVideoElement | null;
+    const mobileVideo = document.getElementById('hero-video-mobile') as HTMLVideoElement | null;
     const hero = document.getElementById('hero-section');
     const glow = document.getElementById('hero-mouse-glow');
-    if (!hero || !glow) return;
 
-    let rafId: number | null = null;
-    let targetX = 0;
-    let targetY = 0;
-    let currentX = 0;
-    let currentY = 0;
-    let isInside = false;
+    if (!desktopVideo && !mobileVideo) return;
 
-    const updateGlow = () => {
-      const dx = targetX - currentX;
-      const dy = targetY - currentY;
+    const desktopMedia = window.matchMedia('(min-width: 1024px)');
+    const motionMedia = window.matchMedia('(prefers-reduced-motion: reduce)');
 
-      if (Math.abs(dx) > 0.25 || Math.abs(dy) > 0.25) {
-        currentX += dx * 0.16;
-        currentY += dy * 0.16;
-        glow.style.setProperty('--mouse-x', `${currentX.toFixed(1)}px`);
-        glow.style.setProperty('--mouse-y', `${currentY.toFixed(1)}px`);
-        rafId = requestAnimationFrame(updateGlow);
-      } else {
-        rafId = null;
+    const syncVideo = () => {
+      const prefersReducedMotion = motionMedia.matches;
+      const isDesktop = desktopMedia.matches;
+
+      const activeVideo = isDesktop ? desktopVideo : mobileVideo;
+      const inactiveVideo = isDesktop ? mobileVideo : desktopVideo;
+
+      // Always pause inactive video to eliminate background decoding and conserve CPU/battery
+      if (inactiveVideo) {
+        inactiveVideo.pause();
       }
+
+      if (!activeVideo) return;
+
+      // 1. Accessibility: If prefers-reduced-motion is active, do not autoplay; show poster fallback
+      if (prefersReducedMotion) {
+        activeVideo.pause();
+        return;
+      }
+
+      // Synchronize playback progress when switching between mobile and desktop viewports
+      const transferTime = inactiveVideo && inactiveVideo.currentTime > 0 ? inactiveVideo.currentTime : null;
+
+      // 2. On-demand video source loading for the active viewport
+      if (!activeVideo.src) {
+        const videoSrc = activeVideo.getAttribute('data-src');
+        if (videoSrc) {
+          activeVideo.src = videoSrc;
+        }
+      }
+
+      if (transferTime !== null) {
+        if (activeVideo.readyState >= 1) {
+          try {
+            activeVideo.currentTime = transferTime;
+          } catch (_) {}
+        } else {
+          activeVideo.addEventListener(
+            'loadedmetadata',
+            () => {
+              try {
+                activeVideo.currentTime = transferTime;
+              } catch (_) {}
+            },
+            { once: true }
+          );
+        }
+      }
+
+      // 3. Autoplay policy compliance: Explicitly set muted = true before play() (iOS Safari / Chrome policy)
+      activeVideo.muted = true;
+      activeVideo.play().catch(() => {});
     };
 
-    const onMouseMove = (e: MouseEvent) => {
-      const rect = hero.getBoundingClientRect();
-      const inRange = e.clientY >= rect.top - 450 && e.clientY <= rect.bottom + 450;
+    // Initial sync on mount
+    syncVideo();
 
-      if (inRange) {
-        targetX = e.clientX - rect.left;
-        targetY = e.clientY - rect.top;
+    // 4. Viewport resize listener: dynamically switch between mobile and desktop video elements seamlessly
+    desktopMedia.addEventListener('change', syncVideo, { signal });
 
-        if (!isInside) {
-          isInside = true;
-          currentX = targetX;
-          currentY = targetY;
+    // 5. Dynamic preference listener for prefers-reduced-motion
+    motionMedia.addEventListener('change', syncVideo, { signal });
+
+    // 6. On-demand Mouse-Following Glow (0% CPU/GPU when mouse is stationary)
+    if (hero && glow) {
+      let rafId: number | null = null;
+      let targetX = 0;
+      let targetY = 0;
+      let currentX = 0;
+      let currentY = 0;
+      let isInside = false;
+
+      const updateGlow = () => {
+        const dx = targetX - currentX;
+        const dy = targetY - currentY;
+
+        if (Math.abs(dx) > 0.25 || Math.abs(dy) > 0.25) {
+          currentX += dx * 0.16;
+          currentY += dy * 0.16;
           glow.style.setProperty('--mouse-x', `${currentX.toFixed(1)}px`);
           glow.style.setProperty('--mouse-y', `${currentY.toFixed(1)}px`);
-          glow.classList.remove('opacity-0');
-          glow.classList.add('opacity-100');
-        }
-
-        if (!rafId) {
           rafId = requestAnimationFrame(updateGlow);
-        }
-      } else if (isInside) {
-        isInside = false;
-        glow.classList.remove('opacity-100');
-        glow.classList.add('opacity-0');
-        if (rafId) {
-          cancelAnimationFrame(rafId);
+        } else {
           rafId = null;
         }
-      }
-    };
+      };
 
-    window.addEventListener('mousemove', onMouseMove, { passive: true });
+      const onMouseMove = (e: MouseEvent) => {
+        if (motionMedia.matches) return;
+
+        const rect = hero.getBoundingClientRect();
+        const inRange = e.clientY >= rect.top - 450 && e.clientY <= rect.bottom + 450;
+
+        if (inRange) {
+          targetX = e.clientX - rect.left;
+          targetY = e.clientY - rect.top;
+
+          if (!isInside) {
+            isInside = true;
+            currentX = targetX;
+            currentY = targetY;
+            glow.style.setProperty('--mouse-x', `${currentX.toFixed(1)}px`);
+            glow.style.setProperty('--mouse-y', `${currentY.toFixed(1)}px`);
+            glow.classList.remove('opacity-0');
+            glow.classList.add('opacity-100');
+          }
+
+          if (!rafId) {
+            rafId = requestAnimationFrame(updateGlow);
+          }
+        } else if (isInside) {
+          isInside = false;
+          glow.classList.remove('opacity-100');
+          glow.classList.add('opacity-0');
+          if (rafId) {
+            cancelAnimationFrame(rafId);
+            rafId = null;
+          }
+        }
+      };
+
+      window.addEventListener('mousemove', onMouseMove, { passive: true, signal });
+    }
   }
 
   setupHeroVideoAndGlow();

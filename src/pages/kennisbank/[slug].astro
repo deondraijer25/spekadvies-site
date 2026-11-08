@@ -47,6 +47,111 @@ const articleSchema = {
     "@id": `https://www.spekadvies.nl/kennisbank/${artikel.slug}`
   }
 };
+
+// Pure TypeScript Markdown Parser for Kennisbank Editorial Articles
+function parseInline(text: string): string {
+  return text
+    // Bold: **text** or __text__
+    .replace(/\*\*(.*?)\*\*/g, '<strong class="font-semibold text-slate-900">$1</strong>')
+    .replace(/__(.*?)__/g, '<strong class="font-semibold text-slate-900">$1</strong>')
+    // Italic: *text* or _text_
+    .replace(/(?<!\*)\*([^*]+)\*(?!\*)/g, '<em>$1</em>')
+    .replace(/\b_([^_]+)_\b/g, '<em>$1</em>')
+    // Links: [text](url)
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="text-brand-dark underline font-medium hover:text-amber-800 transition-colors">$1</a>');
+}
+
+function parseMarkdown(md: string): string {
+  if (!md) return '';
+  const lines = md.replace(/\r\n/g, '\n').split('\n');
+  const output: string[] = [];
+  let currentParagraph: string[] = [];
+  let currentList: { type: 'ul' | 'ol'; items: string[] } | null = null;
+
+  function flushParagraph() {
+    if (currentParagraph.length > 0) {
+      const text = currentParagraph.map(l => parseInline(l.trim())).join(' ');
+      if (text.trim()) {
+        output.push(`<p class="leading-relaxed mb-4 text-slate-700">${text}</p>`);
+      }
+      currentParagraph = [];
+    }
+  }
+
+  function flushList() {
+    if (currentList) {
+      const tag = currentList.type;
+      const listClass = tag === 'ul' 
+        ? 'list-disc pl-6 space-y-2 my-4 text-slate-700' 
+        : 'list-decimal pl-6 space-y-2 my-4 text-slate-700';
+      const itemsHtml = currentList.items
+        .map(item => `<li class="leading-relaxed">${parseInline(item.trim())}</li>`)
+        .join('\n');
+      output.push(`<${tag} class="${listClass}">\n${itemsHtml}\n</${tag}>`);
+      currentList = null;
+    }
+  }
+
+  function flushAll() {
+    flushParagraph();
+    flushList();
+  }
+
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    const trimmed = line.trim();
+
+    if (!trimmed) {
+      flushAll();
+      continue;
+    }
+
+    if (trimmed.startsWith('# ')) {
+      flushAll();
+      output.push(`<h1 class="text-2xl sm:text-3xl font-semibold font-display text-brand-dark mt-8 mb-4">${parseInline(trimmed.slice(2).trim())}</h1>`);
+      continue;
+    }
+    if (trimmed.startsWith('## ')) {
+      flushAll();
+      output.push(`<h2 class="text-xl sm:text-2xl font-semibold font-display text-brand-dark mt-8 mb-4">${parseInline(trimmed.slice(3).trim())}</h2>`);
+      continue;
+    }
+    if (trimmed.startsWith('### ')) {
+      flushAll();
+      output.push(`<h3 class="text-lg sm:text-xl font-semibold font-display text-brand-dark mt-6 mb-3">${parseInline(trimmed.slice(4).trim())}</h3>`);
+      continue;
+    }
+    if (trimmed.startsWith('#### ')) {
+      flushAll();
+      output.push(`<h4 class="text-base sm:text-lg font-semibold font-display text-brand-dark mt-6 mb-2">${parseInline(trimmed.slice(5).trim())}</h4>`);
+      continue;
+    }
+
+    const ulMatch = trimmed.match(/^[-*]\s+(.*)$/);
+    if (ulMatch) {
+      flushParagraph();
+      if (currentList && currentList.type !== 'ul') flushList();
+      if (!currentList) currentList = { type: 'ul', items: [] };
+      currentList.items.push(ulMatch[1]);
+      continue;
+    }
+
+    const olMatch = trimmed.match(/^\d+\.\s+(.*)$/);
+    if (olMatch) {
+      flushParagraph();
+      if (currentList && currentList.type !== 'ol') flushList();
+      if (!currentList) currentList = { type: 'ol', items: [] };
+      currentList.items.push(olMatch[1]);
+      continue;
+    }
+
+    flushList();
+    currentParagraph.push(trimmed);
+  }
+
+  flushAll();
+  return output.join('\n');
+}
 ---
 
 <Layout title={artikel.seoTitle} description={artikel.seoDescription}>
@@ -106,8 +211,8 @@ const articleSchema = {
       </section>
 
       <!-- Editorial Body -->
-      <article class="prose prose-slate max-w-none font-sans text-slate-700 leading-relaxed space-y-6 text-sm sm:text-base font-normal">
-        <div set:html={artikel.content.replace(/\n/g, '<br />')} />
+      <article class="prose prose-slate max-w-none font-sans text-slate-700 leading-relaxed text-sm sm:text-base font-normal">
+        <div set:html={parseMarkdown(artikel.content)} />
       </article>
 
       <!-- Related Subservices -->

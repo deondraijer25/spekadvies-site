@@ -6,7 +6,7 @@ import { COMPANY_DATA } from '../data/company';
 ---
 
 <Layout 
-  title="Plan een afspraak | Persoonlijk Advies op Maat — Spekadvies Moerkapelle"
+  title="Gratis Adviesgesprek Plannen | Spekadvies Moerkapelle"
   description="Plan in 1 minuut een vrijblijvende afspraak met Martin van der Spek voor onafhankelijk advies over hypotheken, verzekeringen, belastingaangiften of vermogen."
 >
   <div class="min-h-screen flex flex-col bg-white relative overflow-hidden">
@@ -30,6 +30,9 @@ import { COMPANY_DATA } from '../data/company';
             <img 
               src="/Logo/Middel 9.svg" 
               alt="Spekadvies Logo" 
+              width="382"
+              height="83"
+              decoding="async"
               class="h-9 sm:h-11 w-auto object-contain select-none"
             />
           </a>
@@ -445,6 +448,22 @@ import { COMPANY_DATA } from '../data/company';
                 ></textarea>
               </div>
 
+              <!-- AVG / Privacy Toestemming Checkbox -->
+              <div class="pt-1 pb-1">
+                <label class="flex items-start gap-3 cursor-pointer select-none group">
+                  <input 
+                    type="checkbox" 
+                    id="funnel-consent" 
+                    name="privacy_consent" 
+                    required
+                    class="mt-1 h-4 w-4 rounded border-slate-300 text-brand-dark focus:ring-[#ffce76] focus:ring-offset-0 cursor-pointer transition-colors shrink-0 accent-[#153b68]"
+                  />
+                  <span class="ty-small text-slate-600 leading-snug group-hover:text-brand-dark transition-colors">
+                    Ik ga akkoord met de verwerking van mijn gegevens voor het inplannen van dit adviesgesprek conform het <a href="/privacybeleid/" target="_blank" rel="noopener noreferrer" class="text-brand-dark font-medium underline hover:text-[#ffce76] transition-colors">privacybeleid</a>. *
+                  </span>
+                </label>
+              </div>
+
               <div class="pt-2">
                 <button 
                   type="submit" 
@@ -459,6 +478,14 @@ import { COMPANY_DATA } from '../data/company';
                   </span>
                 </button>
               </div>
+
+              <!-- Reassuring Privacy Microcopy -->
+              <p class="ty-small text-slate-500 text-center leading-relaxed pt-2 flex items-center justify-center gap-1.5">
+                <svg class="w-3.5 h-3.5 text-emerald-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                </svg>
+                <span>Wij gaan vertrouwelijk en zorgvuldig om met je persoonsgegevens. Lees ons <a href="/privacybeleid/" class="text-brand-dark font-medium underline hover:text-[#ffce76] transition-colors">privacybeleid</a>.</span>
+              </p>
 
               <div id="funnel-error" class="hidden ty-small text-red-600 font-semibold text-center pt-1"></div>
             </form>
@@ -509,11 +536,24 @@ import { COMPANY_DATA } from '../data/company';
               <div class="ty-small text-slate-500 mt-0.5">Aanbieders vergeleken</div>
             </div>
             <div>
-              <div class="ty-stat text-brand-dark flex items-baseline justify-center gap-1">
-                <span>9.4</span>
-                <span class="text-[#ffce76] text-base sm:text-lg">★</span>
-              </div>
-              <div class="ty-small text-slate-500 mt-0.5">Klantwaardering</div>
+              <a 
+                href={COMPANY_DATA.advieskeuzeReviews.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group block hover:opacity-90 transition-opacity"
+                title="Verifieer onze beoordeling van 9.4 op Advieskeuze.nl"
+              >
+                <div class="ty-stat text-brand-dark flex items-baseline justify-center gap-0.5">
+                  <span>9.4</span>
+                  <span class="text-slate-400 text-xs font-semibold">/10</span>
+                  <span class="text-[#ffce76] text-sm ml-0.5">★</span>
+                </div>
+                <div class="ty-small text-slate-500 mt-0.5 group-hover:text-brand-dark transition-colors flex items-center justify-center gap-1">
+                  <span class="font-medium">Advieskeuze.nl</span>
+                  <span class="text-emerald-600 text-xs font-semibold">✓</span>
+                  <span class="text-slate-400 text-[10px]">↗</span>
+                </div>
+              </a>
             </div>
           </div>
 
@@ -741,6 +781,9 @@ import { COMPANY_DATA } from '../data/company';
         const userMessage = (formData.get('message') || '').toString().trim();
         const city = (formData.get('city') || '').toString().trim();
 
+        const params = new URLSearchParams(window.location.search);
+        const getAttr = (key) => params.get(key) || sessionStorage.getItem('spek_' + key) || '';
+
         const payload = {
           name: formData.get('name'),
           phone: formData.get('phone'),
@@ -750,7 +793,13 @@ import { COMPANY_DATA } from '../data/company';
           situation: state.situation,
           timeline: state.timeline,
           preference: state.preference,
-          message: userMessage
+          message: userMessage,
+          utm_source: getAttr('utm_source'),
+          utm_medium: getAttr('utm_medium'),
+          utm_campaign: getAttr('utm_campaign'),
+          gclid: getAttr('gclid'),
+          referrer: sessionStorage.getItem('spek_referrer') || document.referrer || '',
+          landing_page: sessionStorage.getItem('spek_landing_page') || window.location.pathname
         };
 
         const endpoints = ['/api/contact', '/api/contact.php', '/contact.php'];
@@ -780,6 +829,15 @@ import { COMPANY_DATA } from '../data/company';
         }
 
         if (success) {
+          if (typeof window.gtag === 'function') {
+            window.gtag('event', 'generate_lead', {
+              event_category: 'Lead Funnel',
+              event_label: state.serviceType || 'adviesgesprek',
+              service_type: state.serviceType || 'overig',
+              situation: state.situation || '',
+              preference: state.preference || ''
+            });
+          }
           steps.forEach((el) => el.classList.add('hidden'));
           if (progressWrapper) progressWrapper.classList.add('hidden');
           if (progressBar) progressBar.style.width = '100%';

@@ -1,0 +1,288 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Footer from '../../components/Footer.astro';
+import { PILLARS, getAllPillarsWithServices } from '../../data/services';
+import { COMPANY_DATA } from '../../data/company';
+
+const pillarsWithServices = getAllPillarsWithServices();
+
+// Schema.org ItemList voor gestructureerde indexatie van alle pijlers en diensten
+const siteOrigin = Astro.site ? Astro.site.origin : (Astro.url ? Astro.url.origin : 'https://www.spekadvies.nl');
+const dienstenSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Dienstenoverzicht Spekadvies Moerkapelle",
+  "description": "Volledig overzicht van onafhankelijke financiële adviesdiensten: hypotheken, verzekeringen, belastingaangifte en vermogen.",
+  "numberOfItems": PILLARS.length,
+  "itemListElement": PILLARS.map((p, idx) => ({
+    "@type": "ListItem",
+    "position": idx + 1,
+    "name": p.title,
+    "description": p.description,
+    "url": new URL(p.hubUrl, siteOrigin).href
+  }))
+};
+---
+
+<Layout 
+  title="Onze Diensten | Hypotheken & Verzekeringen | Spekadvies" 
+  description="Overzicht van alle adviesdiensten van Spekadvies: onafhankelijk hypotheekadvies, verzekeringen, belastingaangifte en vermogen in Moerkapelle."
+>
+  <!-- Schema.org Gestructureerde Data voor Diensten -->
+  <script type="application/ld+json" set:html={JSON.stringify(dienstenSchema)} />
+
+  <Navbar />
+  <Breadcrumbs />
+
+  <main class="relative z-10 flex-grow bg-white">
+    
+    <!-- =====================================================================
+         [SECTIE 1] HERO HEADER
+         ===================================================================== -->
+    <section 
+      class="relative py-20 sm:py-28 lg:py-32 bg-brand-dark bg-center bg-cover bg-no-repeat overflow-hidden rounded-b-[40px] sm:rounded-b-[56px] lg:rounded-b-[72px] shadow-2xl"
+      style="background-image: linear-gradient(rgba(21, 59, 104, 0.88), rgba(11, 26, 47, 0.96)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=80');"
+    >
+      <!-- Zachte achtergrondgloed -->
+      <div class="absolute left-1/2 -top-20 -translate-x-1/2 w-[600px] h-[300px] bg-brand-primary/10 blur-[120px] pointer-events-none rounded-full"></div>
+
+      <div class="max-w-5xl mx-auto px-4 sm:px-8 text-center relative z-10">
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md text-brand-primary border border-white/20 text-[11px] font-semibold tracking-wider uppercase px-4 py-1.5 rounded-full mb-6 font-sans shadow-xs">
+          <i class="fa-solid fa-layer-group text-xs text-brand-primary"></i>
+          <span>Onafhankelijk Advies in 4 Pijlers • Moerkapelle & Regio</span>
+        </div>
+        
+        <h1 class="ty-h1 text-white mb-6 max-w-4xl mx-auto">
+          Al jouw financiële zaken helder onder één dak
+        </h1>
+        
+        <p class="ty-lead text-slate-200 max-w-3xl mx-auto mb-10">
+          Van je eerste koopwoning en passende verzekeringen tot een zorgeloze belastingaangifte en vermogensopbouw. Spekadvies biedt 100% onafhankelijk maatwerk via meer dan 40 geldverstrekkers en verzekeraars.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a 
+            href="/adviesgesprek/"
+            class="open-contact-drawer btn-primary-gold inline-flex items-center justify-center gap-2.5 bg-brand-primary hover:bg-brand-primary-hover text-brand-dark px-7 py-3.5 rounded-full shadow-[0_10px_25px_rgba(255,206,118,0.25)] hover:shadow-[0_14px_32px_rgba(255,206,118,0.35)] hover:-translate-y-0.5 transition-all duration-300 cursor-pointer w-full sm:w-auto text-center"
+          >
+            <span>Plan een gratis adviesgesprek</span>
+            <i class="fa-solid fa-arrow-right text-xs"></i>
+          </a>
+          <a 
+            href={`tel:${COMPANY_DATA.contact.phoneRaw}`}
+            class="btn-secondary inline-flex items-center justify-center gap-2.5 bg-white/10 hover:bg-white/20 text-white px-6 py-3.5 rounded-full border border-white/20 backdrop-blur-xs hover:-translate-y-0.5 transition-all w-full sm:w-auto text-center"
+          >
+            <i class="fa-solid fa-phone text-xs"></i>
+            <span>{COMPANY_DATA.contact.phoneDisplay}</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         [SECTIE 2] SNELNAVIGATIE / PIJLER FILTER BALK
+         ===================================================================== -->
+    <section class="py-6 bg-slate-50 border-b border-slate-200/80 sticky top-0 z-20 backdrop-blur-md bg-slate-50/90">
+      <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
+        <div class="flex items-center justify-start sm:justify-center gap-2 sm:gap-3 overflow-x-auto hide-scrollbar py-1">
+          {PILLARS.map((pillar) => (
+            <a 
+              href={`#${pillar.anchor}`}
+              class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold font-sans bg-white border border-slate-200 text-slate-700 hover:text-brand-dark hover:border-brand-primary hover:bg-amber-50/40 transition-all shrink-0 shadow-2xs"
+            >
+              <i class={`${pillar.icon} text-amber-700 text-xs`}></i>
+              <span>{pillar.title}</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         [SECTIE 3] DE 4 PIJLERS MET DIENSTEN
+         ===================================================================== -->
+    <div class="space-y-16 sm:space-y-24 py-16 sm:py-20">
+      {pillarsWithServices.map((pillar, pillarIndex) => (
+        <section id={pillar.anchor} class="scroll-mt-28">
+          <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
+            
+            <!-- Pijler Header Block -->
+            <div class="bg-gradient-to-r from-slate-50 via-amber-50/20 to-slate-50 border border-slate-200/80 rounded-3xl p-6 sm:p-10 mb-8 sm:mb-10 shadow-xs">
+              <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+                <div class="space-y-3 max-w-3xl">
+                  <div class="inline-flex items-center gap-2 bg-amber-100/70 text-amber-900 border border-amber-300/60 text-[11px] font-semibold tracking-wider uppercase px-3 py-1 rounded-full font-sans">
+                    <i class={`${pillar.icon} text-xs text-amber-800`}></i>
+                    <span>Pijler {pillarIndex + 1} • {pillar.title}</span>
+                  </div>
+                  <h2 class="ty-h2 text-brand-dark">
+                    {pillar.title}
+                  </h2>
+                  <p class="ty-lead text-slate-600">
+                    {pillar.description}
+                  </p>
+                  <p class="text-xs sm:text-sm text-slate-500 font-sans leading-relaxed">
+                    {pillar.leadText}
+                  </p>
+                </div>
+                
+                <div class="shrink-0">
+                  <a 
+                    href={pillar.hubUrl}
+                    class="inline-flex items-center gap-2 bg-brand-dark hover:bg-slate-900 text-white px-5 py-2.5 rounded-full text-xs font-semibold font-sans transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5"
+                  >
+                    <span>Bekijk {pillar.title.toLowerCase()} hub</span>
+                    <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Diensten Grid binnen deze Pijler -->
+            <div class={`grid gap-6 ${
+              pillar.services.length > 4 
+                ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-4' 
+                : pillar.services.length === 4 
+                  ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-4' 
+                  : 'grid-cols-1 md:grid-cols-2 max-w-4xl'
+            }`}>
+              {pillar.services.map((svc) => (
+                <div class="bento-card p-6 flex flex-col justify-between group hover:border-amber-400/60 transition-all duration-300">
+                  <div>
+                    <!-- Icon in pill -->
+                    <div class="w-11 h-11 rounded-2xl bg-amber-50 border border-amber-200/70 flex items-center justify-center text-amber-800 text-base mb-5 shadow-2xs group-hover:scale-105 group-hover:bg-amber-100 transition-all">
+                      <i class={svc.icon}></i>
+                    </div>
+
+                    <!-- Title -->
+                    <h3 class="ty-h3 text-brand-dark mb-2.5 group-hover:text-amber-800 transition-colors">
+                      {svc.title}
+                    </h3>
+
+                    <!-- Short description -->
+                    <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed mb-4">
+                      {svc.shortDesc}
+                    </p>
+
+                    <!-- Feature Tags / Highlights -->
+                    {svc.highlights && svc.highlights.length > 0 && (
+                      <div class="flex flex-wrap gap-1.5 mb-6">
+                        {svc.highlights.map((tag) => (
+                          <span class="inline-block bg-slate-100 text-slate-700 text-[10px] font-medium font-sans px-2.5 py-0.5 rounded-md border border-slate-200/60">
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+
+                  <!-- Link Action Button -->
+                  <div class="pt-4 border-t border-slate-100">
+                    <a 
+                      href={svc.url} 
+                      class="inline-flex items-center text-xs font-semibold text-brand-dark group-hover:text-amber-800 font-sans gap-1.5 transition-colors"
+                    >
+                      <span>Lees meer over {svc.title}</span>
+                      <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+          </div>
+        </section>
+      ))}
+    </div>
+
+    <!-- =====================================================================
+         [SECTIE 4] WAAROM KIEZEN VOOR SPEKADVIES? (E-E-A-T TRUST SECTION)
+         ===================================================================== -->
+    <section class="py-16 sm:py-24 bg-brand-basetint/50 border-t border-b border-slate-200/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
+        <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16 space-y-3">
+          <div class="inline-flex items-center gap-2 bg-amber-100/70 text-amber-900 border border-amber-300/60 text-[11px] font-semibold tracking-wider uppercase px-3 py-1 rounded-full font-sans">
+            <i class="fa-solid fa-certificate text-xs text-amber-800"></i>
+            <span>Vast Gezicht in Moerkapelle</span>
+          </div>
+          <h2 class="ty-h2 text-brand-dark">
+            Waarom kiezen voor Spekadvies?
+          </h2>
+          <p class="ty-lead text-slate-600">
+            Financieel advies draait om vertrouwen, rust en resultaat. Dit is hoe wij het verschil maken voor jou.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+          <!-- USP 1 -->
+          <div class="bg-white border border-slate-200/80 p-6 sm:p-8 rounded-3xl shadow-xs space-y-4">
+            <div class="w-12 h-12 rounded-2xl bg-amber-50 border border-amber-200/70 flex items-center justify-center text-amber-800 text-lg shadow-2xs">
+              <i class="fa-solid fa-scale-balanced"></i>
+            </div>
+            <h3 class="ty-h3 text-brand-dark">100% Onafhankelijk</h3>
+            <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
+              Wij zijn niet gebonden aan één bank of verzekeraar. We vergelijken objectief meer dan 40 aanbieders op rente, dekking en voorwaarden voor het beste resultaat.
+            </p>
+          </div>
+
+          <!-- USP 2 -->
+          <div class="bg-white border border-slate-200/80 p-6 sm:p-8 rounded-3xl shadow-xs space-y-4">
+            <div class="w-12 h-12 rounded-2xl bg-amber-50 border border-amber-200/70 flex items-center justify-center text-amber-800 text-lg shadow-2xs">
+              <i class="fa-solid fa-handshake"></i>
+            </div>
+            <h3 class="ty-h3 text-brand-dark">Alles onder één dak</h3>
+            <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
+              Je hypotheek, verzekeringen en belastingaangifte vullen elkaar naadloos aan. Eén vertrouwd aanspreekpunt aan de Herenweg 42 te Moerkapelle.
+            </p>
+          </div>
+
+          <!-- USP 3 -->
+          <div class="bg-white border border-slate-200/80 p-6 sm:p-8 rounded-3xl shadow-xs space-y-4">
+            <div class="w-12 h-12 rounded-2xl bg-amber-50 border border-amber-200/70 flex items-center justify-center text-amber-800 text-lg shadow-2xs">
+              <i class="fa-solid fa-user-tie"></i>
+            </div>
+            <h3 class="ty-h3 text-brand-dark">Erkend Hypothecair Planner</h3>
+            <p class="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
+              Persoonlijk advies door Martin van der Spek met meer dan 20 jaar regionale ervaring. Wft en AFM vergund, met duidelijke taal en zonder verrassingen.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         [SECTIE 5] CALL TO ACTION AFSPRAAK
+         ===================================================================== -->
+    <section class="py-16 sm:py-20 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-8 text-center space-y-6">
+        <h2 class="ty-h2 text-brand-dark">
+          Klaar voor een helder en onafhankelijk advies?
+        </h2>
+        <p class="ty-lead text-slate-600 max-w-2xl mx-auto">
+          Plan direct een vrijblijvend adviesgesprek in Moerkapelle of bij jou thuis. We nemen de tijd om jouw wensen grondig door te nemen.
+        </p>
+        <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a 
+            href="/adviesgesprek/"
+            class="open-contact-drawer btn-primary-gold inline-flex items-center justify-center gap-2.5 bg-brand-primary hover:bg-brand-primary-hover text-brand-dark px-8 py-4 rounded-full font-sans font-semibold shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 w-full sm:w-auto"
+          >
+            <span>Gratis adviesgesprek aanvragen</span>
+            <i class="fa-solid fa-arrow-right text-xs"></i>
+          </a>
+          <a 
+            href={`tel:${COMPANY_DATA.contact.phoneRaw}`}
+            class="btn-secondary inline-flex items-center justify-center gap-2 bg-slate-100 hover:bg-slate-200 text-brand-dark px-7 py-4 rounded-full font-sans font-semibold transition-all w-full sm:w-auto"
+          >
+            <i class="fa-solid fa-phone text-xs"></i>
+            <span>Bel direct: {COMPANY_DATA.contact.phoneDisplay}</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  
+  <Footer />
+</Layout>

@@ -1,0 +1,323 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import Footer from '../components/Footer.astro';
+import { COMPANY_DATA } from '../data/company';
+
+const pageTitle = "Privacybeleid & AVG | Spekadvies Moerkapelle";
+const pageDescription = "Lees hoe Spekadvies (vd Spek Financiële Diensten B.V.) jouw persoonsgegevens zorgvuldig beschermt conform de AVG en de Wet op het financieel toezicht (Wft).";
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <Navbar />
+  <Breadcrumbs />
+
+  <main class="relative z-10 flex-grow bg-brand-basetint/30">
+    <!-- Header Hero Section -->
+    <section class="relative py-16 sm:py-24 bg-[#153b68] overflow-hidden rounded-b-[40px] sm:rounded-b-[56px] shadow-lg">
+      <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 relative z-10 text-center">
+        <span class="ty-eyebrow text-brand-primary mb-3">Juridisch & Privacy</span>
+        <h1 class="ty-h1 text-white mb-4">Privacybeleid Spekadvies</h1>
+        <p class="ty-lead text-slate-300 max-w-2xl mx-auto">
+          Betrouwbare en transparante verwerking van jouw persoonsgegevens conform de Algemene Verordening Gegevensbescherming (AVG) en de Wet op het financieel toezicht (Wft).
+        </p>
+        <div class="mt-4 text-xs text-slate-300 font-sans">
+          <span>Laatst bijgewerkt: november 2026</span>
+          <span class="mx-2">•</span>
+          <span>Versie 2.1</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content Grid -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-12 sm:py-16">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+        
+        <!-- Sidebar Navigation (Sticky on Desktop) -->
+        <aside class="lg:col-span-4 order-2 lg:order-1 space-y-6">
+          <div class="bg-white rounded-2xl border border-slate-200/80 p-6 shadow-sm sticky top-24">
+            <h2 class="text-sm font-semibold font-sans uppercase tracking-wider text-brand-dark mb-4 pb-2 border-b border-slate-100">
+              Inhoudsopgave
+            </h2>
+            <nav aria-label="Inhoudsopgave privacybeleid">
+              <ul class="space-y-2.5 text-xs font-sans text-slate-600">
+                <li><a href="#controller" class="hover:text-brand-accent-dark transition-colors block py-0.5">1. Verwerkingsverantwoordelijke</a></li>
+                <li><a href="#gegevens" class="hover:text-brand-accent-dark transition-colors block py-0.5">2. Welke gegevens verwerken wij?</a></li>
+                <li><a href="#doeleinden" class="hover:text-brand-accent-dark transition-colors block py-0.5">3. Doeleinden van de verwerking</a></li>
+                <li><a href="#grondslagen" class="hover:text-brand-accent-dark transition-colors block py-0.5">4. Juridische grondslagen</a></li>
+                <li><a href="#delen" class="hover:text-brand-accent-dark transition-colors block py-0.5">5. Delen met derden & ontvangers</a></li>
+                <li><a href="#bewaren" class="hover:text-brand-accent-dark transition-colors block py-0.5">6. Bewaartermijnen</a></li>
+                <li><a href="#beveiliging" class="hover:text-brand-accent-dark transition-colors block py-0.5">7. Beveiliging van persoonsgegevens</a></li>
+                <li><a href="#rechten" class="hover:text-brand-accent-dark transition-colors block py-0.5">8. Jouw rechten onder de AVG</a></li>
+                <li><a href="#toezicht" class="hover:text-brand-accent-dark transition-colors block py-0.5">9. Klachtrecht Autoriteit Persoonsgegevens</a></li>
+                <li><a href="#cookies" class="hover:text-brand-accent-dark transition-colors block py-0.5">10. Cookies & websitegebruik</a></li>
+                <li><a href="#contact" class="hover:text-brand-accent-dark transition-colors block py-0.5">11. Vragen & contact</a></li>
+              </ul>
+            </nav>
+
+            <!-- Trust Badge Card in Sidebar -->
+            <div class="mt-6 pt-6 border-t border-slate-100 text-xs font-sans space-y-2 bg-slate-50 -mx-6 -mb-6 p-6 rounded-b-2xl">
+              <p class="font-semibold text-brand-dark">Toezicht & Registraties</p>
+              <div class="text-slate-600 space-y-1">
+                <div>AFM Vergunning: <span class="font-medium text-brand-dark">{COMPANY_DATA.accreditations.afm}</span></div>
+                <div>Kamer van Koophandel: <span class="font-medium text-brand-dark">{COMPANY_DATA.accreditations.kvk}</span></div>
+                <div>Aangesloten bij: <span class="font-medium text-brand-dark">Kifid</span></div>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Document Body -->
+        <article class="lg:col-span-8 order-1 lg:order-2 space-y-8 font-sans">
+          
+          <!-- Section 1: Verwerkingsverantwoordelijke -->
+          <section id="controller" class="bg-white rounded-2xl border border-slate-200/80 p-6 sm:p-8 shadow-sm scroll-mt-28">
+            <h2 class="ty-h2 text-brand-dark mb-4">1. Wie is de verwerkingsverantwoordelijke?</h2>
+            <p class="ty-body mb-4">
+              Dit privacybeleid is van toepassing op alle verwerkingen van persoonsgegevens door <strong>Spekadvies</strong>, statutair bekend als <strong>vd Spek Financiële Diensten B.V.</strong> (hierna: "Spekadvies", "wij" of "ons"). Wij zijn de verwerkingsverantwoordelijke in de zin van de Algemene Verordening Gegevensbescherming (AVG).
+            </p>
+            <div class="bg-brand-basetint p-4 rounded-xl border border-slate-200 text-xs space-y-1.5 text-slate-700">
+              <div><strong>Bedrijfsnaam:</strong> {COMPANY_DATA.legalName} (handelend onder Spekadvies)</div>
+              <div><strong>Contactpersoon / Oprichter:</strong> {COMPANY_DATA.founder.name}</div>
+              <div><strong>Vestigingsadres:</strong> {COMPANY_DATA.address.formatted}</div>
+              <div><strong>KvK-nummer:</strong> {COMPANY_DATA.accreditations.kvk}</div>
+              <div><strong>AFM-vergunningnummer:</strong> {COMPANY_DATA.accreditations.afm}</div>
+              <div><strong>Telefoon:</strong> <a href={`tel:${COMPANY_DATA.contact.phoneRaw}`} class="text-brand-dark underline">{COMPANY_DATA.contact.phoneDisplay}</a></div>
+              <div><strong>E-mail:</strong> <a href={`mailto:${COMPANY_DATA.contact.email}`} class="text-brand-dark underline">{COMPANY_DATA.contact.email}</a></div>
+            </div>
+          </section>
+
+          <!-- Section 2: Gegevens -->
+          <section id="gegevens" class="bg-white rounded-2xl border border-slate-200/80 p-6 sm:p-8 shadow-sm scroll-mt-28">
+            <h2 class="ty-h2 text-brand-dark mb-4">2. Welke persoonsgegevens verwerken wij?</h2>
+            <p class="ty-body mb-4">
+              Voor het verlenen van deskundig en passend financieel advies, hypotheekbemiddeling, verzekeringsbeheer en belastingaangiften verwerken wij de volgende categorieën van persoonsgegevens:
+            </p>
+            <ul class="space-y-3 text-sm text-slate-600 list-disc list-inside">
+              <li><strong>Contact- en identificatiegegevens:</strong> Voor- en achternaam, adres, postcode, woonplaats, telefoonnummer, e-mailadres, geboortedatum, burgerlijke staat en gezinssamenstelling.</li>
+              <li><strong>Financiële gegevens:</strong> Inkomensgegevens (salarisstroken, werkgeversverklaringen, jaarcijfers en winst- en verliesrekeningen bij ondernemers/ZZP), vermogensgegevens (spaargeld, beleggingen, schenkingen), pensioengegevens (UPO), banksaldi, huidige hypotheekoverzichten, leningen, studieleningen (DUO) en alimentatieverplichtingen.</li>
+              <li><strong>Woning- en onderpandgegevens:</strong> Gegevens over de huidige of aan te kopen woning, koopsom, taxatiewaarde, WOZ-waarde, kadastrale gegevens en energielabel.</li>
+              <li><strong>Burgerservicenummer (BSN):</strong> Wij verwerken jouw BSN uitsluitend wanneer dit wettelijk verplicht is, zoals bij de definitieve hypotheekaanvraag bij de geldverstrekker, doorgifte aan de notaris en bij het indienen van de belastingaangifte bij de Belastingdienst. Wij vragen en verwerken het BSN nooit via openbare contactformulieren op deze website.</li>
+              <li><strong>Bijzondere persoonsgegevens (gezondheid):</strong> Indien voor een verzekering (zoals een overlijdensrisicoverzekering of arbeidsongeschiktheidsverzekering) een gezondheidsverklaring vereist is, geschiedt deze medische acceptatie rechtstreeks via de medisch adviseur van de betreffende verzekeraar. Spekadvies bewaart zelf geen medische dossiers.</li>
+              <li><strong>Websitegegevens:</strong> IP-adres, browserversie en geanonimiseerde statistieken over websitebezoek via functionele cookies.</li>
+            </ul>
+          </section>
+
+          <!-- Section 3: Doeleinden -->
+          <section id="doeleinden" class="bg-white rounded-2xl border border-slate-200/80 p-6 sm:p-8 shadow-sm scroll-mt-28">
+            <h2 class="ty-h2 text-brand-dark mb-4">3. Doeleinden van de gegevensverwerking</h2>
+            <p class="ty-body mb-4">
+              Wij verwerken persoonsgegevens uitsluitend voor de volgende welbepaalde doeleinden:
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-slate-600">
+              <div class="p-4 rounded-xl bg-slate-50 border border-slate-100">
+                <h3 class="font-semibold text-brand-dark text-sm mb-1.5">Hypotheek- & Financieel Advies</h3>
+                <p>Het berekenen van jouw leencapaciteit, het vergelijken van geldverstrekkers en het tot stand brengen van een bindende hypotheekofferte.</p>
+              </div>
+              <div class="p-4 rounded-xl bg-slate-50 border border-slate-100">
+                <h3 class="font-semibold text-brand-dark text-sm mb-1.5">Verzekeringsbemiddeling</h3>
+                <p>Het adviseren over en afsluiten van passende particuliere en zakelijke schade-, levens- en inkomensverzekeringen.</p>
+              </div>
+              <div class="p-4 rounded-xl bg-slate-50 border border-slate-100">
+                <h3 class="font-semibold text-brand-dark text-sm mb-1.5">Belastingaangifte & Vermogen</h3>
+                <p>Het voorbereiden en indienen van jouw aangifte inkomstenbelasting en advies over vermogensopbouw en pensioen.</p>
+              </div>
+              <div class="p-4 rounded-xl bg-slate-50 border border-slate-100">
+                <h3 class="font-semibold text-brand-dark text-sm mb-1.5">Wettelijke Zorgplicht & Wwft</h3>
+                <p>Voldoen aan de wettelijke identificatieplicht, cliëntenonderzoek (Wwft) en dossierplicht conform de Wet op het financieel toezicht (Wft).</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 4: Grondslagen -->
+          <section id="grondslagen" class="bg-white rounded-2xl border border-slate-200/80 p-6 sm:p-8 shadow-sm scroll-mt-28">
+            <h2 class="ty-h2 text-brand-dark mb-4">4. Juridische grondslagen van de verwerking</h2>
+            <p class="ty-body mb-4">
+              Conform artikel 6 van de AVG verwerken wij persoonsgegevens uitsluitend op basis van ten minste één van de volgende rechtsgronden:
+            </p>
+            <div class="space-y-3 text-sm text-slate-600">
+              <div class="flex items-start space-x-3">
+                <i class="fa-solid fa-file-contract text-brand-accent-dark mt-1 flex-shrink-0"></i>
+                <p><strong>Uitvoering van de overeenkomst (art. 6 lid 1 sub b AVG):</strong> De verwerking is noodzakelijk om onze advies- en bemiddelingsovereenkomst met jou uit te voeren.</p>
+              </div>
+              <div class="flex items-start space-x-3">
+                <i class="fa-solid fa-scale-balanced text-brand-accent-dark mt-1 flex-shrink-0"></i>
+                <p><strong>Wettelijke verplichting (art. 6 lid 1 sub c AVG):</strong> Wij zijn wettelijk verplicht bepaalde gegevens vast te leggen krachtens de Wft, Wwft, Sanctiewet en belastingwetgeving.</p>
+              </div>
+              <div class="flex items-start space-x-3">
+                <i class="fa-solid fa-shield-halved text-brand-accent-dark mt-1 flex-shrink-0"></i>
+                <p><strong>Gerechtvaardigd belang (art. 6 lid 1 sub f AVG):</strong> Voor het veilig houden van onze systemen, relatiebeheer en het beantwoorden van websiteaanvragen.</p>
+              </div>
+              <div class="flex items-start space-x-3">
+                <i class="fa-solid fa-check text-brand-accent-dark mt-1 flex-shrink-0"></i>
+                <p><strong>Toestemming (art. 6 lid 1 sub a AVG):</strong> Voor specifieke verwerkingen zoals het gebruik van optionele analytische cookies of gerichte marketingcommunicatie.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 5: Delen met derden -->
+          <section id="delen" class="bg-white rounded-2xl border border-slate-200/80 p-6 sm:p-8 shadow-sm scroll-mt-28">
+            <h2 class="ty-h2 text-brand-dark mb-4">5. Delen van gegevens met derden</h2>
+            <p class="ty-body mb-4">
+              Spekadvies verkoopt jouw persoonsgegevens <strong>nooit</strong> aan derden. Wij verstrekken jouw gegevens uitsluitend aan derden indien dit strikt noodzakelijk is voor de uitvoering van onze dienstverlening of op grond van een wettelijk voorschrift:
+            </p>
+            <ul class="space-y-2 text-sm text-slate-600 list-disc list-inside mb-4">
+              <li><strong>Geldverstrekkers en banken:</strong> Voor het beoordelen en uitbrengen van een hypotheekofferte en leningovereenkomst.</li>
+              <li><strong>Verzekeringsmaatschappijen:</strong> Voor de acceptatie en het beheer van verzekeringspolissen.</li>
+              <li><strong>Notariskantoren en taxateurs:</strong> Voor het passeren van de hypotheekakte en de taxatie van de woning.</li>
+              <li><strong>Belastingdienst:</strong> Voor het verzorgen en indienen van jouw aangiften inkomstenbelasting.</li>
+              <li><strong>IT- en softwaresystemen:</strong> Leveranciers van onze CRM-, advies- en rekensystemen. Met deze partijen hebben wij strikte verwerkersovereenkomsten (art. 28 AVG) gesloten.</li>
+            </ul>
+            <p class="ty-body text-xs text-slate-500">
+              Al onze gegevensverwerkingen vinden plaats binnen de Europese Economische Ruimte (EER). Indien een softwareleverancier gegevens buiten de EER zou verwerken, geschiedt dit uitsluitend conform de geldende EU-standaardcontractbepalingen (SCC) met passende waarborgen.
+            </p>
+          </section>
+
+          <!-- Section 6: Bewaartermijnen -->
+          <section id="bewaren" class="bg-white rounded-2xl border border-slate-200/80 p-6 sm:p-8 shadow-sm scroll-mt-28">
+            <h2 class="ty-h2 text-brand-dark mb-4">6. Bewaartermijnen</h2>
+            <p class="ty-body mb-4">
+              Wij bewaren jouw persoonsgegevens niet langer dan noodzakelijk is voor de doelen waarvoor zij zijn verzameld, of zolang als de wet ons daartoe verplicht:
+            </p>
+            <div class="border border-slate-200 rounded-xl overflow-hidden text-xs">
+              <table class="w-full text-left">
+                <thead class="bg-slate-50 border-b border-slate-200 font-semibold text-brand-dark">
+                  <tr>
+                    <th class="p-3">Type gegevens</th>
+                    <th class="p-3">Bewaartermijn</th>
+                    <th class="p-3">Wettelijke grond</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-100 text-slate-600">
+                  <tr>
+                    <td class="p-3">Contactaanvragen zonder vervolg</td>
+                    <td class="p-3">Maximaal 6 maanden na afronding</td>
+                    <td class="p-3">Gerechtvaardigd belang</td>
+                  </tr>
+                  <tr>
+                    <td class="p-3">Hypotheek- & financieel adviesdossier</td>
+                    <td class="p-3">Gedurende looptijd hypotheek + 5 jaar (max. 20 jaar)</td>
+                    <td class="p-3">Wft-zorgplicht & aansprakelijkheid</td>
+                  </tr>
+                  <tr>
+                    <td class="p-3">Verzekeringsdossiers</td>
+                    <td class="p-3">Gedurende looptijd polis + 7 jaar</td>
+                    <td class="p-3">Wft en Burgerlijk Wetboek</td>
+                  </tr>
+                  <tr>
+                    <td class="p-3">Fiscale administratie & belastingaangiften</td>
+                    <td class="p-3">7 jaar</td>
+                    <td class="p-3">Fiscale bewaarplicht (AWR)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <!-- Section 7: Beveiliging -->
+          <section id="beveiliging" class="bg-white rounded-2xl border border-slate-200/80 p-6 sm:p-8 shadow-sm scroll-mt-28">
+            <h2 class="ty-h2 text-brand-dark mb-4">7. Beveiliging van persoonsgegevens</h2>
+            <p class="ty-body mb-4">
+              Spekadvies neemt de bescherming van jouw gegevens uiterst serieus. Wij nemen passende technische en organisatorische maatregelen om misbruik, verlies, onbevoegde toegang en ongewenste openbaarmaking tegen te gaan:
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-slate-600">
+              <div class="p-3 bg-slate-50 rounded-lg">
+                <p class="font-semibold text-brand-dark mb-1">SSL/TLS Versleuteling</p>
+                <p>Onze website en verzendformulieren maken gebruik van betrouwbare TLS-certificaten voor veilige gegevensoverdracht.</p>
+              </div>
+              <div class="p-3 bg-slate-50 rounded-lg">
+                <p class="font-semibold text-brand-dark mb-1">Twee-factor Authenticatie</p>
+                <p>Al onze adviessystemen en databases zijn beveiligd met strikte 2FA en rolgebaseerde toegangsrechten.</p>
+              </div>
+              <div class="p-3 bg-slate-50 rounded-lg">
+                <p class="font-semibold text-brand-dark mb-1">Geheimhoudingsplicht</p>
+                <p>Alle medewerkers en ingeschakelde specialisten hebben een contractuele en wettelijke geheimhoudingsplicht.</p>
+              </div>
+              <div class="p-3 bg-slate-50 rounded-lg">
+                <p class="font-semibold text-brand-dark mb-1">Periodieke Audits</p>
+                <p>Onze IT-infrastructuur en procedures worden periodiek getoetst aan de geldende normen voor financiële dienstverleners.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 8: Rechten -->
+          <section id="rechten" class="bg-white rounded-2xl border border-slate-200/80 p-6 sm:p-8 shadow-sm scroll-mt-28">
+            <h2 class="ty-h2 text-brand-dark mb-4">8. Jouw rechten onder de AVG</h2>
+            <p class="ty-body mb-4">
+              Onder de Algemene Verordening Gegevensbescherming heb je duidelijke rechten met betrekking tot jouw persoonsgegevens:
+            </p>
+            <div class="space-y-2.5 text-xs text-slate-600">
+              <p><strong>Recht op inzage (art. 15 AVG):</strong> Je mag te allen tijde een overzicht opvragen van de persoonsgegevens die wij van jou verwerken.</p>
+              <p><strong>Recht op rectificatie (art. 16 AVG):</strong> Kloppen jouw gegevens niet of zijn ze gewijzigd? Dan passen wij deze direct aan.</p>
+              <p><strong>Recht op gegevenswissing / vergetelheid (art. 17 AVG):</strong> Je kunt verzoeken om verwijdering van jouw gegevens, mits er geen wettelijke bewaarplicht (zoals Wft of fiscaal) op rust.</p>
+              <p><strong>Recht op beperking van de verwerking (art. 18 AVG):</strong> In bepaalde situaties kun je ons vragen de verwerking tijdelijk stop te zetten.</p>
+              <p><strong>Recht op dataportabiliteit (art. 20 AVG):</strong> Je hebt het recht om jouw digitaal aangeleverde gegevens in een gangbaar formaat te ontvangen of over te laten dragen.</p>
+              <p><strong>Recht van bezwaar (art. 21 AVG):</strong> Je kunt bezwaar maken tegen een verwerking die is gebaseerd op ons gerechtvaardigd belang.</p>
+              <p><strong>Recht om toestemming in te trekken:</strong> Indien je voor een bepaalde verwerking toestemming hebt gegeven, kun je deze te allen tijde weer intrekken.</p>
+            </div>
+            <div class="mt-4 p-4 rounded-xl bg-brand-primary/10 border border-brand-accent/30 text-xs text-slate-700">
+              Wil je gebruikmaken van een van deze rechten? Stuur een e-mail naar <a href={`mailto:${COMPANY_DATA.contact.email}`} class="text-brand-dark font-semibold underline">{COMPANY_DATA.contact.email}</a>. Wij reageren binnen de wettelijke termijn van 30 dagen. Om misbruik te voorkomen, kunnen wij je vragen om je identiteit te bevestigen.
+            </div>
+          </section>
+
+          <!-- Section 9: Klachtrecht AP -->
+          <section id="toezicht" class="bg-white rounded-2xl border border-slate-200/80 p-6 sm:p-8 shadow-sm scroll-mt-28">
+            <h2 class="ty-h2 text-brand-dark mb-4">9. Klachtrecht bij de Autoriteit Persoonsgegevens</h2>
+            <p class="ty-body mb-4">
+              Heb je een klacht over de wijze waarop Spekadvies omgaat met jouw privacy? Neem dan direct contact op met Martin van der Spek zodat we gezamenlijk een oplossing kunnen vinden.
+            </p>
+            <p class="ty-body text-xs text-slate-600 mb-4">
+              Daarnaast heb je te allen tijde het wettelijke recht om een klacht in te dienen bij de nationale toezichthouder:
+            </p>
+            <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-xs text-slate-700 space-y-1">
+              <p class="font-semibold text-brand-dark">Autoriteit Persoonsgegevens (AP)</p>
+              <p>Postbus 93374, 2509 AJ Den Haag</p>
+              <p>Telefoon: 088 - 1805 250</p>
+              <p>Website: <a href="https://www.autoriteitpersoonsgegevens.nl" target="_blank" rel="noopener noreferrer" class="text-brand-dark underline font-medium">www.autoriteitpersoonsgegevens.nl</a></p>
+            </div>
+          </section>
+
+          <!-- Section 10: Cookies -->
+          <section id="cookies" class="bg-white rounded-2xl border border-slate-200/80 p-6 sm:p-8 shadow-sm scroll-mt-28">
+            <h2 class="ty-h2 text-brand-dark mb-4">10. Cookies en externe technologieën</h2>
+            <p class="ty-body mb-3">
+              Onze website maakt gebruik van functionele en privacyvriendelijke analytische cookies om de werking van de website te garanderen en inzicht te krijgen in het algemene bezoekgedrag zonder individuele profielen op te bouwen.
+            </p>
+            <p class="ty-body text-xs text-slate-600">
+              Via onze cookiebanner kun je jouw cookievoorkeuren te allen tijde beheren of herzien. Zie voor meer informatie onze cookieverklaring.
+            </p>
+          </section>
+
+          <!-- Section 11: Contact -->
+          <section id="contact" class="bg-brand-dark rounded-2xl p-6 sm:p-8 text-white shadow-md scroll-mt-28">
+            <h2 class="ty-h2 text-brand-primary mb-3">11. Vragen over dit privacybeleid?</h2>
+            <p class="text-sm text-slate-300 mb-6 leading-relaxed">
+              Heb je vragen over dit privacybeleid of wil je een verzoek indienen met betrekking tot jouw persoonsgegevens? Martin van der Spek staat je graag persoonlijk te woord.
+            </p>
+            <div class="flex flex-wrap gap-4 text-xs font-sans">
+              <a 
+                href={`mailto:${COMPANY_DATA.contact.email}`} 
+                class="bg-brand-primary hover:bg-brand-primary-hover text-brand-dark font-semibold px-6 py-3 rounded-full transition-colors flex items-center space-x-2"
+              >
+                <i class="fa-solid fa-envelope"></i>
+                <span>Stuur een e-mail</span>
+              </a>
+              <a 
+                href={`tel:${COMPANY_DATA.contact.phoneRaw}`} 
+                class="bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-3 rounded-full transition-colors flex items-center space-x-2"
+              >
+                <i class="fa-solid fa-phone"></i>
+                <span>Bel 079 - 593 12 41</span>
+              </a>
+            </div>
+          </section>
+
+        </article>
+
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>

@@ -59,6 +59,9 @@ const cleanPath = pathname.replace(/\/$/, "");
           <img 
             src="/Logo/Middel 9.svg" 
             alt="Spekadvies Logo" 
+            width="382"
+            height="83"
+            decoding="async"
             class="h-8 sm:h-10 md:h-[48px] lg:h-[58px] w-auto max-w-[170px] sm:max-w-[230px] md:max-w-none object-contain select-none"
           />
         </a>
@@ -71,7 +74,7 @@ const cleanPath = pathname.replace(/\/$/, "");
           
           <!-- Hypotheken Dropdown -->
           <div class="relative group">
-            <a href="/hypotheken" class={`hover:text-amber-700 flex items-center space-x-1.5 focus:outline-none py-2 cursor-pointer font-sans font-semibold text-[14px] transition-colors ${
+            <a href="/hypotheken/" class={`hover:text-amber-700 flex items-center space-x-1.5 focus:outline-none py-2 cursor-pointer font-sans font-semibold text-[14px] transition-colors ${
               cleanPath.startsWith("/diensten/hypotheek") || cleanPath.startsWith("/diensten/starter") || cleanPath.startsWith("/diensten/doorstromers") || cleanPath.startsWith("/diensten/overwaarde") || cleanPath.startsWith("/diensten/zzp") || cleanPath.startsWith("/diensten/nieuwbouw") || cleanPath === "/hypotheken" ? "text-amber-800 font-semibold" : "text-slate-700"
             }`}>
               <span>Hypotheken</span>
@@ -79,16 +82,16 @@ const cleanPath = pathname.replace(/\/$/, "");
             </a>
             <div class="absolute left-0 mt-1 w-64 bg-white border border-slate-200/90 rounded-2xl p-3 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50">
               <div class="flex flex-col space-y-1">
-                <a href="/diensten/startershypotheek" class="hover:text-brand-dark hover:bg-amber-50/60 px-3 py-2 rounded-xl transition-all text-xs font-semibold text-slate-700">Startershypotheek</a>
-                <a href="/diensten/doorstromers-overbrugging" class="hover:text-brand-dark hover:bg-amber-50/60 px-3 py-2 rounded-xl transition-all text-xs font-semibold text-slate-700">Doorstromers & Overbrugging</a>
-                <a href="/diensten/hypotheek-oversluiten" class="hover:text-brand-dark hover:bg-amber-50/60 px-3 py-2 rounded-xl transition-all text-xs font-semibold text-slate-700">Hypotheek Oversluiten</a>
-                <a href="/diensten/overwaarde-verzilveren" class="hover:text-brand-dark hover:bg-amber-50/60 px-3 py-2 rounded-xl transition-all text-xs font-semibold text-slate-700">Overwaarde & Senioren</a>
-                <a href="/diensten/zzp-ondernemers-hypotheek" class="hover:text-brand-dark hover:bg-amber-50/60 px-3 py-2 rounded-xl transition-all text-xs font-semibold text-slate-700">ZZP & Ondernemers</a>
-                <a href="/diensten/nieuwbouw-hypotheek" class="hover:text-brand-dark hover:bg-amber-50/60 px-3 py-2 rounded-xl transition-all text-xs font-semibold text-slate-700">Nieuwbouw Hypotheek</a>
-                <a href="/diensten/hypotheek-verduurzamen" class="hover:text-brand-dark hover:bg-amber-50/60 px-3 py-2 rounded-xl transition-all text-xs font-semibold text-slate-700">Hypotheek Verduurzamen</a>
-                <a href="/diensten/hypotheek-bij-scheiding" class="hover:text-brand-dark hover:bg-amber-50/60 px-3 py-2 rounded-xl transition-all text-xs font-semibold text-slate-700">Hypotheek bij Scheiding</a>
+                <a href="/diensten/startershypotheek/" class="hover:text-brand-dark hover:bg-amber-50/60 px-3 py-2 rounded-xl transition-all text-xs font-semibold text-slate-700">Startershypotheek</a>
+                <a href="/diensten/doorstromers-overbrugging/" class="hover:text-brand-dark hover:bg-amber-50/60 px-3 py-2 rounded-xl transition-all text-xs font-semibold text-slate-700">Doorstromers & Overbrugging</a>
+                <a href="/diensten/hypotheek-oversluiten/" class="hover:text-brand-dark hover:bg-amber-50/60 px-3 py-2 rounded-xl transition-all text-xs font-semibold text-slate-700">Hypotheek Oversluiten</a>
+                <a href="/diensten/overwaarde-verzilveren/" class="hover:text-brand-dark hover:bg-amber-50/60 px-3 py-2 rounded-xl transition-all text-xs font-semibold text-slate-700">Overwaarde & Senioren</a>
+                <a href="/diensten/zzp-ondernemers-hypotheek/" class="hover:text-brand-dark hover:bg-amber-50/60 px-3 py-2 rounded-xl transition-all text-xs font-semibold text-slate-700">ZZP & Ondernemers</a>
+                <a href="/diensten/nieuwbouw-hypotheek/" class="hover:text-brand-dark hover:bg-amber-50/60 px-3 py-2 rounded-xl transition-all text-xs font-semibold text-slate-700">Nieuwbouw Hypotheek</a>
+                <a href="/diensten/hypotheek-verduurzamen/" class="hover:text-brand-dark hover:bg-amber-50/60 px-3 py-2 rounded-xl transition-all text-xs font-semibold text-slate-700">Hypotheek Verduurzamen</a>
+                <a href="/diensten/hypotheek-bij-scheiding/" class="hover:text-brand-dark hover:bg-amber-50/60 px-3 py-2 rounded-xl transition-all text-xs font-semibold text-slate-700">Hypotheek bij Scheiding</a>
                 <div class="pt-1.5 border-t border-slate-100">
-                  <a href="/hypotheken" class="text-amber-800 hover:text-brand-dark px-3 py-1.5 rounded-xl transition-all text-xs font-semibold block">
+                  <a href="/hypotheken/" class="text-amber-800 hover:text-brand-dark px-3 py-1.5 rounded-xl transition-all text-xs font-semibold block">
                     Alle hypotheken bekijken ➔
                   </a>
                 </div>
@@ -98,7 +101,7 @@ const cleanPath = pathname.replace(/\/$/, "");
 
           <!-- Verzekeringen Dropdown -->
           <div class="relative group">
-            <a href="/verzekeringen" class={`hover:text-amber-700 flex items-center space-x-1.5 focus:outline-none py-2 cursor-pointer font-sans font-semibold text-[14px] transition-colors ${
+            <a href="/verzekeringen/" class={`hover:text-amber-700 flex items-center space-x-1.5 focus:outline-none py-2 cursor-pointer font-sans font-semibold text-[14px] transition-colors ${
               cleanPath.startsWith("/diensten/aov") || cleanPath.startsWith("/diensten/woon") || cleanPath.startsWith("/diensten/overlijdens") || cleanPath.startsWith("/diensten/zakelijke") || cleanPath === "/verzekeringen" ? "text-amber-800 font-semibold" : "text-slate-700"
             }`}>
               <span>Verzekeringen</span>
@@ -106,13 +109,13 @@ const cleanPath = pathname.replace(/\/$/, "");
             </a>
             <div class="absolute left-0 mt-1 w-64 bg-white border border-slate-200/90 rounded-2xl p-3 shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 z-50">
               <div class="flex flex-col space-y-1">
-                <a href="/diensten/aov-zzp-verzekering" class="hover:text-brand-dark hover:bg-amber-50/60 px-3 py-2 rounded-xl transition-all text-xs font-semibold text-slate-700">AOV voor Ondernemers</a>
-                <a href="/diensten/woonverzekeringen" class="hover:text-brand-dark hover:bg-amber-50/60 px-3 py-2 rounded-xl transition-all text-xs font-semibold text-slate-700">Woonverzekeringen</a>
-                <a href="/diensten/overlijdensrisicoverzekering" class="hover:text-brand-dark hover:bg-amber-50/60 px-3 py-2 rounded-xl transition-all text-xs font-semibold text-slate-700">Overlijdensrisico (ORV)</a>
-                <a href="/diensten/zakelijke-verzekeringen" class="hover:text-brand-dark hover:bg-amber-50/60 px-3 py-2 rounded-xl transition-all text-xs font-semibold text-slate-700">Zakelijke Verzekeringen</a>
-                <a href="/diensten/vermogensbeheer" class="hover:text-brand-dark hover:bg-amber-50/60 px-3 py-2 rounded-xl transition-all text-xs font-semibold text-slate-700">Vermogensbeheer & Pensioen</a>
+                <a href="/diensten/aov-zzp-verzekering/" class="hover:text-brand-dark hover:bg-amber-50/60 px-3 py-2 rounded-xl transition-all text-xs font-semibold text-slate-700">AOV voor Ondernemers</a>
+                <a href="/diensten/woonverzekeringen/" class="hover:text-brand-dark hover:bg-amber-50/60 px-3 py-2 rounded-xl transition-all text-xs font-semibold text-slate-700">Woonverzekeringen</a>
+                <a href="/diensten/overlijdensrisicoverzekering/" class="hover:text-brand-dark hover:bg-amber-50/60 px-3 py-2 rounded-xl transition-all text-xs font-semibold text-slate-700">Overlijdensrisico (ORV)</a>
+                <a href="/diensten/zakelijke-verzekeringen/" class="hover:text-brand-dark hover:bg-amber-50/60 px-3 py-2 rounded-xl transition-all text-xs font-semibold text-slate-700">Zakelijke Verzekeringen</a>
+                <a href="/diensten/vermogensbeheer/" class="hover:text-brand-dark hover:bg-amber-50/60 px-3 py-2 rounded-xl transition-all text-xs font-semibold text-slate-700">Vermogensbeheer & Pensioen</a>
                 <div class="pt-1.5 border-t border-slate-100">
-                  <a href="/verzekeringen" class="text-amber-800 hover:text-brand-dark px-3 py-1.5 rounded-xl transition-all text-xs font-semibold block">
+                  <a href="/verzekeringen/" class="text-amber-800 hover:text-brand-dark px-3 py-1.5 rounded-xl transition-all text-xs font-semibold block">
                     Alle verzekeringen bekijken ➔
                   </a>
                 </div>
@@ -121,12 +124,12 @@ const cleanPath = pathname.replace(/\/$/, "");
           </div>
           
           <!-- Aangiften & Belastingen -->
-          <a href="/aangiften" class={`hover:text-amber-700 transition-colors py-2 font-semibold ${cleanPath === "/aangiften" ? "text-amber-800 font-semibold" : "text-slate-700"}`}>
+          <a href="/aangiften/" class={`hover:text-amber-700 transition-colors py-2 font-semibold ${cleanPath === "/aangiften" ? "text-amber-800 font-semibold" : "text-slate-700"}`}>
             Belastingaangifte
           </a>
 
           <!-- Over ons -->
-          <a href="/over-ons" class={`hover:text-amber-700 transition-colors py-2 font-semibold ${cleanPath === "/over-ons" ? "text-amber-800 font-semibold" : "text-slate-700"}`}>
+          <a href="/over-ons/" class={`hover:text-amber-700 transition-colors py-2 font-semibold ${cleanPath === "/over-ons" ? "text-amber-800 font-semibold" : "text-slate-700"}`}>
             Over ons
           </a>
           
@@ -145,7 +148,7 @@ const cleanPath = pathname.replace(/\/$/, "");
 
           <!-- Action Button (Visible on sm+) with Animated Rolling Text & Sliding SVG Arrow -->
           <a 
-            href="/adviesgesprek"
+            href="/adviesgesprek/"
             class="open-contact-drawer btn-nav group hidden sm:flex bg-brand-dark hover:bg-slate-900 text-white px-5 py-2.5 rounded-full transition-all duration-300 items-center justify-center gap-2 shadow-md shadow-brand-dark/20 hover:shadow-lg hover:shadow-brand-dark/30 hover:-translate-y-0.5 whitespace-nowrap flex-shrink-0 cursor-pointer overflow-hidden"
           >
             <!-- Animated Rolling Text -->
@@ -225,18 +228,18 @@ const cleanPath = pathname.replace(/\/$/, "");
       <div>
         <span class="text-slate-400 text-[10px] tracking-widest block mb-2 font-display">Diensten</span>
         <div class="flex flex-col pl-3 space-y-2 border-l-2 border-brand-accent/30">
-          <a href="/hypotheken" class="text-slate-700 hover:text-brand-dark py-1.5 transition-colors font-sans font-semibold text-sm">Hypotheken</a>
-          <a href="/verzekeringen" class="text-slate-700 hover:text-brand-dark py-1.5 transition-colors font-sans font-semibold text-sm">Verzekeringen</a>
-          <a href="/aangiften" class="text-slate-700 hover:text-brand-dark py-1.5 transition-colors font-sans font-semibold text-sm">Belastingaangifte</a>
-          <a href="/diensten/vermogensbeheer" class="text-slate-700 hover:text-brand-dark py-1.5 transition-colors font-sans font-semibold text-sm">Vermogen</a>
+          <a href="/hypotheken/" class="text-slate-700 hover:text-brand-dark py-1.5 transition-colors font-sans font-semibold text-sm">Hypotheken</a>
+          <a href="/verzekeringen/" class="text-slate-700 hover:text-brand-dark py-1.5 transition-colors font-sans font-semibold text-sm">Verzekeringen</a>
+          <a href="/aangiften/" class="text-slate-700 hover:text-brand-dark py-1.5 transition-colors font-sans font-semibold text-sm">Belastingaangifte</a>
+          <a href="/diensten/vermogensbeheer/" class="text-slate-700 hover:text-brand-dark py-1.5 transition-colors font-sans font-semibold text-sm">Vermogen</a>
         </div>
       </div>
       
       <div class="border-t border-slate-100 pt-3">
         <span class="text-slate-400 text-[10px] tracking-widest block mb-2 font-display">Over & Contact</span>
         <div class="flex flex-col pl-3 space-y-2 border-l-2 border-brand-dark/20">
-          <a href="/over-ons" class="text-slate-700 hover:text-brand-dark py-1.5 transition-colors font-sans font-semibold text-sm">Over Spekadvies</a>
-          <a href="/klantenservice" class="text-slate-700 hover:text-brand-dark py-1.5 transition-colors font-sans font-semibold text-sm">Klantenservice & Downloads</a>
+          <a href="/over-ons/" class="text-slate-700 hover:text-brand-dark py-1.5 transition-colors font-sans font-semibold text-sm">Over Spekadvies</a>
+          <a href="/klantenservice/" class="text-slate-700 hover:text-brand-dark py-1.5 transition-colors font-sans font-semibold text-sm">Klantenservice & Downloads</a>
         </div>
       </div>
 
@@ -266,7 +269,7 @@ const cleanPath = pathname.replace(/\/$/, "");
 
       <div class="pt-2">
         <a 
-          href="/adviesgesprek"
+          href="/adviesgesprek/"
           class="open-contact-drawer btn-primary-gold w-full bg-brand-primary hover:bg-brand-primary-hover text-brand-dark font-semibold text-center py-4 rounded-full transition-colors shadow-md block cursor-pointer"
         >
           Plan een afspraak →
