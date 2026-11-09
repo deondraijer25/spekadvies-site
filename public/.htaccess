@@ -18,4 +18,11 @@ ErrorDocument 404 /404.html
   RewriteRule ^vermogensbeheer/?$ /diensten/vermogensbeheer [R=301,L]
   RewriteRule ^schade/?.*$ /klantenservice [R=301,L]
   RewriteRule ^downloads/?.*$ /klantenservice [R=301,L]
+  RewriteRule ^(Hypotheek|Index_wonen|index_aankoopbegeleiding_huis)\.asp$ /hypotheken [R=301,L,NC]
+  RewriteRule ^Arbeidsongeschikt\.asp$ /diensten/aov-zzp-verzekering [R=301,L,NC]
+  RewriteRule ^(Bedrijven_Verzekeringen|Bedrijven_Ziekteverzuim|Bedrijven_Arbeidsvoorwaarden|Index_bedrijven)\.asp$ /diensten/zakelijke-verzekeringen [R=301,L,NC]
+  RewriteRule ^(Pensioen|Nabestaandenpensioen)\.asp$ /diensten/vermogensbeheer [R=301,L,NC]
+  RewriteRule ^(Verzekeringen|Index_vakantie|Online_Afsluiten.*)\.asp$ /verzekeringen [R=301,L,NC]
+  RewriteRule ^(Coaching|Index_profiel|Index_lyoness)\.asp$ /over-ons [R=301,L,NC]
+  RewriteRule ^.*\.asp$ / [R=301,L,NC]
 </IfModule>
